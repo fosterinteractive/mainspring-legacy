@@ -87,7 +87,8 @@
     "Backbone",
     "VIE",
     "CKEDITOR",
-    "ga"
+    "ga",
+    "require"
 ]
 
 }
