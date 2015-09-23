@@ -1,0 +1,16 @@
+%l-footer__wrapper,
+.l-footer__wrapper {
+  background-color: $black;
+}
+
+%l-footer,
+.l-footer {
+  @extend %l-page--limit;
+  padding: ru(1) ru(0.5);
+  color: $grey-medium;
+
+  @include breakpoint($bp-sml-med) {
+    padding-right: ru(1);
+    padding-left: ru(1);
+  }
+}

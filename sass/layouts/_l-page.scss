@@ -1,0 +1,66 @@
+/**
+ * @file
+ *
+ * This partial is used to define generic page layout items common between all
+ * EG the "wrapper Stuff"
+ */
+
+
+// usually used for page regions/containers. e.g. l--footer__wrapper, l-page__content-container.
+%l-page__container {
+  @extend %clearfix;
+  margin: ru(1) 0;
+}
+
+
+
+// Message region on non panel pages.
+%l-page__message,
+.l-page__message {
+  @extend %l-page--limit;
+}
+
+// Used specifically in products page to do two column layout with content and image when selecting default layout.
+%l-page__content,
+.l-page__content {
+  @extend %clearfix;
+  background-color: $grey-light;
+  padding: ru(1);
+}
+
+%l-page__content-main,
+.l-page__content-main {
+  @extend %content-helper--remove-both-child-margins;
+
+  @include breakpoint($bp-lrg) {
+    padding-right: 25%;
+  }
+
+  @include breakpoint($bp-max) {
+    padding-right: (1 / 3) * 100%;
+  }
+}
+
+%l-page__content-main--has-aside,
+.l-page__content-main.has-aside {
+
+  @include breakpoint($bp-med) {
+    @include grid-span(4, 1);
+    padding-right: ru(0.5);
+  }
+
+  @include breakpoint($bp-lrg) {
+    padding-right: ru(1);
+  }
+}
+
+%l-page__content-aside,
+.l-page__content-aside {
+  margin-top: ru(0.5);
+
+  @include breakpoint($bp-med) {
+    @include grid-span(2, 5);
+    margin-top: 0;
+    padding-left: ru(0.5);
+  }
+}

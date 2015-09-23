@@ -1,0 +1,316 @@
+%mobile-menu,
+.mobile-menu {
+  background-color: $black;
+}
+
+%mobile-menu__close,
+.mobile-menu__close {
+  text-align: right;
+}
+
+%mobile-menu__close-btn,
+.mobile-menu__close button {
+  float: right;
+  margin: ru(0.5);
+  padding: 0;
+}
+
+%mobile-menu__list,
+.mobile-menu ul {
+  @extend %list--blank;
+  clear: both;
+}
+
+%mobile-menu__menu,
+.mobile-menu > ul,
+.mobile-menu__secondary > ul {
+  border-bottom: 1px solid $grey-medium-xdark;
+}
+
+%mobile-menu__list-item,
+.mobile-menu li {
+  display: block;
+  border-bottom: 1px solid $grey-medium-xdark;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+%mobile-menu__btn--primary,
+.mobile-menu .level-1.expanded > a {
+  @extend %btn--accordion-1;
+
+  &.js-is-active {
+    @extend %btn--accordion-1--is-active;
+  }
+}
+
+%mobile-menu__btn--secondary,
+.mobile-menu .level-2.expanded > a {
+  @extend %btn--accordion-2;
+
+  &.js-is-active {
+    @extend %btn--accordion-2--is-active;
+  }
+}
+
+%mobile-menu__btn-tirtiary,
+.mobile-menu a {
+  @extend %btn--accordion-3;
+}
+
+/*doc
+---
+title: Mobile Menu
+name: menu-mobile
+category: Menus - Mobile
+---
+
+```html_example
+<div class="styleguide__wrapper--med styleguide__mobile-menu"><!-- Only used in style guide -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__close">
+      <button class="btn--icon--white-red" role="button">
+        <svg class="svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#close"></use></svg>
+        <div class="visually-hidden">Close Menu</div>
+      </button>
+    </div>
+    <ul class="menu">
+      <li class="first expanded menu-mlid-3186 level-1">
+        <a href="http://www.example.com/" id="heating">Heating</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-3811 level-2">
+            <a href="http://www.example.com/" title="">Furnace</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-3816 level-3"><a href="http://www.example.com/" title="">Repair Furnace</a></li>
+              <li class="last leaf menu-mlid-3821 level-3"><a href="http://www.example.com/" title="">Buy Furnace</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-3826 level-2">
+            <a href="http://www.example.com/" title="">Other Heating</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-3831 level-3"><a href="http://www.example.com/" title="">Fireplaces</a></li>
+              <li class="last leaf menu-mlid-3836 level-3"><a href="http://www.example.com/" title="">Rent Water Heaters </a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-3841 level-2">
+            <a href="http://www.example.com/" title="">Ongoing Protection &amp; Maintenance Plans</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-3846 level-3"><a href="http://www.example.com/" title="">Furnace Heating Protection Plan</a></li>
+              <li class="last leaf menu-mlid-3851 level-3"><a href="http://www.example.com/" title="">Complete Furnace Protection </a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-3856 level-2">
+            <a href="http://www.example.com/" title="">Repair</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first last leaf menu-mlid-3861 level-3"><a href="http://www.example.com/" title="">Furnace Repair</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-3866 level-2">
+            <a href="http://www.example.com/" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first last leaf menu-mlid-3871 level-3"><a href="http://www.example.com/" title="">Tools &amp; Resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="expanded active menu-mlid-3191 level-1">
+        <a href="/" id="cooling" class="active">Cooling</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-3201 level-2">
+            <a href="http://example.com" title="">Air Conditioner</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4106 level-3"><a href="http://example.com" title="">Buy Air Conditioner</a></li>
+              <li class="leaf menu-mlid-4107 level-3"><a href="http://example.com" title="">Rent Air Conditioner</a></li>
+              <li class="last leaf menu-mlid-4108 level-3"><a href="http://example.com" title="">Repair Air Conditioner</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4109 level-2">
+            <a href="http://example.com" title="">Protection &amp; Maintenance Plans</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4110 level-3"><a href="http://example.com" title="">Cooling Maintenance Plan</a></li>
+              <li class="leaf menu-mlid-4111 level-3"><a href="http://example.com" title="">Cooling Protection Plan</a></li>
+              <li class="last leaf menu-mlid-4112 level-3"><a href="http://example.com" title="">Cooling Protection Plan with Maintenance</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4113 level-2">
+            <a href="http://example.com" title="">Maintenance &amp; Care</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first last leaf menu-mlid-4114 level-3"><a href="http://example.com" title="">Air Conditioner Maintenance</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4115 level-2">
+            <a href="http://example.com" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first last leaf menu-mlid-4116 level-3"><a href="http://example.com" title="">Tools &amp; Resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="expanded active menu-mlid-3196 level-1">
+        <a href="/" id="water" class="active">Water Heaters &amp; Plumbing</a>
+        <ul class="menu js-open" style="display: block;">
+          <li class="first expanded menu-mlid-4117 level-2">
+            <a href="http://example.com" title="">Rental Water Heaters</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4118 level-3"><a href="http://example.com" title="">Water Heater</a></li>
+              <li class="leaf menu-mlid-4119 level-3"><a href="http://example.com" title="">Tankless Water Heater</a></li>
+              <li class="leaf menu-mlid-4120 level-3"><a href="http://example.com" title="">Terms &amp; Conditions</a></li>
+              <li class="last leaf menu-mlid-4121 level-3"><a href="http://example.com" title="">Current Regulations</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4122 level-2">
+            <a href="http://example.com" title="">Plumbing Services</a>
+            <ul class="menu js-open" style="display: block;">
+              <li class="first leaf menu-mlid-4123 level-3"><a href="http://example.com" title="">Plumbing Repair</a></li>
+              <li class="last leaf menu-mlid-4124 level-3"><a href="http://example.com" title="">Plumbing Upgrades</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4125 level-2">
+            <a href="http://example.com" title="">Avoiding Plumbing Hassles</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4126 level-3"><a href="http://example.com" title="">Plumbing &amp; Drain Protection Plan</a></li>
+              <li class="last leaf menu-mlid-4127 level-3"><a href="http://example.com" title="">Total Home 3-in-1 Protection Plan</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4128 level-2">
+            <a href="http://example.com" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4129 level-3"><a href="http://example.com" title="">Tools &amp; Resources</a></li>
+              <li class="leaf menu-mlid-4130 level-3"><a href="http://example.com" title="">How water heater billing works</a></li>
+              <li class="last leaf menu-mlid-4131 level-3"><a href="http://example.com" title="">Picking the right size of Water Heater</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="expanded menu-mlid-4132 level-1">
+        <a href="http://example.com" id="equipment">Equipment Protection</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-4133 level-2">
+            <a href="http://example.com" title="">Maintenance &amp; Repair</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4134 level-3"><a href="http://example.com" title="">Air Conditioner Maintenance</a></li>
+              <li class="leaf menu-mlid-4135 level-3"><a href="http://example.com" title="">Air Conditioner Repair</a></li>
+              <li class="leaf menu-mlid-4136 level-3"><a href="http://example.com" title="">Furnace Maintenance</a></li>
+              <li class="last leaf menu-mlid-4137 level-3"><a href="http://example.com" title="">Furnace Repair</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4138 level-2">
+            <a href="http://example.com" title="">Equipment Protection &amp; Maintenance Plans</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4139 level-3"><a href="http://example.com" title="">Cooling Maintenance Plan</a></li>
+              <li class="leaf menu-mlid-4140 level-3"><a href="http://example.com" title="">Cooling Protection Plan</a></li>
+              <li class="leaf menu-mlid-4141 level-3"><a href="http://example.com" title="">Cooling Protection with Maintenance</a></li>
+              <li class="leaf menu-mlid-4142 level-3"><a href="http://example.com" title="">Heating Protection Plan – Furnace</a></li>
+              <li class="leaf menu-mlid-4143 level-3"><a href="http://example.com" title="">Heating Protection plan – Boiler</a></li>
+              <li class="leaf menu-mlid-4144 level-3"><a href="http://example.com" title="">Complete Furnace Protection</a></li>
+              <li class="leaf menu-mlid-4145 level-3"><a href="http://example.com" title="">Complete Boiler Protection</a></li>
+              <li class="last leaf menu-mlid-4146 level-3"><a href="http://example.com" title="">Plumbing &amp; Drain Protection Plan</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4147 level-2">
+            <a href="http://example.com" title="">Total Home Plans</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4148 level-3"><a href="http://example.com" title="">Total Home 3-in-1</a></li>
+              <li class="last leaf menu-mlid-4149 level-3"><a href="http://example.com" title="">Total Home 6-in-1</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4150 level-2">
+            <a href="http://example.com" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4151 level-3"><a href="http://example.com" title="">Tools and Resources</a></li>
+              <li class="last leaf menu-mlid-4152 level-3"><a href="http://example.com" title="">Current Offers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="expanded active menu-mlid-3206 level-1">
+        <a href="/" id="smarter" class="active">Smarter Living</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-4153 level-2">
+            <a href="http://example.com" title="">Living Well</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4154 level-3"><a href="http://example.com" title="">Duct Cleaning</a></li>
+              <li class="leaf menu-mlid-4155 level-3"><a href="http://example.com" title="">Energy Audit</a></li>
+              <li class="leaf menu-mlid-4156 level-3"><a href="http://example.com" title="">3-in-1 Protection Plans</a></li>
+              <li class="leaf menu-mlid-4157 level-3"><a href="http://example.com" title="">Saving Energy</a></li>
+              <li class="leaf menu-mlid-4158 level-3"><a href="http://example.com" title="">Spring Energy Tips</a></li>
+              <li class="last leaf menu-mlid-4159 level-3"><a href="http://example.com" title="">Tools &amp; Resources</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4160 level-2">
+            <a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Sub-Metering</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4161 level-3"><a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">What is Sub-metering?</a></li>
+              <li class="leaf menu-mlid-4162 level-3"><a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Electricity Sub-metering</a></li>
+              <li class="leaf menu-mlid-4163 level-3"><a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Water Sub-metering</a></li>
+              <li class="leaf menu-mlid-4164 level-3"><a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Thermal Sub-metering</a></li>
+              <li class="leaf menu-mlid-4165 level-3"><a href="https://www.enercare.ca/residents-condoapartment" title="">Sub-metering for Residents</a></li>
+              <li class="leaf menu-mlid-4166 level-3"><a href="https://www.enercare.ca/property-managers-and-building-owners" title="">Sub-metering for Property Managers</a></li>
+              <li class="last leaf menu-mlid-4167 level-3"><a href="https://www.enercare.ca/new-construction-developers-0" title="">Sub-metering for New Construction Developers</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4168 level-2">
+            <a href="http://example.com" title="">Learn More</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4169 level-3"><a href="http://example.com" title="">Tools and Resources</a></li>
+              <li class="last leaf menu-mlid-4170 level-3"><a href="http://example.com" title="">Current Offers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="last expanded active menu-mlid-3211 level-1">
+        <a href="/" id="customer" class="active">Customer Care</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-4171 level-2">
+            <a href="http://example.com" title="">Customer Care</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4172 level-3"><a href="http://example.com" title="">Contact Us</a></li>
+              <li class="leaf menu-mlid-4173 level-3"><a href="https://myenercare.ca/" title="">Login to MyEnerCare</a></li>
+              <li class="last leaf menu-mlid-4174 level-3"><a href="http://example.com" title="">Current Offers</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4175 level-2">
+            <a href="http://example.com" title="">Billing &amp; Account Enquiries</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4176 level-3"><a href="http://example.com" title="">Contact Us</a></li>
+              <li class="leaf menu-mlid-4177 level-3"><a href="https://www.enercare.ca/billing-faqs" title="">Billing FAQs</a></li>
+              <li class="leaf menu-mlid-4178 level-3"><a href="https://www.enercare.ca/moving-out" title="">Moving?</a></li>
+              <li class="last leaf menu-mlid-4179 level-3"><a href="http://example.com" title="">E-Billing for Sub-metering customers?</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4180 level-2">
+            <a href="http://example.com" title="">Before you call</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4181 level-3"><a href="http://example.com" title="">Smarter living article #1</a></li>
+              <li class="last leaf menu-mlid-4182 level-3"><a href="http://example.com" title="">Smarter living article #2</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4183 level-2">
+            <a href="http://example.com" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4184 level-3"><a href="http://example.com" title="">Tools &amp; Resources</a></li>
+              <li class="last leaf menu-mlid-4185 level-3"><a href="http://example.com" title="">Current Offers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="menu"><li class="first leaf menu-mlid-4401 level-1"><a href="http://business.enercare.ca" title="">Builder Program</a></li>
+      <li class="leaf menu-mlid-4406 level-1"><a href="https://www.directenergy.com/ontario/commercialservices/" title="">Commercial HVAC</a></li>
+      <li class="leaf menu-mlid-4411 level-1"><a href="https://business.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Metered Services </a></li>
+      <li class="last leaf menu-mlid-4416 level-1"><a href="http://business.enercare.ca" title="">Previous Enercare Home</a></li>
+    </ul>
+
+    <ul class="menu"><li class="first leaf menu-mlid-4026 level-1"><a href="http://google.ca" title="">MyEnercare</a></li>
+      <li class="leaf menu-mlid-4031 level-1"><a href="http://google.ca" title="">Careers</a></li>
+      <li class="leaf menu-mlid-4036 level-1"><a href="http://google.ca" title="">Corporate Policies</a></li>
+      <li class="leaf menu-mlid-4041 level-1"><a href="http://google.ca" title="">Investor Relations</a></li>
+      <li class="last leaf menu-mlid-4046 level-1"><a href="http://google.ca" title="">Sitemap</a></li>
+    </ul>
+  </div>
+</div>
+```
+*/

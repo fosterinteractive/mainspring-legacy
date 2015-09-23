@@ -1,0 +1,19 @@
+%animate-background-color--fast {
+  transition-property: background-color;
+  transition-duration: $transition-fast;
+}
+
+%animate-color--fast {
+  transition-property: color;
+  transition-duration: $transition-fast;
+}
+
+%animate-opacity--fast {
+  transition-property: opacity;
+  transition-duration: $transition-fast;
+}
+
+%animate-all--fast {
+  transition-property: all;
+  transition-duration: $transition-fast;
+}

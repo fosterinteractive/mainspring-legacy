@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Base - Typography</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/styleguide.css">
+      
+        <link rel="stylesheet" href="../css/style.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Components</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="components_-_blockquote.html">Blockquote</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="components_-_masthead.html">Masthead</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_message.html">Message</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_tables.html">Tables</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Base</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="base_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_images.html">Images</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_links.html">Links</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_lists.html">Lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_-_form.html">Form</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="base_-_typography.html">Typography</a></li>
+              
+            
+          
+          </ul>
+        
+          <h3>Branding</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="branding_-_colors.html">Colors</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Menus</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="menus_-_mobile.html">Mobile</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>Typography</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#type-a">Example Content</a></li>
+              
+            
+              
+                <li><a href="#type-variations-a">Basic Elements</a></li>
+              
+            
+              
+                <li><a href="#type-variations-c">Headings</a></li>
+              
+            
+              
+                <li><a href="#type-variations-d">Type Variations</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="type-a" class="styleguide">Example Content</h1>
+
+<p>All styles appear in /global/_typography.scss</p>
+</div><div class="codeExample"><div class="exampleOutput"><div class="styleguide__wrapper styleguide__type">
+<h1>H1 - Heading Level 1</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar finibus diam, eget sagittis est hendrerit et. </p>
+<h2> Heading level 2 -  Pellentesque sed sollicitudin lacus, </h2>
+<p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<h3>Heading level 3 - Maecenas interdum, elit ut accumsan luctus </h3>
+<p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<h4>Heading Level 4 -   Ut sodales, lorem quis ultrices sollicitudin</h4>
+<p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<h5>Heading level 5 - Maecenas interdum, elit ut accumsan luctus </h5>
+<p>1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.</p>
+<h6>Heading level 6 - Maecenas interdum, elit ut accumsan luctus </h6>
+<p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.</p>
+<p>New Paragrpah dolor eleifend dolor, eget suscipit ante erat ac lectus.  <a href="#">This is a text link</a> Ut sodales, lorem quis ultrices sollicitudin
+<strong>Strong is used to indicate strong importance</strong> at cursus erat urna vitae justo. Maecenas interdum
+<em>This text has added emphasis.</em>
+<p>Superscript<sup>®</sup></p>
+<p>Subscript for things like H<sub>2</sub>O</p>
+<p><small>This small text is small for for fine print, etc.</small></p>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper styleguide__type"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h1&gt;</span>H1 - Heading Level 1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar finibus diam, eget sagittis est hendrerit et. <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h2&gt;</span> Heading level 2 -  Pellentesque sed sollicitudin lacus, <span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;p&gt;</span>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Heading level 3 - Maecenas interdum, elit ut accumsan luctus <span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h4&gt;</span>Heading Level 4 -   Ut sodales, lorem quis ultrices sollicitudin<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;p&gt;</span>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h5&gt;</span>Heading level 5 - Maecenas interdum, elit ut accumsan luctus <span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;p&gt;</span>1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h6&gt;</span>Heading level 6 - Maecenas interdum, elit ut accumsan luctus <span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>New Paragrpah dolor eleifend dolor, eget suscipit ante erat ac lectus.  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>This is a text link<span class="nt">&lt;/a&gt;</span> Ut sodales, lorem quis ultrices sollicitudin
+<span class="nt">&lt;strong&gt;</span>Strong is used to indicate strong importance<span class="nt">&lt;/strong&gt;</span> at cursus erat urna vitae justo. Maecenas interdum
+<span class="nt">&lt;em&gt;</span>This text has added emphasis.<span class="nt">&lt;/em&gt;</span>
+<span class="nt">&lt;p&gt;</span>Superscript<span class="nt">&lt;sup&gt;</span>®<span class="nt">&lt;/sup&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Subscript for things like H<span class="nt">&lt;sub&gt;</span>2<span class="nt">&lt;/sub&gt;</span>O<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;small&gt;</span>This small text is small for for fine print, etc.<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="type-variations-a" class="styleguide">Basic Elements</h1>
+
+<h2>Paragraph</h2>
+</div><div class="codeExample"><div class="exampleOutput"><p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus. Neque solum ea communia, verum etiam paria esse dixerunt. Sed haec omittamus; Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;p&gt;</span>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus. Neque solum ea communia, verum etiam paria esse dixerunt. Sed haec omittamus; Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Re mihi non aeque satisfacit, et quidem locis pluribus.
+<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h2>Bold &amp; Italic</h2>
+</div><div class="codeExample"><div class="exampleOutput"><p>
+  <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is in italix</em> Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>This is in Bold<span class="nt">&lt;/strong&gt;</span>, consectetur adipiscing elit. <span class="nt">&lt;em&gt;</span>This is in italix<span class="nt">&lt;/em&gt;</span> Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="type-variations-c" class="styleguide">Headings</h1>
+
+<p>Headings Level 1 &amp; 2 resize at breakpoint large</p>
+</div><div class="codeExample"><div class="exampleOutput"><h1>My Title Level 1 - 36/52px</h1>
+<h2>My Title Level 2 - 28/32px</h2>
+<h3>My Title Level 3 - 23px</h3>
+<h4>My Title Level 4 - 19px</h4>
+<h5>My Title Level 5 - 17px</h5>
+<h6>My Title Level 6 - 15px</h6>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>My Title Level 1 - 36/52px<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>My Title Level 2 - 28/32px<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>My Title Level 3 - 23px<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>My Title Level 4 - 19px<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>My Title Level 5 - 17px<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>My Title Level 6 - 15px<span class="nt">&lt;/h6&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="type-variations-d" class="styleguide">Type Variations</h1>
+
+<h2>Color Variations</h2>
+</div><div class="codeExample"><div class="exampleOutput"><div class="styleguide__wrapper--med-black styleguide__color-variations"><!-- Only used in style guide -->
+  <p class="t--white">White Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--grey-medium">Grey-Medium Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--grey-dark">Grey-Dark Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper--med-black styleguide__color-variations"</span><span class="nt">&gt;</span><span class="c">&lt;!-- Only used in style guide --&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--white"</span><span class="nt">&gt;</span>White Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--grey-medium"</span><span class="nt">&gt;</span>Grey-Medium Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--grey-dark"</span><span class="nt">&gt;</span>Grey-Dark Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h2>Size Variations</h2>
+</div><div class="codeExample"><div class="exampleOutput"><div class="styleguide__wrapper"><!-- Only used in style guide -->
+  <p class="t--xsmall">X-Small Paragraph. 11.5px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--small">Small Paragraph. 13px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p> Default Paragraph. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--medium">Medium Paragraph. 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--large">Large Paragraph. 19px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--xlarge">X-Large Paragraph. 23px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--xxlarge">XX-Large Paragraph. 28/34px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--xxxlarge">XXX-Large Paragraph. 34/48px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper"</span><span class="nt">&gt;</span><span class="c">&lt;!-- Only used in style guide --&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--xsmall"</span><span class="nt">&gt;</span>X-Small Paragraph. 11.5px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--small"</span><span class="nt">&gt;</span>Small Paragraph. 13px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span> Default Paragraph. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--medium"</span><span class="nt">&gt;</span>Medium Paragraph. 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--large"</span><span class="nt">&gt;</span>Large Paragraph. 19px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--xlarge"</span><span class="nt">&gt;</span>X-Large Paragraph. 23px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--xxlarge"</span><span class="nt">&gt;</span>XX-Large Paragraph. 28/34px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--xxxlarge"</span><span class="nt">&gt;</span>XXX-Large Paragraph. 34/48px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h2>Line height Variations</h2>
+</div><div class="codeExample"><div class="exampleOutput"><div class="styleguide__wrapper"><!-- Only used in style guide -->
+  <p class="t--short">Short Line Height Paragraph. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+</div>
+
+<div class="styleguide__wrapper"><!-- Only used in style guide -->
+  <p>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--trailer">Extra Bottom Margin. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+</div>
+
+<div class="styleguide__wrapper"><!-- Only used in style guide -->
+  <p class="t--medium">Medium Default Paragraph 17px / 23px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--medium-xlineheight">Medium Tall Paragraph 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--medium">Medium Default Paragraph 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+</div>
+
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper"</span><span class="nt">&gt;</span><span class="c">&lt;!-- Only used in style guide --&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--short"</span><span class="nt">&gt;</span>Short Line Height Paragraph. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper"</span><span class="nt">&gt;</span><span class="c">&lt;!-- Only used in style guide --&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--trailer"</span><span class="nt">&gt;</span>Extra Bottom Margin. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper"</span><span class="nt">&gt;</span><span class="c">&lt;!-- Only used in style guide --&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--medium"</span><span class="nt">&gt;</span>Medium Default Paragraph 17px / 23px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--medium-xlineheight"</span><span class="nt">&gt;</span>Medium Tall Paragraph 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--medium"</span><span class="nt">&gt;</span>Medium Default Paragraph 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</pre></div></div></div><div class="cortana-content">
+<h2>Size &amp; Style Variations</h2>
+</div><div class="codeExample"><div class="exampleOutput"><div class="styleguide__wrapper--med-black t--white"><!-- Only used in style guide -->
+    <p class="t--medium-caps">Emergency response </br />
+    24/7 Call Support Center</p>
+    <p >Electricity, Water & Thermal Sub-metering<br />
+    <span class="t--large-bold-caps">1-866-449-4423</span>
+    </p>
+    <p >Water Heaters, Furnace & Air Conditioners<br />
+    <span class="t--large-bold-caps">1-866-421-9025</span>
+    </p>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper--med-black t--white"</span><span class="nt">&gt;</span><span class="c">&lt;!-- Only used in style guide --&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"t--medium-caps"</span><span class="nt">&gt;</span>Emergency response <span class="err">&lt;</span>/br /&gt;
+    24/7 Call Support Center<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="nt">&gt;</span>Electricity, Water <span class="err">&amp;</span> Thermal Sub-metering<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t--large-bold-caps"</span><span class="nt">&gt;</span>1-866-449-4423<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="nt">&gt;</span>Water Heaters, Furnace <span class="err">&amp;</span> Air Conditioners<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t--large-bold-caps"</span><span class="nt">&gt;</span>1-866-421-9025<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Blockquote",
+              "breadcrumb": "Components - Blockquote > Blockquote",
+              "path": "components_-_blockquote.html#a-blockquote"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "SVG Icons - UI",
+              "breadcrumb": "Base Icons > SVG Icons - UI",
+              "path": "base_icons.html#a-icons"
+              },
+            
+              
+              
+              {
+              "title": "SVG Icons - Products",
+              "breadcrumb": "Base Icons > SVG Icons - Products",
+              "path": "base_icons.html#b-icons"
+              },
+            
+              
+              
+              {
+              "title": "SVG Icons - Social",
+              "breadcrumb": "Base Icons > SVG Icons - Social",
+              "path": "base_icons.html#c-icons"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Inline Images",
+              "breadcrumb": "Base - Images > Inline Images",
+              "path": "base_-_images.html#a-inlineimg"
+              },
+            
+              
+              
+              {
+              "title": "Alignment Variations",
+              "breadcrumb": "Base - Images > Alignment Variations",
+              "path": "base_-_images.html#b-align"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Links",
+              "breadcrumb": "Base - Links > Links",
+              "path": "base_-_links.html#a-links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Unordered List",
+              "breadcrumb": "Base - Lists > Unordered List",
+              "path": "base_-_lists.html#a-lists"
+              },
+            
+              
+              
+              {
+              "title": "Ordered list",
+              "breadcrumb": "Base - Lists > Ordered list",
+              "path": "base_-_lists.html#b-lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Masthead",
+              "breadcrumb": "Components - Masthead > Masthead",
+              "path": "components_-_masthead.html#a-masthead"
+              },
+            
+              
+              
+              {
+              "title": "Masthead Tall",
+              "breadcrumb": "Components - Masthead > Masthead Tall",
+              "path": "components_-_masthead.html#b-masthead"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Message",
+              "breadcrumb": "Components - Message > Message",
+              "path": "components_-_message.html#a-message"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Table",
+              "breadcrumb": "Components - Tables > Table",
+              "path": "components_-_tables.html#a-tables"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Colors",
+              "breadcrumb": "Branding - Colors > Colors",
+              "path": "branding_-_colors.html#color"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Input Boxes",
+              "breadcrumb": "Base - Form > Input Boxes",
+              "path": "base_-_form.html#form-01"
+              },
+            
+              
+              
+              {
+              "title": "Check Boxes",
+              "breadcrumb": "Base - Form > Check Boxes",
+              "path": "base_-_form.html#form-02-check"
+              },
+            
+              
+              
+              {
+              "title": "Radio",
+              "breadcrumb": "Base - Form > Radio",
+              "path": "base_-_form.html#form-03-radio"
+              },
+            
+              
+              
+              {
+              "title": "Form Layout Styles",
+              "breadcrumb": "Base - Form > Form Layout Styles",
+              "path": "base_-_form.html#form-04-layout"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Mobile Menu",
+              "breadcrumb": "Menus - Mobile > Mobile Menu",
+              "path": "menus_-_mobile.html#menu-mobile"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Example Content",
+              "breadcrumb": "Base - Typography > Example Content",
+              "path": "base_-_typography.html#type-a"
+              },
+            
+              
+              
+              {
+              "title": "Basic Elements",
+              "breadcrumb": "Base - Typography > Basic Elements",
+              "path": "base_-_typography.html#type-variations-a"
+              },
+            
+              
+              
+              {
+              "title": "Headings",
+              "breadcrumb": "Base - Typography > Headings",
+              "path": "base_-_typography.html#type-variations-c"
+              },
+            
+              
+              
+              {
+              "title": "Type Variations",
+              "breadcrumb": "Base - Typography > Type Variations",
+              "path": "base_-_typography.html#type-variations-d"
+              },
+            
+          
+        
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

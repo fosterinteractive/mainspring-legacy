@@ -1,0 +1,44 @@
+// SUMMARY
+//////////
+%summary__container,
+.summary__container {
+  @include leading-border($default-border-width, 0.5);
+  margin-bottom: ru(1);
+  border-color: $black;
+}
+
+// %summary,
+// .summary {
+
+// }
+
+%summary__title,
+.summary__title {
+  margin-top: ru(0.5);
+  margin-bottom: ru(0.5);
+
+  a {
+    @extend %link--black-red;
+  }
+}
+
+%summary__date,
+.summary__date {
+  color: $grey-medium-xdark;
+}
+
+// %summary__subtitle,
+// .summary__subtitle {
+
+// }
+
+%summary__body,
+.summary__body {
+  margin-bottom: ru(0.5);
+}
+
+%summary__btn--icon,
+.summary__btn--icon {
+  @extend %btn--icon-inline;
+}
+

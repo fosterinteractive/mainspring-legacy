@@ -1,0 +1,65 @@
+// // Import Libraries
+// @import '../bower_components/sass-toolkit/stylesheets/toolkit';
+// @import '../bower_components/sassy-maps/sass/sassy-maps';
+// @import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
+// @import '../bower_components/singularity/stylesheets/singularitygs';
+// @import '../bower_components/jacket/stylesheets/jacket';
+
+// // Kickstart
+// @import '../bower_components/sass-toolkit/stylesheets/toolkit/kickstart';
+
+// // Global Config (Doesn not render any CSS)
+
+// @import 'config/functions';
+// @import 'config/variables';
+// @import 'config/mixins';
+// @import 'config/extends';
+
+
+// Styles used for only the styleguide
+
+%styleguide__wrapper,
+.styleguide__wrapper {
+  @extend %clearfix;
+  position: relative;
+  margin-bottom: ru(1);
+  padding: ru(1);
+}
+
+%styleguide__wrapper--lrg,
+.styleguide__wrapper--lrg {
+  @extend %styleguide__wrapper;
+  max-width: em(720px);
+}
+
+// Force display to visible
+
+%styleguide--force-visibile,
+.styleguide--force-visibile,
+.styleguide--force-visibile svg {
+  display: block !important; // scss-lint:disable ImportantRule
+  visibility: visible;
+  opacity: 1;
+}
+
+%styleguide--force-static,
+.styleguide--force-static {
+  position: static !important; // scss-lint:disable ImportantRule
+}
+
+
+
+// Cortana Overrides
+.cortana-content {
+  .clearfix {
+    @extend %clearfix;
+  }
+}
+
+.exampleOutput { // scss-lint:disable SelectorFormat
+  padding: 50px 15px !important; // scss-lint:disable ImportantRule
+}
+
+.cortana-container {
+  max-width: $bp-max !important; // scss-lint:disable ImportantRule
+}

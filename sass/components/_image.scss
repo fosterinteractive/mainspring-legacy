@@ -1,0 +1,98 @@
+/*doc
+---
+title: Inline Images
+name: a-inlineimg
+category: Base - Images
+---
+
+```html_example
+<h2>Full Column Width</h2><!-- Only used in style guide -->
+<picture data-picture-mapping="full_column_img" data-picture-align="">
+  <img data-picture-mapping="full_column_img" data-picture-align="" src="">
+</picture>
+
+<h2>Half Column Width</h2><!-- Only used in style guide -->
+<picture data-picture-mapping="half_column_img" data-picture-align="">
+  <img data-picture-mapping="half_column_img" data-picture-align="" src="">
+</picture>
+```
+*/
+
+/*doc
+---
+title: Alignment Variations
+name: b-align
+category: Base - Images
+---
+
+```html_example
+
+<picture data-picture-mapping="half_column_img" data-picture-align="left">
+  <h2>Align Left</h2><!-- Only used in style guide -->
+  <img data-picture-mapping="half_column_img" data-picture-align="left" src="">
+</picture>
+
+
+<picture data-picture-mapping="half_column_img" data-picture-align="right">
+  <h2>Align Right</h2><!-- Only used in style guide -->
+  <img data-picture-mapping="half_column_img" data-picture-align="right" src="">
+</picture>
+
+
+<picture data-picture-mapping="half_column_img" data-picture-align="center">
+  <h2>Align Center</h2><!-- Only used in style guide -->
+  <img data-picture-mapping="half_column_img" data-picture-align="center" src="">
+</picture>
+```
+*/
+
+
+img,
+picture {
+  display: block;
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+figure {
+  margin: 0;
+}
+
+
+// Inline images
+
+picture {
+  clear: both;
+
+  &[data-picture-mapping ='half_column_img'] {
+
+    @include breakpoint($bp-sml) {
+      width: 50%;
+    }
+  }
+
+  &[data-picture-align='left'] {
+    float: left;
+    padding-right: ru(1);
+  }
+
+  &[data-picture-align='right'] {
+    float: right;
+    padding-left: ru(1);
+  }
+
+  &[data-picture-align='center'] {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  img {
+    width: 100%;
+  }
+}

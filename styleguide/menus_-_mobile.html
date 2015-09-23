@@ -1,0 +1,1066 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Menus - Mobile</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/styleguide.css">
+      
+        <link rel="stylesheet" href="../css/style.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Components</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="components_-_blockquote.html">Blockquote</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="components_-_masthead.html">Masthead</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_message.html">Message</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_tables.html">Tables</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Base</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="base_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_images.html">Images</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_links.html">Links</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_lists.html">Lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_-_form.html">Form</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_-_typography.html">Typography</a></li>
+              
+            
+          
+          </ul>
+        
+          <h3>Branding</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="branding_-_colors.html">Colors</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Menus</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="menus_-_mobile.html">Mobile</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>Mobile</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#menu-mobile">Mobile Menu</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="menu-mobile" class="styleguide">Mobile Menu</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="styleguide__wrapper--med styleguide__mobile-menu"><!-- Only used in style guide -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__close">
+      <button class="btn--icon--white-red" role="button">
+        <svg class="svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#close"></use></svg>
+        <div class="visually-hidden">Close Menu</div>
+      </button>
+    </div>
+    <ul class="menu">
+      <li class="first expanded menu-mlid-3186 level-1">
+        <a href="http://www.example.com/" id="heating">Heating</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-3811 level-2">
+            <a href="http://www.example.com/" title="">Furnace</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-3816 level-3"><a href="http://www.example.com/" title="">Repair Furnace</a></li>
+              <li class="last leaf menu-mlid-3821 level-3"><a href="http://www.example.com/" title="">Buy Furnace</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-3826 level-2">
+            <a href="http://www.example.com/" title="">Other Heating</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-3831 level-3"><a href="http://www.example.com/" title="">Fireplaces</a></li>
+              <li class="last leaf menu-mlid-3836 level-3"><a href="http://www.example.com/" title="">Rent Water Heaters </a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-3841 level-2">
+            <a href="http://www.example.com/" title="">Ongoing Protection &amp; Maintenance Plans</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-3846 level-3"><a href="http://www.example.com/" title="">Furnace Heating Protection Plan</a></li>
+              <li class="last leaf menu-mlid-3851 level-3"><a href="http://www.example.com/" title="">Complete Furnace Protection </a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-3856 level-2">
+            <a href="http://www.example.com/" title="">Repair</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first last leaf menu-mlid-3861 level-3"><a href="http://www.example.com/" title="">Furnace Repair</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-3866 level-2">
+            <a href="http://www.example.com/" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first last leaf menu-mlid-3871 level-3"><a href="http://www.example.com/" title="">Tools &amp; Resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="expanded active menu-mlid-3191 level-1">
+        <a href="/" id="cooling" class="active">Cooling</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-3201 level-2">
+            <a href="http://example.com" title="">Air Conditioner</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4106 level-3"><a href="http://example.com" title="">Buy Air Conditioner</a></li>
+              <li class="leaf menu-mlid-4107 level-3"><a href="http://example.com" title="">Rent Air Conditioner</a></li>
+              <li class="last leaf menu-mlid-4108 level-3"><a href="http://example.com" title="">Repair Air Conditioner</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4109 level-2">
+            <a href="http://example.com" title="">Protection &amp; Maintenance Plans</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4110 level-3"><a href="http://example.com" title="">Cooling Maintenance Plan</a></li>
+              <li class="leaf menu-mlid-4111 level-3"><a href="http://example.com" title="">Cooling Protection Plan</a></li>
+              <li class="last leaf menu-mlid-4112 level-3"><a href="http://example.com" title="">Cooling Protection Plan with Maintenance</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4113 level-2">
+            <a href="http://example.com" title="">Maintenance &amp; Care</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first last leaf menu-mlid-4114 level-3"><a href="http://example.com" title="">Air Conditioner Maintenance</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4115 level-2">
+            <a href="http://example.com" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first last leaf menu-mlid-4116 level-3"><a href="http://example.com" title="">Tools &amp; Resources</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="expanded active menu-mlid-3196 level-1">
+        <a href="/" id="water" class="active">Water Heaters &amp; Plumbing</a>
+        <ul class="menu js-open" style="display: block;">
+          <li class="first expanded menu-mlid-4117 level-2">
+            <a href="http://example.com" title="">Rental Water Heaters</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4118 level-3"><a href="http://example.com" title="">Water Heater</a></li>
+              <li class="leaf menu-mlid-4119 level-3"><a href="http://example.com" title="">Tankless Water Heater</a></li>
+              <li class="leaf menu-mlid-4120 level-3"><a href="http://example.com" title="">Terms &amp; Conditions</a></li>
+              <li class="last leaf menu-mlid-4121 level-3"><a href="http://example.com" title="">Current Regulations</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4122 level-2">
+            <a href="http://example.com" title="">Plumbing Services</a>
+            <ul class="menu js-open" style="display: block;">
+              <li class="first leaf menu-mlid-4123 level-3"><a href="http://example.com" title="">Plumbing Repair</a></li>
+              <li class="last leaf menu-mlid-4124 level-3"><a href="http://example.com" title="">Plumbing Upgrades</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4125 level-2">
+            <a href="http://example.com" title="">Avoiding Plumbing Hassles</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4126 level-3"><a href="http://example.com" title="">Plumbing &amp; Drain Protection Plan</a></li>
+              <li class="last leaf menu-mlid-4127 level-3"><a href="http://example.com" title="">Total Home 3-in-1 Protection Plan</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4128 level-2">
+            <a href="http://example.com" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4129 level-3"><a href="http://example.com" title="">Tools &amp; Resources</a></li>
+              <li class="leaf menu-mlid-4130 level-3"><a href="http://example.com" title="">How water heater billing works</a></li>
+              <li class="last leaf menu-mlid-4131 level-3"><a href="http://example.com" title="">Picking the right size of Water Heater</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="expanded menu-mlid-4132 level-1">
+        <a href="http://example.com" id="equipment">Equipment Protection</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-4133 level-2">
+            <a href="http://example.com" title="">Maintenance &amp; Repair</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4134 level-3"><a href="http://example.com" title="">Air Conditioner Maintenance</a></li>
+              <li class="leaf menu-mlid-4135 level-3"><a href="http://example.com" title="">Air Conditioner Repair</a></li>
+              <li class="leaf menu-mlid-4136 level-3"><a href="http://example.com" title="">Furnace Maintenance</a></li>
+              <li class="last leaf menu-mlid-4137 level-3"><a href="http://example.com" title="">Furnace Repair</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4138 level-2">
+            <a href="http://example.com" title="">Equipment Protection &amp; Maintenance Plans</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4139 level-3"><a href="http://example.com" title="">Cooling Maintenance Plan</a></li>
+              <li class="leaf menu-mlid-4140 level-3"><a href="http://example.com" title="">Cooling Protection Plan</a></li>
+              <li class="leaf menu-mlid-4141 level-3"><a href="http://example.com" title="">Cooling Protection with Maintenance</a></li>
+              <li class="leaf menu-mlid-4142 level-3"><a href="http://example.com" title="">Heating Protection Plan – Furnace</a></li>
+              <li class="leaf menu-mlid-4143 level-3"><a href="http://example.com" title="">Heating Protection plan – Boiler</a></li>
+              <li class="leaf menu-mlid-4144 level-3"><a href="http://example.com" title="">Complete Furnace Protection</a></li>
+              <li class="leaf menu-mlid-4145 level-3"><a href="http://example.com" title="">Complete Boiler Protection</a></li>
+              <li class="last leaf menu-mlid-4146 level-3"><a href="http://example.com" title="">Plumbing &amp; Drain Protection Plan</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4147 level-2">
+            <a href="http://example.com" title="">Total Home Plans</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4148 level-3"><a href="http://example.com" title="">Total Home 3-in-1</a></li>
+              <li class="last leaf menu-mlid-4149 level-3"><a href="http://example.com" title="">Total Home 6-in-1</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4150 level-2">
+            <a href="http://example.com" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4151 level-3"><a href="http://example.com" title="">Tools and Resources</a></li>
+              <li class="last leaf menu-mlid-4152 level-3"><a href="http://example.com" title="">Current Offers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="expanded active menu-mlid-3206 level-1">
+        <a href="/" id="smarter" class="active">Smarter Living</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-4153 level-2">
+            <a href="http://example.com" title="">Living Well</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4154 level-3"><a href="http://example.com" title="">Duct Cleaning</a></li>
+              <li class="leaf menu-mlid-4155 level-3"><a href="http://example.com" title="">Energy Audit</a></li>
+              <li class="leaf menu-mlid-4156 level-3"><a href="http://example.com" title="">3-in-1 Protection Plans</a></li>
+              <li class="leaf menu-mlid-4157 level-3"><a href="http://example.com" title="">Saving Energy</a></li>
+              <li class="leaf menu-mlid-4158 level-3"><a href="http://example.com" title="">Spring Energy Tips</a></li>
+              <li class="last leaf menu-mlid-4159 level-3"><a href="http://example.com" title="">Tools &amp; Resources</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4160 level-2">
+            <a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Sub-Metering</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4161 level-3"><a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">What is Sub-metering?</a></li>
+              <li class="leaf menu-mlid-4162 level-3"><a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Electricity Sub-metering</a></li>
+              <li class="leaf menu-mlid-4163 level-3"><a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Water Sub-metering</a></li>
+              <li class="leaf menu-mlid-4164 level-3"><a href="https://www.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Thermal Sub-metering</a></li>
+              <li class="leaf menu-mlid-4165 level-3"><a href="https://www.enercare.ca/residents-condoapartment" title="">Sub-metering for Residents</a></li>
+              <li class="leaf menu-mlid-4166 level-3"><a href="https://www.enercare.ca/property-managers-and-building-owners" title="">Sub-metering for Property Managers</a></li>
+              <li class="last leaf menu-mlid-4167 level-3"><a href="https://www.enercare.ca/new-construction-developers-0" title="">Sub-metering for New Construction Developers</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4168 level-2">
+            <a href="http://example.com" title="">Learn More</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4169 level-3"><a href="http://example.com" title="">Tools and Resources</a></li>
+              <li class="last leaf menu-mlid-4170 level-3"><a href="http://example.com" title="">Current Offers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="last expanded active menu-mlid-3211 level-1">
+        <a href="/" id="customer" class="active">Customer Care</a>
+        <ul class="menu js-closed" style="display: none;">
+          <li class="first expanded menu-mlid-4171 level-2">
+            <a href="http://example.com" title="">Customer Care</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4172 level-3"><a href="http://example.com" title="">Contact Us</a></li>
+              <li class="leaf menu-mlid-4173 level-3"><a href="https://myenercare.ca/" title="">Login to MyEnerCare</a></li>
+              <li class="last leaf menu-mlid-4174 level-3"><a href="http://example.com" title="">Current Offers</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4175 level-2">
+            <a href="http://example.com" title="">Billing &amp; Account Enquiries</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4176 level-3"><a href="http://example.com" title="">Contact Us</a></li>
+              <li class="leaf menu-mlid-4177 level-3"><a href="https://www.enercare.ca/billing-faqs" title="">Billing FAQs</a></li>
+              <li class="leaf menu-mlid-4178 level-3"><a href="https://www.enercare.ca/moving-out" title="">Moving?</a></li>
+              <li class="last leaf menu-mlid-4179 level-3"><a href="http://example.com" title="">E-Billing for Sub-metering customers?</a></li>
+            </ul>
+          </li>
+          <li class="expanded menu-mlid-4180 level-2">
+            <a href="http://example.com" title="">Before you call</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4181 level-3"><a href="http://example.com" title="">Smarter living article #1</a></li>
+              <li class="last leaf menu-mlid-4182 level-3"><a href="http://example.com" title="">Smarter living article #2</a></li>
+            </ul>
+          </li>
+          <li class="last expanded menu-mlid-4183 level-2">
+            <a href="http://example.com" title="">Learn more</a>
+            <ul class="menu js-closed" style="display: none;">
+              <li class="first leaf menu-mlid-4184 level-3"><a href="http://example.com" title="">Tools &amp; Resources</a></li>
+              <li class="last leaf menu-mlid-4185 level-3"><a href="http://example.com" title="">Current Offers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="menu"><li class="first leaf menu-mlid-4401 level-1"><a href="http://business.enercare.ca" title="">Builder Program</a></li>
+      <li class="leaf menu-mlid-4406 level-1"><a href="https://www.directenergy.com/ontario/commercialservices/" title="">Commercial HVAC</a></li>
+      <li class="leaf menu-mlid-4411 level-1"><a href="https://business.enercare.ca/sub-metering-electricity-water-and-thermal" title="">Metered Services </a></li>
+      <li class="last leaf menu-mlid-4416 level-1"><a href="http://business.enercare.ca" title="">Previous Enercare Home</a></li>
+    </ul>
+
+    <ul class="menu"><li class="first leaf menu-mlid-4026 level-1"><a href="http://google.ca" title="">MyEnercare</a></li>
+      <li class="leaf menu-mlid-4031 level-1"><a href="http://google.ca" title="">Careers</a></li>
+      <li class="leaf menu-mlid-4036 level-1"><a href="http://google.ca" title="">Corporate Policies</a></li>
+      <li class="leaf menu-mlid-4041 level-1"><a href="http://google.ca" title="">Investor Relations</a></li>
+      <li class="last leaf menu-mlid-4046 level-1"><a href="http://google.ca" title="">Sitemap</a></li>
+    </ul>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper--med styleguide__mobile-menu"</span><span class="nt">&gt;</span><span class="c">&lt;!-- Only used in style guide --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mobile-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mobile-menu__close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn--icon--white-red"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg"</span><span class="nt">&gt;&lt;use</span> <span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span> <span class="na">xlink:href=</span><span class="s">"/sites/all/themes/enercare/svg/sprite-ui.svg#close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Close Menu<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first expanded menu-mlid-3186 level-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">id=</span><span class="s">"heating"</span><span class="nt">&gt;</span>Heating<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first expanded menu-mlid-3811 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Furnace<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-3816 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Repair Furnace<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-3821 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Buy Furnace<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-3826 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Other Heating<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-3831 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Fireplaces<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-3836 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Rent Water Heaters <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-3841 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Ongoing Protection <span class="ni">&amp;amp;</span> Maintenance Plans<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-3846 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Furnace Heating Protection Plan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-3851 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Complete Furnace Protection <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-3856 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Repair<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first last leaf menu-mlid-3861 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Furnace Repair<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last expanded menu-mlid-3866 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Learn more<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first last leaf menu-mlid-3871 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.example.com/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Tools <span class="ni">&amp;amp;</span> Resources<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded active menu-mlid-3191 level-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">id=</span><span class="s">"cooling"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Cooling<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first expanded menu-mlid-3201 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Air Conditioner<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4106 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Buy Air Conditioner<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4107 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Rent Air Conditioner<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4108 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Repair Air Conditioner<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4109 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Protection <span class="ni">&amp;amp;</span> Maintenance Plans<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4110 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Cooling Maintenance Plan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4111 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Cooling Protection Plan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4112 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Cooling Protection Plan with Maintenance<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4113 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Maintenance <span class="ni">&amp;amp;</span> Care<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first last leaf menu-mlid-4114 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Air Conditioner Maintenance<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last expanded menu-mlid-4115 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Learn more<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first last leaf menu-mlid-4116 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Tools <span class="ni">&amp;amp;</span> Resources<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded active menu-mlid-3196 level-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">id=</span><span class="s">"water"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Water Heaters <span class="ni">&amp;amp;</span> Plumbing<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-open"</span> <span class="na">style=</span><span class="s">"display: block;"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first expanded menu-mlid-4117 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Rental Water Heaters<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4118 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Water Heater<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4119 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Tankless Water Heater<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4120 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Terms <span class="ni">&amp;amp;</span> Conditions<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4121 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Current Regulations<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4122 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Plumbing Services<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-open"</span> <span class="na">style=</span><span class="s">"display: block;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4123 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Plumbing Repair<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4124 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Plumbing Upgrades<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4125 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Avoiding Plumbing Hassles<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4126 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Plumbing <span class="ni">&amp;amp;</span> Drain Protection Plan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4127 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Total Home 3-in-1 Protection Plan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last expanded menu-mlid-4128 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Learn more<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4129 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Tools <span class="ni">&amp;amp;</span> Resources<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4130 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>How water heater billing works<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4131 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Picking the right size of Water Heater<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4132 level-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">id=</span><span class="s">"equipment"</span><span class="nt">&gt;</span>Equipment Protection<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first expanded menu-mlid-4133 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Maintenance <span class="ni">&amp;amp;</span> Repair<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4134 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Air Conditioner Maintenance<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4135 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Air Conditioner Repair<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4136 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Furnace Maintenance<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4137 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Furnace Repair<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4138 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Equipment Protection <span class="ni">&amp;amp;</span> Maintenance Plans<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4139 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Cooling Maintenance Plan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4140 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Cooling Protection Plan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4141 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Cooling Protection with Maintenance<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4142 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Heating Protection Plan – Furnace<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4143 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Heating Protection plan – Boiler<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4144 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Complete Furnace Protection<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4145 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Complete Boiler Protection<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4146 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Plumbing <span class="ni">&amp;amp;</span> Drain Protection Plan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4147 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Total Home Plans<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4148 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Total Home 3-in-1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4149 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Total Home 6-in-1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last expanded menu-mlid-4150 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Learn more<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4151 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Tools and Resources<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4152 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Current Offers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded active menu-mlid-3206 level-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">id=</span><span class="s">"smarter"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Smarter Living<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first expanded menu-mlid-4153 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Living Well<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4154 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Duct Cleaning<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4155 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Energy Audit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4156 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>3-in-1 Protection Plans<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4157 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Saving Energy<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4158 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Spring Energy Tips<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4159 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Tools <span class="ni">&amp;amp;</span> Resources<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4160 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/sub-metering-electricity-water-and-thermal"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Sub-Metering<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4161 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/sub-metering-electricity-water-and-thermal"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>What is Sub-metering?<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4162 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/sub-metering-electricity-water-and-thermal"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Electricity Sub-metering<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4163 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/sub-metering-electricity-water-and-thermal"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Water Sub-metering<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4164 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/sub-metering-electricity-water-and-thermal"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Thermal Sub-metering<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4165 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/residents-condoapartment"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Sub-metering for Residents<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4166 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/property-managers-and-building-owners"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Sub-metering for Property Managers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4167 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/new-construction-developers-0"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Sub-metering for New Construction Developers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last expanded menu-mlid-4168 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Learn More<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4169 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Tools and Resources<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4170 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Current Offers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last expanded active menu-mlid-3211 level-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">id=</span><span class="s">"customer"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Customer Care<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first expanded menu-mlid-4171 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Customer Care<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4172 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Contact Us<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4173 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://myenercare.ca/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Login to MyEnerCare<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4174 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Current Offers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4175 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Billing <span class="ni">&amp;amp;</span> Account Enquiries<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4176 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Contact Us<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4177 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/billing-faqs"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Billing FAQs<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4178 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.enercare.ca/moving-out"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Moving?<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4179 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>E-Billing for Sub-metering customers?<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"expanded menu-mlid-4180 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Before you call<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4181 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Smarter living article #1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4182 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Smarter living article #2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last expanded menu-mlid-4183 level-2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Learn more<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu js-closed"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4184 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Tools <span class="ni">&amp;amp;</span> Resources<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4185 level-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Current Offers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4401 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://business.enercare.ca"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Builder Program<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4406 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.directenergy.com/ontario/commercialservices/"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Commercial HVAC<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4411 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://business.enercare.ca/sub-metering-electricity-water-and-thermal"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Metered Services <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4416 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://business.enercare.ca"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Previous Enercare Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;&lt;li</span> <span class="na">class=</span><span class="s">"first leaf menu-mlid-4026 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://google.ca"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>MyEnercare<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4031 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://google.ca"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Careers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4036 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://google.ca"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Corporate Policies<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"leaf menu-mlid-4041 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://google.ca"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Investor Relations<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"last leaf menu-mlid-4046 level-1"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://google.ca"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>Sitemap<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Blockquote",
+              "breadcrumb": "Components - Blockquote > Blockquote",
+              "path": "components_-_blockquote.html#a-blockquote"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "SVG Icons - UI",
+              "breadcrumb": "Base Icons > SVG Icons - UI",
+              "path": "base_icons.html#a-icons"
+              },
+            
+              
+              
+              {
+              "title": "SVG Icons - Products",
+              "breadcrumb": "Base Icons > SVG Icons - Products",
+              "path": "base_icons.html#b-icons"
+              },
+            
+              
+              
+              {
+              "title": "SVG Icons - Social",
+              "breadcrumb": "Base Icons > SVG Icons - Social",
+              "path": "base_icons.html#c-icons"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Inline Images",
+              "breadcrumb": "Base - Images > Inline Images",
+              "path": "base_-_images.html#a-inlineimg"
+              },
+            
+              
+              
+              {
+              "title": "Alignment Variations",
+              "breadcrumb": "Base - Images > Alignment Variations",
+              "path": "base_-_images.html#b-align"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Links",
+              "breadcrumb": "Base - Links > Links",
+              "path": "base_-_links.html#a-links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Unordered List",
+              "breadcrumb": "Base - Lists > Unordered List",
+              "path": "base_-_lists.html#a-lists"
+              },
+            
+              
+              
+              {
+              "title": "Ordered list",
+              "breadcrumb": "Base - Lists > Ordered list",
+              "path": "base_-_lists.html#b-lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Masthead",
+              "breadcrumb": "Components - Masthead > Masthead",
+              "path": "components_-_masthead.html#a-masthead"
+              },
+            
+              
+              
+              {
+              "title": "Masthead Tall",
+              "breadcrumb": "Components - Masthead > Masthead Tall",
+              "path": "components_-_masthead.html#b-masthead"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Message",
+              "breadcrumb": "Components - Message > Message",
+              "path": "components_-_message.html#a-message"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Table",
+              "breadcrumb": "Components - Tables > Table",
+              "path": "components_-_tables.html#a-tables"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Colors",
+              "breadcrumb": "Branding - Colors > Colors",
+              "path": "branding_-_colors.html#color"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Input Boxes",
+              "breadcrumb": "Base - Form > Input Boxes",
+              "path": "base_-_form.html#form-01"
+              },
+            
+              
+              
+              {
+              "title": "Check Boxes",
+              "breadcrumb": "Base - Form > Check Boxes",
+              "path": "base_-_form.html#form-02-check"
+              },
+            
+              
+              
+              {
+              "title": "Radio",
+              "breadcrumb": "Base - Form > Radio",
+              "path": "base_-_form.html#form-03-radio"
+              },
+            
+              
+              
+              {
+              "title": "Form Layout Styles",
+              "breadcrumb": "Base - Form > Form Layout Styles",
+              "path": "base_-_form.html#form-04-layout"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Mobile Menu",
+              "breadcrumb": "Menus - Mobile > Mobile Menu",
+              "path": "menus_-_mobile.html#menu-mobile"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Example Content",
+              "breadcrumb": "Base - Typography > Example Content",
+              "path": "base_-_typography.html#type-a"
+              },
+            
+              
+              
+              {
+              "title": "Basic Elements",
+              "breadcrumb": "Base - Typography > Basic Elements",
+              "path": "base_-_typography.html#type-variations-a"
+              },
+            
+              
+              
+              {
+              "title": "Headings",
+              "breadcrumb": "Base - Typography > Headings",
+              "path": "base_-_typography.html#type-variations-c"
+              },
+            
+              
+              
+              {
+              "title": "Type Variations",
+              "breadcrumb": "Base - Typography > Type Variations",
+              "path": "base_-_typography.html#type-variations-d"
+              },
+            
+          
+        
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

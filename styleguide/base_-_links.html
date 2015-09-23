@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Base - Links</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/styleguide.css">
+      
+        <link rel="stylesheet" href="../css/style.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Components</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="components_-_blockquote.html">Blockquote</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="components_-_masthead.html">Masthead</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_message.html">Message</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_tables.html">Tables</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Base</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="base_icons.html">Icons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_images.html">Images</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a class="active" href="base_-_links.html">Links</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_lists.html">Lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_-_form.html">Form</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_-_typography.html">Typography</a></li>
+              
+            
+          
+          </ul>
+        
+          <h3>Branding</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="branding_-_colors.html">Colors</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Menus</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="menus_-_mobile.html">Mobile</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>Links</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#a-links">Links</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="a-links" class="styleguide">Links</h1>
+
+<h2>Link Colours on Light</h2>
+</div><div class="codeExample"><div class="exampleOutput"><div class="styleguide__wrapper styleguide__links"><!--only used in style guide-->
+  <p><a href="#">Default Link</a></p>
+  <p><a href="#" class="link--black-red">Black To Red Link</a></p>
+</div>
+
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper styleguide__links"</span><span class="nt">&gt;</span><span class="c">&lt;!--only used in style guide--&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Default Link<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"link--black-red"</span><span class="nt">&gt;</span>Black To Red Link<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</pre></div></div></div><div class="cortana-content">
+<h2>Link Colours on Dark</h2>
+</div><div class="codeExample"><div class="exampleOutput"><div class="styleguide__wrapper-black"><!--only used in style guide-->
+  <p><a href="#" class="link--grey">Grey to White Link</a></p>
+  <p><a href="#" class="link--white-red">White To Red Link</a></p>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styleguide__wrapper-black"</span><span class="nt">&gt;</span><span class="c">&lt;!--only used in style guide--&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"link--grey"</span><span class="nt">&gt;</span>Grey to White Link<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"link--white-red"</span><span class="nt">&gt;</span>White To Red Link<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h2>Inline Links</h2>
+</div><div class="codeExample"><div class="exampleOutput"><ul class="inline-links">
+  <li><a href="#">Lorem</a></li>
+  <li><a href="#">Consectetur</a></li>
+  <li><a href="#">Vestibulum</a></li>
+</ul>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"inline-links"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Lorem<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Consectetur<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Vestibulum<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Blockquote",
+              "breadcrumb": "Components - Blockquote > Blockquote",
+              "path": "components_-_blockquote.html#a-blockquote"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "SVG Icons - UI",
+              "breadcrumb": "Base Icons > SVG Icons - UI",
+              "path": "base_icons.html#a-icons"
+              },
+            
+              
+              
+              {
+              "title": "SVG Icons - Products",
+              "breadcrumb": "Base Icons > SVG Icons - Products",
+              "path": "base_icons.html#b-icons"
+              },
+            
+              
+              
+              {
+              "title": "SVG Icons - Social",
+              "breadcrumb": "Base Icons > SVG Icons - Social",
+              "path": "base_icons.html#c-icons"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Inline Images",
+              "breadcrumb": "Base - Images > Inline Images",
+              "path": "base_-_images.html#a-inlineimg"
+              },
+            
+              
+              
+              {
+              "title": "Alignment Variations",
+              "breadcrumb": "Base - Images > Alignment Variations",
+              "path": "base_-_images.html#b-align"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Links",
+              "breadcrumb": "Base - Links > Links",
+              "path": "base_-_links.html#a-links"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Unordered List",
+              "breadcrumb": "Base - Lists > Unordered List",
+              "path": "base_-_lists.html#a-lists"
+              },
+            
+              
+              
+              {
+              "title": "Ordered list",
+              "breadcrumb": "Base - Lists > Ordered list",
+              "path": "base_-_lists.html#b-lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Masthead",
+              "breadcrumb": "Components - Masthead > Masthead",
+              "path": "components_-_masthead.html#a-masthead"
+              },
+            
+              
+              
+              {
+              "title": "Masthead Tall",
+              "breadcrumb": "Components - Masthead > Masthead Tall",
+              "path": "components_-_masthead.html#b-masthead"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Message",
+              "breadcrumb": "Components - Message > Message",
+              "path": "components_-_message.html#a-message"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Table",
+              "breadcrumb": "Components - Tables > Table",
+              "path": "components_-_tables.html#a-tables"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Colors",
+              "breadcrumb": "Branding - Colors > Colors",
+              "path": "branding_-_colors.html#color"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Input Boxes",
+              "breadcrumb": "Base - Form > Input Boxes",
+              "path": "base_-_form.html#form-01"
+              },
+            
+              
+              
+              {
+              "title": "Check Boxes",
+              "breadcrumb": "Base - Form > Check Boxes",
+              "path": "base_-_form.html#form-02-check"
+              },
+            
+              
+              
+              {
+              "title": "Radio",
+              "breadcrumb": "Base - Form > Radio",
+              "path": "base_-_form.html#form-03-radio"
+              },
+            
+              
+              
+              {
+              "title": "Form Layout Styles",
+              "breadcrumb": "Base - Form > Form Layout Styles",
+              "path": "base_-_form.html#form-04-layout"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Mobile Menu",
+              "breadcrumb": "Menus - Mobile > Mobile Menu",
+              "path": "menus_-_mobile.html#menu-mobile"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Example Content",
+              "breadcrumb": "Base - Typography > Example Content",
+              "path": "base_-_typography.html#type-a"
+              },
+            
+              
+              
+              {
+              "title": "Basic Elements",
+              "breadcrumb": "Base - Typography > Basic Elements",
+              "path": "base_-_typography.html#type-variations-a"
+              },
+            
+              
+              
+              {
+              "title": "Headings",
+              "breadcrumb": "Base - Typography > Headings",
+              "path": "base_-_typography.html#type-variations-c"
+              },
+            
+              
+              
+              {
+              "title": "Type Variations",
+              "breadcrumb": "Base - Typography > Type Variations",
+              "path": "base_-_typography.html#type-variations-d"
+              },
+            
+          
+        
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

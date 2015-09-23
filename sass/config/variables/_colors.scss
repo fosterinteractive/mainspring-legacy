@@ -1,0 +1,37 @@
+/*doc
+---
+title: Colors
+name: color
+category: Branding - Colors
+---
+
+
+*/
+
+$black: #040303;
+$white: #ffffff;
+
+// Greys
+
+
+// $grey-medium-medium-light: mix($grey-medium, $grey-medium-light, 0.1);
+// $grey-medium-medium-light: $grey-medium;
+
+// Main Colors
+
+// Shadow Color
+
+$shadow: rgba($black, 0.5);
+
+//Messages Colors
+$m-red-light: #fef5f1;
+$m-red-dark: #8c2e0b;
+
+// Array of colors for /config/mixin/_debug-layout.scss
+$debug-blue: rgb(0, 0, 160);
+$debug-red: rgb(160, 0, 0);
+$debug-green: rgb(0, 160, 0);
+
+$debug-colors: $debug-red, $debug-green, $debug-blue !global;
+
+

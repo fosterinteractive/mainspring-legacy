@@ -1,0 +1,237 @@
+// SVG Global Styles
+
+// Default Color fill
+svg {
+  fill: currentColor;
+}
+
+
+// 2 color Fills for SVG
+// NOTE: requires use of <path fill="currentColor" d="...."/> on the "background"
+%svg--white-on-red,
+.svg--white-on-red {
+  fill: $white;
+  color: $red;
+}
+
+%svg--red-on-white,
+.svg--red-on-white {
+  fill: $red;
+  color: $white;
+}
+
+%svg--black-on-white,
+.svg--black-on-white {
+  fill: $black;
+  color: $white;
+}
+
+.icon-svg {
+  @extend %svg--large;
+}
+
+///// Scale in proportion, fluid width SVGs
+// Allowing fully fluid SVG's
+// Based on http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
+
+%svg__wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+// Apply this mixin to the svg's wrapper
+@mixin svg-wrapper($intristic-ratio) {
+  @extend %svg__wrapper;
+  @include ir($intristic-ratio);
+}
+
+// Extend the Actual SVG with placeholder
+
+%svg__core,
+.svg__core {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%svg--large {
+  width: ru(2);
+  height: ru(2);
+}
+
+// Fixed size, centered SVG in fixed size container
+// Include from container
+
+@mixin svg-centered($svg-width, $svg-height, $wrapper-width, $wrapper-height, $svg-class: svg) {
+
+  @if ($wrapper-width < $svg-width or $wrapper-height < $svg-height) {
+    @error ('Wrapper can not be larger the the svg');
+  }
+
+  position: relative;
+  width: $wrapper-width;
+  height: $wrapper-height;
+
+  .#{$svg-class} {
+    position: absolute;
+    top: ($wrapper-height - $svg-height) / 2;
+    left: ($wrapper-width - $svg-width) / 2;
+    width: $svg-width;
+    height: $svg-height;
+  }
+}
+
+// Prefix icon with a mult-line link with vertically centered (middle or top) svg to the left
+// Apply to parent container with an SVG of the specified class inside
+
+$baseline: rem($base-line-height) !default;
+
+@mixin svg-inline(
+  $baseline, // font baseline
+  $svg-width, // SVG width (units same as typography)
+  $svg-height, // SVG height
+  $svg-class, // Class for the SVG inside the parent
+  $svg-pad-right, // padding on left side of SVG
+  $svg-pad-left, // padding on right side of SVG
+  $container-vertical-padding, // Top & bottom padding for container
+  $container-horizontal-padding : 0, // Left and right padding for container
+  $alignment: 'middle') { // Align 'middle' or 'top'
+
+  position: relative;
+  padding-left: $svg-pad-left + $svg-width + $svg-pad-right + $container-horizontal-padding;
+
+  @if ($container-horizontal-padding != '0') {
+    padding-right: $container-horizontal-padding;
+  }
+
+  @if ($container-vertical-padding != 0) {
+    padding-top: $container-vertical-padding;
+    padding-bottom: $container-vertical-padding;
+  }
+
+  // SVG positioning
+  .#{$svg-class} {
+    display: block;
+    position: absolute;
+
+    left: 0 + $svg-pad-left + $container-horizontal-padding;
+    margin-top: (-$svg-height / 2);
+    width: $svg-width;
+    height: $svg-height;
+
+    // SVG vertical positioning
+
+    // Vertical Align icon in middle of parent
+    @if ($alignment == 'middle') {
+      top: 50%;
+    }
+    @if ($alignment == 'top') {
+      top: ($baseline / 2) + $container-vertical-padding;
+    }
+
+  }
+}
+
+/*doc
+---
+title: SVG Icons - UI
+name: a-icons
+category: Base Icons
+---
+
+| Preview                                                                          | Name                    |
+|----------------------------------------------------------------------------------|--------------------------|
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-neg--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-neg--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-neg--outline"></use></svg></div>  | <pre>#arrow-down-neg--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-neg"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-neg"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-neg"></use></svg></div>   | <pre>#arrow-down-neg</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-pos"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-pos"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-down-pos"></use></svg></div>   | <pre>#arrow-down-pos</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-neg--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-neg--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-neg--outline"></use></svg></div>   | <pre>#arrow-left-neg--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-neg"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-neg"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-neg"></use></svg></div>   | <pre>#arrow-left-neg</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-pos-end"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-pos-end"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-pos-end"></use></svg></div>   | <pre>#arrow-left-pos-end</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-pos"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-pos"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-left-pos"></use></svg></div>   | <pre>#arrow-left-pos</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-neg--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-neg--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-neg--outline"></use></svg></div>   | <pre>#arrow-right-neg--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-neg"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-neg"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-neg"></use></svg></div>   | <pre>#arrow-right-neg</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-pos-end"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-pos-end"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-pos-end"></use></svg></div>   | <pre>#arrow-right-pos-end</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-pos"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-pos"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-right-pos"></use></svg></div>   | <pre>#arrow-right-pos</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-neg--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-neg--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-neg--outline"></use></svg></div>   | <pre>#arrow-up-neg--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-neg"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-neg"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-neg"></use></svg></div>   | <pre>#arrow-up-neg</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-pos"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-pos"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#arrow-up-pos"></use></svg></div>   | <pre>#arrow-up-pos</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#attention"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#attention"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#attention"></use></svg></div>   | <pre>#attention</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#chevron-right"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#chevron-right"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#chevron-right"></use></svg></div>   | <pre>#chevron-right</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#close--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#close--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#close--outline"></use></svg></div>   | <pre>#close--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#close"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#close"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#close"></use></svg></div>   | <pre>#close</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#download"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#download"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#download"></use></svg></div>   | <pre>#download</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#flag"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#flag"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#flag"></use></svg></div>   | <pre>#flag</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#info"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#info"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#info"></use></svg></div>   | <pre>#info</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#link"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#link"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#link"></use></svg></div>   | <pre>#link</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#logo"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#logo"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#logo"></use></svg></div>   | <pre>#logo</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#menu"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#menu"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#menu"></use></svg></div>   | <pre>#menu</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#more"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#more"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#more"></use></svg></div>   | <pre>#more</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#pencil"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#pencil"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#pencil"></use></svg></div>   | <pre>#pencil</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#pin"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#pin"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#pin"></use></svg></div>   | <pre>#pin</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#play"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#play"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#play"></use></svg></div>   | <pre>#play</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#search"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#search"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#search"></use></svg></div>   | <pre>#search</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#settings"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#settings"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#settings"></use></svg></div>   | <pre>#settings</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#tel--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#tel--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#tel--outline"></use></svg></div>   | <pre>#tel--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#tel"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#tel"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#tel"></use></svg></div>   | <pre>#tel</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#text-bubbles--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#text-bubbles--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#text-bubbles--outline"></use></svg></div>   | <pre>#text-bubbles--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#zoom-in"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#zoom-in"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#zoom-in"></use></svg></div>   | <pre>#zoom-in</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#zoom-out"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#zoom-out"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#zoom-out"></use></svg></div>   | <pre>#zoom-out</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#furnace"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#furnace"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#furnace"></use></svg></div>   | <pre>#furnace</pre>  |
+<div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#plumbing"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#plumbing"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-ui.svg#plumbing"></use></svg></div>   | <pre>#plumbing</pre>  |
+<div class="clearfix"></div>
+*/
+
+
+/*doc
+---
+title: SVG Icons - Products
+name: b-icons
+category: Base Icons
+---
+
+| Preview                                                                          | Name                    |
+|----------------------------------------------------------------------------------|--------------------------|
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#flame"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#flame"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#flame"></use></svg></div>  | <pre>#flame</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#leaf"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#leaf"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#leaf"></use></svg></div>  | <pre>#leaf</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#light-bulb"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#light-bulb"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#light-bulb"></use></svg></div>  | <pre>#light-bulb</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#person"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#person"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#person"></use></svg></div>  | <pre>#person</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#shield"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#shield"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#shield"></use></svg></div>  |  <pre>#shield</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#snow"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#snow"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#snow"></use></svg></div>  |  <pre>#snow</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#water"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#water"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#water"></use></svg></div>  |  <pre>#water</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#best-advice"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#best-advice"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#best-advice"></use></svg></div>  |  <pre>#best-advice</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#homecare"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#homecare"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#homecare"></use></svg></div>  |  <pre>#homecare</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#redcarpet"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#redcarpet"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#redcarpet"></use></svg></div>  |  <pre>#redcarpet</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#safety"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#safety"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#safety"></use></svg></div>  |  <pre>#safety</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#sameday"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#sameday"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#sameday"></use></svg></div>  |  <pre>#sameday</pre>  |
+|  <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#training"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#training"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#training"></use></svg></div>  |  <pre>#training</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#tel"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#tel"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-products.svg#tel"></use></svg></div>   | <pre>#tel</pre>  |
+
+<div class="clearfix"></div>
+*/
+
+/*doc
+---
+title: SVG Icons - Social
+name: c-icons
+category: Base Icons
+---
+<p>Sprite not being loaded/used</p>
+
+| Preview                                                                          | Name                    |
+|----------------------------------------------------------------------------------|--------------------------|
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#facebook"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#facebook"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#facebook"></use></svg></div>  |  <pre>#facebook</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#facebook--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#facebook--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#facebook--outline"></use></svg></div> |  <pre>#facebook--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#linkedin"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#linkedin"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#linkedin"></use></svg></div>  |  <pre>#linkedin</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#linkedin--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#linkedin--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#linkedin--outline"></use></svg></div>  |  <pre>#linkedin--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#pinterest"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#pinterest"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#pinterest"></use></svg></div>  |  <pre>#pinterest</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#pinterest--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#pinterest--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#pinterest--outline"></use></svg></div>  |  <pre>#pinterest--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#twitter"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#twitter"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#twitter"></use></svg></div>  |  <pre>#twitter</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#twitter--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#twitter--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#twitter--outline"></use></svg></div>  |  <pre>twitter--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#youtube"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#youtube"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#youtube"></use></svg></div>  |  <pre>#youtube</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#youtube--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#youtube--outline"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#youtube--outline"></use></svg></div>  |  <pre>#youtube--outline</pre>  |
+| <div class="styleguide__wrapper--icon"><svg class="svg__core svg--black-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#share"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--red-on-white"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#share"></use></svg></div> <div class="styleguide__wrapper--icon"><svg class="svg__core svg--white-on-red"><use xlink:href="/sites/all/themes/enercare/svg/sprite-social.svg#share"></use></svg></div>  |  <pre>#share</pre>  |
+<div class="clearfix"></div>
+*/

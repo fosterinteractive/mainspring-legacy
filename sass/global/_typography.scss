@@ -1,0 +1,328 @@
+@viewport {
+  width: device-width;
+}
+
+// LOAD FONTS
+
+// @include font-face('My Font', $fonts-medium-italic, bold, italic);
+
+// Set Base Fonts
+// scss-lint:disable VendorPrefix
+html {
+  background-color: $white;
+  line-height: strip-unit($base-line-height / $base-font-size);
+  color: $grey-xdark;
+  font-family: $body-font;
+}
+// scss-lint:enable VendorPrefix
+
+@include establish-baseline($base-font-size);
+
+/*doc
+---
+title: Example Content
+name: type-a
+category: Base - Typography
+---
+
+All styles appear in /global/_typography.scss
+
+```html_example
+<div class="styleguide__wrapper styleguide__type">
+<h1>H1 - Heading Level 1</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar finibus diam, eget sagittis est hendrerit et. </p>
+<h2> Heading level 2 -  Pellentesque sed sollicitudin lacus, </h2>
+<p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<h3>Heading level 3 - Maecenas interdum, elit ut accumsan luctus </h3>
+<p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<h4>Heading Level 4 -   Ut sodales, lorem quis ultrices sollicitudin</h4>
+<p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<h5>Heading level 5 - Maecenas interdum, elit ut accumsan luctus </h5>
+<p>1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.</p>
+<h6>Heading level 6 - Maecenas interdum, elit ut accumsan luctus </h6>
+<p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.</p>
+<p>New Paragrpah dolor eleifend dolor, eget suscipit ante erat ac lectus.  <a href="#">This is a text link</a> Ut sodales, lorem quis ultrices sollicitudin
+<strong>Strong is used to indicate strong importance</strong> at cursus erat urna vitae justo. Maecenas interdum
+<em>This text has added emphasis.</em>
+<p>Superscript<sup>®</sup></p>
+<p>Subscript for things like H<sub>2</sub>O</p>
+<p><small>This small text is small for for fine print, etc.</small></p>
+</div>
+```
+*/
+
+
+
+/*doc
+---
+title: Basic Elements
+name: type-variations-a
+category: Base - Typography
+---
+
+<h2>Paragraph</h2>
+
+```html_example
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus. Neque solum ea communia, verum etiam paria esse dixerunt. Sed haec omittamus; Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+```
+
+<h2>Bold &amp; Italic</h2>
+
+```html_example
+<p>
+  <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is in italix</em> Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+```
+*/
+
+p {
+  margin: ru(0.5) 0;
+}
+
+/*doc
+---
+title: Headings
+name: type-variations-c
+category: Base - Typography
+---
+<p>Headings Level 1 &amp; 2 resize at breakpoint large</p>
+
+```html_example
+<h1>My Title Level 1 - 36/52px</h1>
+<h2>My Title Level 2 - 28/32px</h2>
+<h3>My Title Level 3 - 23px</h3>
+<h4>My Title Level 4 - 19px</h4>
+<h5>My Title Level 5 - 17px</h5>
+<h6>My Title Level 6 - 15px</h6>
+```
+*/
+
+%heading-font {
+  margin: ru(1) 0 ru(0.5);
+  font-family: $title-font;
+  font-weight: $title-font-weight;
+}
+
+h1,
+.h1,
+%h1 {
+  @extend %heading-font;
+  @include adjust-font-size-to($h1-font-size);
+
+  @include breakpoint($bp-lrg) {
+    @include adjust-font-size-to($h1-font-size--bp-lrg);
+  }
+}
+
+h2,
+.h2,
+%h2 {
+  @extend %heading-font;
+  @include adjust-font-size-to($h2-font-size);
+
+  @include breakpoint($bp-lrg) {
+    @include adjust-font-size-to($h2-font-size--bp-lrg, 1.5);
+  }
+}
+
+%h2--tall,
+.h2--tall {
+  @extend %h2;
+
+  @include breakpoint($bp-lrg) {
+    @include adjust-font-size-to($h2-font-size--bp-lrg, 1.75);
+  }
+}
+
+%h2--lrgspace,
+.h2--lrgspace {
+  @extend %h2;
+  margin-bottom: ru(1.5);
+}
+
+%h2--no-margin,
+.h2--no-margin {
+  @extend %h2;
+  margin: 0;
+}
+
+h3,
+.h3,
+%h3 {
+  @extend %heading-font;
+  @extend %t--xlarge;
+}
+
+h4,
+.h4,
+%h4 {
+  @extend %heading-font;
+  @extend %t--large;
+}
+
+h5,
+.h5,
+%h5 {
+  @extend %heading-font;
+  @extend %t--medium;
+}
+
+h6,
+.h6,
+%h6 {
+  @extend %heading-font;
+  @include adjust-font-size-to($h6-font-size);
+}
+
+////////////////////////
+// Type Color Variations
+////////////////////////
+
+/*doc
+---
+title: Type Variations
+name: type-variations-d
+category: Base - Typography
+---
+
+<h2>Color Variations</h2>
+
+```html_example
+<div class="styleguide__wrapper--med-black styleguide__color-variations"><!-- Only used in style guide -->
+  <p class="t--white">White Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--grey-medium">Grey-Medium Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--grey-dark">Grey-Dark Paragraph Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+</div>
+```
+
+<h2>Size Variations</h2>
+
+```html_example
+<div class="styleguide__wrapper"><!-- Only used in style guide -->
+  <p class="t--xsmall">X-Small Paragraph. 11.5px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--small">Small Paragraph. 13px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p> Default Paragraph. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--medium">Medium Paragraph. 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--large">Large Paragraph. 19px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--xlarge">X-Large Paragraph. 23px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--xxlarge">XX-Large Paragraph. 28/34px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--xxxlarge">XXX-Large Paragraph. 34/48px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+
+</div>
+```
+
+<h2>Line height Variations</h2>
+
+```html_example
+<div class="styleguide__wrapper"><!-- Only used in style guide -->
+  <p class="t--short">Short Line Height Paragraph. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+</div>
+
+<div class="styleguide__wrapper"><!-- Only used in style guide -->
+  <p>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--trailer">Extra Bottom Margin. 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p>Default Paragraph 15px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+</div>
+
+<div class="styleguide__wrapper"><!-- Only used in style guide -->
+  <p class="t--medium">Medium Default Paragraph 17px / 23px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--medium-xlineheight">Medium Tall Paragraph 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+  <p class="t--medium">Medium Default Paragraph 17px - Lorem ipsum dolor sit amet, id eum ignota audire, detraxit posidonium sed cu. Ut usu tincidunt interesset. Eos idque dicta ridens ei, elitr corrumpit ea vis.</p>
+</div>
+
+```
+
+<h2>Size &amp; Style Variations</h2>
+
+```html_example
+<div class="styleguide__wrapper--med-black t--white"><!-- Only used in style guide -->
+    <p class="t--medium-caps">Emergency response </br />
+    24/7 Call Support Center</p>
+    <p >Electricity, Water & Thermal Sub-metering<br />
+    <span class="t--large-bold-caps">1-866-449-4423</span>
+    </p>
+    <p >Water Heaters, Furnace & Air Conditioners<br />
+    <span class="t--large-bold-caps">1-866-421-9025</span>
+    </p>
+</div>
+```
+*/
+
+// Colors
+%t--white,
+.t--white {
+  color: $white;
+}
+
+%t--grey-medium,
+.t--grey-medium {
+  color: $grey-medium;
+}
+
+%t--grey-dark-medium,
+.t--grey-dark-medium {
+  color: $grey-medium-xdark;
+}
+
+%t--red,
+.t--red {
+  color: $red;
+}
+
+// %t--grey-dark,
+// .t--grey-dark {
+//   color: $grey-dark;
+// }
+
+// Size
+%t--xsmall,
+.t--xsmall {
+  @include adjust-font-size-to($xsmall-font-size);
+}
+
+%t--small,
+.t--small {
+  @include adjust-font-size-to($small-font-size);
+}
+
+%t--medium,
+.t--medium {
+  @include adjust-font-size-to($medium-font-size);
+}
+
+%t--large,
+.t--large {
+  @include adjust-font-size-to($large-font-size);
+}
+
+%t--xlarge,
+.t--xlarge {
+  @include adjust-font-size-to($xlarge-font-size);
+}
+
+
+// Medium with Extra lineheight
+%t--medium-xlineheight,
+.t--medium-xlineheight {
+  @include adjust-font-size-to($medium-font-size, 1.25);
+}
+
+// Sizes / Font Variations
+
+%t--caps,
+.t--caps {
+  text-transform: uppercase;
+}
+
+
+
+%hr,
+hr {
+  display: block;
+  margin: ru(1) 0;
+  border-style: solid;
+  border-color: $red;
+}

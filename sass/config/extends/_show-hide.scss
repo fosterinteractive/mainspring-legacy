@@ -1,0 +1,33 @@
+%clearfix {
+  // @include clearfix;
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%text-hide {
+  @include text-hide;
+}
+
+%visuallyhidden,
+%visually-hidden,
+.visuallyhidden,
+.visually-hidden {
+  @include visuallyhidden;
+}
+
+%hidden,
+.hidden {
+  display: none;
+}
+
+%visible,
+.visible {
+  display: block;
+}

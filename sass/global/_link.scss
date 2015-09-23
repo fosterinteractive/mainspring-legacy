@@ -1,0 +1,85 @@
+/*doc
+---
+title: Links
+name: a-links
+category: Base - Links
+---
+
+<h2>Link Colours on Light</h2>
+```html_example
+<div class="styleguide__wrapper styleguide__links"><!--only used in style guide-->
+  <p><a href="#">Default Link</a></p>
+  <p><a href="#" class="link--black-red">Black To Red Link</a></p>
+</div>
+
+```
+
+<h2>Link Colours on Dark</h2>
+
+```html_example
+<div class="styleguide__wrapper-black"><!--only used in style guide-->
+  <p><a href="#" class="link--grey">Grey to White Link</a></p>
+  <p><a href="#" class="link--white-red">White To Red Link</a></p>
+</div>
+```
+
+<h2>Inline Links</h2>
+
+```html_example
+<ul class="inline-links">
+  <li><a href="#">Lorem</a></li>
+  <li><a href="#">Consectetur</a></li>
+  <li><a href="#">Vestibulum</a></li>
+</ul>
+```
+
+*/
+
+%link,
+a {
+  @extend %animate-color--fast;
+  @extend %animate-background-color--fast;
+  text-decoration: none;
+  color: $blue-dark;
+
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $red;
+  }
+}
+
+.inline-links {
+  @extend %inline-links;
+}
+
+
+a {
+  text-decoration: none;
+
+  // &:visted {
+
+  // }
+
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+%link--grey,
+.link--grey {
+  text-decoration: none;
+  color: $grey-medium;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    color: $white;
+  }
+}
+

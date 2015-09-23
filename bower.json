@@ -1,0 +1,31 @@
+{
+  "name": "theme",
+  "version": "0.0.2",
+  "authors": [
+    "Aidan Foster <afoster@fosterinteractive.com>"
+  ],
+  "description": "Theme Package",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "eq.js": "~1.6.0",
+    "jQuery.dotdotdot": "~1.7.2",
+    "matchHeight": "~0.6.0"
+  },
+  "devDependencies": {
+    "jacket": "~1.1.1",
+    "sassy-maps": "~0.4.0",
+    "breakpoint-sass": "~2.5.0",
+    "singularity": "~1.6.2",
+    "sass-toolkit": "~2.7.0",
+    "Cortana": "~1.2.8",
+    "js-cookie": "~1.5.1",
+    "backstopjs": "~0.4.3"
+  }
+}

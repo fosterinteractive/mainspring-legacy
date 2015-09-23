@@ -1,0 +1,6 @@
+// Common Styleistic Elements resused in many other components
+
+// Typical rounded corners.
+%border-radius {
+  @include border-radius(2px);
+}

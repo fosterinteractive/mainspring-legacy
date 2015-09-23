@@ -1,0 +1,48 @@
+// %l-form,
+// .l-form {
+
+// }
+
+%l-form__item--core {
+  float: left;
+  width: 100%;
+}
+
+%l-form__item,
+.l-form__item,
+.l-form .form-item {
+  @extend %l-form__item--core;
+}
+
+
+%l-form__actions,
+.l-form .form-actions {
+  @extend %clearfix;
+  clear: both;
+}
+
+// 2 Column layout
+%l-form--2col,
+.l-form[data-eq-state="2cols"] {
+  margin: 0 ru(-0.5) ru(1) ru(-0.5);
+
+  %l-form__item,
+  .l-form__item,
+  > .form-item {
+    padding: 0 ru(0.5);
+    width: 50%;
+
+    &:nth-of-type(2n+1) {
+      clear: both;
+    }
+  }
+
+  .form-actions {
+    padding: 0 ru(0.5);
+  }
+
+  .l-form__item--wide {
+    width: 100%;
+  }
+}
+
