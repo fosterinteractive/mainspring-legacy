@@ -18,48 +18,48 @@
 
 // Styles used for only the styleguide
 
-%styleguide__wrapper,
-.styleguide__wrapper {
-  @extend %clearfix;
-  position: relative;
-  margin-bottom: ru(1);
-  padding: ru(1);
-}
+// %styleguide__wrapper,
+// .styleguide__wrapper {
+//   @extend %clearfix;
+//   position: relative;
+//   margin-bottom: ru(1);
+//   padding: ru(1);
+// }
 
-%styleguide__wrapper--lrg,
-.styleguide__wrapper--lrg {
-  @extend %styleguide__wrapper;
-  max-width: em(720px);
-}
+// %styleguide__wrapper--lrg,
+// .styleguide__wrapper--lrg {
+//   @extend %styleguide__wrapper;
+//   max-width: em(720px);
+// }
 
-// Force display to visible
+// // Force display to visible
 
-%styleguide--force-visibile,
-.styleguide--force-visibile,
-.styleguide--force-visibile svg {
-  display: block !important; // scss-lint:disable ImportantRule
-  visibility: visible;
-  opacity: 1;
-}
+// %styleguide--force-visibile,
+// .styleguide--force-visibile,
+// .styleguide--force-visibile svg {
+//   display: block !important; // scss-lint:disable ImportantRule
+//   visibility: visible;
+//   opacity: 1;
+// }
 
-%styleguide--force-static,
-.styleguide--force-static {
-  position: static !important; // scss-lint:disable ImportantRule
-}
+// %styleguide--force-static,
+// .styleguide--force-static {
+//   position: static !important; // scss-lint:disable ImportantRule
+// }
 
 
 
 // Cortana Overrides
-.cortana-content {
-  .clearfix {
-    @extend %clearfix;
-  }
-}
+// .cortana-content {
+//   .clearfix {
+//     @extend %clearfix;
+//   }
+// }
 
-.exampleOutput { // scss-lint:disable SelectorFormat
-  padding: 50px 15px !important; // scss-lint:disable ImportantRule
-}
+// .exampleOutput { // scss-lint:disable SelectorFormat
+//   padding: 50px 15px !important; // scss-lint:disable ImportantRule
+// }
 
-.cortana-container {
-  max-width: $bp-max !important; // scss-lint:disable ImportantRule
-}
+// .cortana-container {
+//   max-width: $bp-max !important; // scss-lint:disable ImportantRule
+// }

@@ -153,15 +153,6 @@ gulp.task('svg-compress', function () {
     .pipe(gulp.dest('svg'));
 });
 
-gulp.task('img-compress', function () {
-  return gulp.src('img-src/*')
-    .pipe(imagemin({
-      progressive: true,
-      optimizationLevel: 4,
-    }))
-    .pipe(gulp.dest('img'));
-});
-
 
 //////////////////////////////
 // SVG Sprite

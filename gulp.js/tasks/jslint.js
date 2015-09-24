@@ -8,7 +8,7 @@ var stylish = require('jshint-stylish');
 //////////////////////////////
 // JS lint Tasks
 //////////////////////////////
-gulp.task('jslint', function () {
+gulp.task('jsLint', function () {
   return gulp.src(['./js/*.js'])
   .pipe(jshint())
   .pipe(jshint.reporter(stylish));
