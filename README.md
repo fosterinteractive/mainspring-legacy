@@ -6,6 +6,10 @@ Very biased boilerplate templates for generating production CSS &amp; Living Sty
 See /docs for more details.
 
 
+Icons are from Font Awsome Created by Dave Gandy
+- Opened and resaved in Illustrator to add real-word bloat.
+
+
 Image Credits
 
 Mainspring Image by Hustvedt (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons

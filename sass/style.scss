@@ -23,7 +23,7 @@
 
 // Default Elements
 //Using https://github.com/appleboy/normalize.scss
-@import 'global/normalize';
+@import 'global/vendor/normalize';
 // @import 'global/typography';
 // @import 'global/print';
 
@@ -82,6 +82,8 @@
 // @import 'components/calendar';
 // @import 'components/carousel';
 
-.foo {
-  background: red;
+$red: #ff0000;
+
+.fooBAR {
+  background: $red;
 }
