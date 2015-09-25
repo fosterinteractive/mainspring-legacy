@@ -1,5 +1,8 @@
 'use strict';
 
+// THIS IS ALL TO BE REFACTORED INTO /GULP.JS
+// Tasks are deleted as they're replaced
+
 var gulp = require('gulp');
 // Run events in sequence (will be depreciated in gulp 4.0)
 // var runSequence = require('run-sequence');
@@ -34,18 +37,6 @@ var cssBase64 = require('gulp-css-base64');
 // http://designfromwithin.com/blog/gulp-sass-browser-sync-front-end-dev
 // http://cameronspear.com/blog/handling-sync-tasks-with-gulp-js/
 // http://www.smashingmagazine.com/2014/06/11/building-with-gulp/
-
-//////////////////////////////
-// Errors Handler
-//
-// If we need more robust error handling this would work
-// http://www.artandlogic.com/blog/2014/05/error-handling-in-gulp/
-//////////////////////////////
-
-function handleError(err) {
-  console.log(err.toString());
-  this.emit('end');
-}
 
 // SASS Production Task Minified + Auto-prefixed, inline images.
 
@@ -102,25 +93,6 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write()) // Write Source Maps
     .pipe(size()) // Write Size
     .pipe(gulp.dest('./css')); // Write CSS
-});
-
-
-
-
-//////////////////////////////
-// SCSS Lint Task
-//////////////////////////////
-gulp.task('scsslint', function() {
-  return gulp.src([
-    'sass/**/*.scss',
-    '!sass/styleguide.scss',
-    '!sass/**/vendor/**/*.scss',
-    '!sass/global/_normalize.scss'
-    ])
-    .pipe(cache('scsslint'))
-    .pipe(scsslint(
-{      'bundleExec': true
-    }));
 });
 
 

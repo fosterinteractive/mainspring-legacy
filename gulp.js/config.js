@@ -89,8 +89,14 @@ module.exports = {
         // @TODO - Add in more options from https://github.com/svg/svgo
         // svgoPlugins: [{removeViewBox: false}],
       },
-      //Assumes svg in the root should NOT be sprited, subfolders are sprited
-      spriteFolders: ['sprite-social', 'sprite-ui']
+      sizeReport: {
+        enabled: true,
+        settings: {
+          '*': {
+            'maxSize': 50000 // Max Size in Bytes after gzip
+          }
+        }
+      }
     }
   }
 };

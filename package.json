@@ -20,6 +20,7 @@
     "gulp-imagemin": "^2.2.1",
     "gulp-jshint": "^1.9.2",
     "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^1.0.0-alpha.3",
     "gulp-sass": "^2.0.4",
     "gulp-scss-lint": "^0.2.4",

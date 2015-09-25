@@ -3,7 +3,7 @@ v0.01
 
 Very biased boilerplate templates for generating production CSS &amp; Living Style Guides w/ SASS, Gulp &amp; other libraries. Intended for use in Drupal or similar CMS.
 
-See /docs for more details.
+*** See /docs for more details. ***
 
 
 Icons are from Font Awsome Created by Dave Gandy
