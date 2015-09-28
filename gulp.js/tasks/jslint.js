@@ -3,13 +3,12 @@
 var config      = require('../config');
 if(!config.tasks.jsLint){return;}
 
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-// Styish makes colored output for jslint
-var stylish = require('jshint-stylish');
-var path         = require('path');
+var gulp      = require('gulp');
+var jshint    = require('gulp-jshint');
+var stylish   = require('jshint-stylish'); // Styish makes colored output for jslint
 
-var src = path.join(config.root.src, config.tasks.css.src);
+// Config
+var src = config.tasks.jsLint.pattern;
 
 //////////////////////////////
 // JS lint Tasks

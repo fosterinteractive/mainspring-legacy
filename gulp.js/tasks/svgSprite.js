@@ -14,8 +14,8 @@ var rename       = require('gulp-rename');
 var sizeReport  = require('gulp-sizereport');
 
 var settings = {
-  src: path.join(config.root.src, config.tasks.svgSprite.src, '**/*.svg'),
-  dest: path.join(config.root.dest, config.tasks.svgSprite.dest),
+  src: config.tasks.svgSprite.src + '/**/*.svg',
+  dest: config.tasks.svgSprite.dest,
   imageminSettings: config.tasks.svgSprite.imageminSettings,
   reportEnabled: config.tasks.svgSprite.sizeReport.enabled,
   reportSettings: config.tasks.svgSprite.sizeReport.settings,
@@ -57,7 +57,7 @@ gulp.task('createSprites', ['svgMinify'], function(){
 
 gulp.task('svgSprite', ['createSprites'], function(){
 
-  return gulp.src(path.join(settings.dest, '*.svg'))
+  return gulp.src(settings.dest + '/*.svg')
   .pipe(rename(function(path){
       path.extname = ''; // Trim Extension
   }))

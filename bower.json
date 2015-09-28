@@ -19,13 +19,13 @@
     "matchHeight": "~0.6.0"
   },
   "devDependencies": {
-    "jacket": "~1.1.1",
-    "sassy-maps": "~0.4.0",
+    "Cortana": "~1.2.9",
+    "backstopjs": "~0.4.3",
     "breakpoint-sass": "~2.5.0",
-    "singularity": "~1.6.2",
-    "sass-toolkit": "~2.7.0",
-    "Cortana": "~1.2.8",
+    "jacket": "~1.1.1",
     "js-cookie": "~1.5.1",
-    "backstopjs": "~0.4.3"
+    "sass-toolkit": "~2.7.0",
+    "sassy-maps": "~0.4.0",
+    "singularity": "~1.6.2"
   }
 }

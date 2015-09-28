@@ -11,19 +11,20 @@ var handleErrors = require('../lib/handleErrors');
 var autoprefixer = require('gulp-autoprefixer');
 var path         = require('path');
 
-var paths = {
-  src: path.join(config.root.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}'),
-  dest: path.join(config.root.dest, config.tasks.css.dest)
-};
+// Config
+var src = config.tasks.css.pattern;
+var dest = gulp.dest(config.tasks.css.dest);
+var sassConfig = config.tasks.css.sassConfig;
+var prefixSettings = config.tasks.css.autoprefixer;
 
 gulp.task('css', function () {
-  return gulp.src(paths.src)
-    .pipe(sourcemaps.init())
-    .pipe(sass(config.tasks.css.sass))
+  return gulp.src(src)
+    // .pipe(sourcemaps.init())
+    .pipe(sass(sassConfig))
     .on('error', handleErrors)
-    .pipe(autoprefixer(config.tasks.css.autoprefixer))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.dest))
+    .pipe(autoprefixer(prefixSettings))
+    // .pipe(sourcemaps.write())
+    .pipe(dest)
     .pipe(browserSync.reload({stream:true})
   );
 });

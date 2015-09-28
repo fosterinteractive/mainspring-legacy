@@ -88,8 +88,9 @@
     "VIE",
     "CKEDITOR",
     "ga",
-    "require"
-]
+    "require",
+    "module"
+  ]
 
 }
 

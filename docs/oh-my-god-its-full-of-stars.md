@@ -5,14 +5,19 @@ Gulp Basics
 http://andy-carter.com/blog/a-beginners-guide-to-the-task-runner-gulp
 https://css-tricks.com/gulp-for-beginners/
 
-General Best Practices
+General Best Practices w/ Gulp
 https://github.com/gulpjs/gulp/tree/master/docs/recipes
 
 
 
 
+Hologram Gulp Plugin
+https://gist.github.com/jchild3rs/470be49a4bc4caf3ca8a
+
+
 Gulp.js structure cribbed from
 https://github.com/vigetlabs/gulp-starter/tree/master/gulpfile.js
+
 
 
 SVG Components - Single file per folder

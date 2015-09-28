@@ -6,12 +6,9 @@ if(!config.tasks.scssLint){return;}
 var gulp      = require('gulp');
 var scssLint  = require('gulp-scss-lint');
 var cache     = require('gulp-cached');
-var path      = require('path');
 
-// @TODO - Figure out how the get the path to woth with non- ./ root src
-// var src = path.join(config.root.src, config.tasks.scssLint.src);
-
-var src = config.tasks.scssLint.src;
+// Array of Lint Src's
+var src = config.tasks.scssLint.pattern;
 var settings = config.tasks.scssLint.settings;
 
 gulp.task('scssLint', function() {
@@ -20,7 +17,9 @@ gulp.task('scssLint', function() {
     .pipe(scssLint(settings));
 });
 
-// Testing Caching
+
+
+// Testing Watch Function Caching
 // gulp.task('scssLintWatch', ['scssLint'], function() {
 //   gulp.watch(src, ['scssLint']);
 // });

@@ -11,24 +11,21 @@ var path        = require('path');
 var sizeReport  = require('gulp-sizereport');
 // var changed  = require('gulp-changed');
 
-var paths = {
-  src: path.join(config.root.src, config.tasks.images.src, '/**'),
-  dest: path.join(config.root.dest, config.tasks.images.dest)
-};
-
-// Enable Size Report
+//Config
+var src  = config.tasks.images.src + '/**';
+var dest = config.tasks.images.dest;
 var reportEnabled = config.tasks.images.sizeReport.enabled;
-
+var reportSettings = config.tasks.images.sizeReport.settings;
 
 gulp.task('images', function() {
-  return gulp.src(paths.src)
+  return gulp.src(src)
   // .pipe(changed(paths.dest)) // Ignore unchanged files
   .pipe(imagemin()) // Optimize
-  .pipe(gulp.dest(paths.dest))
+  .pipe(gulp.dest(dest))
   .pipe(browserSync.reload({stream:true})
   // Image Size Reporting
   .pipe(gulpIf(reportEnabled,
-      sizeReport(config.tasks.images.sizeReport.settings)
+      sizeReport(reportSettings)
     ))
   );
 });

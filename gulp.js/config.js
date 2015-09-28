@@ -2,12 +2,6 @@
 
 
 module.exports = {
-  root: {
-    // Default exports in this project folder.
-    // Leave blank to work in this folder
-    src: '', // EG - './src',
-    dest: '' // EG - './public'
-  },
 
   tasks: {
 
@@ -15,18 +9,43 @@ module.exports = {
       // See http://www.browsersync.io/docs/options/ for options
       proxy: 'mainspring.dev',
       port: 3333,
-      files: ['./css/*.css'],
+      // files: [
+        // './css/*.css',
+        // './styleguide/index.html'], // Watch index.html only - Holgram regenerates every file on update.
       ui:{
         port: 3334
+      },
+      ghostMode: {
+        clicks: true,
+        forms: true,
+        scroll: true
       }
+
     },
 
+    // Compile CSS from SCSS
+    css: {
+      pattern: ['./sass/**/*.scss'],
+      dest: 'css',
+      autoprefixer: {
+        browsers: ['last 2 versions', 'ie >= 9']
+      },
+      sassConfig: {
+        // Node Sass Settings - https://github.com/sass/node-sass
+        indentedSyntax: false, // Enable .sass syntax
+        precision: 6,
+        errLogToConsole: true
+      },
+      // Add in SIZE REPORT ??
+    },
+
+
     jsLint: {
-      src: './js/**/*.js'
+      pattern: './js/**/*.js'
     },
 
     scssLint: {
-      src: [
+      pattern: [
         'sass/**/*.scss',
         '!sass/**/vendor/**/*.scss', // Ignore /vendor folders
       ],
@@ -48,19 +67,8 @@ module.exports = {
     //   extensions: ['js']
     // },
 
-    css: {
-      src: 'sass',
-      dest: 'css',
-      autoprefixer: {
-        browsers: ['last 3 version']
-      },
-      sass: {
-        indentedSyntax: false // Enable .sass syntax
-      },
-      extensions: ['scss', 'css']
-      // Add in SIZE REPORT ??
-    },
 
+    // Compress Static Bitmaps
     images: {
       src: 'img-src',
       dest: 'img',
@@ -80,6 +88,7 @@ module.exports = {
       }
     },
 
+    // SVG spriting
     svgSprite: {
       src: 'svg-src',
       dest: 'svg',
@@ -93,9 +102,16 @@ module.exports = {
         enabled: true,
         settings: {
           '*': {
-            'maxSize': 50000 // Max Size in Bytes after gzip
+            'maxSize': 50000 // Alert if > Max Size in Bytes after gzip
           }
         }
+      }
+    },
+    hologram: {
+      configFile: './hologram_config.yml',
+      settings : {
+        bundler: true,
+        logging: false
       }
     }
   }
