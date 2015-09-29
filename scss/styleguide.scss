@@ -60,6 +60,10 @@
 //   padding: 50px 15px !important; // scss-lint:disable ImportantRule
 // }
 
-// .cortana-container {
-//   max-width: $bp-max !important; // scss-lint:disable ImportantRule
-// }
+.cortana-container {
+  max-width: 100% !important; // scss-lint:disable ImportantRule
+  padding-left: 21px;
+  padding-right: 21px;
+}
+
+

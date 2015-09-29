@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = {
 
   tasks: {
@@ -9,65 +8,64 @@ module.exports = {
       // See http://www.browsersync.io/docs/options/ for options
       proxy: 'mainspring.dev',
       port: 3333,
-      // files: [
-        // './css/*.css',
-        // './styleguide/index.html'], // Watch index.html only - Holgram regenerates every file on update.
-      ui:{
-        port: 3334
+      files: [
+      './scss/*.css',
+        './styleguide/index.html'], // Watch index.html only - Holgram regenerates every file on update.
+        ui:{
+          port: 3334
+        },
+        ghostMode: {
+          clicks: true,
+          forms: true,
+          scroll: true
+        }
+
       },
-      ghostMode: {
-        clicks: true,
-        forms: true,
-        scroll: true
-      }
 
-    },
-
-    // Compile CSS from SCSS
+    // Compile CSS from SCSS and optimize
     css: {
-      pattern: ['./sass/**/*.scss'],
+      pattern: ['./scss/**/*.scss'],
       dest: 'css',
       autoprefixer: {
-        browsers: ['last 2 versions', 'ie >= 9']
+        browsers: [
+        'ie >= 9',
+        'ie_mob >= 10',
+        'ff >= 30',
+        'chrome >= 34',
+        'safari >= 7',
+        'opera >= 23',
+        'ios >= 6',
+        'android >= 4.2',
+        'bb >= 10'
+        ]
+
       },
       sassConfig: {
         // Node Sass Settings - https://github.com/sass/node-sass
         indentedSyntax: false, // Enable .sass syntax
-        precision: 6,
+        precision: 10, // Google Starter kit's default
         errLogToConsole: true
       },
-      // Add in SIZE REPORT ??
-    },
-
-
-    jsLint: {
-      pattern: './js/**/*.js'
-    },
-
-    scssLint: {
-      pattern: [
-        'sass/**/*.scss',
-        '!sass/**/vendor/**/*.scss', // Ignore /vendor folders
-      ],
-      settings : {
-        'config': '.scss-lint.yml', // Linter Config File
-        'bundleExec': true,
+      sourceMaps: './maps', // Source Maps Folder
+      sizeReport: {
+        enabled: true,
+        settings: {
+          gzip: true, // Gzip for size reporting
+          '*': {
+            'maxSize': 70000,
+            'maxGzippedSize': 50000 // Max Size in Bytes after gzip
+          }
+        }
       }
     },
-
-
-    // js: {
-    //   src: 'javascripts',
-    //   dest: 'javascripts',
-    //   extractSharedJs: true,
-    //   entries: {
-    //     app: ['./app.js'],
-    //     page: ['./page.js']
-    //   },
-    //   extensions: ['js']
-    // },
-
-
+    hologram: {
+      configFile: './hologram_config.yml',
+      settings : {
+        bundler: true,
+        logging: false
+      }
+    }
+  },
     // Compress Static Bitmaps
     images: {
       src: 'img-src',
@@ -88,6 +86,35 @@ module.exports = {
       }
     },
 
+    jsLint: {
+      pattern: './js/**/*.js'
+    },
+
+    scssLint: {
+      pattern: [
+      'scss/**/*.scss',
+        '!scss/**/vendor/**/*.scss', // Ignore /vendor folders
+        ],
+        settings : {
+        'config': '.scss-lint.yml', // Linter Config File
+        'bundleExec': true,
+      }
+    },
+
+
+    // js: {
+    //   src: 'javascripts',
+    //   dest: 'javascripts',
+    //   extractSharedJs: true,
+    //   entries: {
+    //     app: ['./app.js'],
+    //     page: ['./page.js']
+    //   },
+    //   extensions: ['js']
+    // },
+
+
+
     // SVG spriting
     svgSprite: {
       src: 'svg-src',
@@ -106,13 +133,5 @@ module.exports = {
           }
         }
       }
-    },
-    hologram: {
-      configFile: './hologram_config.yml',
-      settings : {
-        bundler: true,
-        logging: false
-      }
     }
-  }
-};
+  };

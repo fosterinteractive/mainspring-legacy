@@ -7,6 +7,10 @@ node_modules/
 .bundle
 Gemfile.lock
 
+// Source Maps
+css/maps
+**/*.map
+
 
 // OS Junk Files
 .DS_Store

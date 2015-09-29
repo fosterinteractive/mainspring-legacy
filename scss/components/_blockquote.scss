@@ -26,7 +26,9 @@ Default Blockquote without citation.
   padding: ru(1);
 }
 
-cite {
-  @extend %clearfix;
+%blockquote__cite,
+.blockquote__cite {
   font-style: normal;
 }
+
+

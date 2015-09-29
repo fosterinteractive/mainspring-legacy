@@ -5,6 +5,10 @@ Very biased boilerplate templates for generating production CSS &amp; Living Sty
 
 *** See /docs for more details. ***
 
+Gulp-Sass is the workhorse of this package which runs off of lib-sass
+See http://sass-compatibility.github.io/ for sass compatibility lists
+compared to ruby-sass
+
 
 Icons are from Font Awsome Created by Dave Gandy
 - Opened and resaved in Illustrator to add real-word bloat.

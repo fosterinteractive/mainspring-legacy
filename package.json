@@ -6,7 +6,7 @@
     "path-exists": "^1.0.0"
   },
   "devDependencies": {
-    "browser-sync": "2.8.2",
+    "browser-sync": "^2.9.6",
     "fs": "0.0.2",
     "gulp": "^3.8.0",
     "gulp-autoprefixer": "^2.1.0",
