@@ -9,18 +9,19 @@ module.exports = {
       proxy: 'mainspring.dev',
       port: 3333,
       files: [
-      './scss/*.css',
-        './styleguide/index.html'], // Watch index.html only - Holgram regenerates every file on update.
-        ui:{
-          port: 3334
-        },
-        ghostMode: {
-          clicks: true,
-          forms: true,
-          scroll: true
-        }
-
+        './css/*.css',
+        './styleguide/index.html'
+      ], // Watch index.html only - Holgram regenerates every file on update.
+      ui:{
+        port: 3334
       },
+      ghostMode: {
+        clicks: true,
+        forms: true,
+        scroll: true
+      }
+
+    },
 
     // Compile CSS from SCSS and optimize
     css: {
@@ -64,8 +65,19 @@ module.exports = {
         bundler: true,
         logging: false
       }
-    }
-  },
+    },
+
+    scssLint: {
+      pattern: [
+      'scss/**/*.scss',
+        '!scss/**/vendor/**/*.scss', // Ignore /vendor folders
+        ],
+        settings : {
+        'config': '.scss-lint.yml', // Linter Config File
+        'bundleExec': true,
+      }
+    },
+
     // Compress Static Bitmaps
     images: {
       src: 'img-src',
@@ -89,18 +101,6 @@ module.exports = {
     jsLint: {
       pattern: './js/**/*.js'
     },
-
-    scssLint: {
-      pattern: [
-      'scss/**/*.scss',
-        '!scss/**/vendor/**/*.scss', // Ignore /vendor folders
-        ],
-        settings : {
-        'config': '.scss-lint.yml', // Linter Config File
-        'bundleExec': true,
-      }
-    },
-
 
     // js: {
     //   src: 'javascripts',
@@ -134,4 +134,7 @@ module.exports = {
         }
       }
     }
-  };
+  },
+};
+
+

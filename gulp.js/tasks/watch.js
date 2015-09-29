@@ -7,14 +7,18 @@ var config      = require('../config');
 var browserSync = require('browser-sync');
 if(!config.tasks.browserSync){return;}
 
-// var batch   = require('gulp-batch');
 
 // Config
-var config = config.tasks.browserSync;
+// var config  = config.tasks.browserSync;
+var scssSrc     = config.tasks.css.pattern;
+var jsSrc       = config.tasks.jsLint.pattern;
 
-gulp.task('watch', ['browserSync', 'css:dev', 'scssLint', 'styleGuide'], function() {
+gulp.task('watch', ['browserSync', 'css:dev', 'scssLint', 'styleGuide', 'jsLint'], function() {
 
   // SASS & Styleguide
-    gulp.watch('sass/**/*.scss', ['css:dev', 'scssLint', 'styleGuide']);
+  gulp.watch(scssSrc, ['css:dev', 'scssLint', 'styleGuide']);
+
+  // JS Tasks
+  gulp.watch(jsSrc, ['jsLint']);
 });
 

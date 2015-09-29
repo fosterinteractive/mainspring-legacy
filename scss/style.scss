@@ -83,6 +83,17 @@
 // @import 'components/carousel';
 
 body {
-  background-color: green;
+  background-color: yellow;
+
+  @include breakpoint($bp-med) {
+    background-color: green;
+  }
 }
 
+p {
+  color: blue;
+
+  @include breakpoint($bp-med) {
+    background-color: white;
+  }
+}
