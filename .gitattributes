@@ -1,3 +1,4 @@
-css/style.css -diff
-css/styleguide.css -diff
-css/maintenance.css -diff
+# Treat Minfied Files as binary
+
+css/**/*css -diff
+svg/**/*.svg -diff
