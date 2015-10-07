@@ -1,12 +1,14 @@
 'use strict';
 
+var localUrl = 'mainspring.dev'; // EG 'localhost', 'mysite.dev'
+
 module.exports = {
 
   tasks: {
 
     browserSync: {
       // See http://www.browsersync.io/docs/options/ for options
-      proxy: 'mainspring.dev',
+      proxy: localUrl,
       port: 3333,
       files: [
         './css/*.css',
@@ -67,17 +69,6 @@ module.exports = {
       }
     },
 
-    scssLint: {
-      pattern: [
-      'scss/**/*.scss',
-        '!scss/**/vendor/**/*.scss', // Ignore /vendor folders
-        ],
-        settings : {
-        'config': '.scss-lint.yml', // Linter Config File
-        'bundleExec': true,
-      }
-    },
-
     // Compress Static Bitmaps
     images: {
       src: 'img-src',
@@ -98,10 +89,6 @@ module.exports = {
       }
     },
 
-    jsLint: {
-      pattern: './js/**/*.js'
-    },
-
     // js: {
     //   src: 'javascripts',
     //   dest: 'javascripts',
@@ -114,6 +101,23 @@ module.exports = {
     // },
 
 
+    jsLint: {
+      pattern: [
+        './js/**/*.js',
+        '!./js/**/vendor/*.js',
+      ]
+    },
+
+    scssLint: {
+      pattern: [
+      'scss/**/*.scss',
+        '!scss/**/vendor/**/*.scss', // Ignore /vendor folders
+        ],
+        settings : {
+        'config': '.scss-lint.yml', // Linter Config File
+        'bundleExec': true,
+      }
+    },
 
     // SVG spriting
     svgSprite: {

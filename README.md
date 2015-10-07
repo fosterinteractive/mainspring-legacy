@@ -24,7 +24,7 @@ compared to ruby-sass
 
 ###Fonts###
 Icons are from Font Awsome Created by Dave Gandy
-- Opened and resaved in Illustrator to add real-word bloat.
+- Opened and resaved in Illustrator to add real-world bloat.
 
 ###Image Credits###
 

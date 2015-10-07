@@ -12,6 +12,7 @@
     "gulp-bower": "0.0.10",
     "gulp-bower-normalize": "^1.0.6",
     "gulp-cached": "^1.1.0",
+    "gulp-exit": "0.0.2",
     "gulp-filter": "^3.0.1",
     "gulp-gzip": "^1.2.0",
     "gulp-hologram": "^1.2.0",
@@ -29,9 +30,12 @@
     "gulp-svgstore": "^5.0.5",
     "jshint-stylish": "^1.0.1",
     "main-bower-files": "^2.9.0",
+    "ngrok": "^0.2.2",
     "os-tmpdir": "^1.0.1",
     "path-exists": "^1.0.0",
-    "require-dir": "^0.3.0"
+    "psi": "^1.0.6",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.4"
   },
   "scripts": {
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"

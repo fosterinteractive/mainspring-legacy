@@ -30,7 +30,7 @@ $ npm install
 
 // Use Gulp to Download and Install Bower Packages
 // & move assets to various folders
-$ gulp bower:install
+$ gulp bower
 ```
 ##Customize For Your Project##
 

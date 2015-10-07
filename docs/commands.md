@@ -50,11 +50,11 @@ gulp images
 ## Bower ##
 Run on First install or after updating bower.json
 
-Known Issue: Copy doesn't wait for delete task to complete. Run twice.
+Known Issue: Copy doesn't wait for delete task to complete? Run twice.
 
 ```
-$gulp bower:install
+$gulp bower
 ```
 
 - Installs Bower Components
-- Copies non-minified core javascript files from bower_components to ./js
+- Copies non-minified core javascript files from bower_components to ./js/vendor
