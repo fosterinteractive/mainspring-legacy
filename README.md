@@ -1,15 +1,24 @@
 # Mainspring
 v0.01
 
-Very biased boilerplate templates for generating production CSS &amp; Living Style Guides w/ SASS, Gulp &amp; other libraries. Intended for use in Drupal or similar CMS.
+Very biased boilerplate templates for generating production CSS &amp; Living
+Style Guides w/ SASS, Gulp &amp; other libraries. Essentially this is an
+assembly of the work of very clever folks into a single starter package.
 
-*** See /docs for more details. ***
+Intended for use in Drupal or similar CMS.
 
+##See /docs for more details##
+[Installation]('/docs/installation.md')
+[Commands]('/docs/installation.md')
+
+[Inspiration]('/docs/oh-my-god-its-full-of-stars.md')
+
+##Overview##
 Gulp-Sass is the workhorse of this package which runs off of lib-sass
 See http://sass-compatibility.github.io/ for sass compatibility lists
 compared to ruby-sass
 
-
+##Credits##
 Icons are from Font Awsome Created by Dave Gandy
 - Opened and resaved in Illustrator to add real-word bloat.
 
