@@ -8,10 +8,10 @@ assembly of the work of very clever folks into a single starter package.
 Intended for use in Drupal or similar CMS.
 
 ##See /docs for more details##
-[Installation]('/docs/installation.md')
-[Commands]('/docs/installation.md')
+[Installation](/docs/installation.md)
+[Commands](/docs/installation.md)
 
-[Inspiration]('/docs/oh-my-god-its-full-of-stars.md')
+[Inspiration](/docs/oh-my-god-its-full-of-stars.md)
 
 ##Overview##
 Gulp-Sass is the workhorse of this package which runs off of lib-sass
