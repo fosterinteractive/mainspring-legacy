@@ -1,0 +1,56 @@
+/*doc
+---
+title: Default Link
+name: c100-links
+category: Base - Links
+---
+
+```html_example
+<div class="styleguide__wrapper styleguide__links"><!--only used in style guide-->
+  <p><a href="#">Default Link</a></p>
+</div>
+```
+
+*/
+
+
+%link,
+a {
+  @extend %animate-color--fast;
+  @extend %animate-background-color--fast;
+  text-decoration: none;
+
+  &:active,
+  &:hover,
+  &:focus, {
+    text-decoration: none;
+  }
+}
+
+/*doc
+---
+title: Link Color Variations
+name: c200-colorlinks
+category: Base - Links
+---
+
+```html_example
+<div class="styleguide__wrapper styleguide__links"><!--only used in style guide-->
+  <p><a href="#" class="g-link--grey">Grey Link</a></p>
+</div>
+```
+
+*/
+
+%g-link--grey,
+.g-link--grey {
+  @extend %link;
+  @extend %u-color--fg-grey;
+
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: palette(grey, dark);
+  }
+}

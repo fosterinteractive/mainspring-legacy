@@ -1,0 +1,18 @@
+bower install
+npm install (might need sudo)
+bundle install --path .vendor/bundle
+
+//Gulp watch
+gulp css:watch
+
+//Gulp Dev
+gulp css:dev
+
+//Gulp Prod
+gulp css:prod
+
+//Gulp SVG
+gulp svgSprite
+
+//Re-generates styleguide
+bundle exec hologram hologram_config.yml

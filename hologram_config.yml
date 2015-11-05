@@ -2,7 +2,7 @@
 # All paths should be relative to there
 
 # The directory containing the source files to parse recursively
-source: ./sass
+source: ./scss
 
 # The directory that hologram will build to
 destination: ./styleguide
@@ -41,8 +41,8 @@ css_include:
   - '../css/style.css'
 
 js_include:
-  # - 'https://code.jquery.com/jquery-1.10.2.min.js'
-
+  - 'https://code.jquery.com/jquery-1.10.2.min.js'
+  - '../js/vendor/eq.js'
 
 # Mark which category should be the index page
 # Alternatively, you may have an index.md in the documentation assets

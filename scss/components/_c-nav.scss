@@ -1,0 +1,199 @@
+%c-nav--core {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// li in the nave
+%c-nav__item--core {
+  display: block;
+  margin: 0;
+}
+
+/*doc
+---
+title: Vertical Navigation
+name: c200-navigation
+category: Components - Navigation
+---
+
+```html_example
+<ul class="c-nav--vertical">
+  <li class="c-nav--vertical__item">
+    <a class="c-nav--vertical__link is-active" href="#">Link 1 Is Active</a>
+  </li>
+  <li class="c-nav--vertical__item">
+    <a class="c-nav--vertical__link" href="#">Link 2</a>
+  </li>
+  <li class="c-nav--vertical__item">
+    <a class="c-nav--vertical__link" href="#">Link 3</a>
+  </li>
+  <li class="c-nav--vertical__item">
+    <a class="c-nav--vertical__link" href="#">Link 4</a>
+  </li>
+</ul>
+```
+
+*/
+
+%c-nav--vertical,
+.c-nav--vertical {
+  @extend %c-nav--core;
+  margin-bottom: ru(2.25);
+}
+
+%c-nav--vertical__item,
+.c-nav--vertical__item {
+  @extend %c-nav__item--core;
+
+  &:not(:first-child) {
+    border-top: 1px solid palette(grey, mediumlight);
+  }
+}
+
+%c-nav--vertical__link,
+.c-nav--vertical__link {
+  display: block;
+  padding: ru(0.25) ru(1.25);
+  text-transform: uppercase;
+  color: palette(grey);
+
+  @include respond-to('expanded-wrapper') {
+    padding-left: ru(1.75);
+  }
+
+  @include respond-to('full-nav') {
+    padding-right: ru(0.5);
+    padding-left: ru(2.5);
+  }
+
+  @include respond-to('full-nav') {
+    padding-left: ru(4);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: palette(grey, xlight);
+    // color: palette(blue, dark);
+  }
+
+  &.is-active {
+    // color: palette(blue, dark);
+    font-weight: 700;
+  }
+}
+
+
+/*doc
+---
+title: Horizontal Navigation
+name: c210-navigation
+category: Components - Navigation
+---
+
+
+```html_example
+<ul class="c-nav--horizontal">
+  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 1</a></li><!--
+  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 2</a></li><!--
+  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link is-active" href="#">Link 3</a></li><!--
+  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 4</a></li>
+</ul>
+```
+
+*/
+
+%c-nav--horizontal,
+.c-nav--horizontal {
+  @extend %c-nav--core;
+}
+
+%c-nav--horizontal__item,
+.c-nav--horizontal__item {
+  display: inline-block;
+
+  &:not(:first-child) {
+    padding-left: 1px;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid palette(grey);
+    padding-right: ru(0.25);
+  }
+}
+
+%c-nav--horizontal__link,
+.c-nav--horizontal__link {
+  display: block;
+  padding-top: 0;
+  color: palette(grey);
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    color: palette(grey, dark);
+  }
+
+  &.is-active {
+    // color: palette(blue, dark);
+  }
+}
+
+
+/*doc
+---
+title: Inline Nav (Breadcrumbs)
+name: c220-navigation
+category: Components - Navigation
+---
+
+```html_example
+<h2>Ordered List</h2>
+<ol class="c-nav--inline">
+  <li><a href="#" class="is-active">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+</ol>
+
+<h2>Unordered List</h2>
+<ul class="c-nav--inline">
+  <li><a href="#">Link 1</a></li>
+  <li><a href="#" class="is-active">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+</ul>
+```
+*/
+
+%c-nav--inline,
+.c-nav--inline {
+  @extend %list--reset;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: palette(grey);
+
+  li {
+    display: inline-block;
+    margin: 0;
+
+    &:after {
+      content: ' > ';
+    }
+  }
+
+  a {
+    color: palette(grey);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.is-active {
+      text-decoration: underline;
+      color: palette(grey, dark);
+    }
+  }
+}
+
+

@@ -1,79 +1,241 @@
-%l-eq,
+//eq wrapper - core
+%l-eq-core,
 .l-eq {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @extend %u-clearfix;
+  // margin-right: ru(-0.5);
+  // margin-left: ru(-0.5);
 }
 
-%l-eq--col {
-  @extend %clearfix;
-  margin-right: ru(-0.5);
-  margin-left: ru(-0.5);
-}
-
-%l-eq__item,
-.l-eq__item,
-.l-eq--item, {
-  margin-bottom: ru(0.5);
-}
-
-%l-eq__item--xtrailer,
-.l-eq__item.xtrailer {
-  margin-bottom: ru(1);
-}
-
-%l-eq__item--underlined,
-.l-eq--underlined .l-eq--item {
-  @include trailing-border(1px, 0.25);
-  margin-bottom: ru(1.25);
-  border-color: $grey-medium-light;
-}
-
-%l-eq--col__item {
-  float: left;
+//eq item - core, default gutter
+%l-eq-item {
   padding: 0 ru(0.5);
 }
 
-%l-eq--col__item--thin-margin {
-  float: left;
+
+//eq item - thin gutter
+%l-eq-item--thin-margin {
   padding: 0 1px;
 }
 
-// 2col layout
-//////////////
-%l-eq--2col,
-.l-eq[data-eq-state="2col"] {
-  @extend %l-eq--col;
-}
+/*doc
+---
+title: 2 Column Layout @ 50% each
+name: l100-col
+category: Layout - Columns
+---
 
-%l-eq--2col__item,
-.l-eq[data-eq-state="2col"] .l-eq__item,
-.l-eq[data-eq-state="2col"] .l-eq--item {
-  @extend %l-eq--col__item;
-  width: 50%;
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col: 600">
+    <div class="l-eq-item">
+      <h3>EQ Item 1 - 50%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
 
-  &:nth-child(2n+1) {
-    clear: both;
+    <div class="l-eq-item">
+      <h3>EQ Item 2 - 50%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+
+//2COLUMN LAYOUT @ 50% EACH
+%l-eq-2col__item,
+.l-eq[data-eq-state="2col"] .l-eq-item {
+  @extend %l-eq-item;
+
+  @include layout(2, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: left;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+      clear: right;
+    }
   }
 }
 
-// 3col layout
-//////////////
-%l-eq--3col,
-.l-eq[data-eq-state="3col"],
-.l-eq--underlined[data-eq-state="3col"] {
-  @extend %l-eq--col;
+/*doc
+---
+title: 2 Column Layout @ 60% & 40%
+name: l200-col
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col-60/40: 600">
+    <div class="l-eq-item">
+      <h3>EQ Item 1 - 60%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-eq-item">
+      <h3>EQ Item 2 - 40%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+//2COLUMN LAYOUT @ 60% & 40%
+%l-eq-2col__item--1-2\(60\,40\),
+.l-eq[data-eq-state="2col-60/40"] .l-eq-item {
+  @extend %l-eq-item;
+
+  @include layout(60 40, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: left;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+      clear: right;
+    }
+  }
 }
 
-%l-eq--3col__item,
-.l-eq[data-eq-state="3col"] .l-eq__item,
-.l-eq[data-eq-state="3col"] .l-eq--item {
+/*doc
+---
+title: 2 Column Layout @ 66.666% & 33.333%
+name: l300-col
+category: Layout - Columns
+---
 
-  @extend %l-eq--col__item;
-  margin-bottom: ru(0.5);
-  width: (1 / 3) * 100%;
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col-66/33: 600">
+    <div class="l-eq-item">
+      <h3>EQ Item 1 - 66.666%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
 
-  &:nth-child(3n+1) {
-    clear: both;
+    <div class="l-eq-item">
+      <h3>EQ Item 2 - 33.333%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+//2COLUMN LAYOUT @ 66.666% & 33.333%
+%l-eq-2col__item--1-2\(66\,33\),
+.l-eq[data-eq-state="2col-66/33"] .l-eq-item {
+  @extend %l-eq-item;
+
+  @include layout(66 33, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: left;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+      clear: right;
+    }
+  }
+}
+
+/*doc
+---
+title: 2 Column Layout @ 75% & 25%
+name: l400-col
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col-75/25: 600">
+    <div class="l-eq-item">
+      <h3>EQ Item 1 - 75%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-eq-item">
+      <h3>EQ Item 2 - 25%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+//2COLUMN LAYOUT @ 75% & 25%
+%l-eq-2col__item--1-2\(75\,25\),
+.l-eq[data-eq-state="2col-75/25"] .l-eq-item {
+  @extend %l-eq-item;
+
+  @include layout(75 25, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: left;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+      clear: right;
+    }
+  }
+}
+
+/*doc
+---
+title: 3 Column Layout @ 33% Each
+name: l500-col
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="3col: 600">
+    <div class="l-eq-item">
+      <h3>EQ Item 1 - 33%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-eq-item">
+      <h3>EQ Item 2 - 33%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-eq-item">
+      <h3>EQ Item 2 - 33%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+//3COLUMN LAYOUT @ 33% EACH
+%l-eq-3col__item,
+.l-eq[data-eq-state="3col"] .l-eq-item {
+  @extend %l-eq-item;
+
+  @include layout(33 33 33, $gutter: 0) {
+    &:nth-child(3n+1) {
+      @include grid-span(1, 1);
+    }
+
+    &:nth-child(3n+2) {
+      @include grid-span(1, 2);
+    }
+
+    &:nth-child(3n+3) {
+      @include grid-span(1, 3);
+    }
   }
 }

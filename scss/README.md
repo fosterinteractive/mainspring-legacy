@@ -1,3 +1,3 @@
-*This is the title of my style guide*
+#Main Spring Style Guide#
 
-This file is used as the home page of the style guide
+This website documents the UI components for Main Spring
