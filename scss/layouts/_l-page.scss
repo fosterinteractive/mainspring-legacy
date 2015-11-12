@@ -32,11 +32,11 @@
 .l-page__content-main {
   @extend %content-helper--remove-both-child-margins;
 
-  @include breakpoint($bp-lrg) {
+  @include respond-to('full-nav') {
     padding-right: 25%;
   }
 
-  @include breakpoint($bp-max) {
+  @include respond-to('max-size') {
     padding-right: (1 / 3) * 100%;
   }
 }
@@ -44,12 +44,12 @@
 %l-page__content-main--has-aside,
 .l-page__content-main.has-aside {
 
-  @include breakpoint($bp-med) {
+  @include respond-to('type-large') {
     @include grid-span(4, 1);
     padding-right: ru(0.5);
   }
 
-  @include breakpoint($bp-lrg) {
+  @include respond-to('full-nav') {
     padding-right: ru(1);
   }
 }
@@ -58,7 +58,7 @@
 .l-page__content-aside {
   margin-top: ru(0.5);
 
-  @include breakpoint($bp-med) {
+  @include respond-to('type-large') {
     @include grid-span(2, 5);
     margin-top: 0;
     padding-left: ru(0.5);

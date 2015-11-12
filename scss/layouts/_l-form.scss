@@ -1,8 +1,3 @@
-// %l-form,
-// .l-form {
-
-// }
-
 %l-form__item--core {
   float: left;
   width: 100%;
@@ -15,8 +10,14 @@
 }
 
 
+// Used on builder login form currently.
+%l-form__item--max,
+.l-form--max .form-item {
+  max-width: ru(30);
+}
+
 %l-form__actions,
-.l-form .form-actions {
+.l-form .l-form-actions {
   @extend %clearfix;
   clear: both;
 }
@@ -37,7 +38,7 @@
     }
   }
 
-  .form-actions {
+  .l-form-actions {
     padding: 0 ru(0.5);
   }
 
@@ -46,3 +47,54 @@
   }
 }
 
+// Narrow - Just remove the 100% width on inner element
+%l-form__item--narrow,
+.l-form__item--narrow {
+  @extend %l-form__item;
+
+  input,
+  select,
+  textarea,
+  button,
+  optgroup {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+// Honey Pot Class - Display none so spam bots fill it out, but not people
+%l-form__foo-bar,
+.l-form__foo-bar {
+  display: none;
+}
+
+// Form Regions in Modal
+%l-form--padding,
+.l-form--padding,
+.l-form .g-form-actions {
+  clear: both;
+  margin-right: ru(0.5);
+  margin-left: ru(0.5);
+}
+
+// @todo reconcile when landing_page gets merged as it has updates to form layout. This won't be used, only temporary.
+%l-form__actions--max,
+.l-form--max .l-form__actions {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+// Addional Vertical Margin
+%l-form--padding-vertical,
+.l-form--padding-vertical {
+  margin-top: ru(0.75);
+  margin-bottom: ru(1.5);
+}
+
+// Reset all Drupal Form Descriptions
+%l-form__item-description,
+.g-form-item .description {
+  // @extend %t--small;
+  margin-top: ru(-0.5);
+  margin-bottom: ru(1);
+}

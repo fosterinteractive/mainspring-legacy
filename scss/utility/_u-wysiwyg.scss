@@ -1,0 +1,23 @@
+// Need to remove the top margin on the first child element.
+%u-remove-first-child-top-margin {
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+// Remove the the last child element bottom margin.
+%u-remove-last-child-bottom-margin {
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Remove margins from first and last child element.
+// Adding generic class to apply to wysiwyg fields to allow for consitent spacing in the page layouts.
+%u-remove-child-both-margins {
+  @extend %u-remove-first-child-top-margin;
+  @extend %u-remove-last-child-bottom-margin;
+
+}

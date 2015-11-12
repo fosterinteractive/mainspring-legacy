@@ -1,0 +1,45 @@
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+
+  &.focusable:active,
+  &.focusable:focus {
+    clip: auto;
+    position: static;
+    margin: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+@mixin visuallyshown {
+  clip: auto;
+  clip: rect(auto auto auto auto);
+  position: static;
+  overflow: visible;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+
+%visually--hidden,
+.visuallyhidden,
+.u-visually--hidden {
+  @include visuallyhidden;
+}
+
+
+%visually--shown,
+.visuallyshown,
+.u-visually--shown {
+  @include visuallyshown;
+}
+

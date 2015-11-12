@@ -13,6 +13,12 @@
 // RU is simply an alias of compass rhythm(2) with the assumption
 // Compass is set to use REM as it's unit.
 
+// @function ru($rhythm-units: 1) {
+//   @return rhythm($rhythm-units);
+// }
+
+$base-line-height: 24px !default;
+
 @function ru($rhythm-units: 1) {
-  @return rhythm($rhythm-units);
+  @return rem($base-line-height * $rhythm-units);
 }

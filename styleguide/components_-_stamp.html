@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Components - Stamp</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/styleguide.css">
+      
+        <link rel="stylesheet" href="../css/style.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Global</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="global_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="global_-_forms.html">Forms</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Components</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="components_-_accordion.html">Accordion</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_boxes.html">Boxes</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_buttons.html">Buttons</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="components_-_stamp.html">Stamp</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_tables.html">Tables</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_navigation.html">Navigation</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="components_-_logo.html">Logo</a></li>
+              
+            
+          
+          </ul>
+        
+          <h3>Base</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_-_links.html">Links</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_-_colors.html">Colors</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_lists.html">Lists</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>Stamp</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#c100-stamp-default">Stamp Default</a></li>
+              
+            
+              
+                <li><a href="#c200-stamp-color">Stamp Color Variations</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="c100-stamp-default" class="styleguide">Stamp Default</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="sg__wrapper--sml-light-grey"> <!-- Style guide only -->
+  <div class="c-stamp">
+    <div class="c-stamp__align">
+      <div class="c-stamp__content">
+        <p>Founded in </p><span class="g-type--huge">1986</span><p>by the Canadian Chiropractic Association</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sg__wrapper--sml-light-grey"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- Style guide only --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__align"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Founded in <span class="nt">&lt;/p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"g-type--huge"</span><span class="nt">&gt;</span>1986<span class="nt">&lt;/span&gt;&lt;p&gt;</span>by the Canadian Chiropractic Association<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="c200-stamp-color" class="styleguide">Stamp Color Variations</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="sg__wrapper--sml-light-grey">
+  <div>
+  <div class="c-stamp--green">
+    <div class="c-stamp__align">
+      <div class="c-stamp__content">
+      <p>Founded in </p><span class="g-type--huge">1986</span><p>by the Canadian Chiropractic Association</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="c-stamp--blue">
+    <div class="c-stamp__align">
+      <div class="c-stamp__content">
+      <p>Founded in </p><span class="g-type--huge">1986</span><p>by the Canadian Chiropractic Association</p>
+      </div>
+  </div>
+  </div>
+  <div class="c-stamp--orange">
+    <div class="c-stamp__align">
+      <div class="c-stamp__content">
+      <p>Founded in </p><span class="g-type--huge">1986</span><p>by the Canadian Chiropractic Association</p>
+      </div>
+    </div>
+  </div>
+  <div class="c-stamp--red">
+    <div class="c-stamp__align">
+      <div class="c-stamp__content">
+      <p>Founded in </p><span class="g-type--huge">1986</span><p>by the Canadian Chiropractic Association</p>
+      </div>
+    </div>
+  </div>
+  <div class="c-stamp--purple">
+    <div class="c-stamp__align">
+      <div class="c-stamp__content">
+      <p>Founded in </p><span class="g-type--huge">1986</span><p>by the Canadian Chiropractic Association</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sg__wrapper--sml-light-grey"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp--green"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__align"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Founded in <span class="nt">&lt;/p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"g-type--huge"</span><span class="nt">&gt;</span>1986<span class="nt">&lt;/span&gt;&lt;p&gt;</span>by the Canadian Chiropractic Association<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp--blue"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__align"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Founded in <span class="nt">&lt;/p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"g-type--huge"</span><span class="nt">&gt;</span>1986<span class="nt">&lt;/span&gt;&lt;p&gt;</span>by the Canadian Chiropractic Association<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp--orange"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__align"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Founded in <span class="nt">&lt;/p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"g-type--huge"</span><span class="nt">&gt;</span>1986<span class="nt">&lt;/span&gt;&lt;p&gt;</span>by the Canadian Chiropractic Association<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp--red"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__align"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Founded in <span class="nt">&lt;/p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"g-type--huge"</span><span class="nt">&gt;</span>1986<span class="nt">&lt;/span&gt;&lt;p&gt;</span>by the Canadian Chiropractic Association<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp--purple"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__align"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-stamp__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Founded in <span class="nt">&lt;/p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"g-type--huge"</span><span class="nt">&gt;</span>1986<span class="nt">&lt;/span&gt;&lt;p&gt;</span>by the Canadian Chiropractic Association<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Example Content",
+              "breadcrumb": "Global - Typography > Example Content",
+              "path": "global_-_typography.html#10-g-type"
+              },
+            
+              
+              
+              {
+              "title": "Basic Elements",
+              "breadcrumb": "Global - Typography > Basic Elements",
+              "path": "global_-_typography.html#20-g-type"
+              },
+            
+              
+              
+              {
+              "title": "Headings",
+              "breadcrumb": "Global - Typography > Headings",
+              "path": "global_-_typography.html#30-g-type"
+              },
+            
+              
+              
+              {
+              "title": "Type Variations",
+              "breadcrumb": "Global - Typography > Type Variations",
+              "path": "global_-_typography.html#40-g-type"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Input Boxes",
+              "breadcrumb": "Global - Forms > Input Boxes",
+              "path": "global_-_forms.html#100-g-form"
+              },
+            
+              
+              
+              {
+              "title": "Check Boxes",
+              "breadcrumb": "Global - Forms > Check Boxes",
+              "path": "global_-_forms.html#110-g-form"
+              },
+            
+              
+              
+              {
+              "title": "Radio",
+              "breadcrumb": "Global - Forms > Radio",
+              "path": "global_-_forms.html#120-form"
+              },
+            
+              
+              
+              {
+              "title": "Form Layout Styles",
+              "breadcrumb": "Global - Forms > Form Layout Styles",
+              "path": "global_-_forms.html#130-layout"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Accordion",
+              "breadcrumb": "Components - Accordion > Accordion",
+              "path": "components_-_accordion.html#c100-accordion"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Box",
+              "breadcrumb": "Components - Boxes > Box",
+              "path": "components_-_boxes.html#c100-box"
+              },
+            
+              
+              
+              {
+              "title": "Box Sizes",
+              "breadcrumb": "Components - Boxes > Box Sizes",
+              "path": "components_-_boxes.html#c200-box-sizes"
+              },
+            
+              
+              
+              {
+              "title": "Box Position",
+              "breadcrumb": "Components - Boxes > Box Position",
+              "path": "components_-_boxes.html#c300-box-position"
+              },
+            
+              
+              
+              {
+              "title": "Box Color",
+              "breadcrumb": "Components - Boxes > Box Color",
+              "path": "components_-_boxes.html#c400-box-color"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Button Default",
+              "breadcrumb": "Components - Buttons > Button Default",
+              "path": "components_-_buttons.html#c100-btn-default"
+              },
+            
+              
+              
+              {
+              "title": "Button Color Variations",
+              "breadcrumb": "Components - Buttons > Button Color Variations",
+              "path": "components_-_buttons.html#c200-btn-colors"
+              },
+            
+              
+              
+              {
+              "title": "Button Size Variations",
+              "breadcrumb": "Components - Buttons > Button Size Variations",
+              "path": "components_-_buttons.html#c300-btn-size"
+              },
+            
+              
+              
+              {
+              "title": "Buttons - Inline Icons",
+              "breadcrumb": "Components - Buttons > Buttons - Inline Icons",
+              "path": "components_-_buttons.html#c400-btn-colors"
+              },
+            
+              
+              
+              {
+              "title": "Buttons - Icons Only",
+              "breadcrumb": "Components - Buttons > Buttons - Icons Only",
+              "path": "components_-_buttons.html#c500-btn-colors"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Default Link",
+              "breadcrumb": "Base - Links > Default Link",
+              "path": "base_-_links.html#c100-links"
+              },
+            
+              
+              
+              {
+              "title": "Link Color Variations",
+              "breadcrumb": "Base - Links > Link Color Variations",
+              "path": "base_-_links.html#c200-colorlinks"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Stamp Default",
+              "breadcrumb": "Components - Stamp > Stamp Default",
+              "path": "components_-_stamp.html#c100-stamp-default"
+              },
+            
+              
+              
+              {
+              "title": "Stamp Color Variations",
+              "breadcrumb": "Components - Stamp > Stamp Color Variations",
+              "path": "components_-_stamp.html#c200-stamp-color"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Tables",
+              "breadcrumb": "Components - Tables > Tables",
+              "path": "components_-_tables.html#c100-tables"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Vertical Navigation",
+              "breadcrumb": "Components - Navigation > Vertical Navigation",
+              "path": "components_-_navigation.html#c200-navigation"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Navigation",
+              "breadcrumb": "Components - Navigation > Horizontal Navigation",
+              "path": "components_-_navigation.html#c210-navigation"
+              },
+            
+              
+              
+              {
+              "title": "Inline Nav (Breadcrumbs)",
+              "breadcrumb": "Components - Navigation > Inline Nav (Breadcrumbs)",
+              "path": "components_-_navigation.html#c220-navigation"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Colors",
+              "breadcrumb": "Base - Colors > Colors",
+              "path": "base_-_colors.html#color"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Unordered List",
+              "breadcrumb": "Base - Lists > Unordered List",
+              "path": "base_-_lists.html#g100-lists"
+              },
+            
+              
+              
+              {
+              "title": "Ordered list",
+              "breadcrumb": "Base - Lists > Ordered list",
+              "path": "base_-_lists.html#g200-lists"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Logo",
+              "breadcrumb": "Components - Logo > Logo",
+              "path": "components_-_logo.html#logo"
+              },
+            
+              
+              
+              {
+              "title": "Logo (Mobile Size)",
+              "breadcrumb": "Components - Logo > Logo (Mobile Size)",
+              "path": "components_-_logo.html#Small"
+              },
+            
+          
+        
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+  <!-- Source Components -->
+  
+</body>
+</html>
