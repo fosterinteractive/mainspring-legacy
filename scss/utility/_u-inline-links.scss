@@ -1,0 +1,21 @@
+// Basic styling used in muliple lists
+
+// Intended for Drupals default menu (ul.menu) / tabs formats
+%u-inline-links {
+  @extend %inline-links__list;
+
+  li {
+    @extend %inline-links__list-item;
+  }
+}
+
+%u-inline-links__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+%u-inline-links__list-item {
+  float: left;
+  margin: 0 ru(0.25) 0 0;
+}

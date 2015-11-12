@@ -1,6 +1,1 @@
-.cortana-container {
-  max-width: 100% !important;
-  padding-left: 21px;
-  padding-right: 21px; }
-
-/*# sourceMappingURL=maps/styleguide.css.map */
+.sg__wrapper,.sg__wrapper--eq,.sg__wrapper--light-grey,.sg__wrapper--sml-light-grey,.sg__wrapper--xlight-grey{position:relative;margin-bottom:2rem;padding:1rem}.sg__wrapper--xlight-grey{background-color:#f1f2f2}.sg__wrapper--eq,.sg__wrapper--light-grey{background-color:#e6e7e8}.sg__wrapper--sml-light-grey{background-color:#e6e7e8;max-width:18.75rem}.sg__wrapper--eq{max-width:43.75rem}.cortana-container{padding-right:21px;padding-left:21px;max-width:100%!important}

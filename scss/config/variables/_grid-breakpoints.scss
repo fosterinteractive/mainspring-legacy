@@ -7,18 +7,18 @@ $breakpoint-to-ems: true;
 
 // Don't forget to update the theme .info file breakpoints!
 
-// $bp-sml: 380px;
-$bp-med: 768px;
-$bp-lrg: 1024px;
-$bp-max: 1200px;
-
+// Respond-to Syntax creates a map of breakpoints named after UI changes
+$breakpoints: add-breakpoint('expanded-wrapper', 400px);
+$breakpoints: add-breakpoint('type-large', 600px);
+$breakpoints: add-breakpoint('full-nav', 900px);
+$breakpoints: add-breakpoint('max-size', 1200px);
 
 // Range Breakpoints
 //
 // $bp-default-to-sml: 0 ($bp-med - 1px);
 // $bp-default-to-med: 0 ($bp-lrg - 1px);
-$bp-med-to-lrg: $bp-med ($bp-lrg - 1px);
-//$bp-sml-to-max: $bp-sml $bp-huge;
+// $bp-med-to-lrg: $bp-med ($bp-lrg - 1px);
+// $bp-sml-to-max: $bp-sml $bp-huge;
 
 // Singularity Variables
 // https://github.com/Team-Sass/Singularity/wiki/Creating-Grids
@@ -32,7 +32,6 @@ $bp-med-to-lrg: $bp-med ($bp-lrg - 1px);
 @include add-gutter-style('fixed');
 @include add-gutter-style('split');
 @include add-gutter(0);
-
 
 
 // // Must enable debug setting

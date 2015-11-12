@@ -1,0 +1,31 @@
+// Foreground Colors
+%u-color--fg-white,
+.u-color--fg-white {
+  color: $white;
+}
+
+%u-color--fg-grey,
+.u-color--fg-grey {
+  color: palette(grey);
+}
+
+// Background Colors
+%u-color--bg-white,
+.u-color--bg-white {
+  background-color: $white;
+}
+
+%u-color--bg-grey,
+.u-color--bg-grey {
+  background-color: palette(grey);
+}
+
+%u-color--bg-grey-light,
+.u-color--bg-grey-light {
+  background-color: palette(grey, light);
+}
+
+%u-color--bg-grey-xlight,
+.u-color--bg-grey-xlight {
+  background-color: palette(grey, xlight);
+}

@@ -1,0 +1,25 @@
+// Reset to Default List Style
+%u-list--reset {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0 0 0 ru(1);
+}
+
+// Reset to block-like list with no padding / margins
+%u-list--blank {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: outside;
+
+  li {
+    margin: 0;
+    // list-style-type: none;
+  }
+}
+
+
+
+
+

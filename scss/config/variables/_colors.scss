@@ -1,31 +1,99 @@
 /*doc
 ---
 title: Colors
-name: color
-category: Branding - Colors
+name: color-100
+category: Base - Colors
 ---
 
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#040303;"><br><br><br><br><br></div>
+      <pre class="text-center">$black</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#ffffff;"><br><br><br><br><br></div>
+      <pre class="text-center">$white</pre>
+    </div>
+
+    <h1>Greys</h1>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#939598;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-base</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#231f20;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-dark</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#afafaf;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-mediumlight</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#e6e7e8;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-light</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#f1f2f2;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-xlight</pre>
+    </div>
+
+    <h1>Main Colors</h1>
+
+    <h1>Debug Colors</h1>
+    <p>Array of colors for /global/mixin/_debug-layout.scss</p>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(0, 0, 160);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-blue</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(160, 0, 0);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-red</pre>
+    </div>
+
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(0, 160, 0);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-green</pre>
+    </div>
+
+  </div>
+</div>
 
 */
 
+// Static Colors
 $black: #040303;
 $white: #ffffff;
 
-// Greys
 
+// Color Palattes array. Use 'light' / 'dark' first
+// See http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+//
+// a {palette(purple);} or a {palette(purple, light)}
 
-// $grey-medium-medium-light: mix($grey-medium, $grey-medium-light, 0.1);
-// $grey-medium-medium-light: $grey-medium;
+$palettes: (
+  grey: (
+    base:   #939598,
+    dark:   #231f20,
+    mediumlight: #afafaf,
+    light:  #e6e7e8,
+    xlight: #f1f2f2
+  )
+);
 
-// Main Colors
 
 // Shadow Color
-
 $shadow: rgba($black, 0.5);
-
-//Messages Colors
-$m-red-light: #fef5f1;
-$m-red-dark: #8c2e0b;
 
 // Array of colors for /config/mixin/_debug-layout.scss
 $debug-blue: rgb(0, 0, 160);
@@ -33,5 +101,8 @@ $debug-red: rgb(160, 0, 0);
 $debug-green: rgb(0, 160, 0);
 
 $debug-colors: $debug-red, $debug-green, $debug-blue !global;
+
+
+
 
 

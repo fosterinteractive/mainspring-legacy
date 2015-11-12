@@ -1,0 +1,11 @@
+@mixin text-hide {
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+%u-text-hide,
+.u-text-hide {
+  @include text-hide;
+}

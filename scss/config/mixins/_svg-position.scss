@@ -1,0 +1,93 @@
+$baseline: 1.5rem !default;
+
+@mixin svg-centered($svg-width, $svg-height, $wrapper-width, $wrapper-height, $svg-class: svg) {
+
+  @if ($wrapper-width < $svg-width or $wrapper-height < $svg-height) {
+    @error ('Wrapper can not be larger the the svg');
+  }
+
+  position: relative;
+  width: $wrapper-width;
+  height: $wrapper-height;
+
+  .#{$svg-class} {
+    position: absolute;
+    top: ($wrapper-height - $svg-height) / 2;
+    left: ($wrapper-width - $svg-width) / 2;
+    width: $svg-width;
+    height: $svg-height;
+  }
+}
+
+// Prefix icon with a mult-line link with vertically centered (middle or top) svg to the left
+// Apply to parent container with an SVG of the specified class inside
+
+
+
+@mixin svg-inline(
+  $baseline, // font baseline
+  $svg-width, // SVG width (units same as typography)
+  $svg-height, // SVG height
+  $svg-pad-right, // padding on right side of SVG
+  $svg-pad-left, // padding on left side of SVG
+  $container-vertical-padding, // Top & bottom padding for container
+  $container-padding-right : 0, // Right padding for container
+  $container-padding-left : 0, // Left and right padding for container
+  $svg-class: 'svg', // Class for the SVG inside the parent
+  $h-alignment: 'left', // Align Icon on 'left' or 'right'
+  $v-alignment: 'middle') { // Align Icon 'middle' or 'top'
+
+  position: relative;
+
+  // Top and Bottom Padding of Container
+  @if ($container-vertical-padding != 0) {
+    padding-top: $container-vertical-padding;
+    padding-bottom: $container-vertical-padding;
+  }
+
+  @if ($h-alignment == 'left') {
+    padding-left: $svg-pad-left + $svg-width + $svg-pad-right + $container-padding-left;
+
+    @if ($container-padding-right != '0') {
+      padding-right: $container-padding-right;
+    }
+
+  } @elseif ($h-alignment == 'right'){
+    padding-right: $svg-pad-left + $svg-width + $svg-pad-right + $container-padding-right;
+
+    @if ($container-padding-left != '0') {
+      padding-left: $container-padding-left;
+    }
+  } @else {
+    @error 'invalid h-alignment value';
+  }
+
+
+  // SVG positioning
+  .#{$svg-class} {
+    display: block;
+    position: absolute;
+
+    margin-top: (-$svg-height / 2);
+    margin-left: (-$svg-width / 2);
+    width: $svg-width;
+    height: $svg-height;
+
+    @if ($h-alignment == 'left') {
+      left: 0 + $svg-pad-left + $container-padding-left;
+    } @else {
+      right: 0 + $svg-pad-right + $container-padding-right;
+    }
+
+    // SVG vertical positioning
+
+    // Vertical Align icon in middle of parent
+    @if ($v-alignment == 'middle') {
+      top: 50%;
+    }
+    @if ($v-alignment == 'top') {
+      top: ($baseline / 2) + $container-vertical-padding;
+    }
+
+  }
+}

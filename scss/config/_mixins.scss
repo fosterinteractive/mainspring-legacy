@@ -4,10 +4,11 @@
 
 @import 'mixins/debug-layout';
 @import 'mixins/placeholder';
+@import 'mixins/rwd-typography';
+@import 'mixins/svg-position';
 @import 'mixins/show-hide';
 @import 'mixins/photoshop-drop-shadow';
-@import 'mixins/rem';
 
 // Importing Hacked Components of Compass
-@import 'mixins/compass-typography-units';
-@import 'mixins/compass-vertical-rhythm';
+// @import 'mixins/compass-typography-units';
+// @import 'mixins/compass-vertical-rhythm';

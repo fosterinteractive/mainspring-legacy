@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Base - Colors</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../css/styleguide.css">
+      
+        <link rel="stylesheet" href="../css/style.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Global</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="global_-_forms.html">Forms</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="global_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Components</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="components_-_blockquote.html">Blockquote</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_buttons.html">Buttons</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_logo.html">Logo</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_navigation.html">Navigation</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_tables.html">Tables</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Base</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="base_-_colors.html">Colors</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_links.html">Links</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_-_lists.html">Lists</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Layout</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="layout_-_columns.html">Columns</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>Colors</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#color-100">Colors</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="color-100" class="styleguide">Colors</h1>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#040303;"><br><br><br><br><br></div>
+      <pre class="text-center">$black</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#ffffff;"><br><br><br><br><br></div>
+      <pre class="text-center">$white</pre>
+    </div>
+
+    <h1>Greys</h1>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#939598;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-base</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#231f20;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-dark</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#afafaf;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-mediumlight</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#e6e7e8;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-light</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#f1f2f2;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-xlight</pre>
+    </div>
+
+    <h1>Main Colors</h1>
+
+    <h1>Debug Colors</h1>
+    <p>Array of colors for /global/mixin/_debug-layout.scss</p>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(0, 0, 160);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-blue</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(160, 0, 0);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-red</pre>
+    </div>
+
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(0, 160, 0);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-green</pre>
+    </div>
+
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Input Boxes",
+              "breadcrumb": "Global - Forms > Input Boxes",
+              "path": "global_-_forms.html#100-g-form"
+              },
+            
+              
+              
+              {
+              "title": "Check Boxes",
+              "breadcrumb": "Global - Forms > Check Boxes",
+              "path": "global_-_forms.html#110-g-form"
+              },
+            
+              
+              
+              {
+              "title": "Radio",
+              "breadcrumb": "Global - Forms > Radio",
+              "path": "global_-_forms.html#120-form"
+              },
+            
+              
+              
+              {
+              "title": "Form Layout Styles",
+              "breadcrumb": "Global - Forms > Form Layout Styles",
+              "path": "global_-_forms.html#130-layout"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Blockquote",
+              "breadcrumb": "Components - Blockquote > Blockquote",
+              "path": "components_-_blockquote.html#c-blockquote-100"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Button Default",
+              "breadcrumb": "Components - Buttons > Button Default",
+              "path": "components_-_buttons.html#c-btn-100"
+              },
+            
+              
+              
+              {
+              "title": "Button Color Variations",
+              "breadcrumb": "Components - Buttons > Button Color Variations",
+              "path": "components_-_buttons.html#c-btn-200"
+              },
+            
+              
+              
+              {
+              "title": "Button Size Variations",
+              "breadcrumb": "Components - Buttons > Button Size Variations",
+              "path": "components_-_buttons.html#c-btn-300"
+              },
+            
+              
+              
+              {
+              "title": "Buttons - Inline Icons",
+              "breadcrumb": "Components - Buttons > Buttons - Inline Icons",
+              "path": "components_-_buttons.html#c-btn-400"
+              },
+            
+              
+              
+              {
+              "title": "Buttons - Icons Only",
+              "breadcrumb": "Components - Buttons > Buttons - Icons Only",
+              "path": "components_-_buttons.html#c-btn-500"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Logo",
+              "breadcrumb": "Components - Logo > Logo",
+              "path": "components_-_logo.html#c-logo-100"
+              },
+            
+              
+              
+              {
+              "title": "Logo (Mobile Size)",
+              "breadcrumb": "Components - Logo > Logo (Mobile Size)",
+              "path": "components_-_logo.html#c-logo-200"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Vertical Navigation",
+              "breadcrumb": "Components - Navigation > Vertical Navigation",
+              "path": "components_-_navigation.html#c-nav-100"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Navigation",
+              "breadcrumb": "Components - Navigation > Horizontal Navigation",
+              "path": "components_-_navigation.html#c-nav-200"
+              },
+            
+              
+              
+              {
+              "title": "Inline Nav (Breadcrumbs)",
+              "breadcrumb": "Components - Navigation > Inline Nav (Breadcrumbs)",
+              "path": "components_-_navigation.html#c-nav-300"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Tables",
+              "breadcrumb": "Components - Tables > Tables",
+              "path": "components_-_tables.html#c100-tables"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Colors",
+              "breadcrumb": "Base - Colors > Colors",
+              "path": "base_-_colors.html#color-100"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Default Link",
+              "breadcrumb": "Base - Links > Default Link",
+              "path": "base_-_links.html#g-link-100"
+              },
+            
+              
+              
+              {
+              "title": "Link Color Variations",
+              "breadcrumb": "Base - Links > Link Color Variations",
+              "path": "base_-_links.html#g-link-200"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Unordered List",
+              "breadcrumb": "Base - Lists > Unordered List",
+              "path": "base_-_lists.html#g-list-100"
+              },
+            
+              
+              
+              {
+              "title": "Ordered list",
+              "breadcrumb": "Base - Lists > Ordered list",
+              "path": "base_-_lists.html#g-list-200"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Example Content",
+              "breadcrumb": "Global - Typography > Example Content",
+              "path": "global_-_typography.html#g-type-100"
+              },
+            
+              
+              
+              {
+              "title": "Basic Elements",
+              "breadcrumb": "Global - Typography > Basic Elements",
+              "path": "global_-_typography.html#g-type-200"
+              },
+            
+              
+              
+              {
+              "title": "Headings",
+              "breadcrumb": "Global - Typography > Headings",
+              "path": "global_-_typography.html#g-type-300"
+              },
+            
+              
+              
+              {
+              "title": "Type Variations",
+              "breadcrumb": "Global - Typography > Type Variations",
+              "path": "global_-_typography.html#g-type-400"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 50% each",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 50% each",
+              "path": "layout_-_columns.html#l-eq-100"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 60% &amp; 40%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 60% &amp; 40%",
+              "path": "layout_-_columns.html#l-eq-200"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 66.666% &amp; 33.333%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 66.666% &amp; 33.333%",
+              "path": "layout_-_columns.html#l-eq-300"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 75% &amp; 25%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 75% &amp; 25%",
+              "path": "layout_-_columns.html#l-eq-400"
+              },
+            
+              
+              
+              {
+              "title": "3 Column Layout @ 33% Each",
+              "breadcrumb": "Layout - Columns > 3 Column Layout @ 33% Each",
+              "path": "layout_-_columns.html#l-eq-500"
+              },
+            
+          
+        
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/eq.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>
