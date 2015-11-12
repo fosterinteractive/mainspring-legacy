@@ -6,7 +6,7 @@
 
 
 // Variables
-$debug-colors: rgb(160, 0, 0), rgb(0, 160, 0), rgb(0, 0, 160) !default;
+$debug-colors: rgb(160, 0, 0), rgb(0, 160, 0), rgb(0, 0, 160) !default; // scss-lint:disable ColorVariable
 
 // Global variable for counting runs
 $debug-count: 1 !default !global;

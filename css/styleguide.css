@@ -1,6 +1,6 @@
 .cortana-container {
-  max-width: 100% !important;
   padding-left: 21px;
-  padding-right: 21px; }
+  padding-right: 21px;
+  max-width: 100% !important; }
 
 /*# sourceMappingURL=maps/styleguide.css.map */

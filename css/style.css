@@ -14,6 +14,7 @@ category: Branding - Colors
 
 
 */
+
 .visuallyhidden,
 .visually-hidden {
   border: 0;
@@ -24,6 +25,7 @@ category: Branding - Colors
   padding: 0;
   width: 1px;
   height: 1px; }
+  
   .visuallyhidden.focusable:active,
   .visuallyhidden.focusable:focus,
   .visually-hidden.focusable:active,
@@ -35,8 +37,10 @@ category: Branding - Colors
     height: auto;
     overflow: visible; }
 
+
 .hidden {
   display: none; }
+
 
 .visible {
   display: block; }
@@ -283,7 +287,8 @@ select {
  *  Known issue: inner spacing remains in IE 6.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -398,17 +403,5 @@ table {
 td,
 th {
   padding: 0; }
-
-body {
-  background-color: yellow; }
-  @media (min-width: 48em) {
-    body {
-      background-color: green; } }
-
-p {
-  color: blue; }
-  @media (min-width: 48em) {
-    p {
-      background-color: white; } }
 
 /*# sourceMappingURL=maps/style.css.map */
