@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -8,15 +9,135 @@ img, video {
 /*doc
 ---
 title: Colors
-name: color
-category: Branding - Colors
+name: color-100
+category: Base - Colors
 ---
 
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#040303;"><br><br><br><br><br></div>
+      <pre class="text-center">$black</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#ffffff;"><br><br><br><br><br></div>
+      <pre class="text-center">$white</pre>
+    </div>
+
+    <h1>Greys</h1>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#939598;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-base</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#231f20;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-dark</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#afafaf;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-mediumlight</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#e6e7e8;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-light</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:#f1f2f2;"><br><br><br><br><br></div>
+      <pre class="text-center">grey-xlight</pre>
+    </div>
+
+    <h1>Main Colors</h1>
+
+    <h1>Debug Colors</h1>
+    <p>Array of colors for /global/mixin/_debug-layout.scss</p>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(0, 0, 160);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-blue</pre>
+    </div>
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(160, 0, 0);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-red</pre>
+    </div>
+
+
+    <div class="sg__wrapper--sml-light-grey">
+      <div style="background:rgb(0, 160, 0);"><br><br><br><br><br></div>
+      <pre class="text-center">$debug-green</pre>
+    </div>
+
+  </div>
+</div>
 
 */
 
+.l-eq:before,
+.l-eq:after,
+.u-clearfix:before,
+.u-clearfix:after {
+  display: table;
+  content: ''; }
+
+
+.l-eq:after,
+.u-clearfix:after {
+  clear: both; }
+
+
+.u-color--fg-white {
+  color: #ffffff; }
+
+
+.g-link--grey,
+.u-color--fg-grey {
+  color: #939598; }
+
+
+.u-color--bg-white {
+  background-color: #ffffff; }
+
+
+.u-color--bg-grey {
+  background-color: #939598; }
+
+
+.u-color--bg-grey-light {
+  background-color: #e6e7e8; }
+
+
+.u-color--bg-grey-xlight {
+  background-color: #f1f2f2; }
+
+
+.tabs__menu,
+.tabs {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: outside; }
+  
+  .tabs__menu li,
+  .tabs li {
+    margin: 0; }
+
+
+.c-logo__hidden-text,
+.u-text-hide {
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+
 .visuallyhidden,
-.visually-hidden {
+.u-visually--hidden {
   border: 0;
   clip: rect(0 0 0 0);
   position: absolute;
@@ -28,8 +149,8 @@ category: Branding - Colors
   
   .visuallyhidden.focusable:active,
   .visuallyhidden.focusable:focus,
-  .visually-hidden.focusable:active,
-  .visually-hidden.focusable:focus {
+  .u-visually--hidden.focusable:active,
+  .u-visually--hidden.focusable:focus {
     clip: auto;
     position: static;
     margin: 0;
@@ -38,12 +159,15 @@ category: Branding - Colors
     overflow: visible; }
 
 
-.hidden {
-  display: none; }
-
-
-.visible {
-  display: block; }
+.visuallyshown,
+.u-visually--shown {
+  clip: auto;
+  clip: rect(auto auto auto auto);
+  position: static;
+  overflow: visible;
+  margin: 0;
+  width: auto;
+  height: auto; }
 
 /* ==========================================================================
    Normalize.scss settings
@@ -403,5 +527,1844 @@ table {
 td,
 th {
   padding: 0; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+html {
+  background-color: #ffffff;
+  line-height: 1.5;
+  color: #231f20;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-size: 100%; }
+
+p, h1,
+.g-type__h1, h2,
+.g-type__h2, h3,
+.g-type__h3, h4,
+.g-type__h4 {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s; }
+  .wf-loading p, .wf-loading h1, .wf-loading
+  .g-type__h1, .wf-loading h2, .wf-loading
+  .g-type__h2, .wf-loading h3, .wf-loading
+  .g-type__h3, .wf-loading h4, .wf-loading
+  .g-type__h4 {
+    opacity: 0; }
+
+/*doc
+---
+title: Example Content
+name: g-type-100
+category: Global - Typography
+---
+
+
+```html_example
+<div class="sg__wrapper--xlight-grey">
+<h1>H1 - Heading Level 1</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar finibus diam, eget sagittis est hendrerit et. </p>
+<h2 class="u-color--fg-orange"> Heading level 2 -  Pellentesque sed sollicitudin lacus, </h2>
+<p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<h3 class="u-color--fg-green">Heading level 3 - Maecenas interdum, elit ut accumsan luctus </h3>
+<p class="g-type__p--large">This is a Large Paragraph.Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<p>This is a normal Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.</p>
+<p>New Paragrpah dolor eleifend dolor, eget suscipit ante erat ac lectus.  <a href="#">This is a text link</a> Ut sodales, lorem quis ultrices sollicitudin
+<strong>Strong is used to indicate strong importance</strong> at cursus erat urna vitae justo. Maecenas interdum
+<em>This text has added emphasis.</em>
+<p>Superscript<sup>®</sup></p>
+<p>Subscript for things like H<sub>2</sub>O</p>
+<p><small>This small text is small for for fine print, etc.</small></p>
+</div>
+```
+*/
+/*doc
+---
+title: Basic Elements
+name: g-type-200
+category: Global - Typography
+---
+
+<h2>Paragraph Sizes w/ Bold &amp; Italic</h2>
+
+```html_example
+<p>
+  Default Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--xsmal">
+  xsmall Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--smal">
+  small Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--large">
+  large Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--xlarge">
+  xlarge Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--huge">
+  huge Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+```
+*/
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0; }
+
+
+.g-type--xsmall {
+  font-size: 0.75rem;
+  line-height: 1.5; }
+
+
+.g-type--small {
+  font-size: 0.875rem;
+  line-height: 1.2857142857; }
+
+
+th,
+.g-type--large {
+  font-size: 1.125rem;
+  line-height: 1.3333333333; }
+
+label:not(.option), textarea.g-input--large--centered,
+select.g-input--large--centered,
+input[type='date'].g-input--large--centered,
+input[type='datetime'].g-input--large--centered,
+input[type='datetime-local'].g-input--large--centered,
+input[type='email'].g-input--large--centered,
+input[type='month'].g-input--large--centered,
+input[type='number'].g-input--large--centered,
+input[type='password'].g-input--large--centered,
+input[type='search'].g-input--large--centered,
+input[type='tel'].g-input--large--centered,
+input[type='text'].g-input--large--centered,
+input[type='time'].g-input--large--centered,
+input[type='url'].g-input--large--centered,
+input[type='week'].g-input--large--centered, textarea.g-input--large,
+select.g-input--large,
+input[type='date'].g-input--large,
+input[type='datetime'].g-input--large,
+input[type='datetime-local'].g-input--large,
+input[type='email'].g-input--large,
+input[type='month'].g-input--large,
+input[type='number'].g-input--large,
+input[type='password'].g-input--large,
+input[type='search'].g-input--large,
+input[type='tel'].g-input--large,
+input[type='text'].g-input--large,
+input[type='time'].g-input--large,
+input[type='url'].g-input--large,
+input[type='week'].g-input--large,
+.g-type--xlarge {
+  font-size: 1.25rem;
+  line-height: 1.5; }
+
+
+.g-type--huge {
+  font-size: 4.0625rem;
+  line-height: 1.1076923077; }
+
+/*doc
+---
+title: Headings
+name: g-type-300
+category: Global - Typography
+---
+<p>Headings resize from small to large at breakpoint. </p>
+<p>H4-6 inherit H3's styles and are not expected to be used</p>
+
+```html_example
+<h1>My Title Level 1</h1>
+<h2>My Title Level 2</h2>
+<h3>My Title Level 3</h3>
+<h4>My Title Level 4</h4>
+<h5>My Title Level 5</h5>
+<h6>My Title Level 6</h6>
+```
+*/
+h1,
+.g-type__h1, h2,
+.g-type__h2, h3,
+.g-type__h3, h4,
+.g-type__h4 {
+  margin: 1rem 0 0.5rem;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-weight: 400; }
+
+h1,
+.g-type__h1 {
+  font-size: 2rem;
+  line-height: 1.125; }
+  @media (min-width: 37.5em) {
+    h1,
+    .g-type__h1 {
+      font-size: 2.625rem;
+      line-height: 1.1428571429; } }
+
+h2,
+.g-type__h2 {
+  font-size: 1.75rem;
+  line-height: 1.0714285714; }
+  @media (min-width: 37.5em) {
+    h2,
+    .g-type__h2 {
+      font-size: 2.25rem;
+      line-height: 1.1666666667; } }
+
+h3,
+.g-type__h3 {
+  font-size: 1.5rem;
+  line-height: 1.25; }
+  @media (min-width: 37.5em) {
+    h3,
+    .g-type__h3 {
+      font-size: 2rem;
+      line-height: 1.125; } }
+
+h4,
+.g-type__h4 {
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
+  text-transform: uppercase; }
+
+/*doc
+---
+title: Type Variations
+name: g-type-400
+category: Global - Typography
+---
+
+<h2>Color Variations</h2>
+
+```html_example
+<div class="sg__wrapper--blue-dark"><!-- Only used in style guide -->
+  <h2 class="u-color--fg-white">About Us</h2>
+</div>
+<div class="sg__wrapper--light-grey">
+  <h2 class="u-color--fg-grey">About Us</h2>
+  <p class="g-type--large u-color--fg-grey">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. </p>
+  <p class="u-color--fg-grey">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+</div>
+```
+*/
+/*doc
+---
+title: Default Link
+name: g-link-100
+category: Base - Links
+---
+
+```html_example
+<div class="styleguide__wrapper styleguide__links"><!--only used in style guide-->
+  <p><a href="#">Default Link</a></p>
+</div>
+```
+
+*/
+
+.g-link--grey,
+a {
+  text-decoration: none; }
+  
+  .g-link--grey:active,
+  .g-link--grey:hover,
+  .g-link--grey:focus,
+  a:active,
+  a:hover,
+  a:focus {
+    text-decoration: none; }
+
+/*doc
+---
+title: Link Color Variations
+name: g-link-200
+category: Base - Links
+---
+
+```html_example
+<div class="styleguide__wrapper styleguide__links"><!--only used in style guide-->
+  <p><a href="#" class="g-link--grey">Grey Link</a></p>
+</div>
+```
+
+*/
+
+.g-link--grey:active,
+.g-link--grey:hover,
+.g-link--grey:focus {
+  text-decoration: underline;
+  color: #231f20; }
+
+/*doc
+---
+title: Unordered List
+name: g-list-100
+category: Base - Lists
+---
+
+```html_example
+<div class="styleguide__wrapper styleguide__lists"><!--only used in style guide-->
+<ul>
+  <li>No Wrapping paragraph tag </li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ul>
+      <li>Nested 2 layers deep</li>
+      <li>Nolla volutpat aliquam velit</li>
+    </ul>
+  </li>
+  <li>Vestibolum laoreet porttitor sem</li>
+</ul>
+<p> Example text next to a list of content</p>
+<p>
+<ul>
+  <li>This list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ul>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nolla volutpat aliquam velit</li>
+    </ul>
+  </li>
+  <li>Vestibolum laoreet porttitor sem</li>
+</ul>
+</p>
+<p> Example text near a list item</p>
+</div>
+```
+*/
+li {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem; }
+
+ul {
+  margin-left: 0.75rem;
+  list-style-type: disc; }
+
+/*doc
+---
+title: Ordered list
+name: g-list-200
+category: Base - Lists
+---
+
+```html_example
+<ol>
+  <li>No Wrapping paragraph tag </li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ol>
+      <li>Nested 2 layers deep</li>
+      <li>Nolla volutpat aliquam velit</li>
+    </ol>
+  </li>
+  <li>Vestibolum laoreet porttitor sem</li>
+</ol>
+<p> Example text next to a list of content</p>
+<p>
+<ol>
+  <li>This list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ol>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nolla volutpat aliquam velit</li>
+    </ol>
+  </li>
+  <li>Vestibolum laoreet porttitor sem</li>
+</ol>
+</p>
+<p> Example text near a list item</p>
+```
+*/
+ol {
+  margin-left: 0.75rem;
+  list-style-type: decimal; }
+  ol ol {
+    list-style-type: lower-alpha; }
+
+svg {
+  fill: currentColor; }
+
+label:not(.option) {
+  display: block; }
+
+textarea,
+select,
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'], button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'] {
+  display: block;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  outline: 0;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  padding: 0.75rem;
+  width: 100%;
+  vertical-align: top;
+  font-family: "proxima-nova-soft", sans-serif;
+  text-shadow: none;
+  -webkit-appearance: none; }
+  textarea:focus,
+  select:focus,
+  input[type='date']:focus,
+  input[type='datetime']:focus,
+  input[type='datetime-local']:focus,
+  input[type='email']:focus,
+  input[type='month']:focus,
+  input[type='number']:focus,
+  input[type='password']:focus,
+  input[type='search']:focus,
+  input[type='tel']:focus,
+  input[type='text']:focus,
+  input[type='time']:focus,
+  input[type='url']:focus,
+  input[type='week']:focus, button:focus,
+  input[type='reset']:focus,
+  input[type='submit']:focus,
+  input[type='button']:focus {
+    border-color: #231f20;
+    background-color: #ffffff; }
+  textarea[disabled],
+  select[disabled],
+  input[disabled][type='date'],
+  input[disabled][type='datetime'],
+  input[disabled][type='datetime-local'],
+  input[disabled][type='email'],
+  input[disabled][type='month'],
+  input[disabled][type='number'],
+  input[disabled][type='password'],
+  input[disabled][type='search'],
+  input[disabled][type='tel'],
+  input[disabled][type='text'],
+  input[disabled][type='time'],
+  input[disabled][type='url'],
+  input[disabled][type='week'], button[disabled],
+  input[disabled][type='reset'],
+  input[disabled][type='submit'],
+  input[disabled][type='button'] {
+    border-color: #e6e7e8; }
+
+textarea.g-input--large--centered,
+select.g-input--large--centered,
+input[type='date'].g-input--large--centered,
+input[type='datetime'].g-input--large--centered,
+input[type='datetime-local'].g-input--large--centered,
+input[type='email'].g-input--large--centered,
+input[type='month'].g-input--large--centered,
+input[type='number'].g-input--large--centered,
+input[type='password'].g-input--large--centered,
+input[type='search'].g-input--large--centered,
+input[type='tel'].g-input--large--centered,
+input[type='text'].g-input--large--centered,
+input[type='time'].g-input--large--centered,
+input[type='url'].g-input--large--centered,
+input[type='week'].g-input--large--centered, textarea.g-input--large,
+select.g-input--large,
+input[type='date'].g-input--large,
+input[type='datetime'].g-input--large,
+input[type='datetime-local'].g-input--large,
+input[type='email'].g-input--large,
+input[type='month'].g-input--large,
+input[type='number'].g-input--large,
+input[type='password'].g-input--large,
+input[type='search'].g-input--large,
+input[type='tel'].g-input--large,
+input[type='text'].g-input--large,
+input[type='time'].g-input--large,
+input[type='url'].g-input--large,
+input[type='week'].g-input--large {
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  height: 4.5rem; }
+
+textarea.g-input--large--centered,
+select.g-input--large--centered,
+input[type='date'].g-input--large--centered,
+input[type='datetime'].g-input--large--centered,
+input[type='datetime-local'].g-input--large--centered,
+input[type='email'].g-input--large--centered,
+input[type='month'].g-input--large--centered,
+input[type='number'].g-input--large--centered,
+input[type='password'].g-input--large--centered,
+input[type='search'].g-input--large--centered,
+input[type='tel'].g-input--large--centered,
+input[type='text'].g-input--large--centered,
+input[type='time'].g-input--large--centered,
+input[type='url'].g-input--large--centered,
+input[type='week'].g-input--large--centered {
+  text-align: center; }
+
+/*doc
+---
+title: Input Boxes
+name: 100-g-form
+category: Global - Forms
+---
+
+```html_example
+<div class="sg__wrapper"> <!--styleguide only -->
+  <div class="l-form__item">
+    <label for="edit-submitted-name">Input Box <span class="form-required" title="This field is required.">*</span></label>
+    <input required="required" placeholder="Jane Smith" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" >
+  </div>
+  <div class="l-form__item--narrow">
+    <label for="edit-submitted-postal-code">Narrow Input Box <span class="form-required" title="This field is required.">*</span></label>
+    <input required="required" placeholder="M3A 1B7" type="text" id="edit-submitted-postal-code" name="submitted[postal_code]" value="" size="10" maxlength="7" class="form-text required">
+  </div>
+  <div class="l-form__item">
+    <label for="edit-submitted-province">Select Box <span class="form-required" title="This field is required.">*</span></label>
+    <select required="required" id="edit-submitted-province" name="submitted[province]" class="form-select required"><option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option><option value="NB">New Brunswick</option><option value="NL">Newfoundland and Labrador</option><option value="NS">Nova Scotia</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON" selected="selected">Ontario</option><option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option></select>
+  </div>
+  <div class="l-form__item--wide">
+    <label for="edit-submitted-type-your-message">Text Area <span class="form-required" title="This field is required.">*</span></label>
+    <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea"><textarea required="required" placeholder="Message" id="edit-submitted-type-your-message" name="submitted[type_your_message]" cols="60" rows="5" class="form-textarea required"></textarea><div class="grippie"></div></div>
+  </div>
+  <div class="l-form__item">
+    <label for="edit-submitted-name">Large Input Box<span class="form-required" title="This field is required.">*</span></label>
+    <input required="required" placeholder="info@info.com" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="g-input--large">
+  </div>
+  <div class="l-form__item">
+    <label for="edit-submitted-name">Large Input Box w/ Centered Text<span class="form-required" title="This field is required.">*</span></label>
+    <input required="required" placeholder="info@info.com" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="g-input--large--centered">
+  </div>
+</div>
+```
+
+*/
+textarea,
+select,
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'] {
+  background-color: #ffffff; }
+
+select {
+  -moz-appearance: none !important; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #939598; }
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #939598; }
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #939598; }
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #939598; }
+
+textarea {
+  height: 9rem;
+  overflow: auto;
+  resize: vertical; }
+
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.form-required {
+  font-weight: normal; }
+
+button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'] {
+  border: 0;
+  background-color: transparent;
+  width: auto;
+  border-spacing: 0;
+  text-align: left;
+  text-indent: 0;
+  text-decoration: none; }
+  button::-moz-focus-inner,
+  input[type='reset']::-moz-focus-inner,
+  input[type='submit']::-moz-focus-inner,
+  input[type='button']::-moz-focus-inner, button::-moz-focus-inner,
+  input[type='reset']::-moz-focus-inner,
+  input[type='submit']::-moz-focus-inner,
+  input[type='button']::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+
+input[type="search"]::-webkit-search-decoration {
+  display: none; }
+
+input[type="file"]:focus, input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  box-shadow: none; }
+
+
+.g-form-checkboxes,
+.g-form-radios {
+  margin-bottom: 3rem; }
+
+
+.g-form-type-checkbox,
+.g-form-type-radio {
+  position: relative;
+  float: left;
+  width: 100%; }
+
+
+.g-form-checkbox,
+.g-form-radio,
+.g-form-type-checkbox .option,
+.g-form-type-radio .option {
+  display: block;
+  margin-top: 0.75rem;
+  margin-bottom: 1;
+  vertical-align: baseline;
+  font-family: "proxima-nova-soft", sans-serif; }
+
+
+.g-form-checkbox,
+.g-form-radio {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem; }
+
+
+.g-form-type-checkbox .option,
+.g-form-type-radio .option {
+  float: left;
+  padding-left: 2.25rem; }
+
+/*doc
+---
+title: Check Boxes
+name: 110-g-form
+category: Global - Forms
+---
+
+```html_example
+<div class="styleguide__wrapper"> <!--styleguide only -->
+  <div class="form-item webform-component webform-component-checkboxes webform-component--check-boxes">
+  <label for="edit-submitted-check-boxes">Check Boxes </label>
+
+  <div id="edit-submitted-check-boxes" class="g-form-checkboxes"><div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AL">
+   <input type="checkbox" id="edit-submitted-check-boxes-1" name="submitted[check_boxes][AL]" value="AL" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-1">Alabama </label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AK">
+   <input type="checkbox" id="edit-submitted-check-boxes-2" name="submitted[check_boxes][AK]" value="AK" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-2">Alaska with a really long label to show what text wrapping looks like when something has a really really long label</label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AS">
+   <input type="checkbox" id="edit-submitted-check-boxes-3" name="submitted[check_boxes][AS]" value="AS" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-3">American Samoa</label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AZ">
+   <input type="checkbox" id="edit-submitted-check-boxes-4" name="submitted[check_boxes][AZ]" value="AZ" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-4">Arizona </label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AR">
+   <input type="checkbox" id="edit-submitted-check-boxes-5" name="submitted[check_boxes][AR]" value="AR" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-5">Arkansas </label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-CA">
+   <input type="checkbox" id="edit-submitted-check-boxes-6" name="submitted[check_boxes][CA]" value="CA" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-6">California </label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-CO">
+   <input type="checkbox" id="edit-submitted-check-boxes-7" name="submitted[check_boxes][CO]" value="CO" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-7">Colorado </label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-CT">
+   <input type="checkbox" id="edit-submitted-check-boxes-8" name="submitted[check_boxes][CT]" value="CT" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-8">Connecticut </label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-DE">
+   <input type="checkbox" id="edit-submitted-check-boxes-9" name="submitted[check_boxes][DE]" value="DE" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-9">Delaware </label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-DC">
+   <input type="checkbox" id="edit-submitted-check-boxes-10" name="submitted[check_boxes][DC]" value="DC" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-10">District of Columbia </label>
+  </div>
+
+  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-FL">
+   <input type="checkbox" id="edit-submitted-check-boxes-11" name="submitted[check_boxes][FL]" value="FL" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-11">Florida </label>
+  </div>
+
+  </div>
+  </div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Radio
+name: 120-form
+category: Global - Forms
+---
+
+```html_example
+<div class="styleguide__wrapper--small styleguide__radios"> <!--styleguide only -->
+<div class="form-item webform-component webform-component-radios webform-component--radio">
+  <label for="edit-submitted-radio">Radio  </label>
+ <div id="edit-submitted-radio" class="g-form-radios"><div class="form-item g-form-type-radio form-item-submitted-radio">
+ <input type="radio" id="edit-submitted-radio-1" name="submitted[radio]" value="sunday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-1">Sunday </label>
+
+</div>
+<div class="form-item g-form-type-radio form-item-submitted-radio">
+ <input type="radio" id="edit-submitted-radio-2" name="submitted[radio]" value="monday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-2">Monday with a really long label to show what text wrapping looks like when something has a really really long label</label>
+
+</div>
+<div class="form-item g-form-type-radio form-item-submitted-radio">
+ <input type="radio" id="edit-submitted-radio-3" name="submitted[radio]" value="tuesday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-3">Tuesday </label>
+
+</div>
+<div class="form-item g-form-type-radio form-item-submitted-radio">
+ <input type="radio" id="edit-submitted-radio-4" name="submitted[radio]" value="wednesday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-4">Wednesday </label>
+
+</div>
+<div class="form-item g-form-type-radio form-item-submitted-radio">
+ <input type="radio" id="edit-submitted-radio-5" name="submitted[radio]" value="thursday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-5">Thursday </label>
+
+</div>
+<div class="form-item g-form-type-radio form-item-submitted-radio">
+ <input type="radio" id="edit-submitted-radio-6" name="submitted[radio]" value="friday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-6">Friday </label>
+
+</div>
+<div class="form-item g-form-type-radio form-item-submitted-radio">
+ <input type="radio" id="edit-submitted-radio-7" name="submitted[radio]" value="saturday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-7">Saturday </label>
+
+</div>
+</div>
+</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Form Layout Styles
+name: 130-layout
+category: Global - Forms
+---
+
+```html_example
+<h2>Form (1 to 2 column)</h2>
+<div class="styleguide__form-layout">
+<div class="l-form" data-eq-pts="2cols:500" data-eq-state="2cols">
+  <div class="l-form__item form-item webform-component webform-component-textfield webform-component--name">
+    <label for="edit-submitted-name">Name <span class="form-required" title="This field is required.">*</span></label>
+   <input required="required" placeholder="Jane Smith" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required">
+  </div>
+  <div class="l-form__item form-item webform-component webform-component-email webform-component--email">
+    <label for="edit-submitted-email">Email <span class="form-required" title="This field is required.">*</span></label>
+   <input required="required" class="email form-text form-email required" placeholder="email@example.com" type="email" id="edit-submitted-email" name="submitted[email]" size="60">
+  </div>
+  <div class="l-form__item form-item webform-component webform-component-select webform-component--province">
+    <label for="edit-submitted-province">Province <span class="form-required" title="This field is required.">*</span></label>
+   <select required="required" id="edit-submitted-province" name="submitted[province]" class="form-select required"><option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option><option value="NB">New Brunswick</option><option value="NL">Newfoundland and Labrador</option><option value="NS">Nova Scotia</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON" selected="selected">Ontario</option><option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option></select>
+  </div>
+  <div class="l-form__item--narrow form-item webform-component webform-component-textfield webform-component--postal-code">
+    <label for="edit-submitted-postal-code">Postal Code <span class="form-required" title="This field is required.">*</span></label>
+   <input required="required" placeholder="M3A 1B7" type="text" id="edit-submitted-postal-code" name="submitted[postal_code]" value="" size="10" maxlength="7" class="form-text required">
+  </div>
+  <div class="g-form-actions">
+    <input class="webform-submit button-primary form-submit ajax-processed" type="submit" id="edit-webform-ajax-submit-371" name="op" value="Submit">
+  </div>
+</div>
+</div>
+```
+*/
+
+.l-eq[data-eq-state="2col"] .l-item,
+.l-eq[data-eq-state="2col-60/40"] .l-item,
+.l-eq[data-eq-state="2col-66/33"] .l-item,
+.l-eq[data-eq-state="2col-75/25"] .l-item,
+.l-eq[data-eq-state="3col"] .l-item {
+  padding: 0 0.75rem; }
+
+/*doc
+---
+title: 2 Column Layout @ 50% each
+name: l-eq-100
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col: 600">
+    <div class="l-item">
+      <h3>EQ Item 1 - 50%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-item">
+      <h3>EQ Item 2 - 50%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.l-eq[data-eq-state="2col"] .l-item:nth-child(2n+1) {
+  width: 50%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: left; }
+
+
+.l-eq[data-eq-state="2col"] .l-item:nth-child(2n+2) {
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none;
+  clear: right; }
+
+/*doc
+---
+title: 2 Column Layout @ 60% & 40%
+name: l-eq-200
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col-60/40: 600">
+    <div class="l-item">
+      <h3>EQ Item 1 - 60%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-item">
+      <h3>EQ Item 2 - 40%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.l-eq[data-eq-state="2col-60/40"] .l-item:nth-child(2n+1) {
+  width: 60%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: left; }
+
+
+.l-eq[data-eq-state="2col-60/40"] .l-item:nth-child(2n+2) {
+  width: 40%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none;
+  clear: right; }
+
+/*doc
+---
+title: 2 Column Layout @ 66.666% & 33.333%
+name: l-eq-300
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col-66/33: 600">
+    <div class="l-item">
+      <h3>EQ Item 1 - 66.666%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-item">
+      <h3>EQ Item 2 - 33.333%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.l-eq[data-eq-state="2col-66/33"] .l-item:nth-child(2n+1) {
+  width: 66.6666666667%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: left; }
+
+
+.l-eq[data-eq-state="2col-66/33"] .l-item:nth-child(2n+2) {
+  width: 33.3333333333%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none;
+  clear: right; }
+
+/*doc
+---
+title: 2 Column Layout @ 75% & 25%
+name: l-eq-400
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col-75/25: 600">
+    <div class="l-item">
+      <h3>EQ Item 1 - 75%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-item">
+      <h3>EQ Item 2 - 25%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.l-eq[data-eq-state="2col-75/25"] .l-item:nth-child(2n+1) {
+  width: 75%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: left; }
+
+
+.l-eq[data-eq-state="2col-75/25"] .l-item:nth-child(2n+2) {
+  width: 25%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none;
+  clear: right; }
+
+/*doc
+---
+title: 3 Column Layout @ 33% Each
+name: l-eq-500
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="3col: 600">
+    <div class="l-item">
+      <h3>EQ Item 1 - 33%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-item">
+      <h3>EQ Item 2 - 33%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-item">
+      <h3>EQ Item 2 - 33%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.l-eq[data-eq-state="3col"] .l-item:nth-child(3n+1) {
+  width: 33.3333333333%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none; }
+
+
+.l-eq[data-eq-state="3col"] .l-item:nth-child(3n+2) {
+  width: 33.3333333333%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 33.3333333333%;
+  clear: none; }
+
+
+.l-eq[data-eq-state="3col"] .l-item:nth-child(3n+3) {
+  width: 33.3333333333%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none; }
+
+/**
+ * @file
+ *
+ * This partial is used to define generic page layout items common between all
+ * EG the "wrapper Stuff"
+ */
+
+.l-page__content {
+  background-color: #999999;
+  padding: 1.5rem; }
+
+@media (min-width: 56.25em) {
+  
+  .l-page__content-main {
+    padding-right: 25%; } }
+
+@media (min-width: 75em) {
+  
+  .l-page__content-main {
+    padding-right: 33.3333333333%; } }
+
+@media (min-width: 37.5em) {
+  
+  .l-page__content-main.has-aside {
+    width: 66.6666666667%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+    padding-right: 0.75rem; } }
+
+@media (min-width: 56.25em) {
+  
+  .l-page__content-main.has-aside {
+    padding-right: 1.5rem; } }
+
+
+.l-page__content-aside {
+  margin-top: 0.75rem; }
+  @media (min-width: 37.5em) {
+    
+    .l-page__content-aside {
+      width: 33.3333333333%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0%;
+      clear: none;
+      margin-top: 0;
+      padding-left: 0.75rem; } }
+
+
+.l-form__item--narrow,
+.l-form__item,
+.l-form .form-item {
+  float: left;
+  width: 100%; }
+
+
+.l-form--max .form-item {
+  max-width: 45rem; }
+
+
+.l-form .l-form-actions {
+  clear: both; }
+
+
+.l-form[data-eq-state="2cols"] {
+  margin: 0 -0.75rem 1.5rem -0.75rem; }
+  
+  .l-form[data-eq-state="2cols"]
+  .l-form__item--narrow,
+  .l-form[data-eq-state="2cols"] .l-form__item,
+  .l-form[data-eq-state="2cols"] > .form-item {
+    padding: 0 0.75rem;
+    width: 50%; }
+    
+    .l-form[data-eq-state="2cols"]
+    .l-form__item--narrow:nth-of-type(2n+1),
+    .l-form[data-eq-state="2cols"] .l-form__item:nth-of-type(2n+1),
+    .l-form[data-eq-state="2cols"] > .form-item:nth-of-type(2n+1) {
+      clear: both; }
+  
+  .l-form[data-eq-state="2cols"] .l-form-actions {
+    padding: 0 0.75rem; }
+  
+  .l-form[data-eq-state="2cols"] .l-form__item--wide {
+    width: 100%; }
+
+
+.l-form__item--narrow input,
+.l-form__item--narrow select,
+.l-form__item--narrow textarea,
+.l-form__item--narrow button,
+.l-form__item--narrow optgroup {
+  width: auto;
+  max-width: 100%; }
+
+
+.l-form__foo-bar {
+  display: none; }
+
+
+.l-form--padding,
+.l-form .g-form-actions {
+  clear: both;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem; }
+
+
+.l-form--max .l-form__actions {
+  margin-right: 0;
+  margin-left: 0; }
+
+
+.l-form--padding-vertical {
+  margin-top: 1.125rem;
+  margin-bottom: 2.25rem; }
+
+
+.g-form-item .description {
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem; }
+
+/*doc
+---
+title: Button Default
+name: c-btn-100
+category: Components - Buttons
+---
+
+```html_example
+<a href="#" class="c-btn">Default Button</a>
+```
+
+*/
+button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'],
+.c-btn--left,
+.c-btn--right,
+.c-btn,
+.c-btn--grey,
+.c-btn--thin {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'],
+.c-btn--left,
+.c-btn--right,
+.c-btn {
+  border-color: #afafaf;
+  background-color: #ffffff;
+  color: #939598; }
+  button:hover,
+  input[type='reset']:hover,
+  input[type='submit']:hover,
+  input[type='button']:hover,
+  .c-btn--left:hover,
+  .c-btn--right:hover, button:focus,
+  input[type='reset']:focus,
+  input[type='submit']:focus,
+  input[type='button']:focus,
+  .c-btn--left:focus,
+  .c-btn--right:focus, button:active,
+  input[type='reset']:active,
+  input[type='submit']:active,
+  input[type='button']:active,
+  .c-btn--left:active,
+  .c-btn--right:active,
+  .c-btn:hover,
+  .c-btn:focus,
+  .c-btn:active {
+    border-color: #939598;
+    background-color: #f1f2f2; }
+
+/*doc
+---
+title: Button Color Variations
+name: c-btn-200
+category: Components - Buttons
+---
+
+```html_example
+<div class="sg__wrapper--light-grey"> <!--styleguide only -->
+  <a href="#" class="c-btn--grey">Grey Button</a>
+</div>
+```
+
+*/
+
+.c-btn--grey {
+  background-color: #939598;
+  color: #ffffff; }
+  
+  .c-btn--grey:hover,
+  .c-btn--grey:focus,
+  .c-btn--grey:active {
+    border-color: #939598;
+    background-color: #ffffff;
+    color: #939598; }
+
+/*doc
+---
+title: Button Size Variations
+name: c-btn-300
+category: Components - Buttons
+---
+
+```html_example
+<div class="sg__wrapper--light-grey"> <!--styleguide only -->
+  <a href="#" class="c-btn--grey c-btn--thin">Thin Grey Button</a>
+</div>
+```
+
+*/
+
+.c-btn--thin {
+  padding: 0.1875rem 1.5rem; }
+
+/*doc
+---
+title: Buttons - Inline Icons
+name: c-btn-400
+category: Components - Buttons
+---
+
+```html_example
+<a href="#" class="c-btn--left"><svg class="svg"><use xlink:href="../svg/sprite-ui.svg#arrow-left"></use></svg>Back Button</a>
+<a href="#" class="c-btn--right">Continue Button<svg class="svg"><use xlink:href="../svg/sprite-ui.svg#arrow-right"></use></svg></a>
+```
+
+*/
+
+.c-btn--left,
+.c-btn--right {
+  position: relative;
+  border-color: #afafaf; }
+  
+  .c-btn--left:hover,
+  .c-btn--right:hover,
+  .c-btn--left:focus,
+  .c-btn--right:focus,
+  .c-btn--left:active,
+  .c-btn--right:active {
+    background-color: #f1f2f2;
+    color: #939598; }
+
+
+.c-btn--left {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 3rem;
+  padding-right: 1.5rem; }
+  
+  .c-btn--left .svg {
+    display: block;
+    position: absolute;
+    margin-top: -0.5625rem;
+    margin-left: -0.5625rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    left: 1.5rem;
+    top: 1.5rem; }
+
+
+.c-btn--right {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 3rem;
+  padding-left: 1.5rem; }
+  
+  .c-btn--right .svg {
+    display: block;
+    position: absolute;
+    margin-top: -0.5625rem;
+    margin-left: -0.5625rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    right: 1.125rem;
+    top: 1.5rem; }
+  
+  .c-btn--right svg {
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem; }
+
+/*doc
+---
+title: Buttons - Icons Only
+name: c-btn-500
+category: Components - Buttons
+---
+
+```html_example
+<div class="sg__wrapper--light-grey"> <!--styleguide only -->
+  <a href="#" class="c-btn--svg">
+  <svg class="svg"><use xlink:href="../svg/sprite-ui.svg#close"></use></svg>
+  <div class="u-text-hide">Close</div>
+  </a>
+
+  <a href="#" class="c-btn--svg">
+  <svg class="svg"><use xlink:href="../svg/sprite-ui.svg#menu"></use></svg>
+  <div class="u-text-hide">Menu</div>
+  </a>
+</div>
+
+```
+
+*/
+
+.c-btn--svg--lrg,
+.c-btn--svg--sml,
+.c-btn--svg {
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: block;
+  color: #231f20; }
+  
+  .c-btn--svg--lrg .svg,
+  .c-btn--svg--sml .svg,
+  .c-btn--svg .svg {
+    position: absolute;
+    top: 0.375rem;
+    left: 0.375rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+  
+  .c-btn--svg--lrg:hover,
+  .c-btn--svg--sml:hover,
+  .c-btn--svg--lrg:focus,
+  .c-btn--svg--sml:focus,
+  .c-btn--svg--lrg:active,
+  .c-btn--svg--sml:active,
+  .c-btn--svg:hover,
+  .c-btn--svg:focus,
+  .c-btn--svg:active {
+    background-color: #e6e7e8; }
+
+
+.c-btn--svg--lrg {
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem; }
+  
+  .c-btn--svg--lrg .svg {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 1.875rem;
+    height: 1.875rem; }
+
+
+.c-btn--svg--sml {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem; }
+  
+  .c-btn--svg--sml .svg {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+
+
+.btn--menu {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0.75rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  padding: 1.125rem 0.375rem;
+  max-height: 100%; }
+  @media (min-width: 37.5em) {
+    
+    .btn--menu {
+      bottom: 0; } }
+  @media (min-width: 56.25em) {
+    
+    .btn--menu {
+      display: none; } }
+  
+  .btn--menu:hover,
+  .btn--menu:active,
+  .btn--menu:focus {
+    text-decoration: none;
+    color: #ffffff; }
+
+/*doc
+---
+title: Logo
+name: c-logo-100
+category: Components - Logo
+---
+
+```html_example
+<div class="styleguide__wrapper--med-black styleguide__logo"><!-- Only used in style guide -->
+  <div class="c-logo">
+    <div class="c-logo__svg-wrapper">
+      <a class="c-logo__link" href="#">
+        <svg class="c-logo__svg--shapes"><use xlink:href="/svg/sprite-ui.svg#logo"></use></svg>
+        <div class="c-logo__hidden-text">Logo</div>
+      </a>
+    </div>
+  </div>
+</div>
+```
+*/
+/*doc
+---
+title: Logo (Mobile Size)
+name:  c-logo-200
+category: Components - Logo
+---
+
+```html_example
+<div class="styleguide__wrapper--tiny-black"><!-- Only used in style guide -->
+  <div class="c-logo">
+    <div class="c-logo__svg-wrapper">
+      <a class="c-logo__link" href="#">
+        <svg class="c-logo__svg--shapes"><use xlink:href="/svg/sprite-ui.svg#logo"></use></svg>
+        <div class="c-logo__hidden-text">Logo</div>
+      </a>
+    </div>
+  </div>
+</div>
+```
+*/
+
+.c-logo {
+  float: left;
+  width: 1.5rem; }
+  @media (min-width: 56.25em) {
+    
+    .c-logo {
+      float: none;
+      margin-bottom: 2.625rem;
+      padding-left: 2.25rem;
+      width: auto; } }
+
+
+.c-logo__link--white {
+  color: #ffffff; }
+  
+  .c-logo__link--white:hover,
+  .c-logo__link--white:active,
+  .c-logo__link--white:focus {
+    color: #ffffff; }
+
+
+.c-logo__svg--shapes {
+  width: 1.5rem;
+  height: 3.5rem; }
+  @media (min-width: 56.25em) {
+    
+    .c-logo__svg--shapes {
+      width: 2.625rem;
+      height: 6.3125rem; } }
+
+
+.c-logo__svg--words {
+  display: none;
+  position: relative;
+  top: 3.125rem;
+  left: 0.5rem;
+  width: 8.25rem;
+  height: 5.6875rem; }
+  @media (min-width: 56.25em) {
+    
+    .c-logo__svg--words {
+      display: inherit; } }
+
+
+.c-logo__hidden-text {
+  height: 0; }
+
+/*doc
+---
+title: Tables
+name: c100-tables
+category: Components - Tables
+---
+
+<p>All content fields displayed.</p>
+
+```html_example
+<div class="styleguide__tables"><!--only used in style guide-->
+<table class="c-table">
+  <tbody>
+    <tr>
+      <th scope="col">Fusce Euismod Tellus Mollis</th>
+      <th class="c-table__col--narrow" scope="col">Sem Lorem</th>
+      <th class="c-table__col--narrow" scope="col">Venenatis</th>
+    </tr>
+    <tr>
+      <td>Porta</td>
+      <td class="c-table__col--narrow">Yes</td>
+      <td class="c-table__col--narrow">Yes</td>
+    </tr>
+    <tr>
+      <td>Inceptos</td>
+      <td class="c-table__col--narrow">Yes</td>
+      <td class="c-table__col--narrow">No</td>
+    </tr>
+    <tr>
+      <td>Cras Elit Nullam</td>
+      <td class="c-table__col--narrow">Yes</td>
+      <td class="c-table__col--narrow">No</td>
+    </tr>
+    <tr>
+      <td>Nullam Foo Donis</td>
+      <td class="c-table__col--narrow">Yes</td>
+      <td class="c-table__col--narrow">No</td>
+    </tr>
+    <tr>
+      <td>Elit</td>
+      <td class="c-table__col--narrow">Yes</td>
+      <td class="c-table__col--narrow">No</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+```
+
+*/
+
+table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e6e7e8;
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse; }
+
+
+th,
+td {
+  border: 1px solid #e6e7e8;
+  padding: 0.375rem 0.75rem; }
+
+
+th {
+  background-color: #939598;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: left;
+  color: #ffffff;
+  font-weight: 400; }
+
+
+td {
+  vertical-align: top; }
+
+
+tr:nth-child(even) {
+  background-color: #ffffff; }
+
+
+tr:nth-child(odd) {
+  background-color: #f1f2f2; }
+
+
+tr:hover,
+tr:focus {
+  background-color: #e6e7e8; }
+  
+  tr:hover td,
+  tr:focus td {
+    border-right-color: #939598;
+    border-left-color: #afafaf; }
+
+
+.c-table__col--narrow {
+  min-width: 1.5rem;
+  max-width: 3rem;
+  text-align: center; }
+
+
+.c-nav--vertical,
+.c-nav--horizontal {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+
+.c-nav--vertical__item {
+  display: block;
+  margin: 0; }
+
+/*doc
+---
+title: Vertical Navigation
+name: c-nav-100
+category: Components - Navigation
+---
+
+```html_example
+<ul class="c-nav--vertical">
+  <li class="c-nav--vertical__item">
+    <a class="c-nav--vertical__link is-active" href="#">Link 1 Is Active</a>
+  </li>
+  <li class="c-nav--vertical__item">
+    <a class="c-nav--vertical__link" href="#">Link 2</a>
+  </li>
+  <li class="c-nav--vertical__item">
+    <a class="c-nav--vertical__link" href="#">Link 3</a>
+  </li>
+  <li class="c-nav--vertical__item">
+    <a class="c-nav--vertical__link" href="#">Link 4</a>
+  </li>
+</ul>
+```
+
+*/
+
+.c-nav--vertical {
+  margin-bottom: 3.375rem; }
+
+
+.c-nav--vertical__item:not(:first-child) {
+  border-top: 1px solid #afafaf; }
+
+
+.c-nav--vertical__link {
+  display: block;
+  padding: 0.375rem 1.875rem;
+  text-transform: uppercase;
+  color: #939598; }
+  @media (min-width: 25em) {
+    
+    .c-nav--vertical__link {
+      padding-left: 2.625rem; } }
+  @media (min-width: 56.25em) {
+    
+    .c-nav--vertical__link {
+      padding-right: 0.75rem;
+      padding-left: 3.75rem; } }
+  @media (min-width: 56.25em) {
+    
+    .c-nav--vertical__link {
+      padding-left: 6rem; } }
+  
+  .c-nav--vertical__link:hover,
+  .c-nav--vertical__link:focus,
+  .c-nav--vertical__link:active {
+    background-color: #f1f2f2; }
+  
+  .c-nav--vertical__link.is-active {
+    font-weight: 700; }
+
+/*doc
+---
+title: Horizontal Navigation
+name: c-nav-200
+category: Components - Navigation
+---
+
+
+```html_example
+<ul class="c-nav--horizontal">
+  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 1</a></li><!--
+  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 2</a></li><!--
+  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link is-active" href="#">Link 3</a></li><!--
+  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 4</a></li>
+</ul>
+```
+
+*/
+
+.c-nav--horizontal__item {
+  display: inline-block; }
+  
+  .c-nav--horizontal__item:not(:first-child) {
+    padding-left: 1px; }
+  
+  .c-nav--horizontal__item:not(:last-child) {
+    border-right: 1px solid #939598;
+    padding-right: 0.375rem; }
+
+
+.c-nav--horizontal__link {
+  display: block;
+  padding-top: 0;
+  color: #939598; }
+  
+  .c-nav--horizontal__link:hover,
+  .c-nav--horizontal__link:focus,
+  .c-nav--horizontal__link:active {
+    text-decoration: underline;
+    color: #231f20; }
+
+/*doc
+---
+title: Inline Nav (Breadcrumbs)
+name: c-nav-300
+category: Components - Navigation
+---
+
+```html_example
+<h2>Ordered List</h2>
+<ol class="c-nav--inline">
+  <li><a href="#" class="is-active">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+</ol>
+
+<h2>Unordered List</h2>
+<ul class="c-nav--inline">
+  <li><a href="#">Link 1</a></li>
+  <li><a href="#" class="is-active">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+</ul>
+```
+*/
+
+.c-nav--inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #939598; }
+  
+  .c-nav--inline li {
+    display: inline-block;
+    margin: 0; }
+    
+    .c-nav--inline li:after {
+      content: ' > '; }
+  
+  .c-nav--inline a {
+    color: #939598; }
+    
+    .c-nav--inline a:hover,
+    .c-nav--inline a:focus,
+    .c-nav--inline a:active,
+    .c-nav--inline a.is-active {
+      text-decoration: underline;
+      color: #231f20; }
+
+/*doc
+---
+title: Tabs
+name: c-tabs-100
+category: Components - Tabs
+---
+
+```html_example
+<h2 class="element-invisible">Primary tabs</h2>
+<ul class="tabs primary">
+<li class="active"><a href="/sharon-gannon-david-life-0" class="active">View<span class="element-invisible">(active tab)</span></a></li>
+<li><a href="/node/51944/edit">Edit</a></li>
+<li><a href="/node/51944/display">Manage display</a></li>
+<li><a href="/node/51944/devel">Devel</a></li>
+</ul>
+
+```
+*/
+
+.tabs__menu,
+.tabs {
+  display: block; }
+
+
+.tabs > li {
+  float: left;
+  margin-bottom: 1.5rem; }
+
+
+.tabs a {
+  float: left;
+  margin: 0;
+  border: 1px solid #939598;
+  border-right: 0;
+  background-color: #e6e7e8;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #231f20; }
+  
+  .tabs a:hover,
+  .tabs a:focus,
+  .tabs a:active {
+    background-color: #939598; }
+
+
+.tabs li.active a {
+  border-bottom-color: transparent;
+  background-color: transparent; }
+
+/*doc
+---
+title: Blockquote
+name: c-blockquote-100
+category: Components - Blockquote
+---
+
+```html_example
+<blockquote class="blockquote">
+  <p>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus."
+  </p>
+</blockquote>
+```
+
+*/
+
+.blockquote {
+  margin: 3rem 0 1.5rem;
+  padding: 1.5rem; }
+
+
+.blockquote__cite {
+  font-style: normal; }
 
 /*# sourceMappingURL=maps/style.css.map */
