@@ -149,8 +149,95 @@ category: Layout - Columns
 
 /*doc
 ---
-title: 2 Column Layout @ 75% & 25%
+title: 2 Column Layout @ 33.333% & 66.666%
 name: l-eq-400
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col-33/66: 600">
+    <div class="l-item">
+      <h3>EQ Item 1 - 33.333%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-item">
+      <h3>EQ Item 2 - 66.666%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+//2COLUMN LAYOUT @ 33.333% & 66.666%
+%l-eq-2col__item--1-2\(33\,66\),
+.l-eq[data-eq-state="2col-33/66"] .l-item {
+  @extend %l-item;
+
+  @include layout(33 66, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: left;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+      clear: right;
+    }
+  }
+}
+
+/*doc
+---
+title: 2 Column Layout @ 40% & 60%
+name: l-eq-500
+category: Layout - Columns
+---
+
+```html_example
+<div class="sg__wrapper--eq">
+  <div class="l-eq" data-eq-pts="2col-40/60: 600">
+    <div class="l-item">
+      <h3>EQ Item 1 - 40%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+
+    <div class="l-item">
+      <h3>EQ Item 2 - 60%</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+//2COLUMN LAYOUT @ 40% & 60%
+%l-eq-2col__item--1-2\(40\,60\),
+.l-eq[data-eq-state="2col-40/60"] .l-item {
+  @extend %l-item;
+
+  @include layout(40 60, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: left;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+      clear: right;
+    }
+  }
+}
+
+
+/*doc
+---
+title: 2 Column Layout @ 75% & 25%
+name: l-eq-600
 category: Layout - Columns
 ---
 
@@ -193,7 +280,7 @@ category: Layout - Columns
 /*doc
 ---
 title: 3 Column Layout @ 33% Each
-name: l-eq-500
+name: l-eq-700
 category: Layout - Columns
 ---
 
