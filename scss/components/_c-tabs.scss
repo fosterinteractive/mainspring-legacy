@@ -1,34 +1,56 @@
-//Admin Tabs
-.tabs.primary {
-  margin: ru(2) 0 0 0;
-  padding: 0;
+/*doc
+---
+title: Tabs
+name: c-tabs-100
+category: Components - Tabs
+---
 
-  li {
-    display: inline-block;
-    margin-right: 0;
+```html_example
+<h2 class="element-invisible">Primary tabs</h2>
+<ul class="tabs primary">
+<li class="active"><a href="/sharon-gannon-david-life-0" class="active">View<span class="element-invisible">(active tab)</span></a></li>
+<li><a href="/node/51944/edit">Edit</a></li>
+<li><a href="/node/51944/display">Manage display</a></li>
+<li><a href="/node/51944/devel">Devel</a></li>
+</ul>
 
+```
+*/
 
-    a {
-      display: block;
-      background-color: rgba($white, 0.5);
-      padding: ru(0.25);
-      color: palette(grey);
+%tabs__menu,
+.tabs__menu,
+.tabs { // Drupal admin tabs.
+  @extend %u-list--blank;
+  @extend %clearfix;
+  display: block;
+}
 
-      &:hover,
-      &:focus,
-      &:active,
-      &.is-active {
-        background-color: rgba($white, 0.8);
-      }
-    }
+%tabs__menu-item,
+.tabs > li {
+  float: left;
+  margin-bottom: ru(1);
+}
+
+%tabs__button,
+.tabs a {
+  float: left;
+  margin: 0;
+  border: 1px solid palette(grey);
+  border-right: 0;
+  background-color: palette(grey, light);
+  padding: ru(0.5) ru(1);
+  text-decoration: none;
+  color: palette(grey, dark);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: palette(grey);
   }
 }
 
-
-//TODO: Make a new component??
-
-.message--status {
-  margin-bottom: ru(1);
-  background-color: rgba($white, 0.5);
-  padding: ru(0.5);
+%tabs__button.is-active,
+.tabs li.active a {
+  border-bottom-color: transparent;
+  background-color: transparent;
 }
