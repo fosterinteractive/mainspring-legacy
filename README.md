@@ -11,7 +11,7 @@ Intended for use in Drupal or similar CMS.
 
 [Installation](/docs/installation.md)
 
-[Commands](/docs/installation.md)
+[Commands](/docs/commands.md)
 
 [Inspiration](/docs/oh-my-god-its-full-of-stars.md)
 
