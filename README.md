@@ -20,7 +20,23 @@ Gulp-Sass is the workhorse of this package which runs off of lib-sass
 See http://sass-compatibility.github.io/ for sass compatibility lists
 compared to ruby-sass
 
-##Credits##
+##Gulp##
+
+
+##SVG##
+
+
+##Hologram##
+
+
+##Naming conventions##
+
+
+##Customize for your project##
+
+
+##Get Started with SCSS##
+
 
 ###Fonts###
 Icons are from Font Awsome Created by Dave Gandy
