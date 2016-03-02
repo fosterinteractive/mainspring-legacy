@@ -10,6 +10,8 @@ var bower = require('gulp-bower');
 var mainBowerFiles = require('main-bower-files');
 var bowerNormalizer = require('gulp-bower-normalize');
 var del = require('del');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
 
 
 gulp.task('bower:install', function() {
@@ -29,7 +31,10 @@ gulp.task('bower', ['bower:install', 'bower:clean'], function() {
     }))
   .pipe(filter('**/*.js'))
   .pipe(flatten())
-  .pipe(gulp.dest('./js/vendor'))
+  .pipe(gulp.dest('./js/vendor')) // Write the non-minified JS
+  .pipe(uglify()) // Minify JS
+  .pipe(rename({extname: ".min.js"})) // Change file to *.min.js
+  .pipe(gulp.dest('./js/vendor')) // Write minified files
   ;
 
 });
