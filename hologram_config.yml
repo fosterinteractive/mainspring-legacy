@@ -42,7 +42,16 @@ css_include:
 
 js_include:
   - 'https://code.jquery.com/jquery-1.10.2.min.js'
+  - '../js/jquery.once.min.js'
   - '../js/vendor/eq.js'
+  - '../js/vendor/jquery.dotdotdot.js'
+  - '../js/vendor/velocity.min.js'
+  - '../js/vendor/svg4everybody.min.js'
+  - '../js/vendor/jquery.matchHeight.js'
+  - '../js/vendor/media.match.js'
+  - '../js/vendor/slidebars.js'
+  - '../js/vendor/enquire.min.js'
+  - '../js/script.js'
 
 # Mark which category should be the index page
 # Alternatively, you may have an index.md in the documentation assets

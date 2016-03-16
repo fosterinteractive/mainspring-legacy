@@ -13,13 +13,16 @@
     "test",
     "tests"
   ],
-
   "dependencies": {
     "eq.js": "~1.6.0",
     "jQuery.dotdotdot": "~1.7.2",
-    "matchHeight": "~0.6.0"
+    "matchHeight": "~0.6.0",
+    "svg4everybody": "~2.0.0",
+    "media-match": "~2.0.2",
+    "enquire": "~2.1.2",
+    "Slidebars": "~0.10.3",
+    "velocity": "~1.2.3"
   },
-
   "devDependencies": {
     "Cortana": "~1.2.9",
     "breakpoint-sass": "~2.5.0",
@@ -28,19 +31,24 @@
     "sassy-maps": "~0.4.0",
     "singularity": "~1.6.2"
   },
-
   "overrides": {
-
     "eq.js": {
       "main": "build/eq.js"
     },
-
     "jQuery.dotdotdot": {
-      "main": "js/jQuery.dotdotdot"
+      "main": "src/js/jQuery.dotdotdot.js"
     },
-
     "matchHeight": {
       "main": "jquery.matchHeight.js"
+    },
+    "media-match": {
+      "main": "media.match.js"
+    },
+    "Slidebars": {
+      "main": "dist/slidebars.js"
+    },
+    "velocity": {
+      "main": "velocity.js"
     }
   }
 }
