@@ -6,7 +6,10 @@ label:not(.option) {
   display: block;
 
   &.has-error {
-    // color: palette(red);
+    //Change to sites red variant
+    border-color: $debug-red;
+    background-color: rgba($debug-red, 0.1);
+    color: $debug-red;
   }
 }
 
@@ -29,15 +32,16 @@ label:not(.option) {
   -webkit-appearance: none;
 
   &:focus {
-    // outline: 2px solid $grey--dark;
-    // border-radius: 4px;
     border-color: palette(grey, dark);
     background-color: $white;
   }
 
   // Error state
   &.has-error {
-    // border-color: palette(red);
+    //Change to sites red variant
+    border-color: $debug-red;
+    background-color: rgba($debug-red, 0.1);
+    color: $debug-red;
   }
 
   &[disabled] {
@@ -128,12 +132,12 @@ input[type='week'] {
 //scss-lint:enable QualifyingElement
 
 
-
-
-
 // Removes select drop-down arrow
 //scss-lint:disable ImportantRule
 select {
+  @extend %g-input--core;
+
+  padding: ru(0.375) ru(0.5);
   -moz-appearance: none !important;
 }
 //scss-lint:enable ImportantRule
@@ -241,7 +245,7 @@ input[type="checkbox"] {
 
 // Checkbox and radios (Drupal Styles)
 %g-form__checkbox-radio-group--core {
-  @extend %clearfix;
+  @extend %u-clearfix;
   margin-bottom: ru(2);
 }
 
@@ -442,27 +446,31 @@ category: Global - Forms
 ---
 
 ```html_example
-<h2>Form (1 to 2 column)</h2>
+<h2>Form field width variations</h2>
 <div class="styleguide__form-layout">
 <div class="l-form" data-eq-pts="2cols:500" data-eq-state="2cols">
-  <div class="l-form__item form-item webform-component webform-component-textfield webform-component--name">
+  <div class="l-form__item--med l-form__item--no-top-margin">
     <label for="edit-submitted-name">Name <span class="form-required" title="This field is required.">*</span></label>
-   <input required="required" placeholder="Jane Smith" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required">
+    <input required="required" placeholder="Jane Smith" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required">
   </div>
-  <div class="l-form__item form-item webform-component webform-component-email webform-component--email">
+  <div class="l-form__item--med l-form__item--no-top-margin">
     <label for="edit-submitted-email">Email <span class="form-required" title="This field is required.">*</span></label>
-   <input required="required" class="email form-text form-email required" placeholder="email@example.com" type="email" id="edit-submitted-email" name="submitted[email]" size="60">
+    <input required="required" class="email form-text form-email required" placeholder="email@example.com" type="email" id="edit-submitted-email" name="submitted[email]" size="60">
   </div>
-  <div class="l-form__item form-item webform-component webform-component-select webform-component--province">
+  <div class="l-form__item--wide">
     <label for="edit-submitted-province">Province <span class="form-required" title="This field is required.">*</span></label>
-   <select required="required" id="edit-submitted-province" name="submitted[province]" class="form-select required"><option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option><option value="NB">New Brunswick</option><option value="NL">Newfoundland and Labrador</option><option value="NS">Nova Scotia</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON" selected="selected">Ontario</option><option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option></select>
+    <select required="required" id="edit-submitted-province" name="submitted[province]" class="form-select required"><option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option><option value="NB">New Brunswick</option><option value="NL">Newfoundland and Labrador</option><option value="NS">Nova Scotia</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON" selected="selected">Ontario</option><option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option></select>
   </div>
-  <div class="l-form__item--narrow form-item webform-component webform-component-textfield webform-component--postal-code">
+  <div class="l-form__item--narrow">
     <label for="edit-submitted-postal-code">Postal Code <span class="form-required" title="This field is required.">*</span></label>
-   <input required="required" placeholder="M3A 1B7" type="text" id="edit-submitted-postal-code" name="submitted[postal_code]" value="" size="10" maxlength="7" class="form-text required">
+    <input required="required" placeholder="M3A 1B7" type="text" id="edit-submitted-postal-code" name="submitted[postal_code]" value="" size="10" maxlength="7" class="form-text required has-error">
+  </div>
+  <div class="l-form__item webform-component webform-component-textfield webform-component--postal-code">
+    <label for="edit-submitted-your-message">Postal Code <span class="form-required" title="This field is required.">*</span></label>
+    <textarea class="l-form__item" name="submitted[your_message]" placeholder="Your Message" rows="5" cols="60" class="form-text required"></textarea>
   </div>
   <div class="g-form-actions">
-    <input class="webform-submit button-primary form-submit ajax-processed" type="submit" id="edit-webform-ajax-submit-371" name="op" value="Submit">
+    <input class="g-input--orange webform-submit button-primary form-submit ajax-processed" type="submit" id="edit-webform-ajax-submit-371" name="op" value="Submit">
   </div>
 </div>
 </div>

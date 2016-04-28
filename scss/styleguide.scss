@@ -18,6 +18,8 @@
 @import 'config/mixins';
 @import 'config/extends';
 
+@import 'utility/utility';
+
 %sg__wrapper,
 .sg__wrapper {
   @extend %u-clearfix;
@@ -52,6 +54,12 @@
   max-width: rem(700px);
 }
 
+%sg__wrapper--img,
+.sg__wrapper--img {
+  @extend %sg__wrapper;
+  max-width: rem(900px);
+}
+
 // // Force display to visible
 
 // %styleguide--force-visibile,
@@ -72,7 +80,7 @@
 // Cortana Overrides
 // .cortana-content {
 //   .clearfix {
-//     @extend %clearfix;
+//     @extend %u-clearfix;
 //   }
 // }
 

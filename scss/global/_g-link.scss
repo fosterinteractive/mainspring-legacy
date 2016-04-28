@@ -16,8 +16,8 @@ category: Base - Links
 
 %link,
 a {
-  @extend %animate-color--fast;
-  @extend %animate-background-color--fast;
+  @extend %u-animate-color;
+  @extend %u-animate-background-color;
   text-decoration: none;
 
   &:active,

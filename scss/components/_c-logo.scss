@@ -10,7 +10,7 @@ category: Components - Logo
   <div class="c-logo">
     <div class="c-logo__svg-wrapper">
       <a class="c-logo__link" href="#">
-        <svg class="c-logo__svg--shapes"><use xlink:href="/svg/sprite-ui.svg#logo"></use></svg>
+        <svg class="c-logo__svg"><use xlink:href="/svg/sprite-ui.svg#logo"></use></svg>
         <div class="c-logo__hidden-text">Logo</div>
       </a>
     </div>
@@ -31,7 +31,7 @@ category: Components - Logo
   <div class="c-logo">
     <div class="c-logo__svg-wrapper">
       <a class="c-logo__link" href="#">
-        <svg class="c-logo__svg--shapes"><use xlink:href="/svg/sprite-ui.svg#logo"></use></svg>
+        <svg class="c-logo__svg"><use xlink:href="/svg/sprite-ui.svg#logo"></use></svg>
         <div class="c-logo__hidden-text">Logo</div>
       </a>
     </div>
@@ -56,23 +56,11 @@ category: Components - Logo
 
 %c-logo__link,
 .c-logo__link {
-  // color: palette(blue, dark);
 
   &:hover,
   &:focus,
   &:active {
-    // color: palette(blue, dark);
-  }
-}
 
-%c-logo__link--white,
-.c-logo__link--white {
-  color: $white;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $white;
   }
 }
 
@@ -81,8 +69,8 @@ category: Components - Logo
   @extend %svg__core;
 }
 
-%c-logo__svg--shapes,
-.c-logo__svg--shapes {
+%c-logo__svg,
+.c-logo__svg {
   @extend %svg__core;
   width: rem(24px);
   height: rem(56px);
@@ -90,23 +78,6 @@ category: Components - Logo
   @include respond-to('full-nav') {
     width: rem(42px);
     height: rem(101px);
-  }
-}
-
-%c-logo__svg--words,
-.c-logo__svg--words {
-
-  @extend %svg__core;
-  display: none;
-  position: relative;
-  top: rem(50px);
-  left: rem(8px);
-  width: rem(132px);
-  height: rem(91px);
-
-
-  @include respond-to('full-nav') {
-    display: inherit;
   }
 }
 

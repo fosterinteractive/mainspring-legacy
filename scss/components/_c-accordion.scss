@@ -58,7 +58,6 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   text-transform: uppercase;
   text-decoration: none;
   font-family: $title-font-family;
-  // font-weight: $title-font-weight-bold;
 }
 
 
@@ -152,12 +151,10 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   margin: ru(0.25) ru(0.75) ru(0.75) 0;
   border: 2px solid $white;
   border-radius: 50%;
-  // color: palette(orange);
   stroke-width: 3px;
 
 
   fill: none;
-  // stroke: palette(orange);
 
  // @ type-large Absolute position icon in left column
   @include respond-to(type-large) {

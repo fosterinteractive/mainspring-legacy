@@ -8,7 +8,7 @@
 
 // usually used for page regions/containers. e.g. l--footer__wrapper, l-page__content-container.
 %l-page__container {
-  @extend %clearfix;
+  @extend %u-clearfix;
   margin: ru(1) 0;
 }
 
@@ -17,20 +17,20 @@
 // Message region on non panel pages.
 %l-page__message,
 .l-page__message {
-  @extend %l-page--limit;
+  // @extend %l-page--limit;
 }
 
 // Used specifically in products page to do two column layout with content and image when selecting default layout.
 %l-page__content,
 .l-page__content {
-  @extend %clearfix;
+  @extend %u-clearfix;
   background-color: $grey-light;
   padding: ru(1);
 }
 
 %l-page__content-main,
 .l-page__content-main {
-  @extend %content-helper--remove-both-child-margins;
+  @extend %u-remove-child--margin-top-bottom;
 
   @include respond-to('full-nav') {
     padding-right: 25%;

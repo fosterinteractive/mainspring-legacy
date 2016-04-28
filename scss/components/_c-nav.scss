@@ -39,7 +39,6 @@ category: Components - Navigation
 %c-nav--vertical,
 .c-nav--vertical {
   @extend %c-nav--core;
-  margin-bottom: ru(2.25);
 }
 
 %c-nav--vertical__item,
@@ -47,39 +46,26 @@ category: Components - Navigation
   @extend %c-nav__item--core;
 
   &:not(:first-child) {
-    border-top: 1px solid palette(grey, mediumlight);
+    // border-top: 1px solid palette(grey, mediumlight);
   }
 }
 
 %c-nav--vertical__link,
 .c-nav--vertical__link {
   display: block;
-  padding: ru(0.25) ru(1.25);
+  padding: ru(0.25) 0;
   text-transform: uppercase;
   color: palette(grey);
-
-  @include respond-to('expanded-wrapper') {
-    padding-left: ru(1.75);
-  }
-
-  @include respond-to('full-nav') {
-    padding-right: ru(0.5);
-    padding-left: ru(2.5);
-  }
-
-  @include respond-to('full-nav') {
-    padding-left: ru(4);
-  }
 
   &:hover,
   &:focus,
   &:active {
     background-color: palette(grey, xlight);
-    // color: palette(blue, dark);
+    color: palette(grey, dark);
   }
 
   &.is-active {
-    // color: palette(blue, dark);
+    color: palette(grey, dark);
     font-weight: 700;
   }
 }
@@ -95,10 +81,10 @@ category: Components - Navigation
 
 ```html_example
 <ul class="c-nav--horizontal">
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 1</a></li><!--
-  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 2</a></li><!--
-  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link is-active" href="#">Link 3</a></li><!--
-  --><li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 4</a></li>
+  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 1</a></li>
+  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 2</a></li>
+  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link is-active" href="#">Link 3</a></li>
+  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 4</a></li>
 </ul>
 ```
 
@@ -118,7 +104,6 @@ category: Components - Navigation
   }
 
   &:not(:last-child) {
-    border-right: 1px solid palette(grey);
     padding-right: ru(0.25);
   }
 }
@@ -137,7 +122,7 @@ category: Components - Navigation
   }
 
   &.is-active {
-    // color: palette(blue, dark);
+    color: palette(grey, dark);
   }
 }
 
@@ -168,7 +153,7 @@ category: Components - Navigation
 
 %c-nav--inline,
 .c-nav--inline {
-  @extend %list--reset;
+  @extend %u-list--reset;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -178,8 +163,10 @@ category: Components - Navigation
     display: inline-block;
     margin: 0;
 
-    &:after {
-      content: ' > ';
+    &:not(:last-of-type)::after {
+      padding-right: 3px;
+      padding-left: ru(0.25);
+      content: '»';
     }
   }
 

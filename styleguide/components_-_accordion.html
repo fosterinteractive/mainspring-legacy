@@ -38,9 +38,6 @@
       
         
         
-      
-        
-        
           
         
       
@@ -68,6 +65,23 @@
         
       
         
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
         
       
 
@@ -80,13 +94,6 @@
         
           <h3>Global</h3>
           <ul>
-          
-            
-              
-              
-                <li><a href="global_-_typography.html">Typography</a></li>
-              
-            
           
             
               
@@ -113,6 +120,21 @@
           
             
           
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="global_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+          
           </ul>
         
           <h3>Components</h3>
@@ -121,18 +143,16 @@
             
           
             
-          
-            
               
               
-                <li><a class="active" href="components_-_accordion.html">Accordion</a></li>
+                <li><a href="components_-_pager.html">Pager</a></li>
               
             
           
             
               
               
-                <li><a href="components_-_boxes.html">Boxes</a></li>
+                <li><a href="components_-_blockquote.html">Blockquote</a></li>
               
             
           
@@ -148,7 +168,7 @@
             
               
               
-                <li><a href="components_-_tables.html">Tables</a></li>
+                <li><a href="components_-_logo.html">Logo</a></li>
               
             
           
@@ -160,14 +180,34 @@
             
           
             
-          
+              
+              
+                <li><a href="components_-_tabs.html">Tabs</a></li>
+              
             
           
             
               
               
-                <li><a href="components_-_logo.html">Logo</a></li>
+                <li><a class="active" href="components_-_accordion.html">Accordion</a></li>
               
+            
+          
+            
+              
+              
+                <li><a href="components_-_tables.html">Tables</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
           </ul>
@@ -184,12 +224,16 @@
             
           
             
+              
+              
+                <li><a href="base_-_images.html">Images</a></li>
+              
+            
           
             
-              
-              
-                <li><a href="base_-_links.html">Links</a></li>
-              
+          
+            
+          
             
           
             
@@ -206,10 +250,59 @@
             
               
               
+                <li><a href="base_-_links.html">Links</a></li>
+              
+            
+          
+            
+              
+              
                 <li><a href="base_-_lists.html">Lists</a></li>
               
             
           
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Layout</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="layout_-_columns.html">Columns</a></li>
+              
             
           
           </ul>
@@ -242,6 +335,14 @@
                 <li><a href="#c100-accordion">Accordion</a></li>
               
             
+              
+                <li><a href="#c105-accordion">Accordion</a></li>
+              
+            
+              
+                <li><a href="#c106-accordion">Accordion</a></li>
+              
+            
           </ul>
         </nav>
 
@@ -251,39 +352,321 @@
 
 
 <h1 id="c100-accordion" class="styleguide">Accordion</h1>
-</div><div class="codeExample"><div class="exampleOutput"><div class="c-accordion" data-component="accordion">
-  <div class="c-accordion__label">
-    <a class="c-accordion__label-link" href="#">
-      <span class="c-accordion__lable-text">Where can I find my Member Number?</span>
-      <svg class="svg c-accordion__icon"><use xlink:href="../svg/sprite-ui.svg"></use></svg>
-      <div class="u-text-hide">Accordion Open/Close</div>
-    </a>
-  </div>
-  <div class="c-accordion__content">
-    <div class="c-accordion__content-img">
 
+<p>Default Accordion is Grey w/ Plus Symbols. Used in <i>Basic Page</i></p>
+
+<p>Assumed &#39;js&#39; and&#39;no-js&#39; class on body for fail / intialized states</p>
+</div><div class="codeExample"><div class="exampleOutput">
+<div class="c-accordion" data-accordion="enabled" data-accordion-state='is-open'>
+
+  <a class="c-accordion__label" href="#" data-accordion-component="label">
+    <div class="c-accordion__label-text">Our independent advisor role</div>
+    <div class="c-accordion__label-icon">
+      <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
+      <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
     </div>
-    <div class="c-accordion__content-text">
-      <p>Your member number is listed on your previous invoice in the top lefthand corner of the page. It is a X digit number</p>
+  </a>
+
+  <div class="c-accordion__content" data-accordion-component="content">
+    <div class="c-accordion__content-icon">
+      <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
+    </div>
+    <div class="c-accordion__content-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
     </div>
   </div>
+
 </div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion"</span> <span class="na">data-component=</span><span class="s">"accordion"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-accordion__label-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"c-accordion__lable-text"</span><span class="nt">&gt;</span>Where can I find my Member Number?<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"../svg/sprite-ui.svg"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-text-hide"</span><span class="nt">&gt;</span>Accordion Open/Close<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-img"</span><span class="nt">&gt;</span>
 
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion"</span> <span class="na">data-accordion=</span><span class="s">"enabled"</span> <span class="na">data-accordion-state=</span><span class="s">'is-open'</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-accordion__label"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-accordion-component=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-text"</span><span class="nt">&gt;</span>Our independent advisor role<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--expand"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-down"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--collapse"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-up"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-text"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Your member number is listed on your previous invoice in the top lefthand corner of the page. It is a X digit number<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content"</span> <span class="na">data-accordion-component=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#megaphone"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-body"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+
+
+</pre></div></div></div><div class="cortana-content">
+<h1 id="c105-accordion" class="styleguide">Accordion</h1>
+
+<p>State Variations</p>
+</div><div class="codeExample"><div class="exampleOutput"><div class="js"> <!-- Style Guide Only - Added by JS dectection to body -->
+  <div class="c-accordion" data-accordion="enabled" data-accordion-state='is-closed'>
+
+    <a class="c-accordion__label" href="#" data-accordion-component="label">
+      <div class="c-accordion__label-text">
+        Is Closed: Risus Nullam Bibendum
+      </div>
+      <div class="c-accordion__label-icon">
+        <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
+        <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
+      </div>
+    </a>
+
+    <div class="c-accordion__content" data-accordion-component="content">
+      <div class="c-accordion__content-icon">
+        <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
+      </div>
+      <div class="c-accordion__content-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="c-accordion" data-accordion="enabled" data-accordion-state='is-open'>
+
+    <a class="c-accordion__label" href="#" data-accordion-component="label">
+      <div class="c-accordion__label-text">
+        Is Open: Ullamcorper Bibendum Dolor Vulputate Ridiculus
+      </div>
+      <div class="c-accordion__label-icon">
+        <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
+        <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
+      </div>
+    </a>
+
+    <div class="c-accordion__content" data-accordion-component="content">
+      <div class="c-accordion__content-icon">
+        <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
+      </div>
+      <div class="c-accordion__content-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="c-accordion" data-accordion="enabled">
+
+    <a class="c-accordion__label" href="#" data-accordion-component="label">
+      <div class="c-accordion__label-text">
+        JS Success, But Not Yet Initialized: Vulputate Tellus Cras
+      </div>
+      <div class="c-accordion__label-icon">
+        <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
+        <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
+      </div>
+    </a>
+
+
+    <div class="c-accordion__content" data-accordion-component="content">
+      <div class="c-accordion__content-icon">
+        <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
+      </div>
+      <div class="c-accordion__content-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div> <!-- End JS success class -->
+
+<div class="no-js"> <!-- Style Guide Only - Added by JS Failed dectection to body -->
+  <div class="c-accordion" data-accordion="enabled">
+
+    <a class="c-accordion__label" href="#" data-accordion-component="label">
+      <div class="c-accordion__label-text">
+        JS failed: Vulputate Tellus Cras
+      </div>
+      <div class="c-accordion__label-icon">
+        <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
+        <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
+      </div>
+    </a>
+
+
+    <div class="c-accordion__content" data-accordion-component="content">
+      <div class="c-accordion__content-icon">
+        <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
+      </div>
+      <div class="c-accordion__content-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"js"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- Style Guide Only - Added by JS dectection to body --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion"</span> <span class="na">data-accordion=</span><span class="s">"enabled"</span> <span class="na">data-accordion-state=</span><span class="s">'is-closed'</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-accordion__label"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-accordion-component=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-text"</span><span class="nt">&gt;</span>
+        Is Closed: Risus Nullam Bibendum
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--expand"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-down"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--collapse"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-up"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content"</span> <span class="na">data-accordion-component=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#megaphone"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion"</span> <span class="na">data-accordion=</span><span class="s">"enabled"</span> <span class="na">data-accordion-state=</span><span class="s">'is-open'</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-accordion__label"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-accordion-component=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-text"</span><span class="nt">&gt;</span>
+        Is Open: Ullamcorper Bibendum Dolor Vulputate Ridiculus
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--expand"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-down"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--collapse"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-up"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content"</span> <span class="na">data-accordion-component=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#megaphone"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion"</span> <span class="na">data-accordion=</span><span class="s">"enabled"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-accordion__label"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-accordion-component=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-text"</span><span class="nt">&gt;</span>
+        JS Success, But Not Yet Initialized: Vulputate Tellus Cras
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--expand"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-down"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--collapse"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-up"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content"</span> <span class="na">data-accordion-component=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#megaphone"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- End JS success class --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"no-js"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- Style Guide Only - Added by JS Failed dectection to body --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion"</span> <span class="na">data-accordion=</span><span class="s">"enabled"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-accordion__label"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-accordion-component=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-text"</span><span class="nt">&gt;</span>
+        JS failed: Vulputate Tellus Cras
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--expand"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-down"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--collapse"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-up"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content"</span> <span class="na">data-accordion-component=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#megaphone"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+
+</pre></div></div></div><div class="cortana-content">
+<h1 id="c106-accordion" class="styleguide">Accordion</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="c-accordion" data-accordion="enabled">
+  <a class="c-accordion__label" href="#" data-accordion-component="label">
+    <div class="c-accordion__label-text">
+      Accordion Content 2 Column (33-66%)
+    </div>
+    <div class="c-accordion__label-icon">
+      <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
+      <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
+    </div>
+  </a>
+
+
+  <div class="c-accordion__content" data-accordion-component="content">
+    <div class="c-accordion__content-icon">
+      <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
+    </div>
+    <div class="c-accordion__content-body l-eq" data-eq-pts="2col: 400, 2col-33/66: 600">
+      <div class="l-item content-text__info-wrapper">
+        <p>Left Column Content</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris.</p>
+      </div>
+
+      <div class="l-item content-text__info-wrapper">
+        <p>Right Column Content</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion"</span> <span class="na">data-accordion=</span><span class="s">"enabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"c-accordion__label"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-accordion-component=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-text"</span><span class="nt">&gt;</span>
+      Accordion Content 2 Column (33-66%)
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__label-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--expand"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-down"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg c-accordion__svg--collapse"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#circle-arrow-up"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content"</span> <span class="na">data-accordion-component=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"svg"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/svg/sprite-ui.svg#megaphone"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-accordion__content-body l-eq"</span> <span class="na">data-eq-pts=</span><span class="s">"2col: 400, 2col-33/66: 600"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-item content-text__info-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Left Column Content<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-item content-text__info-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Right Column Content<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
 <span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div><div class="cortana-content">
         </div>
@@ -307,42 +690,6 @@
       $scope.searchData = 
       [
         
-          
-        
-          
-            
-              
-              
-              {
-              "title": "Example Content",
-              "breadcrumb": "Global - Typography > Example Content",
-              "path": "global_-_typography.html#10-g-type"
-              },
-            
-              
-              
-              {
-              "title": "Basic Elements",
-              "breadcrumb": "Global - Typography > Basic Elements",
-              "path": "global_-_typography.html#20-g-type"
-              },
-            
-              
-              
-              {
-              "title": "Headings",
-              "breadcrumb": "Global - Typography > Headings",
-              "path": "global_-_typography.html#30-g-type"
-              },
-            
-              
-              
-              {
-              "title": "Type Variations",
-              "breadcrumb": "Global - Typography > Type Variations",
-              "path": "global_-_typography.html#40-g-type"
-              },
-            
           
         
           
@@ -386,9 +733,9 @@
               
               
               {
-              "title": "Accordion",
-              "breadcrumb": "Components - Accordion > Accordion",
-              "path": "components_-_accordion.html#c100-accordion"
+              "title": "Pager",
+              "breadcrumb": "Components - Pager > Pager",
+              "path": "components_-_pager.html#c-100pager"
               },
             
           
@@ -398,33 +745,9 @@
               
               
               {
-              "title": "Box",
-              "breadcrumb": "Components - Boxes > Box",
-              "path": "components_-_boxes.html#c100-box"
-              },
-            
-              
-              
-              {
-              "title": "Box Sizes",
-              "breadcrumb": "Components - Boxes > Box Sizes",
-              "path": "components_-_boxes.html#c200-box-sizes"
-              },
-            
-              
-              
-              {
-              "title": "Box Position",
-              "breadcrumb": "Components - Boxes > Box Position",
-              "path": "components_-_boxes.html#c300-box-position"
-              },
-            
-              
-              
-              {
-              "title": "Box Color",
-              "breadcrumb": "Components - Boxes > Box Color",
-              "path": "components_-_boxes.html#c400-box-color"
+              "title": "Blockquote",
+              "breadcrumb": "Components - Blockquote > Blockquote",
+              "path": "components_-_blockquote.html#c-blockquote-100"
               },
             
           
@@ -436,7 +759,7 @@
               {
               "title": "Button Default",
               "breadcrumb": "Components - Buttons > Button Default",
-              "path": "components_-_buttons.html#c100-btn-default"
+              "path": "components_-_buttons.html#c-btn-100"
               },
             
               
@@ -444,7 +767,7 @@
               {
               "title": "Button Color Variations",
               "breadcrumb": "Components - Buttons > Button Color Variations",
-              "path": "components_-_buttons.html#c200-btn-colors"
+              "path": "components_-_buttons.html#c-btn-200"
               },
             
               
@@ -452,7 +775,7 @@
               {
               "title": "Button Size Variations",
               "breadcrumb": "Components - Buttons > Button Size Variations",
-              "path": "components_-_buttons.html#c300-btn-size"
+              "path": "components_-_buttons.html#c-btn-300"
               },
             
               
@@ -460,7 +783,7 @@
               {
               "title": "Buttons - Inline Icons",
               "breadcrumb": "Components - Buttons > Buttons - Inline Icons",
-              "path": "components_-_buttons.html#c400-btn-colors"
+              "path": "components_-_buttons.html#c-btn-400"
               },
             
               
@@ -468,7 +791,7 @@
               {
               "title": "Buttons - Icons Only",
               "breadcrumb": "Components - Buttons > Buttons - Icons Only",
-              "path": "components_-_buttons.html#c500-btn-colors"
+              "path": "components_-_buttons.html#c-btn-500"
               },
             
           
@@ -478,17 +801,97 @@
               
               
               {
-              "title": "Default Link",
-              "breadcrumb": "Base - Links > Default Link",
-              "path": "base_-_links.html#c100-links"
+              "title": "Inline Images",
+              "breadcrumb": "Base - Images > Inline Images",
+              "path": "base_-_images.html#c-images"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Logo",
+              "breadcrumb": "Components - Logo > Logo",
+              "path": "components_-_logo.html#c-logo-100"
               },
             
               
               
               {
-              "title": "Link Color Variations",
-              "breadcrumb": "Base - Links > Link Color Variations",
-              "path": "base_-_links.html#c200-colorlinks"
+              "title": "Logo (Mobile Size)",
+              "breadcrumb": "Components - Logo > Logo (Mobile Size)",
+              "path": "components_-_logo.html#c-logo-200"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Vertical Navigation",
+              "breadcrumb": "Components - Navigation > Vertical Navigation",
+              "path": "components_-_navigation.html#c-nav-100"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Navigation",
+              "breadcrumb": "Components - Navigation > Horizontal Navigation",
+              "path": "components_-_navigation.html#c-nav-200"
+              },
+            
+              
+              
+              {
+              "title": "Inline Nav (Breadcrumbs)",
+              "breadcrumb": "Components - Navigation > Inline Nav (Breadcrumbs)",
+              "path": "components_-_navigation.html#c-nav-300"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Tabs",
+              "breadcrumb": "Components - Tabs > Tabs",
+              "path": "components_-_tabs.html#c-tabs-100"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Accordion",
+              "breadcrumb": "Components - Accordion > Accordion",
+              "path": "components_-_accordion.html#c100-accordion"
+              },
+            
+              
+              
+              {
+              "title": "Accordion",
+              "breadcrumb": "Components - Accordion > Accordion",
+              "path": "components_-_accordion.html#c105-accordion"
+              },
+            
+              
+              
+              {
+              "title": "Accordion",
+              "breadcrumb": "Components - Accordion > Accordion",
+              "path": "components_-_accordion.html#c106-accordion"
               },
             
           
@@ -510,25 +913,9 @@
               
               
               {
-              "title": "Vertical Navigation",
-              "breadcrumb": "Components - Navigation > Vertical Navigation",
-              "path": "components_-_navigation.html#c200-navigation"
-              },
-            
-              
-              
-              {
-              "title": "Horizontal Navigation",
-              "breadcrumb": "Components - Navigation > Horizontal Navigation",
-              "path": "components_-_navigation.html#c210-navigation"
-              },
-            
-              
-              
-              {
-              "title": "Inline Nav (Breadcrumbs)",
-              "breadcrumb": "Components - Navigation > Inline Nav (Breadcrumbs)",
-              "path": "components_-_navigation.html#c220-navigation"
+              "title": "Colors",
+              "breadcrumb": "Base - Colors > Colors",
+              "path": "base_-_colors.html#color-100"
               },
             
           
@@ -538,9 +925,17 @@
               
               
               {
-              "title": "Colors",
-              "breadcrumb": "Base - Colors > Colors",
-              "path": "base_-_colors.html#color"
+              "title": "Default Link",
+              "breadcrumb": "Base - Links > Default Link",
+              "path": "base_-_links.html#g-link-100"
+              },
+            
+              
+              
+              {
+              "title": "Link Color Variations",
+              "breadcrumb": "Base - Links > Link Color Variations",
+              "path": "base_-_links.html#g-link-200"
               },
             
           
@@ -552,7 +947,7 @@
               {
               "title": "Unordered List",
               "breadcrumb": "Base - Lists > Unordered List",
-              "path": "base_-_lists.html#g100-lists"
+              "path": "base_-_lists.html#g-list-100"
               },
             
               
@@ -560,7 +955,7 @@
               {
               "title": "Ordered list",
               "breadcrumb": "Base - Lists > Ordered list",
-              "path": "base_-_lists.html#g200-lists"
+              "path": "base_-_lists.html#g-list-200"
               },
             
           
@@ -570,17 +965,85 @@
               
               
               {
-              "title": "Logo",
-              "breadcrumb": "Components - Logo > Logo",
-              "path": "components_-_logo.html#logo"
+              "title": "Example Content",
+              "breadcrumb": "Global - Typography > Example Content",
+              "path": "global_-_typography.html#g-type-100"
               },
             
               
               
               {
-              "title": "Logo (Mobile Size)",
-              "breadcrumb": "Components - Logo > Logo (Mobile Size)",
-              "path": "components_-_logo.html#Small"
+              "title": "Basic Elements",
+              "breadcrumb": "Global - Typography > Basic Elements",
+              "path": "global_-_typography.html#g-type-200"
+              },
+            
+              
+              
+              {
+              "title": "Headings",
+              "breadcrumb": "Global - Typography > Headings",
+              "path": "global_-_typography.html#g-type-300"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 50% each",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 50% each",
+              "path": "layout_-_columns.html#l-eq-100"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 60% &amp; 40%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 60% &amp; 40%",
+              "path": "layout_-_columns.html#l-eq-200"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 66.666% &amp; 33.333%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 66.666% &amp; 33.333%",
+              "path": "layout_-_columns.html#l-eq-300"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 33.333% &amp; 66.666%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 33.333% &amp; 66.666%",
+              "path": "layout_-_columns.html#l-eq-400"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 40% &amp; 60%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 40% &amp; 60%",
+              "path": "layout_-_columns.html#l-eq-500"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 75% &amp; 25%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 75% &amp; 25%",
+              "path": "layout_-_columns.html#l-eq-600"
+              },
+            
+              
+              
+              {
+              "title": "3 Column Layout @ 33% Each",
+              "breadcrumb": "Layout - Columns > 3 Column Layout @ 33% Each",
+              "path": "layout_-_columns.html#l-eq-700"
               },
             
           
@@ -600,6 +1063,30 @@
       <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
     </a>
   </script>
+  
+    
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+      <script type="text/javascript" src="../js/jquery.once.min.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/eq.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/jquery.dotdotdot.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/velocity.min.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/svg4everybody.min.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/jquery.matchHeight.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/media.match.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/slidebars.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/enquire.min.js"></script>
+    
+      <script type="text/javascript" src="../js/script.js"></script>
+    
   
   <!-- Source Components -->
   

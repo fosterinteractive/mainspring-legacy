@@ -49,16 +49,25 @@
       
         
         
-      
-        
-        
-      
-        
-        
-      
-        
-        
           
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
         
       
         
@@ -112,6 +121,12 @@
             
           
             
+          
+            
+          
+            
+          
+            
               
               
                 <li><a href="global_-_typography.html">Typography</a></li>
@@ -130,6 +145,13 @@
             
               
               
+                <li><a href="components_-_pager.html">Pager</a></li>
+              
+            
+          
+            
+              
+              
                 <li><a href="components_-_blockquote.html">Blockquote</a></li>
               
             
@@ -139,6 +161,8 @@
               
                 <li><a href="components_-_buttons.html">Buttons</a></li>
               
+            
+          
             
           
             
@@ -159,6 +183,13 @@
               
               
                 <li><a class="active" href="components_-_tabs.html">Tabs</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="components_-_accordion.html">Accordion</a></li>
               
             
           
@@ -186,6 +217,17 @@
           
             
           
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_-_images.html">Images</a></li>
+              
             
           
             
@@ -227,6 +269,12 @@
         
           <h3>Layout</h3>
           <ul>
+          
+            
+          
+            
+          
+            
           
             
           
@@ -297,20 +345,24 @@
 
 <h1 id="c-tabs-100" class="styleguide">Tabs</h1>
 </div><div class="codeExample"><div class="exampleOutput"><h2 class="element-invisible">Primary tabs</h2>
-<ul class="tabs primary">
-<li class="active"><a href="/sharon-gannon-david-life-0" class="active">View<span class="element-invisible">(active tab)</span></a></li>
-<li><a href="/node/51944/edit">Edit</a></li>
-<li><a href="/node/51944/display">Manage display</a></li>
-<li><a href="/node/51944/devel">Devel</a></li>
-</ul>
+<div class="c-tabs">
+  <ul class="c-tabs__list">
+    <li><a href="#" class="is-active">View</a></li>
+    <li><a href="#">Edit</a></li>
+    <li><a href="#">Manage display</a></li>
+    <li><a href="#">Devel</a></li>
+  </ul>
+</div>
 
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"element-invisible"</span><span class="nt">&gt;</span>Primary tabs<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tabs primary"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/sharon-gannon-david-life-0"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>View<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"element-invisible"</span><span class="nt">&gt;</span>(active tab)<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/node/51944/edit"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/node/51944/display"</span><span class="nt">&gt;</span>Manage display<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/node/51944/devel"</span><span class="nt">&gt;</span>Devel<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"c-tabs__list"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"is-active"</span><span class="nt">&gt;</span>View<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Manage display<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Devel<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
 </pre></div></div></div><div class="cortana-content">
         </div>
@@ -377,6 +429,18 @@
               
               
               {
+              "title": "Pager",
+              "breadcrumb": "Components - Pager > Pager",
+              "path": "components_-_pager.html#c-100pager"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
               "title": "Blockquote",
               "breadcrumb": "Components - Blockquote > Blockquote",
               "path": "components_-_blockquote.html#c-blockquote-100"
@@ -424,6 +488,18 @@
               "title": "Buttons - Icons Only",
               "breadcrumb": "Components - Buttons > Buttons - Icons Only",
               "path": "components_-_buttons.html#c-btn-500"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Inline Images",
+              "breadcrumb": "Base - Images > Inline Images",
+              "path": "base_-_images.html#c-images"
               },
             
           
@@ -484,6 +560,34 @@
               "title": "Tabs",
               "breadcrumb": "Components - Tabs > Tabs",
               "path": "components_-_tabs.html#c-tabs-100"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Accordion",
+              "breadcrumb": "Components - Accordion > Accordion",
+              "path": "components_-_accordion.html#c100-accordion"
+              },
+            
+              
+              
+              {
+              "title": "Accordion",
+              "breadcrumb": "Components - Accordion > Accordion",
+              "path": "components_-_accordion.html#c105-accordion"
+              },
+            
+              
+              
+              {
+              "title": "Accordion",
+              "breadcrumb": "Components - Accordion > Accordion",
+              "path": "components_-_accordion.html#c106-accordion"
               },
             
           
@@ -578,14 +682,6 @@
               "path": "global_-_typography.html#g-type-300"
               },
             
-              
-              
-              {
-              "title": "Type Variations",
-              "breadcrumb": "Global - Typography > Type Variations",
-              "path": "global_-_typography.html#g-type-400"
-              },
-            
           
         
           
@@ -617,9 +713,25 @@
               
               
               {
+              "title": "2 Column Layout @ 33.333% &amp; 66.666%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 33.333% &amp; 66.666%",
+              "path": "layout_-_columns.html#l-eq-400"
+              },
+            
+              
+              
+              {
+              "title": "2 Column Layout @ 40% &amp; 60%",
+              "breadcrumb": "Layout - Columns > 2 Column Layout @ 40% &amp; 60%",
+              "path": "layout_-_columns.html#l-eq-500"
+              },
+            
+              
+              
+              {
               "title": "2 Column Layout @ 75% &amp; 25%",
               "breadcrumb": "Layout - Columns > 2 Column Layout @ 75% &amp; 25%",
-              "path": "layout_-_columns.html#l-eq-400"
+              "path": "layout_-_columns.html#l-eq-600"
               },
             
               
@@ -627,7 +739,7 @@
               {
               "title": "3 Column Layout @ 33% Each",
               "breadcrumb": "Layout - Columns > 3 Column Layout @ 33% Each",
-              "path": "layout_-_columns.html#l-eq-500"
+              "path": "layout_-_columns.html#l-eq-700"
               },
             
           
@@ -651,7 +763,25 @@
     
       <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     
+      <script type="text/javascript" src="../js/jquery.once.min.js"></script>
+    
       <script type="text/javascript" src="../js/vendor/eq.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/jquery.dotdotdot.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/velocity.min.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/svg4everybody.min.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/jquery.matchHeight.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/media.match.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/slidebars.js"></script>
+    
+      <script type="text/javascript" src="../js/vendor/enquire.min.js"></script>
+    
+      <script type="text/javascript" src="../js/script.js"></script>
     
   
   <!-- Source Components -->

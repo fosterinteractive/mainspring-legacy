@@ -20,7 +20,6 @@ category: Base - Lists
   <li>Vestibolum laoreet porttitor sem</li>
 </ul>
 <p> Example text next to a list of content</p>
-<p>
 <ul>
   <li>This list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit ametThis list is wrapped in paragraph ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
@@ -33,22 +32,20 @@ category: Base - Lists
   </li>
   <li>Vestibolum laoreet porttitor sem</li>
 </ul>
-</p>
 <p> Example text near a list item</p>
 </div>
 ```
 */
 
-li {
-  // padding-left: ru(0.25);
-  margin-top: ru(0.5);
-  margin-bottom: ru(0.5);
-}
-
 ul {
-  @extend %list--reset;
+  @extend %u-list--reset;
+  margin-bottom: ru(0.5);
   margin-left: ru(0.5);
   list-style-type: disc;
+
+  ul {
+    margin-bottom: 0;
+  }
 }
 /*doc
 ---
@@ -91,11 +88,13 @@ category: Base - Lists
 
 
 ol {
-  @extend %list--reset;
+  @extend %u-list--reset;
+  margin-bottom: ru(0.5);
   margin-left: ru(0.5);
   list-style-type: decimal;
 
   ol {
+    margin-bottom: 0;
     list-style-type: lower-alpha;
   }
 }

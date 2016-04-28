@@ -21,7 +21,7 @@
     "tag": "1.2.9",
     "commit": "8eea2a5766463307319dd89813b58fb435ee1f40"
   },
-  "_source": "git://github.com/Yago31/Cortana.git",
+  "_source": "https://github.com/Yago31/Cortana.git",
   "_target": "~1.2.9",
   "_originalSource": "Cortana"
 }

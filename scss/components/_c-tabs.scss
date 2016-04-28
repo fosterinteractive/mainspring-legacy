@@ -7,50 +7,51 @@ category: Components - Tabs
 
 ```html_example
 <h2 class="element-invisible">Primary tabs</h2>
-<ul class="tabs primary">
-<li class="active"><a href="/sharon-gannon-david-life-0" class="active">View<span class="element-invisible">(active tab)</span></a></li>
-<li><a href="/node/51944/edit">Edit</a></li>
-<li><a href="/node/51944/display">Manage display</a></li>
-<li><a href="/node/51944/devel">Devel</a></li>
-</ul>
+<div class="c-tabs">
+  <ul class="c-tabs__list">
+    <li><a href="#" class="is-active">View</a></li>
+    <li><a href="#">Edit</a></li>
+    <li><a href="#">Manage display</a></li>
+    <li><a href="#">Devel</a></li>
+  </ul>
+</div>
 
 ```
 */
 
-%tabs__menu,
-.tabs__menu,
-.tabs { // Drupal admin tabs.
-  @extend %u-list--blank;
-  @extend %clearfix;
-  display: block;
+%c-tabs,
+.c-tabs {
+  margin-top: ru(1);
 }
 
-%tabs__menu-item,
-.tabs > li {
-  float: left;
-  margin-bottom: ru(1);
-}
-
-%tabs__button,
-.tabs a {
-  float: left;
+%c-tabs__list,
+.c-tabs__list {
+  @extend %u-list--reset;
   margin: 0;
-  border: 1px solid palette(grey);
-  border-right: 0;
-  background-color: palette(grey, light);
-  padding: ru(0.5) ru(1);
-  text-decoration: none;
+  padding: 0;
+}
+
+%c-tabs__list-item,
+.c-tabs__list li {
+  display: inline-block;
+  margin: 0;
+}
+
+%c-tabs__btn,
+.c-tabs a {
+  @include font-size($p--small-font-sizes);
+
+  display: block;
+  border: 1px solid palette(grey, light);
+  background-color: palette(grey, mediumlight);
+  padding: ru(0.25) ru(0.5);
   color: palette(grey, dark);
+  font-weight: 600;
 
   &:hover,
   &:focus,
-  &:active {
-    background-color: palette(grey);
+  &:active,
+  &.is-active {
+    background-color: $white;
   }
-}
-
-%tabs__button.is-active,
-.tabs li.active a {
-  border-bottom-color: transparent;
-  background-color: transparent;
 }
