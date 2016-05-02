@@ -1,6 +1,6 @@
 %u-clearfix,
 .u-clearfix {
-  // @include clearfix;
+
   &:before,
   &:after {
     display: table;
@@ -11,4 +11,3 @@
     clear: both;
   }
 }
-

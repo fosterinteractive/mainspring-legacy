@@ -23,8 +23,6 @@ svg {
   stroke: currentColor;
 }
 
-
-
 // // Apply this mixin to the svg's wrapper
 @mixin svg-wrapper($intristic-ratio) {
   @extend %svg__wrapper;
@@ -71,4 +69,3 @@ svg {
     height: $svg-height;
   }
 }
-

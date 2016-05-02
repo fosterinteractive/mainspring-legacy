@@ -1,6 +1,7 @@
-"use strict";
+$(document).ready(function() {
 
-$( document ).ready(function() {
+  'use strict';
+
   // Initializes svg4everybody
   svg4everybody();
 
@@ -26,10 +27,10 @@ $( document ).ready(function() {
       e.preventDefault();
 
       var $this = $(this);
-      var $wrapper_attr = $wrapper.attr('data-accordion-state');
+      var $wrapperAttr = $wrapper.attr('data-accordion-state');
 
       // If item is closed
-      if ($wrapper_attr == 'is-closed') {
+      if ($wrapperAttr === 'is-closed') {
 
         //Slidedown - and before animation is done refresh eqjs
         $content.velocity('slideDown', {

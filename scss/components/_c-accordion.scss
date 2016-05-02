@@ -8,10 +8,7 @@ Default Accordion is Grey w/ Plus Symbols. Used in <i>Basic Page</i>
 
 Assumed 'js' and'no-js' class on body for fail / intialized states
 
-
-
 ```html_example
-
 <div class="c-accordion" data-accordion="enabled" data-accordion-state='is-open'>
 
   <a class="c-accordion__label" href="#" data-accordion-component="label">
@@ -32,10 +29,7 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   </div>
 
 </div>
-
-
 ```
-
 */
 
 // Default Accordion is Grey w/ Plus Symbols
@@ -60,14 +54,12 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   font-family: $title-font-family;
 }
 
-
 %c-accordion__label,
 .c-accordion__label {
   @extend %c-accordion__label--core;
   border: 1px solid palette(grey, xlight);
   background-color: palette(grey, xlight);
   color: palette(grey, dark);
-
 
   &:focus,
   &:hover,
@@ -103,7 +95,6 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   .no-js & {
     display: block;
   }
-
 }
 
 %c-accordion__svg--collapse,
@@ -113,9 +104,7 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   .c-accordion[data-accordion-state='is-open'] & {
     display: block;
   }
-
 }
-
 
 %c-accordion__label-text,
 .c-accordion__label-text {
@@ -152,11 +141,9 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   border: 2px solid $white;
   border-radius: 50%;
   stroke-width: 3px;
-
-
   fill: none;
 
- // @ type-large Absolute position icon in left column
+  // @ type-large Absolute position icon in left column
   @include respond-to(type-large) {
     @include svg-centered (ru(1.5), ru(1.5), ru(2.5), ru(2.5));
     position: absolute;
@@ -176,6 +163,7 @@ title: Accordion
 name: c105-accordion
 category: Components - Accordion
 ---
+
 State Variations
 
 ```html_example
@@ -278,10 +266,8 @@ State Variations
   </div>
 
 </div>
-
 ```
 */
-
 
 /*doc
 ---
@@ -322,5 +308,4 @@ category: Components - Accordion
 
 </div>
 ```
-
 */

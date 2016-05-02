@@ -18,9 +18,7 @@ html {
 }
 // scss-lint:enable VendorPrefix
 
-
 // Global Extends for Typography
-
 
 %g-type__core {
   // Fade in fonts using Web Font Loader default classes https://github.com/at-import/toolkit#font-helpers
@@ -28,14 +26,12 @@ html {
   // font-family: $base-font-family;
 }
 
-
 /*doc
 ---
 title: Example Content
 name: g-type-100
 category: Global - Typography
 ---
-
 
 ```html_example
 <div class="sg__wrapper--xlight-grey">
@@ -55,8 +51,6 @@ category: Global - Typography
 </div>
 ```
 */
-
-
 
 /*doc
 ---
@@ -119,6 +113,7 @@ p {
 .g-type--huge {
   @include font-size($p--xhuge-font-sizes);
 }
+
 /*doc
 ---
 title: Headings

@@ -39,6 +39,7 @@ category: Components - Logo
 </div>
 ```
 */
+
 %c-logo,
 .c-logo {
   float: left;
@@ -50,24 +51,17 @@ category: Components - Logo
     padding-left: ru(1.5);
     width: auto;
   }
-
 }
 
+// %c-logo__link,
+// .c-logo__link {
 
-%c-logo__link,
-.c-logo__link {
+//   &:hover,
+//   &:focus,
+//   &:active {
 
-  &:hover,
-  &:focus,
-  &:active {
-
-  }
-}
-
-%c-logo__svg,
-.c-logo__svg {
-  @extend %svg__core;
-}
+//   }
+// }
 
 %c-logo__svg,
 .c-logo__svg {

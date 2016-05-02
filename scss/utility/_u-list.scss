@@ -7,19 +7,21 @@
 }
 
 // Reset to block-like list with no padding / margins
-%u-list--blank {
+%u-list__list--blank {
   margin: 0;
   padding: 0;
   list-style-type: none;
   list-style-position: outside;
-
-  li {
-    margin: 0;
-    // list-style-type: none;
-  }
 }
 
+%u-list__item--blank {
+  margin: 0;
+}
 
+%u-list--blank {
+  @extend %u-list__list--blank;
 
-
-
+  li {
+    @extend %u-list__item--blank;
+  }
+}

@@ -5,7 +5,7 @@
 
 %l-form,
 .l-form {
-  @extend %u-remove-child-both-margins;
+  @extend %u-remove-child--margin-top-bottom;
   margin: 0 ru(-0.25);
 
   .g-form-actions {
@@ -89,7 +89,6 @@
   @extend %u-clearfix;
   clear: both;
 }
-
 
 %l-form--filter,
 .l-form--filter {

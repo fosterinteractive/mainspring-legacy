@@ -29,13 +29,11 @@
   height: auto;
 }
 
-
 %visually--hidden,
 .visuallyhidden,
 .u-visually--hidden {
   @include visuallyhidden;
 }
-
 
 %visually--shown,
 .visuallyshown,

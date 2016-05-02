@@ -6,7 +6,7 @@ label:not(.option) {
   display: block;
 
   &.has-error {
-    //Change to sites red variant
+    // Change to sites red variant
     border-color: $debug-red;
     background-color: rgba($debug-red, 0.1);
     color: $debug-red;
@@ -26,7 +26,6 @@ label:not(.option) {
   width: 100%;
   vertical-align: top;
   font-family: $base-font-family;
-
   // Many Resets for various browsers
   text-shadow: none;
   -webkit-appearance: none;
@@ -38,7 +37,7 @@ label:not(.option) {
 
   // Error state
   &.has-error {
-    //Change to sites red variant
+    // Change to sites red variant
     border-color: $debug-red;
     background-color: rgba($debug-red, 0.1);
     color: $debug-red;
@@ -46,8 +45,8 @@ label:not(.option) {
 
   &[disabled] {
     border-color: palette(grey, light);
+    background-color: palette(grey, xlight);
   }
-
 }
 
 // Overside Form Elements
@@ -60,9 +59,9 @@ label:not(.option) {
 
 %g-input--large--centered {
   @extend %g-input--large;
-
   text-align: center;
 }
+
 /*doc
 ---
 title: Input Boxes
@@ -136,8 +135,8 @@ input[type='week'] {
 //scss-lint:disable ImportantRule
 select {
   @extend %g-input--core;
-
-  padding: ru(0.375) ru(0.5);
+  background: url('../svg/sprite-ui/arrow-down.svg') no-repeat right ru(0.5)center;
+  padding: ru(0.375) ru(1.5) ru(0.375) ru(0.5);
   -moz-appearance: none !important;
 }
 //scss-lint:enable ImportantRule
@@ -236,6 +235,7 @@ input[type="search"]::-webkit-search-decoration {  // UI Consistency
 input[type="file"],
 input[type="radio"],
 input[type="checkbox"] {
+
   &:focus,
   &:active {
     box-shadow: none;
@@ -256,7 +256,7 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-// element & label common styles
+// Element & label common styles
 %g-form-check-radio--core {
   display: block;
   margin-top: ru(0.5);
@@ -406,7 +406,6 @@ category: Global - Forms
 </div>
 </div>
 ```
-
 */
 
 %g-form__radio-group,
@@ -452,6 +451,10 @@ category: Global - Forms
   <div class="l-form__item--med l-form__item--no-top-margin">
     <label for="edit-submitted-name">Name <span class="form-required" title="This field is required.">*</span></label>
     <input required="required" placeholder="Jane Smith" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required">
+  </div>
+  <div class="l-form__item--med l-form__item--no-top-margin">
+    <label for="address">Address <span class="form-required" title="This field is required.">*</span></label>
+    <input required="required" placeholder="Address" type="text" id="address" name="saddress" value="" size="60" maxlength="128" class="form-text required" disabled>
   </div>
   <div class="l-form__item--med l-form__item--no-top-margin">
     <label for="edit-submitted-email">Email <span class="form-required" title="This field is required.">*</span></label>

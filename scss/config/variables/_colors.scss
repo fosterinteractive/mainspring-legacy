@@ -68,13 +68,11 @@ category: Base - Colors
 
   </div>
 </div>
-
 */
 
 // Static Colors
 $black: #040303;
 $white: #ffffff;
-
 
 // Color Palattes array. Use 'light' / 'dark' first
 // See http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
@@ -100,8 +98,3 @@ $debug-red: rgb(160, 0, 0);
 $debug-green: rgb(0, 160, 0);
 
 $debug-colors: $debug-red, $debug-green, $debug-blue !global;
-
-
-
-
-

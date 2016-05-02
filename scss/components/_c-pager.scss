@@ -30,7 +30,6 @@ category: Components - Pager
 %c-pager,
 .c-pager {
   @extend %u-clearfix;
-
   background-color: $white;
   padding: ru(1) 0;
   text-align: center;
@@ -60,7 +59,6 @@ category: Components - Pager
     width: 10%;
   }
 }
-
 
 %c-pager__item-current,
 .c-pager__item-current {

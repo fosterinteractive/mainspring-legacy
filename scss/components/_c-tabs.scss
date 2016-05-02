@@ -40,7 +40,6 @@ category: Components - Tabs
 %c-tabs__btn,
 .c-tabs a {
   @include font-size($p--small-font-sizes);
-
   display: block;
   border: 1px solid palette(grey, light);
   background-color: palette(grey, mediumlight);

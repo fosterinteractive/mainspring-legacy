@@ -6,13 +6,12 @@
   // margin-left: ru(-0.5);
 }
 
-//eq item - core, default gutter
+// eq item - core, default gutter
 %l-item {
   padding: 0 ru(0.5);
 }
 
-
-//eq item - thin gutter
+// eq item - thin gutter
 %l-item--thin-margin {
   padding: 0 1px;
 }
@@ -39,11 +38,10 @@ category: Layout - Columns
   </div>
 </div>
 ```
-
 */
 
 
-//2COLUMN LAYOUT @ 50% EACH
+// 2COLUMN LAYOUT @ 50% EACH
 %l-eq-2col__item,
 .l-eq[data-eq-state="2col"] .l-item {
   @extend %l-item;
@@ -51,12 +49,11 @@ category: Layout - Columns
   @include layout(2, $gutter: 0) {
     &:nth-child(2n+1) {
       @include grid-span(1, 1);
-      clear: left;
+      clear: both;
     }
 
     &:nth-child(2n+2) {
       @include grid-span(1, 2);
-      clear: right;
     }
   }
 }
@@ -83,10 +80,9 @@ category: Layout - Columns
   </div>
 </div>
 ```
-
 */
 
-//2COLUMN LAYOUT @ 60% & 40%
+// 2COLUMN LAYOUT @ 60% & 40%
 %l-eq-2col__item--1-2\(60\,40\),
 .l-eq[data-eq-state="2col-60/40"] .l-item {
   @extend %l-item;
@@ -94,12 +90,11 @@ category: Layout - Columns
   @include layout(60 40, $gutter: 0) {
     &:nth-child(2n+1) {
       @include grid-span(1, 1);
-      clear: left;
+      clear: both;
     }
 
     &:nth-child(2n+2) {
       @include grid-span(1, 2);
-      clear: right;
     }
   }
 }
@@ -137,12 +132,11 @@ category: Layout - Columns
   @include layout(66 33, $gutter: 0) {
     &:nth-child(2n+1) {
       @include grid-span(1, 1);
-      clear: left;
+      clear: both;
     }
 
     &:nth-child(2n+2) {
       @include grid-span(1, 2);
-      clear: right;
     }
   }
 }
@@ -169,10 +163,9 @@ category: Layout - Columns
   </div>
 </div>
 ```
-
 */
 
-//2COLUMN LAYOUT @ 33.333% & 66.666%
+// 2COLUMN LAYOUT @ 33.333% & 66.666%
 %l-eq-2col__item--1-2\(33\,66\),
 .l-eq[data-eq-state="2col-33/66"] .l-item {
   @extend %l-item;
@@ -180,12 +173,11 @@ category: Layout - Columns
   @include layout(33 66, $gutter: 0) {
     &:nth-child(2n+1) {
       @include grid-span(1, 1);
-      clear: left;
+      clear: both;
     }
 
     &:nth-child(2n+2) {
       @include grid-span(1, 2);
-      clear: right;
     }
   }
 }
@@ -212,7 +204,6 @@ category: Layout - Columns
   </div>
 </div>
 ```
-
 */
 
 //2COLUMN LAYOUT @ 40% & 60%
@@ -223,16 +214,14 @@ category: Layout - Columns
   @include layout(40 60, $gutter: 0) {
     &:nth-child(2n+1) {
       @include grid-span(1, 1);
-      clear: left;
+      clear: both;
     }
 
     &:nth-child(2n+2) {
       @include grid-span(1, 2);
-      clear: right;
     }
   }
 }
-
 
 /*doc
 ---
@@ -256,10 +245,9 @@ category: Layout - Columns
   </div>
 </div>
 ```
-
 */
 
-//2COLUMN LAYOUT @ 75% & 25%
+// 2COLUMN LAYOUT @ 75% & 25%
 %l-eq-2col__item--1-2\(75\,25\),
 .l-eq[data-eq-state="2col-75/25"] .l-item {
   @extend %l-item;
@@ -267,12 +255,11 @@ category: Layout - Columns
   @include layout(75 25, $gutter: 0) {
     &:nth-child(2n+1) {
       @include grid-span(1, 1);
-      clear: left;
+      clear: both;
     }
 
     &:nth-child(2n+2) {
       @include grid-span(1, 2);
-      clear: right;
     }
   }
 }
@@ -304,10 +291,9 @@ category: Layout - Columns
   </div>
 </div>
 ```
-
 */
 
-//3COLUMN LAYOUT @ 33% EACH
+// 3COLUMN LAYOUT @ 33% EACH
 %l-eq-3col__item,
 .l-eq[data-eq-state="3col"] .l-item {
   @extend %l-item;
@@ -315,6 +301,7 @@ category: Layout - Columns
   @include layout(33 33 33, $gutter: 0) {
     &:nth-child(3n+1) {
       @include grid-span(1, 1);
+      clear: both;
     }
 
     &:nth-child(3n+2) {

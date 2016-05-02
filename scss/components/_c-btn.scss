@@ -8,7 +8,6 @@ category: Components - Buttons
 ```html_example
 <a href="#" class="c-btn">Default Button</a>
 ```
-
 */
 
 %c-btn--core {
@@ -19,7 +18,6 @@ category: Components - Buttons
   text-transform: uppercase;
   text-decoration: none;
 }
-
 
 %c-btn,
 .c-btn {
@@ -36,7 +34,6 @@ category: Components - Buttons
   }
 }
 
-
 /*doc
 ---
 title: Button Color Variations
@@ -49,9 +46,7 @@ category: Components - Buttons
   <a href="#" class="c-btn--grey">Grey Button</a>
 </div>
 ```
-
 */
-
 
 %c-btn--grey,
 .c-btn--grey {
@@ -68,8 +63,6 @@ category: Components - Buttons
   }
 }
 
-
-
 /*doc
 ---
 title: Button Size Variations
@@ -82,14 +75,11 @@ category: Components - Buttons
   <a href="#" class="c-btn--grey c-btn--thin">Thin Grey Button</a>
 </div>
 ```
-
 */
-
 
 %c-btn--thin,
 .c-btn--thin {
   @extend %c-btn--core;
-
   padding: ru(0.125) ru(1);
 }
 
@@ -104,14 +94,12 @@ category: Components - Buttons
 <a href="#" class="c-btn--left"><svg class="svg"><use xlink:href="../svg/sprite-ui.svg#arrow-left"></use></svg>Back Button</a>
 <a href="#" class="c-btn--right">Continue Button<svg class="svg"><use xlink:href="../svg/sprite-ui.svg#arrow-right"></use></svg></a>
 ```
-
 */
 
 %c-btn--icon {
   @extend %c-btn;
   position: relative;
   border-color: palette(grey, mediumlight);
-
 
   &:hover,
   &:focus,
@@ -186,7 +174,6 @@ category: Components - Buttons
 </div>
 
 ```
-
 */
 
 %c-btn--svg,
@@ -202,7 +189,6 @@ category: Components - Buttons
     background-color: palette(grey, light);
   }
 }
-
 
 %c-btn--svg--lrg,
 .c-btn--svg--lrg {

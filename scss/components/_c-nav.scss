@@ -33,7 +33,6 @@ category: Components - Navigation
   </li>
 </ul>
 ```
-
 */
 
 %c-nav--vertical,
@@ -45,9 +44,9 @@ category: Components - Navigation
 .c-nav--vertical__item {
   @extend %c-nav__item--core;
 
-  &:not(:first-child) {
-    // border-top: 1px solid palette(grey, mediumlight);
-  }
+  // &:not(:first-child) {
+  //   border-top: 1px solid palette(grey, mediumlight);
+  // }
 }
 
 %c-nav--vertical__link,
@@ -70,7 +69,6 @@ category: Components - Navigation
   }
 }
 
-
 /*doc
 ---
 title: Horizontal Navigation
@@ -87,7 +85,6 @@ category: Components - Navigation
   <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 4</a></li>
 </ul>
 ```
-
 */
 
 %c-nav--horizontal,
@@ -125,7 +122,6 @@ category: Components - Navigation
     color: palette(grey, dark);
   }
 }
-
 
 /*doc
 ---
@@ -182,5 +178,3 @@ category: Components - Navigation
     }
   }
 }
-
-

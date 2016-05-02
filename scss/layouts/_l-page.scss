@@ -12,13 +12,11 @@
   margin: ru(1) 0;
 }
 
-
-
 // Message region on non panel pages.
-%l-page__message,
-.l-page__message {
-  // @extend %l-page--limit;
-}
+// %l-page__message,
+// .l-page__message {
+//   @extend %l-page--limit;
+// }
 
 // Used specifically in products page to do two column layout with content and image when selecting default layout.
 %l-page__content,
