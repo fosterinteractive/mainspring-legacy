@@ -1,8 +1,7 @@
 // Mixin for setting html5 placeholder color
-
 $grey-light: #999999 !default;
 
-@mixin placeholder($color:$grey-light) {
+@mixin placeholder($color: $grey-light) {
   &::-webkit-input-placeholder {
     color: $color;
   }

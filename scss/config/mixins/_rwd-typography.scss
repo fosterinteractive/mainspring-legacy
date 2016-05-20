@@ -30,9 +30,9 @@
     $fontsize: nth($fs-font-size, 1);
     // If a px unit convert to Rem
     @if (unit($fontsize) == 'px') {
-        font-size: rem($fontsize);
+      font-size: rem($fontsize);
     } @else {
-        line-height: $fontsize;
+      line-height: $fontsize;
     }
     @if (length($fs-font-size) > 1) {
       $lineheight: nth($fs-font-size, 2);

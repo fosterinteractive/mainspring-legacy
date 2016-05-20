@@ -3,9 +3,6 @@
 .sass-cache
 bower_components/*
 node_modules/
-.vendor/bundle
-.bundle
-Gemfile.lock
 
 // Source Maps
 css/maps

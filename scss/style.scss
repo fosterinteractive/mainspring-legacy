@@ -6,20 +6,15 @@
 @import '../bower_components/singularity/stylesheets/singularitygs';
 @import '../bower_components/jacket/stylesheets/jacket';
 
-// Hacked Parts of Compass
-
-
-
 // Kickstart
 @import '../bower_components/sass-toolkit/stylesheets/toolkit/kickstart';
 
 
 // Global Config (Doesn not render any CSS)
-
 @import 'config/functions';
 @import 'config/variables';
 @import 'config/mixins';
-@import 'config/extends';
+
 
 // Utiltiy Functions
 @import 'utility/utility';
