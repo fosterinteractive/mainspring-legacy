@@ -70,30 +70,30 @@ category: Global - Forms
 ---
 
 ```html_example
-<div class="sg__wrapper"> <!--styleguide only -->
-  <div class="l-form__item">
-    <label for="edit-submitted-name">Input Box <span class="form-required" title="This field is required.">*</span></label>
-    <input required="required" placeholder="Jane Smith" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" >
+<div class='sg__wrapper'> <!--styleguide only -->
+  <div class='l-form__item'>
+    <label for='edit-submitted-name'>Input Box <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='Jane Smith' type='text' id='edit-submitted-name' name='submitted[name]' value='' size='60' maxlength='128' >
   </div>
-  <div class="l-form__item--narrow">
-    <label for="edit-submitted-postal-code">Narrow Input Box <span class="form-required" title="This field is required.">*</span></label>
-    <input required="required" placeholder="M3A 1B7" type="text" id="edit-submitted-postal-code" name="submitted[postal_code]" value="" size="10" maxlength="7" class="form-text required">
+  <div class='l-form__item--narrow'>
+    <label for='edit-submitted-postal-code'>Narrow Input Box <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='M3A 1B7' type='text' id='edit-submitted-postal-code' name='submitted[postal_code]' value='' size='10' maxlength='7' class='form-text required'>
   </div>
-  <div class="l-form__item">
-    <label for="edit-submitted-province">Select Box <span class="form-required" title="This field is required.">*</span></label>
-    <select required="required" id="edit-submitted-province" name="submitted[province]" class="form-select required"><option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option><option value="NB">New Brunswick</option><option value="NL">Newfoundland and Labrador</option><option value="NS">Nova Scotia</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON" selected="selected">Ontario</option><option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option></select>
+  <div class='l-form__item'>
+    <label for='edit-submitted-province'>Select Box <span class='form-required' title='This field is required.'>*</span></label>
+    <select required='required' id='edit-submitted-province' name='submitted[province]' class='form-select required'><option value='AB'>Alberta</option><option value='BC'>British Columbia</option><option value='MB'>Manitoba</option><option value='NB'>New Brunswick</option><option value='NL'>Newfoundland and Labrador</option><option value='NS'>Nova Scotia</option><option value='NT'>Northwest Territories</option><option value='NU'>Nunavut</option><option value='ON' selected='selected'>Ontario</option><option value='PE'>Prince Edward Island</option><option value='QC'>Quebec</option><option value='SK'>Saskatchewan</option><option value='YT'>Yukon</option></select>
   </div>
-  <div class="l-form__item--wide">
-    <label for="edit-submitted-type-your-message">Text Area <span class="form-required" title="This field is required.">*</span></label>
-    <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea"><textarea required="required" placeholder="Message" id="edit-submitted-type-your-message" name="submitted[type_your_message]" cols="60" rows="5" class="form-textarea required"></textarea><div class="grippie"></div></div>
+  <div class='l-form__item--wide'>
+    <label for='edit-submitted-type-your-message'>Text Area <span class='form-required' title='This field is required.'>*</span></label>
+    <div class='form-textarea-wrapper resizable textarea-processed resizable-textarea'><textarea required='required' placeholder='Message' id='edit-submitted-type-your-message' name='submitted[type_your_message]' cols='60' rows='5' class='form-textarea required'></textarea><div class='grippie'></div></div>
   </div>
-  <div class="l-form__item">
-    <label for="edit-submitted-name">Large Input Box<span class="form-required" title="This field is required.">*</span></label>
-    <input required="required" placeholder="info@info.com" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="g-input--large">
+  <div class='l-form__item'>
+    <label for='edit-submitted-name'>Large Input Box<span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='info@info.com' type='text' id='edit-submitted-name' name='submitted[name]' value='' size='60' maxlength='128' class='g-input--large'>
   </div>
-  <div class="l-form__item">
-    <label for="edit-submitted-name">Large Input Box w/ Centered Text<span class="form-required" title="This field is required.">*</span></label>
-    <input required="required" placeholder="info@info.com" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="g-input--large--centered">
+  <div class='l-form__item'>
+    <label for='edit-submitted-name'>Large Input Box w/ Centered Text<span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='info@info.com' type='text' id='edit-submitted-name' name='submitted[name]' value='' size='60' maxlength='128' class='g-input--large--centered'>
   </div>
 </div>
 ```
@@ -223,7 +223,7 @@ input[type='button'] {
 ///////////////
 // Remove decoration from input
 //scss-lint:disable QualifyingElement
-input[type="search"]::-webkit-search-decoration {  // UI Consistency
+input[type='search']::-webkit-search-decoration {  // UI Consistency
   display: none;
 }
 //scss-lint:enable QualifyingElement
@@ -232,9 +232,9 @@ input[type="search"]::-webkit-search-decoration {  // UI Consistency
 //////////////////////
 // Remove shadows
 //scss-lint:disable QualifyingElement
-input[type="file"],
-input[type="radio"],
-input[type="checkbox"] {
+input[type='file'],
+input[type='radio'],
+input[type='checkbox'] {
 
   &:focus,
   &:active {
@@ -288,52 +288,52 @@ category: Global - Forms
 ---
 
 ```html_example
-<div class="styleguide__wrapper"> <!--styleguide only -->
-  <div class="form-item webform-component webform-component-checkboxes webform-component--check-boxes">
-  <label for="edit-submitted-check-boxes">Check Boxes </label>
+<div class='styleguide__wrapper'> <!--styleguide only -->
+  <div class='form-item webform-component webform-component-checkboxes webform-component--check-boxes'>
+  <label for='edit-submitted-check-boxes'>Check Boxes </label>
 
-  <div id="edit-submitted-check-boxes" class="g-form-checkboxes"><div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AL">
-   <input type="checkbox" id="edit-submitted-check-boxes-1" name="submitted[check_boxes][AL]" value="AL" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-1">Alabama </label>
+  <div id='edit-submitted-check-boxes' class='g-form-checkboxes'><div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AL'>
+   <input type='checkbox' id='edit-submitted-check-boxes-1' name='submitted[check_boxes][AL]' value='AL' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-1'>Alabama </label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AK">
-   <input type="checkbox" id="edit-submitted-check-boxes-2" name="submitted[check_boxes][AK]" value="AK" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-2">Alaska with a really long label to show what text wrapping looks like when something has a really really long label</label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AK'>
+   <input type='checkbox' id='edit-submitted-check-boxes-2' name='submitted[check_boxes][AK]' value='AK' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-2'>Alaska with a really long label to show what text wrapping looks like when something has a really really long label</label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AS">
-   <input type="checkbox" id="edit-submitted-check-boxes-3" name="submitted[check_boxes][AS]" value="AS" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-3">American Samoa</label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AS'>
+   <input type='checkbox' id='edit-submitted-check-boxes-3' name='submitted[check_boxes][AS]' value='AS' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-3'>American Samoa</label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AZ">
-   <input type="checkbox" id="edit-submitted-check-boxes-4" name="submitted[check_boxes][AZ]" value="AZ" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-4">Arizona </label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AZ'>
+   <input type='checkbox' id='edit-submitted-check-boxes-4' name='submitted[check_boxes][AZ]' value='AZ' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-4'>Arizona </label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-AR">
-   <input type="checkbox" id="edit-submitted-check-boxes-5" name="submitted[check_boxes][AR]" value="AR" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-5">Arkansas </label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AR'>
+   <input type='checkbox' id='edit-submitted-check-boxes-5' name='submitted[check_boxes][AR]' value='AR' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-5'>Arkansas </label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-CA">
-   <input type="checkbox" id="edit-submitted-check-boxes-6" name="submitted[check_boxes][CA]" value="CA" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-6">California </label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-CA'>
+   <input type='checkbox' id='edit-submitted-check-boxes-6' name='submitted[check_boxes][CA]' value='CA' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-6'>California </label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-CO">
-   <input type="checkbox" id="edit-submitted-check-boxes-7" name="submitted[check_boxes][CO]" value="CO" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-7">Colorado </label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-CO'>
+   <input type='checkbox' id='edit-submitted-check-boxes-7' name='submitted[check_boxes][CO]' value='CO' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-7'>Colorado </label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-CT">
-   <input type="checkbox" id="edit-submitted-check-boxes-8" name="submitted[check_boxes][CT]" value="CT" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-8">Connecticut </label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-CT'>
+   <input type='checkbox' id='edit-submitted-check-boxes-8' name='submitted[check_boxes][CT]' value='CT' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-8'>Connecticut </label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-DE">
-   <input type="checkbox" id="edit-submitted-check-boxes-9" name="submitted[check_boxes][DE]" value="DE" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-9">Delaware </label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-DE'>
+   <input type='checkbox' id='edit-submitted-check-boxes-9' name='submitted[check_boxes][DE]' value='DE' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-9'>Delaware </label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-DC">
-   <input type="checkbox" id="edit-submitted-check-boxes-10" name="submitted[check_boxes][DC]" value="DC" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-10">District of Columbia </label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-DC'>
+   <input type='checkbox' id='edit-submitted-check-boxes-10' name='submitted[check_boxes][DC]' value='DC' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-10'>District of Columbia </label>
   </div>
 
-  <div class="form-item g-form-type-checkbox form-item-submitted-check-boxes-FL">
-   <input type="checkbox" id="edit-submitted-check-boxes-11" name="submitted[check_boxes][FL]" value="FL" class="g-form-checkbox">  <label class="option" for="edit-submitted-check-boxes-11">Florida </label>
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-FL'>
+   <input type='checkbox' id='edit-submitted-check-boxes-11' name='submitted[check_boxes][FL]' value='FL' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-11'>Florida </label>
   </div>
 
   </div>
@@ -371,35 +371,35 @@ category: Global - Forms
 ---
 
 ```html_example
-<div class="styleguide__wrapper--small styleguide__radios"> <!--styleguide only -->
-<div class="form-item webform-component webform-component-radios webform-component--radio">
-  <label for="edit-submitted-radio">Radio  </label>
- <div id="edit-submitted-radio" class="g-form-radios"><div class="form-item g-form-type-radio form-item-submitted-radio">
- <input type="radio" id="edit-submitted-radio-1" name="submitted[radio]" value="sunday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-1">Sunday </label>
+<div class='styleguide__wrapper--small styleguide__radios'> <!--styleguide only -->
+<div class='form-item webform-component webform-component-radios webform-component--radio'>
+  <label for='edit-submitted-radio'>Radio  </label>
+ <div id='edit-submitted-radio' class='g-form-radios'><div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-1' name='submitted[radio]' value='sunday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-1'>Sunday </label>
 
 </div>
-<div class="form-item g-form-type-radio form-item-submitted-radio">
- <input type="radio" id="edit-submitted-radio-2" name="submitted[radio]" value="monday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-2">Monday with a really long label to show what text wrapping looks like when something has a really really long label</label>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-2' name='submitted[radio]' value='monday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-2'>Monday with a really long label to show what text wrapping looks like when something has a really really long label</label>
 
 </div>
-<div class="form-item g-form-type-radio form-item-submitted-radio">
- <input type="radio" id="edit-submitted-radio-3" name="submitted[radio]" value="tuesday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-3">Tuesday </label>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-3' name='submitted[radio]' value='tuesday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-3'>Tuesday </label>
 
 </div>
-<div class="form-item g-form-type-radio form-item-submitted-radio">
- <input type="radio" id="edit-submitted-radio-4" name="submitted[radio]" value="wednesday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-4">Wednesday </label>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-4' name='submitted[radio]' value='wednesday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-4'>Wednesday </label>
 
 </div>
-<div class="form-item g-form-type-radio form-item-submitted-radio">
- <input type="radio" id="edit-submitted-radio-5" name="submitted[radio]" value="thursday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-5">Thursday </label>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-5' name='submitted[radio]' value='thursday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-5'>Thursday </label>
 
 </div>
-<div class="form-item g-form-type-radio form-item-submitted-radio">
- <input type="radio" id="edit-submitted-radio-6" name="submitted[radio]" value="friday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-6">Friday </label>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-6' name='submitted[radio]' value='friday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-6'>Friday </label>
 
 </div>
-<div class="form-item g-form-type-radio form-item-submitted-radio">
- <input type="radio" id="edit-submitted-radio-7" name="submitted[radio]" value="saturday" class="g-form-radio">  <label class="option" for="edit-submitted-radio-7">Saturday </label>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-7' name='submitted[radio]' value='saturday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-7'>Saturday </label>
 
 </div>
 </div>
@@ -428,7 +428,7 @@ category: Global - Forms
   @extend %g-form-check-radio-label;
 }
 
-// Reset all Drupal Submit Forms to "Action" Buttons
+// Reset all Drupal Submit Forms to 'Action' Buttons
 //scss-lint:disable QualifyingElement
 // %g-form-submit--drupal,
 // .g-form-actions input[type='submit'] {
@@ -446,34 +446,34 @@ category: Global - Forms
 
 ```html_example
 <h2>Form field width variations</h2>
-<div class="styleguide__form-layout">
-<div class="l-form" data-eq-pts="2cols:500" data-eq-state="2cols">
-  <div class="l-form__item--med l-form__item--no-top-margin">
-    <label for="edit-submitted-name">Name <span class="form-required" title="This field is required.">*</span></label>
-    <input required="required" placeholder="Jane Smith" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required">
+<div class='styleguide__form-layout'>
+<div class='l-form' data-eq-pts='2cols:500' data-eq-state='2cols'>
+  <div class='l-form__item--med l-form__item--no-top-margin'>
+    <label for='edit-submitted-name'>Name <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='Jane Smith' type='text' id='edit-submitted-name' name='submitted[name]' value='' size='60' maxlength='128' class='form-text required'>
   </div>
-  <div class="l-form__item--med l-form__item--no-top-margin">
-    <label for="address">Address <span class="form-required" title="This field is required.">*</span></label>
-    <input required="required" placeholder="Address" type="text" id="address" name="saddress" value="" size="60" maxlength="128" class="form-text required" disabled>
+  <div class='l-form__item--med l-form__item--no-top-margin'>
+    <label for='address'>Address <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='Address' type='text' id='address' name='saddress' value='' size='60' maxlength='128' class='form-text required' disabled>
   </div>
-  <div class="l-form__item--med l-form__item--no-top-margin">
-    <label for="edit-submitted-email">Email <span class="form-required" title="This field is required.">*</span></label>
-    <input required="required" class="email form-text form-email required" placeholder="email@example.com" type="email" id="edit-submitted-email" name="submitted[email]" size="60">
+  <div class='l-form__item--med l-form__item--no-top-margin'>
+    <label for='edit-submitted-email'>Email <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' class='email form-text form-email required' placeholder='email@example.com' type='email' id='edit-submitted-email' name='submitted[email]' size='60'>
   </div>
-  <div class="l-form__item--wide">
-    <label for="edit-submitted-province">Province <span class="form-required" title="This field is required.">*</span></label>
-    <select required="required" id="edit-submitted-province" name="submitted[province]" class="form-select required"><option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option><option value="NB">New Brunswick</option><option value="NL">Newfoundland and Labrador</option><option value="NS">Nova Scotia</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON" selected="selected">Ontario</option><option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option></select>
+  <div class='l-form__item--wide'>
+    <label for='edit-submitted-province'>Province <span class='form-required' title='This field is required.'>*</span></label>
+    <select required='required' id='edit-submitted-province' name='submitted[province]' class='form-select required'><option value='AB'>Alberta</option><option value='BC'>British Columbia</option><option value='MB'>Manitoba</option><option value='NB'>New Brunswick</option><option value='NL'>Newfoundland and Labrador</option><option value='NS'>Nova Scotia</option><option value='NT'>Northwest Territories</option><option value='NU'>Nunavut</option><option value='ON' selected='selected'>Ontario</option><option value='PE'>Prince Edward Island</option><option value='QC'>Quebec</option><option value='SK'>Saskatchewan</option><option value='YT'>Yukon</option></select>
   </div>
-  <div class="l-form__item--narrow">
-    <label for="edit-submitted-postal-code">Postal Code <span class="form-required" title="This field is required.">*</span></label>
-    <input required="required" placeholder="M3A 1B7" type="text" id="edit-submitted-postal-code" name="submitted[postal_code]" value="" size="10" maxlength="7" class="form-text required has-error">
+  <div class='l-form__item--narrow'>
+    <label for='edit-submitted-postal-code'>Postal Code <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='M3A 1B7' type='text' id='edit-submitted-postal-code' name='submitted[postal_code]' value='' size='10' maxlength='7' class='form-text required has-error'>
   </div>
-  <div class="l-form__item webform-component webform-component-textfield webform-component--postal-code">
-    <label for="edit-submitted-your-message">Postal Code <span class="form-required" title="This field is required.">*</span></label>
-    <textarea class="l-form__item" name="submitted[your_message]" placeholder="Your Message" rows="5" cols="60" class="form-text required"></textarea>
+  <div class='l-form__item webform-component webform-component-textfield webform-component--postal-code'>
+    <label for='edit-submitted-your-message'>Postal Code <span class='form-required' title='This field is required.'>*</span></label>
+    <textarea class='l-form__item' name='submitted[your_message]' placeholder='Your Message' rows='5' cols='60' class='form-text required'></textarea>
   </div>
-  <div class="g-form-actions">
-    <input class="g-input--orange webform-submit button-primary form-submit ajax-processed" type="submit" id="edit-webform-ajax-submit-371" name="op" value="Submit">
+  <div class='g-form-actions'>
+    <input class='g-input--orange webform-submit button-primary form-submit ajax-processed' type='submit' id='edit-webform-ajax-submit-371' name='op' value='Submit'>
   </div>
 </div>
 </div>

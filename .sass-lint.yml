@@ -26,8 +26,8 @@ rules:
     - 0
     - include: true
   force-attribute-nesting: 0
-  force-element-nesting: 1
-  force-pseudo-nesting: 1
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
   function-name-format:
     - 0
     - allow-leading-underscore: false
@@ -108,6 +108,11 @@ rules:
         - border-right-color
         - border-bottom-color
         - border-left-color
+        - border-radius
+        - border-top-right-radius
+        - border-bottom-right-radius
+        - border-bottom-left-radius
+        - border-top-left-radius
         - background
         - background-color
         - background-image

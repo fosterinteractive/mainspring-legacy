@@ -58,7 +58,7 @@
 }
 
 %l-form--2col,
-.l-form[data-eq-state="2cols"] {
+.l-form[data-eq-state='2cols'] {
   @extend %l-form;
 
   .l-form__item--wide {
@@ -107,7 +107,7 @@
 }
 
 %l-form--filter-2col,
-.l-form--filter[data-eq-state="2cols"] {
+.l-form--filter[data-eq-state='2cols'] {
   @extend %l-form--2col;
   @extend %l-form--filter;
 }

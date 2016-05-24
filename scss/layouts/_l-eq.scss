@@ -24,14 +24,14 @@ category: Layout - Columns
 ---
 
 ```html_example
-<div class="sg__wrapper--eq">
-  <div class="l-eq" data-eq-pts="2col: 600">
-    <div class="l-item">
+<div class='sg__wrapper--eq'>
+  <div class='l-eq' data-eq-pts='2col: 600'>
+    <div class='l-item'>
       <h3>EQ Item 1 - 50%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
 
-    <div class="l-item">
+    <div class='l-item'>
       <h3>EQ Item 2 - 50%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
@@ -43,7 +43,7 @@ category: Layout - Columns
 
 // 2COLUMN LAYOUT @ 50% EACH
 %l-eq-2col__item,
-.l-eq[data-eq-state="2col"] .l-item {
+.l-eq[data-eq-state='2col'] .l-item {
   @extend %l-item;
 
   @include layout(2, $gutter: 0) {
@@ -66,14 +66,14 @@ category: Layout - Columns
 ---
 
 ```html_example
-<div class="sg__wrapper--eq">
-  <div class="l-eq" data-eq-pts="2col-60/40: 600">
-    <div class="l-item">
+<div class='sg__wrapper--eq'>
+  <div class='l-eq' data-eq-pts='2col-60/40: 600'>
+    <div class='l-item'>
       <h3>EQ Item 1 - 60%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
 
-    <div class="l-item">
+    <div class='l-item'>
       <h3>EQ Item 2 - 40%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
@@ -84,7 +84,7 @@ category: Layout - Columns
 
 // 2COLUMN LAYOUT @ 60% & 40%
 %l-eq-2col__item--1-2\(60\,40\),
-.l-eq[data-eq-state="2col-60/40"] .l-item {
+.l-eq[data-eq-state='2col-60/40'] .l-item {
   @extend %l-item;
 
   @include layout(60 40, $gutter: 0) {
@@ -107,14 +107,14 @@ category: Layout - Columns
 ---
 
 ```html_example
-<div class="sg__wrapper--eq">
-  <div class="l-eq" data-eq-pts="2col-66/33: 600">
-    <div class="l-item">
+<div class='sg__wrapper--eq'>
+  <div class='l-eq' data-eq-pts='2col-66/33: 600'>
+    <div class='l-item'>
       <h3>EQ Item 1 - 66.666%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
 
-    <div class="l-item">
+    <div class='l-item'>
       <h3>EQ Item 2 - 33.333%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
@@ -126,7 +126,7 @@ category: Layout - Columns
 
 //2COLUMN LAYOUT @ 66.666% & 33.333%
 %l-eq-2col__item--1-2\(66\,33\),
-.l-eq[data-eq-state="2col-66/33"] .l-item {
+.l-eq[data-eq-state='2col-66/33'] .l-item {
   @extend %l-item;
 
   @include layout(66 33, $gutter: 0) {
@@ -149,14 +149,14 @@ category: Layout - Columns
 ---
 
 ```html_example
-<div class="sg__wrapper--eq">
-  <div class="l-eq" data-eq-pts="2col-33/66: 600">
-    <div class="l-item">
+<div class='sg__wrapper--eq'>
+  <div class='l-eq' data-eq-pts='2col-33/66: 600'>
+    <div class='l-item'>
       <h3>EQ Item 1 - 33.333%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
 
-    <div class="l-item">
+    <div class='l-item'>
       <h3>EQ Item 2 - 66.666%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
@@ -167,7 +167,7 @@ category: Layout - Columns
 
 // 2COLUMN LAYOUT @ 33.333% & 66.666%
 %l-eq-2col__item--1-2\(33\,66\),
-.l-eq[data-eq-state="2col-33/66"] .l-item {
+.l-eq[data-eq-state='2col-33/66'] .l-item {
   @extend %l-item;
 
   @include layout(33 66, $gutter: 0) {
@@ -190,14 +190,14 @@ category: Layout - Columns
 ---
 
 ```html_example
-<div class="sg__wrapper--eq">
-  <div class="l-eq" data-eq-pts="2col-40/60: 600">
-    <div class="l-item">
+<div class='sg__wrapper--eq'>
+  <div class='l-eq' data-eq-pts='2col-40/60: 600'>
+    <div class='l-item'>
       <h3>EQ Item 1 - 40%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
 
-    <div class="l-item">
+    <div class='l-item'>
       <h3>EQ Item 2 - 60%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
@@ -208,7 +208,7 @@ category: Layout - Columns
 
 //2COLUMN LAYOUT @ 40% & 60%
 %l-eq-2col__item--1-2\(40\,60\),
-.l-eq[data-eq-state="2col-40/60"] .l-item {
+.l-eq[data-eq-state='2col-40/60'] .l-item {
   @extend %l-item;
 
   @include layout(40 60, $gutter: 0) {
@@ -231,14 +231,14 @@ category: Layout - Columns
 ---
 
 ```html_example
-<div class="sg__wrapper--eq">
-  <div class="l-eq" data-eq-pts="2col-75/25: 600">
-    <div class="l-item">
+<div class='sg__wrapper--eq'>
+  <div class='l-eq' data-eq-pts='2col-75/25: 600'>
+    <div class='l-item'>
       <h3>EQ Item 1 - 75%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
 
-    <div class="l-item">
+    <div class='l-item'>
       <h3>EQ Item 2 - 25%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
@@ -249,7 +249,7 @@ category: Layout - Columns
 
 // 2COLUMN LAYOUT @ 75% & 25%
 %l-eq-2col__item--1-2\(75\,25\),
-.l-eq[data-eq-state="2col-75/25"] .l-item {
+.l-eq[data-eq-state='2col-75/25'] .l-item {
   @extend %l-item;
 
   @include layout(75 25, $gutter: 0) {
@@ -272,19 +272,19 @@ category: Layout - Columns
 ---
 
 ```html_example
-<div class="sg__wrapper--eq">
-  <div class="l-eq" data-eq-pts="3col: 600">
-    <div class="l-item">
+<div class='sg__wrapper--eq'>
+  <div class='l-eq' data-eq-pts='3col: 600'>
+    <div class='l-item'>
       <h3>EQ Item 1 - 33%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
 
-    <div class="l-item">
+    <div class='l-item'>
       <h3>EQ Item 2 - 33%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
 
-    <div class="l-item">
+    <div class='l-item'>
       <h3>EQ Item 2 - 33%</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus augue nibh, imperdiet eget velit id, posuere viverra leo. In libero arcu, tincidunt et convallis non, imperdiet quis velit.</p>
     </div>
@@ -295,7 +295,7 @@ category: Layout - Columns
 
 // 3COLUMN LAYOUT @ 33% EACH
 %l-eq-3col__item,
-.l-eq[data-eq-state="3col"] .l-item {
+.l-eq[data-eq-state='3col'] .l-item {
   @extend %l-item;
 
   @include layout(33 33 33, $gutter: 0) {
