@@ -4,13 +4,13 @@ var config      = require('../config');
 if(!config.tasks.css){return;}
 
 var gulp         = require('gulp');
-var gulpIf      = require('gulp-if');
+var gulpIf       = require('gulp-if');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var handleErrors = require('../lib/handleErrors');
 var autoprefixer = require('gulp-autoprefixer');
-var minifyCss    = require('gulp-minify-css');
-var sizeReport  = require('gulp-sizereport');
+var cleanCSS     = require('gulp-clean-css');
+var sizeReport   = require('gulp-sizereport');
 
 
 // Config
@@ -23,27 +23,25 @@ var reportEnabled = config.tasks.css.sizeReport.enabled;
 var reportSettings = config.tasks.css.sizeReport.settings;
 
 
-// Development CSS
+// Development CSS - Non minfied with Sourcemaps
 gulp.task('css:dev', function () {
   return gulp.src(src)
     .pipe(sourcemaps.init())
     .pipe(sass(sassConfig))
     .on('error', handleErrors)
     .pipe(autoprefixer(prefixSettings))
-    // Blocked by this ISSUE - https://github.com/murphydanger/gulp-minify-css/issues/113#issuecomment-122485286
-    // .pipe(minifyCss({keepBreaks:true})) // Keeps line Breaks
     .pipe(sourcemaps.write(sourceMaps))
     .pipe(gulp.dest(dest))
     ;
 });
 
-// Production CSS
+// Production CSS - Minified w/size report, no sourcemaps.
 gulp.task('css:prod', function () {
   return gulp.src(src)
     .pipe(sass(sassConfig))
     .on('error', handleErrors)
     .pipe(autoprefixer(prefixSettings))
-    .pipe(minifyCss())
+    .pipe(cleanCSS())
     .pipe(gulp.dest(dest))
 
     // Size Report

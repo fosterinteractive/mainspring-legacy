@@ -105,11 +105,7 @@ module.exports = {
     },
 
     sassLint: {
-      pattern: sassLintPattern,
-        settings : {
-        'config': '.scss-lint.yml', // Linter Config File
-        'bundleExec': true,
-      }
+      pattern: sassLintPattern
     },
 
     // SVG spriting
