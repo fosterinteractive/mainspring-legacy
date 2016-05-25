@@ -4,7 +4,7 @@ var config      = require('../config');
 var gulp        = require('gulp');
 var path        = require('path');
 var config      = require('../config');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create;
 if(!config.tasks.browserSync){return;}
 
 
@@ -13,10 +13,10 @@ if(!config.tasks.browserSync){return;}
 var scssSrc     = config.tasks.css.pattern;
 var jsSrc       = config.tasks.jsLint.pattern;
 
-gulp.task('watch', ['browserSync', 'css:dev', 'sassLint', 'styleGuide', 'jsLint'], function() {
+gulp.task('watch', ['browserSync', 'css:dev', 'sassLint', 'jsLint', 'styleguide'], function() {
 
   // SASS & Styleguide
-  gulp.watch(scssSrc, ['css:dev', 'sassLint', 'styleGuide']);
+  gulp.watch(scssSrc, ['css:dev', 'sassLint', 'styleguide']);
 
   // JS Tasks
   gulp.watch(jsSrc, ['jsLint']);

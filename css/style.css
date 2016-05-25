@@ -1911,26 +1911,6 @@ category: Layout - Columns
     .l-form--filter {
       padding: 1.5rem 3.375rem; } }
 
-/**
-  * @stylesheet buttons.css Buttons
-  * @parent styles
-  *
-  * @description
-  * This buttons page is being pulled from documentation in the`buttons.css` file.
-  *
-  * @demo _c-btn.html
-**/
-/*doc
----
-title: Button Default
-name: c-btn-100
-category: Components - Buttons
----
-
-```html_example
-<a href="#" class="c-btn">Default Button</a>
-```
-*/
 button,
 input[type='reset'],
 input[type='submit'],

@@ -1,7 +1,7 @@
 {
   "sites": {
     "styles": {
-      "glob": "scss/**/*.{scss,md}",
+      "glob": "scss/**/*.{scss,html,md}",
       "dest": "styleguide",
       "parent": "styles"
     }

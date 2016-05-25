@@ -1,24 +1,14 @@
-/**
-  * @stylesheet buttons.css Buttons
-  * @parent styles
-  *
-  * @description
-  * This buttons page is being pulled from documentation in the`buttons.css` file.
-  *
-  * @demo scss/components/_c-btn.html
-**/
+// Buttons
+//
+// Your standard button suitable for clicking.sss
+//
+// :hover   - Highlights when hovering.
+// .shiny   - Do not press this big, shiny, red button.
+//
+// Markup: _c-btn.html
+//
+// Style guide: components.button
 
-/*doc
----
-title: Button Default
-name: c-btn-100
-category: Components - Buttons
----
-
-```html_example
-<a href="#" class="c-btn">Default Button</a>
-```
-*/
 
 %c-btn--core {
   display: inline-block;
@@ -236,4 +226,8 @@ category: Components - Buttons
     text-decoration: none;
     color: $white;
   }
+}
+
+.sdsdf {
+  sdfsd: dsdf;
 }
