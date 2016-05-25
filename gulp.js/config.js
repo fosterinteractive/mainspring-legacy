@@ -1,6 +1,18 @@
 'use strict';
 
 var localUrl = 'mainspring.dev'; // EG 'localhost', 'mysite.dev'
+var browserSyncWatch = [ // Refresh browser when these files update
+  './css/*.css',
+  './styleguide/index.html'];  // Watch index.html only - Holgram regenerates every file on update.
+var scssPattern = ['./scss/**/*.scss']; // Watch scss files for complile
+var jsLintPattern = [
+  './js/**/*.js',
+  '!./js/**/vendor/*.min.js', // Ignore minified files
+  '!./js/**/vendor/*.js']; // Ignore /vendor sub-folders
+var sassLintPattern = [ //Scss Lint these files
+  'scss/**/*.scss',
+  '!scss/**/vendor/**/*.scss']; // Ignore /vendor sub-folders
+
 
 module.exports = {
 
@@ -10,10 +22,8 @@ module.exports = {
       // See http://www.browsersync.io/docs/options/ for options
       proxy: localUrl,
       port: 3333,
-      files: [
-        './css/*.css',
-        './styleguide/index.html'
-      ], // Watch index.html only - Holgram regenerates every file on update.
+      files: [browserSyncWatch,
+      ],
       ui:{
         port: 3334
       },
@@ -27,7 +37,7 @@ module.exports = {
 
     // Compile CSS from SCSS and optimize
     css: {
-      pattern: ['./scss/**/*.scss'],
+      pattern: scssPattern,
       dest: 'css',
       autoprefixer: {
         browsers: [
@@ -89,30 +99,13 @@ module.exports = {
       }
     },
 
-    // js: {
-    //   src: 'javascripts',
-    //   dest: 'javascripts',
-    //   extractSharedJs: true,
-    //   entries: {
-    //     app: ['./app.js'],
-    //     page: ['./page.js']
-    //   },
-    //   extensions: ['js']
-    // },
-
 
     jsLint: {
-      pattern: [
-        './js/**/*.js',
-        '!./js/**/vendor/*.js',
-      ]
+      pattern: jsLintPattern
     },
 
-    scssLint: {
-      pattern: [
-      'scss/**/*.scss',
-        '!scss/**/vendor/**/*.scss', // Ignore /vendor folders
-        ],
+    sassLint: {
+      pattern: sassLintPattern,
         settings : {
         'config': '.scss-lint.yml', // Linter Config File
         'bundleExec': true,

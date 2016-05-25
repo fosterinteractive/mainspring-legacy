@@ -13,10 +13,10 @@ if(!config.tasks.browserSync){return;}
 var scssSrc     = config.tasks.css.pattern;
 var jsSrc       = config.tasks.jsLint.pattern;
 
-gulp.task('watch', ['browserSync', 'css:dev', 'scssLint', 'styleGuide', 'jsLint'], function() {
+gulp.task('watch', ['browserSync', 'css:dev', 'sassLint', 'styleGuide', 'jsLint'], function() {
 
   // SASS & Styleguide
-  gulp.watch(scssSrc, ['css:dev', 'scssLint', 'styleGuide']);
+  gulp.watch(scssSrc, ['css:dev', 'sassLint', 'styleGuide']);
 
   // JS Tasks
   gulp.watch(jsSrc, ['jsLint']);

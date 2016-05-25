@@ -11,12 +11,12 @@ $debug-colors: rgb(160, 0, 0), rgb(0, 160, 0), rgb(0, 0, 160) !default; // scss-
 // Global variable for counting runs
 $debug-count: 1 !default !global;
 
-@mixin dbl ($i : $debug-count) {
+@mixin dbl ($i: $debug-count) {
   $color: nth($debug-colors, $i);
-  background-color: rgba($color, 0.5);
   outline: 2px dashed $color;
+  background-color: rgba($color, 0.5);
 
-  @if ($i < length($debug-colors)){
+  @if ($i < length($debug-colors)) {
     $debug-count: $i + 1 !global;
   }@else {
     $debug-count: 1 !global;

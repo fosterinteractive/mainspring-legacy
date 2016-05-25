@@ -9,34 +9,37 @@
 }
 
 @mixin visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
   position: absolute;
-  overflow: hidden;
   margin: -1px;
+  border: 0;
   padding: 0;
   width: 1px;
   height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 
-  &.focusable:active,
-  &.focusable:focus {
-    clip: auto;
-    position: static;
-    margin: 0;
-    width: auto;
-    height: auto;
-    overflow: visible;
+  .focusable {
+    &:active,
+    &:focus {
+      position: static;
+      margin: 0;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip: auto;
+    }
   }
 }
 
 @mixin visuallyshown {
-  clip: auto;
-  clip: rect(auto auto auto auto);
   position: static;
-  overflow: visible;
   margin: 0;
   width: auto;
   height: auto;
+  overflow: visible;
+
+  clip: auto;
+  clip: rect(auto auto auto auto); // scss-lint:disable DuplicateProperty
 }
 
 @mixin invisible {
@@ -44,7 +47,7 @@
 }
 
 @mixin text-hide {
+  overflow: hidden;
   text-indent: 150%;
   white-space: nowrap;
-  overflow: hidden;
 }

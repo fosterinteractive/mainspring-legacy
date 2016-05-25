@@ -1,3 +1,4 @@
+// Default Base line for positioning SVGs next to text
 $baseline: 1.5rem !default;
 
 @mixin svg-centered($svg-width, $svg-height, $wrapper-width, $wrapper-height, $svg-class: svg) {
@@ -22,8 +23,6 @@ $baseline: 1.5rem !default;
 // Prefix icon with a mult-line link with vertically centered (middle or top) svg to the left
 // Apply to parent container with an SVG of the specified class inside
 
-
-
 @mixin svg-inline(
   $baseline, // font baseline
   $svg-width, // SVG width (units same as typography)
@@ -31,8 +30,8 @@ $baseline: 1.5rem !default;
   $svg-pad-right, // padding on right side of SVG
   $svg-pad-left, // padding on left side of SVG
   $container-vertical-padding, // Top & bottom padding for container
-  $container-padding-right : 0, // Right padding for container
-  $container-padding-left : 0, // Left and right padding for container
+  $container-padding-right: 0, // Right padding for container
+  $container-padding-left: 0, // Left and right padding for container
   $svg-class: 'svg', // Class for the SVG inside the parent
   $h-alignment: 'left', // Align Icon on 'left' or 'right'
   $v-alignment: 'middle') { // Align Icon 'middle' or 'top'
@@ -52,7 +51,7 @@ $baseline: 1.5rem !default;
       padding-right: $container-padding-right;
     }
 
-  } @elseif ($h-alignment == 'right'){
+  } @elseif ($h-alignment == 'right') {
     padding-right: $svg-pad-left + $svg-width + $svg-pad-right + $container-padding-right;
 
     @if ($container-padding-left != '0') {
