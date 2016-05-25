@@ -216,7 +216,7 @@ ul, ol,
 .g-link--grey,
 a {
   -webkit-transition-property: background-color;
-          transition-property: background-color;
+  transition-property: background-color;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s; }
 
@@ -224,7 +224,7 @@ a {
 .g-link--grey,
 a {
   -webkit-transition-property: color;
-          transition-property: color;
+  transition-property: color;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s; }
 
@@ -1911,6 +1911,15 @@ category: Layout - Columns
     .l-form--filter {
       padding: 1.5rem 3.375rem; } }
 
+/**
+  * @stylesheet buttons.css Buttons
+  * @parent styles
+  *
+  * @description
+  * This buttons page is being pulled from documentation in the`buttons.css` file.
+  *
+  * @demo _c-btn.html
+**/
 /*doc
 ---
 title: Button Default

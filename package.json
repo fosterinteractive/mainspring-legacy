@@ -5,6 +5,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.6",
     "del": "^2.0.2",
+    "documentjs": "^0.4.4",
     "fs": "0.0.2",
     "gulp": "^3.8.0",
     "gulp-autoprefixer": "^3.1.0",
