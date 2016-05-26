@@ -1,0 +1,21 @@
+$transition-duration: 0.25s !default;
+
+%u-animate-background-color {
+  transition-property: background-color;
+  transition-duration: $transition-duration;
+}
+
+%u-animate-color {
+  transition-property: color;
+  transition-duration: $transition-duration;
+}
+
+%u-animate-opacity {
+  transition-property: opacity;
+  transition-duration: $transition-duration;
+}
+
+%u-animate-all {
+  transition-property: all;
+  transition-duration: $transition-duration;
+}

@@ -1,0 +1,13 @@
+%u-clearfix,
+.u-clearfix {
+
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+}

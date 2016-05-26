@@ -1,0 +1,97 @@
+
+// Import Libraries
+// @import '../bower_components/sass-toolkit/stylesheets/toolkit';
+// @import '../bower_components/sassy-maps/sass/sassy-maps';
+// @import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
+// @import '../bower_components/singularity/stylesheets/singularitygs';
+// @import '../bower_components/jacket/stylesheets/jacket';
+
+
+// Kickstart
+// @import '../bower_components/sass-toolkit/stylesheets/toolkit/kickstart';
+
+
+// Global Config (Doesn not render any CSS)
+
+// @import 'config/functions';
+// @import 'config/variables';
+// @import 'config/mixins';
+// @import 'config/extends';
+
+// @import 'utility/utility';
+
+// %sg__wrapper,
+// .sg__wrapper {
+//   @extend %u-clearfix;
+//   position: relative;
+//   margin-bottom: 2rem;
+//   padding: 1rem;
+// }
+
+// %sg__wrapper--xlight-grey,
+// .sg__wrapper--xlight-grey {
+//   @extend %sg__wrapper;
+//   background-color: palette(grey, xlight);
+// }
+
+// %sg__wrapper--light-grey,
+// .sg__wrapper--light-grey {
+//   @extend %sg__wrapper;
+//   background-color: palette(grey, light);
+// }
+
+// %sg__wrapper--sml-light-grey,
+// .sg__wrapper--sml-light-grey {
+//   @extend %sg__wrapper;
+//   background-color: palette(grey, light);
+//   max-width: rem(300px);
+// }
+
+// %sg__wrapper--eq,
+// .sg__wrapper--eq {
+//   @extend %sg__wrapper;
+//   background-color: palette(grey, light);
+//   max-width: rem(700px);
+// }
+
+// %sg__wrapper--img,
+// .sg__wrapper--img {
+//   @extend %sg__wrapper;
+//   max-width: rem(900px);
+// }
+
+// // Force display to visible
+
+// %styleguide--force-visibile,
+// .styleguide--force-visibile,
+// .styleguide--force-visibile svg {
+//   display: block !important; // scss-lint:disable ImportantRule
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+// %styleguide--force-static,
+// .styleguide--force-static {
+//   position: static !important; // scss-lint:disable ImportantRule
+// }
+
+
+
+// Cortana Overrides
+// .cortana-content {
+//   .clearfix {
+//     @extend %u-clearfix;
+//   }
+// }
+
+// .exampleOutput { // scss-lint:disable SelectorFormat
+//   padding: 50px 15px !important; // scss-lint:disable ImportantRule
+// }
+
+// .cortana-container {
+//   padding-right: 21px;
+//   padding-left: 21px;
+//   max-width: 100% !important; // scss-lint:disable ImportantRule
+// }
+
+

@@ -5,7 +5,7 @@
 
 var gulp          = require('gulp');
 // var styleguide    = require('sc5-styleguide');
-// var browserSync   = require('browser-sync');
+var browserSync   = require('browser-sync');
 // var outputPath    = 'styleguide';
 
 
@@ -38,7 +38,7 @@ var options = {
   source: [
     './scss'
   ],
-  destination: 'styleguide',
+  destination: 'styleguide-kss',
 
   // The css and js paths are URLs, like '/misc/jquery.js'.
   // The following paths are relative to the generated style guide.
@@ -55,6 +55,6 @@ var options = {
 
 
 
-gulp.task('styleguide', function(cb) {
-  kss(options, cb);
+gulp.task('styleguidesadasd', function(cb) {
+  kss(options, cb)
 });

@@ -1,0 +1,180 @@
+@viewport {
+  width: device-width;
+}
+
+// LOAD FONTS
+// @include font-face('My Font', $fonts-medium-italic, bold, italic);
+
+// @include enable-ligatures();
+
+// Set Base Fonts
+// scss-lint:disable VendorPrefix
+html {
+  background-color: $white;
+  line-height: strip-unit($base-line-height / $base-font-size);
+  color: palette(grey, dark);
+  font-family: $base-font-family;
+  font-size: 100%;
+}
+// scss-lint:enable VendorPrefix
+
+// Global Extends for Typography
+
+%g-type__core {
+  // Fade in fonts using Web Font Loader default classes https://github.com/at-import/toolkit#font-helpers
+  @include content-fade-in(0.25s, '.wf-loading', false);
+  // font-family: $base-font-family;
+}
+
+/*doc
+---
+title: Example Content
+name: g-type-100
+category: Global - Typography
+---
+
+```html_example
+<div class="sg__wrapper--xlight-grey">
+<h1>H1 - Heading Level 1</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar finibus diam, eget sagittis est hendrerit et. </p>
+<h2 class="u-color--fg-orange"> Heading level 2 -  Pellentesque sed sollicitudin lacus, </h2>
+<p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<h3 class="u-color--fg-green">Heading level 3 - Maecenas interdum, elit ut accumsan luctus </h3>
+<p class="g-type__p--large">This is a Large Paragraph.Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+<p>This is a normal Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.</p>
+<p>New Paragrpah dolor eleifend dolor, eget suscipit ante erat ac lectus.  <a href="#">This is a text link</a> Ut sodales, lorem quis ultrices sollicitudin
+<strong>Strong is used to indicate strong importance</strong> at cursus erat urna vitae justo. Maecenas interdum
+<em>This text has added emphasis.</em>
+<p>Superscript<sup>®</sup></p>
+<p>Subscript for things like H<sub>2</sub>O</p>
+<p><small>This small text is small for for fine print, etc.</small></p>
+</div>
+```
+*/
+
+/*doc
+---
+title: Basic Elements
+name: g-type-200
+category: Global - Typography
+---
+
+<h2>Paragraph Sizes w/ Bold &amp; Italic</h2>
+
+```html_example
+<p>
+  Default Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--xsmall">
+  xsmall Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--small">
+  small Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--large">
+  large Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--xlarge">
+  xlarge Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+<p class="g-type--huge">
+  huge Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</p>
+```
+*/
+
+p {
+  @extend %g-type__core;
+  @include font-size($p-font-sizes);
+  margin: 0 0 1rem 0;
+}
+
+%g-type--xsmall,
+.g-type--xsmall {
+  @include font-size($p--xsmall-font-sizes);
+}
+
+%g-type--small,
+.g-type--small {
+  @include font-size($p--small-font-sizes);
+}
+
+%g-type--large,
+.g-type--large {
+  @include font-size($p--large-font-sizes);
+}
+
+%g-type--xlarge,
+.g-type--xlarge {
+  @include font-size($p--xlarge-font-sizes);
+}
+
+%g-type--huge,
+.g-type--huge {
+  @include font-size($p--xhuge-font-sizes);
+}
+
+/*doc
+---
+title: Headings
+name: g-type-300
+category: Global - Typography
+---
+<p>Headings resize from small to large at breakpoint. </p>
+<p>H4-6 inherit H3's styles and are not expected to be used</p>
+
+```html_example
+<h1>My Title Level 1</h1>
+<h2>My Title Level 2</h2>
+<h3>My Title Level 3</h3>
+<h4>My Title Level 4</h4>
+<h5>My Title Level 5</h5>
+<h6>My Title Level 6</h6>
+```
+*/
+
+%heading-font {
+  @extend %g-type__core;
+  margin: 1rem 0 0.5rem;
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+}
+
+h1,
+.g-type__h1,
+%g-type__h1 {
+  @extend %heading-font;
+  @include font-size($h1-font-sizes);
+}
+
+h2,
+.g-type__h2,
+%g-type__h2 {
+  @extend %heading-font;
+  @include font-size($h2-font-sizes);
+}
+
+h3,
+.g-type__h3,
+%g-type__h3 {
+  @extend %heading-font;
+  @include font-size($h3-font-sizes);
+}
+
+h4,
+.g-type__h4,
+%g-type__h4 {
+  @extend %g-type__h3;
+}
+
+h5,
+.g-type__h5,
+%g-type__h5 {
+  @extend %g-type__h3;
+}
+
+h6,
+.g-type__h6,
+%g-type__h6 {
+  @extend %g-type__h3;
+}

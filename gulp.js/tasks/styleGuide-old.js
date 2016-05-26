@@ -11,7 +11,7 @@ var browserSync   = require('browser-sync');
 var configFile = config.tasks.hologram.configFile;
 var settings = config.tasks.hologram.settings;
 
-gulp.task('styleGuide', function() {
+gulp.task('styleGuideasdasdada', function() {
   gulp.src(configFile)
     .pipe(hologram(settings))
     .pipe(browserSync.reload({stream:true}));
