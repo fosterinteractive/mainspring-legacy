@@ -4,57 +4,32 @@
 // if(!config.tasks.jsLint){return;}
 
 var gulp          = require('gulp');
-// var styleguide    = require('sc5-styleguide');
+var styleguide    = require('sc5-styleguide');
 var browserSync   = require('browser-sync');
 // var outputPath    = 'styleguide';
 
+var overviewPath = 'scss/homepage.md';
+var styleguideAppRoot = './';
+var styleguideBuildPath = 'styleguide';
 
-
-// gulp.task('styleguide:generate', function() {
-//   return gulp.src('css/**/*.scss')
-//     .pipe(styleguide.generate({
-//         title: 'Styleguide',
-//         server: false,
-//         appRoot: outputPath,
-//         disableEncapsulation: true,
-//         overviewPath: 'styleguide.md'
-//       }))
-//     .pipe(gulp.dest(outputPath));
-// });
-
-// gulp.task('styleguide:applystyles', function() {
-//   return gulp.src('css/style.css')
-//     .pipe(styleguide.applyStyles())
-//     .pipe(gulp.dest(outputPath));
-// });
-
-// gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
-
-// kss-node 2.3.1 and later.
-var kss = require('kss');
-
-
-var options = {
-  source: [
-    './scss'
-  ],
-  destination: 'styleguide-kss',
-
-  // The css and js paths are URLs, like '/misc/jquery.js'.
-  // The following paths are relative to the generated style guide.
-  css: [
-    ('../css/styles.css')
-  ],
-
-  js: [
-  ],
-
-  homepage: 'homepage.md',
-  title: 'Style Guide'
-};
-
-
-
-gulp.task('styleguidesadasd', function(cb) {
-  kss(options, cb)
+gulp.task('sc5:generate', function() {
+  return gulp.src('scss/**/*.scss')
+    .pipe(styleguide.generate({
+        title: 'Styleguide',
+        server: false,
+        rootPath: styleguideBuildPath,
+        appRoot: styleguideAppRoot,
+        overviewPath: overviewPath,
+        disableHtml5Mode: true,
+        sideNav: true
+      }))
+    .pipe(gulp.dest(styleguideBuildPath));
 });
+
+gulp.task('sc5:applystyles', function() {
+  return gulp.src('css/**.css')
+    .pipe(styleguide.applyStyles())
+    .pipe(gulp.dest(styleguideBuildPath));
+});
+
+gulp.task('styleguide', ['sc5:generate', 'sc5:applystyles']);

@@ -3,7 +3,7 @@
 var localUrl = 'mainspring.dev'; // EG 'localhost', 'mysite.dev'
 var browserSyncWatch = [ // Refresh browser when these files update
   './css/*.css',
-  './styleguide/index.html'];  // Watch index.html only - Holgram regenerates every file on update.
+  './styleguide/*.html'];  // Watch index.html only - Styleguide regenerates every file on update.
 var scssPattern = ['./scss/**/*.scss']; // Watch scss files for complile
 var jsLintPattern = [
   './js/**/*.js',
