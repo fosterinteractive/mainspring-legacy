@@ -1,3 +1,9 @@
+// Navigation - Vertical
+//
+// markup: _c-nav--vertical.html
+//
+// Styleguide 2.5
+
 %c-nav--core {
   margin: 0;
   padding: 0;
@@ -10,30 +16,6 @@
   margin: 0;
 }
 
-/*doc
----
-title: Vertical Navigation
-name: c-nav-100
-category: Components - Navigation
----
-
-```html_example
-<ul class="c-nav--vertical">
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link is-active" href="#">Link 1 Is Active</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 2</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 3</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 4</a>
-  </li>
-</ul>
-```
-*/
 
 %c-nav--vertical,
 .c-nav--vertical {
