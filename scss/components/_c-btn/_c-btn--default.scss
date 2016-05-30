@@ -1,19 +1,12 @@
 // Buttons
 //
-// markup: _c-btn.html
-//
-// Styleguide 2.1
-
-
-// Buttons 2
-//
-// .c-btn       - Default
-// .c-btn--grey - Grey Button
-//
 // markup:
-// <a href="#" class=" {modifiers} ">Links</a>
+// <a href="#" class="{$modifiers}">{$modifiers}</a>
 //
-// Styleguide 2.2
+// Styleguide 2.1.1
+
+
+
 
 %c-btn--core {
   display: inline-block;
@@ -22,6 +15,8 @@
   padding: ru(0.5) ru(1);
   text-transform: uppercase;
   text-decoration: none;
+
+
 }
 
 %c-btn,
@@ -37,6 +32,8 @@
     border-color: palette(grey);
     background-color: palette(grey, xlight);
   }
+
+
 }
 
 /*doc
@@ -59,12 +56,15 @@ category: Components - Buttons
   background-color: palette(grey);
   color: $white;
 
-  &:hover,
   &:focus,
   &:active {
     border-color: palette(grey);
     background-color: $white;
     color: palette(grey);
+  }
+
+  &:hover {
+    outline: 1px solid red;
   }
 }
 
@@ -88,75 +88,7 @@ category: Components - Buttons
   padding: ru(0.125) ru(1);
 }
 
-/*doc
----
-title: Buttons - Inline Icons
-name: c-btn-400
-category: Components - Buttons
----
 
-```html_example
-<a href="#" class="c-btn--left"><svg class="svg"><use xlink:href="../svg/sprite-ui.svg#arrow-left"></use></svg>Back Button</a>
-<a href="#" class="c-btn--right">Continue Button<svg class="svg"><use xlink:href="../svg/sprite-ui.svg#arrow-right"></use></svg></a>
-```
-*/
-
-%c-btn--icon {
-  @extend %c-btn;
-  position: relative;
-  border-color: palette(grey, mediumlight);
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: palette(grey, xlight);
-    color: palette(grey);
-  }
-
-  svg {
-    // color: palette(green);
-  }
-}
-
-%c-btn--left,
-.c-btn--left {
-  @extend %c-btn--icon;
-  // See config/mixins/svg-position.scss
-  @include svg-inline(
-    $baseline: rem($base-line-height), // font baseline
-    $svg-width: ru(0.75), // SVG width (units same as typography)
-    $svg-height: ru(0.75), // SVG height
-    $svg-pad-right: ru(0.25), // padding on right side of SVG
-    $svg-pad-left: 0, // padding on left side of SVG
-    $container-vertical-padding: ru(0.5), // Top & bottom padding for container
-    $container-padding-left: ru(1), // Left padding for container
-    $container-padding-right: ru(1), // Right padding for container    $svg-class: 'svg', // Class for the SVG inside the parent
-    $h-alignment: 'left', // Align Icon on 'left' or 'right'
-    $v-alignment: 'top'); // Align Icon 'middle' or 'top'
-}
-
-%c-btn--right,
-.c-btn--right {
-  @extend %c-btn--icon;
-  @include svg-inline(
-    $baseline: rem($base-line-height), // font baseline
-    $svg-width: ru(0.75), // SVG width (units same as typography)
-    $svg-height: ru(0.75), // SVG height
-    $svg-pad-right: 0, // padding on left side of SVG
-    $svg-pad-left: ru(0.5), // padding on right side of SVG
-    $container-vertical-padding: ru(0.5), // Top & bottom padding for container
-    $container-padding-left: ru(1), // Left padding for container
-    $container-padding-right: ru(0.75), // Right padding for container
-    $svg-class: 'svg', // Class for the SVG inside the parent
-    $h-alignment: 'right', // Align Icon on 'left' or 'right'
-    $v-alignment: 'top'); // Align Icon 'middle' or 'top'
-
-  svg {
-    position: absolute;
-    top: ru(2 / 3);
-    right: ru(1 / 3);
-  }
-}
 
 /*doc
 ---

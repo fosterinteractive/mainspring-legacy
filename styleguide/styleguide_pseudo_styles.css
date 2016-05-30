@@ -107,6 +107,61 @@ input[type='button'].pseudo-class-active,
   background-color: #f1f2f2;
 }
 
+.c-btn--grey.pseudo-class-focus,
+.c-btn--grey.pseudo-class-active {
+  border-color: #939598;
+  background-color: #ffffff;
+  color: #939598;
+}
+
+.c-btn--grey.pseudo-class-hover {
+  outline: 1px solid red;
+}
+
+.c-btn--svg--lrg.pseudo-class-hover,
+.c-btn--svg--sml.pseudo-class-hover,
+.c-btn--svg--lrg.pseudo-class-focus,
+.c-btn--svg--sml.pseudo-class-focus,
+.c-btn--svg--lrg.pseudo-class-active,
+.c-btn--svg--sml.pseudo-class-active,
+.c-btn--svg.pseudo-class-hover,
+.c-btn--svg.pseudo-class-focus,
+.c-btn--svg.pseudo-class-active {
+  background-color: #e6e7e8;
+}
+
+.btn--menu.pseudo-class-hover,
+.btn--menu.pseudo-class-active,
+.btn--menu.pseudo-class-focus {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+button.pseudo-class-hover,
+input[type='reset'].pseudo-class-hover,
+input[type='submit'].pseudo-class-hover,
+input[type='button'].pseudo-class-hover,
+.c-btn--left.pseudo-class-hover,
+.c-btn--right.pseudo-class-hover,
+button.pseudo-class-focus,
+input[type='reset'].pseudo-class-focus,
+input[type='submit'].pseudo-class-focus,
+input[type='button'].pseudo-class-focus,
+.c-btn--left.pseudo-class-focus,
+.c-btn--right.pseudo-class-focus,
+button.pseudo-class-active,
+input[type='reset'].pseudo-class-active,
+input[type='submit'].pseudo-class-active,
+input[type='button'].pseudo-class-active,
+.c-btn--left.pseudo-class-active,
+.c-btn--right.pseudo-class-active,
+.c-btn.pseudo-class-hover,
+.c-btn.pseudo-class-focus,
+.c-btn.pseudo-class-active {
+  border-color: #939598;
+  background-color: #f1f2f2;
+}
+
 .c-btn--grey.pseudo-class-hover,
 .c-btn--grey.pseudo-class-focus,
 .c-btn--grey.pseudo-class-active {

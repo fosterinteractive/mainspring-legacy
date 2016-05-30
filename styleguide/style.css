@@ -1654,6 +1654,201 @@ category: Components - Buttons
   background-color: #939598;
   color: #ffffff; }
   
+  .c-btn--grey:focus,
+  .c-btn--grey:active {
+    border-color: #939598;
+    background-color: #ffffff;
+    color: #939598; }
+  
+  .c-btn--grey:hover {
+    outline: 1px solid red; }
+
+/*doc
+---
+title: Button Size Variations
+name: c-btn-300
+category: Components - Buttons
+---
+
+```html_example
+<div class="sg__wrapper--light-grey"> <!--styleguide only -->
+  <a href="#" class="c-btn--grey c-btn--thin">Thin Grey Button</a>
+</div>
+```
+*/
+
+.c-btn--thin {
+  padding: 0.1875rem 1.5rem; }
+
+/*doc
+---
+title: Buttons - Icons Only
+name: c-btn-500
+category: Components - Buttons
+---
+
+```html_example
+<div class="sg__wrapper--light-grey"> <!--styleguide only -->
+  <a href="#" class="c-btn--svg">
+  <svg class="svg"><use xlink:href="../svg/sprite-ui.svg#close"></use></svg>
+  <div class="u-text-hide">Close</div>
+  </a>
+
+  <a href="#" class="c-btn--svg">
+  <svg class="svg"><use xlink:href="../svg/sprite-ui.svg#menu"></use></svg>
+  <div class="u-text-hide">Menu</div>
+  </a>
+</div>
+
+```
+*/
+
+.c-btn--svg--lrg,
+.c-btn--svg--sml,
+.c-btn--svg {
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: block;
+  color: #231f20; }
+  
+  .c-btn--svg--lrg .svg,
+  .c-btn--svg--sml .svg,
+  .c-btn--svg .svg {
+    position: absolute;
+    top: 0.375rem;
+    left: 0.375rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+  
+  .c-btn--svg--lrg:hover,
+  .c-btn--svg--sml:hover,
+  .c-btn--svg--lrg:focus,
+  .c-btn--svg--sml:focus,
+  .c-btn--svg--lrg:active,
+  .c-btn--svg--sml:active,
+  .c-btn--svg:hover,
+  .c-btn--svg:focus,
+  .c-btn--svg:active {
+    background-color: #e6e7e8; }
+
+
+.c-btn--svg--lrg {
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem; }
+  
+  .c-btn--svg--lrg .svg {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 1.875rem;
+    height: 1.875rem; }
+
+
+.c-btn--svg--sml {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem; }
+  
+  .c-btn--svg--sml .svg {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+
+
+.btn--menu {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0.75rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  padding: 1.125rem 0.375rem;
+  max-height: 100%; }
+  @media (min-width: 37.5em) {
+    
+    .btn--menu {
+      bottom: 0; } }
+  @media (min-width: 56.25em) {
+    
+    .btn--menu {
+      display: none; } }
+  
+  .btn--menu:hover,
+  .btn--menu:active,
+  .btn--menu:focus {
+    text-decoration: none;
+    color: #ffffff; }
+
+button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'],
+.c-btn--left,
+.c-btn--right,
+.c-btn,
+.c-btn--grey,
+.c-btn--thin {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  foo: 16px; }
+
+button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'],
+.c-btn--left,
+.c-btn--right,
+.c-btn {
+  border-color: #afafaf;
+  background-color: #ffffff;
+  color: #939598; }
+  button:hover,
+  input[type='reset']:hover,
+  input[type='submit']:hover,
+  input[type='button']:hover,
+  .c-btn--left:hover,
+  .c-btn--right:hover, button:focus,
+  input[type='reset']:focus,
+  input[type='submit']:focus,
+  input[type='button']:focus,
+  .c-btn--left:focus,
+  .c-btn--right:focus, button:active,
+  input[type='reset']:active,
+  input[type='submit']:active,
+  input[type='button']:active,
+  .c-btn--left:active,
+  .c-btn--right:active,
+  .c-btn:hover,
+  .c-btn:focus,
+  .c-btn:active {
+    border-color: #939598;
+    background-color: #f1f2f2; }
+
+/*doc
+---
+title: Button Color Variations
+name: c-btn-200
+category: Components - Buttons
+---
+
+```html_example
+<div class="sg__wrapper--light-grey"> <!--styleguide only -->
+  <a href="#" class="c-btn--grey">Grey Button</a>
+</div>
+```
+*/
+
+.c-btn--grey {
+  background-color: #939598;
+  color: #ffffff; }
+  
   .c-btn--grey:hover,
   .c-btn--grey:focus,
   .c-btn--grey:active {

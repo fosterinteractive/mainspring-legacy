@@ -67,7 +67,7 @@
 // Styleguide 2.0
 
 // Components (with EJ.js based layouts)
-@import 'components/c-btn';
+@import 'components/_c-btn/c-btn';
 @import 'components/c-logo';
 @import 'components/c-nav/c-nav';
 @import 'components/c-tab/c-tab';
@@ -155,7 +155,7 @@
 // <pre>
 // .l-eq--2cols >> 2 columns when
 // .l-eq--5cols
-// .l-eq--2col--1-2(60,40)  <-- 1 to 2 columns. 2 columns in ratio of 60% 40% .
+// .l-eq--2col--1-2(60,40)  >> 1 to 2 columns. 2 columns in ratio of 60% 40% .
 // </pre>
 //
 // Styleguide 3.0
