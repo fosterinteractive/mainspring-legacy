@@ -164,7 +164,7 @@ input[type='button'].pseudo-class-active,
   background-color: #e6e7e8;
 }
 
-.c-accordion__content-body > .pseudo-class-first-child,
+.c-accordion__content > .pseudo-class-first-child,
 .l-page__content-main > .pseudo-class-first-child,
 .l-form--filter > .pseudo-class-first-child,
 .l-form > .pseudo-class-first-child,
@@ -173,7 +173,7 @@ input[type='button'].pseudo-class-active,
   margin-top: 0;
 }
 
-.c-accordion__content-body > .pseudo-class-last-child,
+.c-accordion__content > .pseudo-class-last-child,
 .l-page__content-main > .pseudo-class-last-child,
 .l-form--filter > .pseudo-class-last-child,
 .l-form > .pseudo-class-last-child,

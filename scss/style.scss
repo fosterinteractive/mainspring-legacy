@@ -74,11 +74,11 @@
 // Components (with EJ.js based layouts)
 @import 'components/_c-btn/c-btn';
 @import 'components/c-logo';
-@import 'components/c-nav';
-@import 'components/c-tabs';
+@import 'components/c-nav/c-nav';
+@import 'components/c-tab/c-tab';
 @import 'components/c-quote';
-@import 'components/c-pager';
-@import 'components/c-accordion';
+@import 'components/_c-accordion/c-accordion';
+@import 'components/c-pager/c-pager';
 
 // Component Partial Naming Examples
 // @import 'components/btn--icon';

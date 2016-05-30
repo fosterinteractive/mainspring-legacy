@@ -80,9 +80,8 @@ category: Base - Colors
 
 .g-form-checkboxes:before,
 .g-form-radios:before,
-.c-pager:before,
 .c-accordion__label:before,
-.c-accordion__content:before,
+.c-pager:before,
 .l-eq:before,
 .l-page__content:before,
 .l-form--filter[data-eq-state='2cols']:before,
@@ -91,9 +90,8 @@ category: Base - Colors
 .g-form-actions:before,
 .g-form-checkboxes:after,
 .g-form-radios:after,
-.c-pager:after,
 .c-accordion__label:after,
-.c-accordion__content:after,
+.c-pager:after,
 .l-eq:after,
 .l-page__content:after,
 .l-form--filter[data-eq-state='2cols']:after,
@@ -108,9 +106,8 @@ category: Base - Colors
 
 .g-form-checkboxes:after,
 .g-form-radios:after,
-.c-pager:after,
 .c-accordion__label:after,
-.c-accordion__content:after,
+.c-pager:after,
 .l-eq:after,
 .l-page__content:after,
 .l-form--filter[data-eq-state='2cols']:after,
@@ -1803,34 +1800,11 @@ category: Components - Logo
   list-style: none; }
 
 
-.c-nav--vertical__item {
+.c-nav--vertical__item,
+.c-nav--horizontal__item {
   display: block;
   margin: 0; }
 
-/*doc
----
-title: Vertical Navigation
-name: c-nav-100
-category: Components - Navigation
----
-
-```html_example
-<ul class="c-nav--vertical">
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link is-active" href="#">Link 1 Is Active</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 2</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 3</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 4</a>
-  </li>
-</ul>
-```
-*/
 
 .c-nav--vertical__link {
   display: block;
@@ -1848,23 +1822,6 @@ category: Components - Navigation
     color: #231f20;
     font-weight: 700; }
 
-/*doc
----
-title: Horizontal Navigation
-name: c-nav-200
-category: Components - Navigation
----
-
-
-```html_example
-<ul class="c-nav--horizontal">
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 1</a></li>
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 2</a></li>
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link is-active" href="#">Link 3</a></li>
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 4</a></li>
-</ul>
-```
-*/
 
 .c-nav--horizontal__item {
   display: inline-block; }
@@ -1890,29 +1847,6 @@ category: Components - Navigation
   .c-nav--horizontal__link.is-active {
     color: #231f20; }
 
-/*doc
----
-title: Inline Nav (Breadcrumbs)
-name: c-nav-300
-category: Components - Navigation
----
-
-```html_example
-<h2>Ordered List</h2>
-<ol class="c-nav--inline">
-  <li><a href="#" class="is-active">Link 1</a></li>
-  <li><a href="#">Link 2</a></li>
-  <li><a href="#">Link 3</a></li>
-</ol>
-
-<h2>Unordered List</h2>
-<ul class="c-nav--inline">
-  <li><a href="#">Link 1</a></li>
-  <li><a href="#" class="is-active">Link 2</a></li>
-  <li><a href="#">Link 3</a></li>
-</ul>
-```
-*/
 
 .c-nav--inline {
   margin: 0;
@@ -1939,26 +1873,6 @@ category: Components - Navigation
       text-decoration: underline;
       color: #231f20; }
 
-/*doc
----
-title: Tabs
-name: c-tabs-100
-category: Components - Tabs
----
-
-```html_example
-<h2 class="element-invisible">Primary tabs</h2>
-<div class="c-tabs">
-  <ul class="c-tabs__list">
-    <li><a href="#" class="is-active">View</a></li>
-    <li><a href="#">Edit</a></li>
-    <li><a href="#">Manage display</a></li>
-    <li><a href="#">Devel</a></li>
-  </ul>
-</div>
-
-```
-*/
 
 .c-tabs {
   margin-top: 1.5rem; }
@@ -2014,120 +1928,6 @@ category: Components - Quote
 .c-quote__cite {
   font-style: normal; }
 
-/*doc
----
-title: Pager
-name: c-100pager
-category: Components - Pager
----
-
-```html_example
-<div class="c-pager">
-  <div class="c-pager__item-prev">
-      <a class="c-btn" href="#" title="Prev" rel="prev">
-        <span class="u-visually--hidden">Previous page</span>
-        <span aria-hidden="true">Prev</span>
-      </a>
-  </div>
-  <div class="c-pager__item-current">
-    Page 2
-  </div>
-
-  <div class="c-pager__item-next">
-    <a class="c-btn" href="#" title="Next" rel="next">
-      <span class="u-visually--hidden">Next page</span>
-      <span aria-hidden="true">Next</span>
-    </a>
-  </div>
-</div>
-```
-*/
-
-.c-pager {
-  background-color: #ffffff;
-  padding: 1.5rem 0;
-  text-align: center; }
-  @media (min-width: 37.5em) {
-    
-    .c-pager {
-      padding-right: 1.5rem;
-      padding-left: 1.5rem; } }
-  @media (min-width: 56.25em) {
-    
-    .c-pager {
-      padding-right: 0.75rem;
-      padding-left: 0.75rem; } }
-  @media (min-width: 75em) {
-    
-    .c-pager {
-      padding-right: 0;
-      padding-left: 0; } }
-
-.c-pager__item-prev, .c-pager__item-next {
-  display: inline-block;
-  padding: 3px 1.5rem; }
-  @media (min-width: 37.5em) {
-    .c-pager__item-prev, .c-pager__item-next {
-      display: block;
-      width: 10%; } }
-
-
-.c-pager__item-current {
-  display: inline-block;
-  padding: 3px 0.75rem;
-  text-align: center; }
-  @media (min-width: 37.5em) {
-    
-    .c-pager__item-current {
-      display: block;
-      float: left;
-      padding: 0;
-      width: 80%; } }
-
-.c-pager__item-prev {
-  float: left; }
-  .c-pager__item-prev a {
-    margin-left: -1.5rem; }
-
-.c-pager__item-next {
-  float: right;
-  text-align: right; }
-  .c-pager__item-next a {
-    margin-right: -1.5rem; }
-
-/*doc
----
-title: Accordion
-name: c100-accordion
-category: Components - Accordion
----
-Default Accordion is Grey w/ Plus Symbols. Used in <i>Basic Page</i>
-
-Assumed 'js' and'no-js' class on body for fail / intialized states
-
-```html_example
-<div class="c-accordion" data-accordion="enabled" data-accordion-state='is-open'>
-
-  <a class="c-accordion__label" href="#" data-accordion-component="label">
-    <div class="c-accordion__label-text">Our independent advisor role</div>
-    <div class="c-accordion__label-icon">
-      <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
-      <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
-    </div>
-  </a>
-
-  <div class="c-accordion__content" data-accordion-component="content">
-    <div class="c-accordion__content-icon">
-      <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
-    </div>
-    <div class="c-accordion__content-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
-    </div>
-  </div>
-
-</div>
-```
-*/
 
 .c-accordion {
   clear: both;
@@ -2138,17 +1938,14 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   display: block;
   position: relative;
   outline: none;
+  border: 1px solid #f1f2f2;
+  background-color: #f1f2f2;
   cursor: pointer;
   padding: 1.125rem 4.5rem 1.125rem 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
+  color: #231f20;
   font-family: "Arial", sans-serif; }
-
-
-.c-accordion__label {
-  border: 1px solid #f1f2f2;
-  background-color: #f1f2f2;
-  color: #231f20; }
   
   .c-accordion__label:focus,
   .c-accordion__label:hover,
@@ -2166,7 +1963,9 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   right: 0.375rem;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+  stroke: #231f20;
+  fill: none; }
   
   .c-accordion__label-icon .svg {
     position: absolute;
@@ -2174,11 +1973,6 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
     left: 0.375rem;
     width: 2.25rem;
     height: 2.25rem; }
-
-
-.c-accordion__label-icon {
-  stroke: #231f20;
-  fill: none; }
 
 
 .c-accordion__svg--expand {
@@ -2208,10 +2002,6 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
   background-color: #afafaf;
   padding: 1.125rem;
   color: #ffffff; }
-  @media (min-width: 37.5em) {
-    
-    .c-accordion__content {
-      padding: 2.25rem 2.25rem 2.25rem 6rem; } }
   .js .c-accordion:not([data-accordion-state='is-open'])
   .c-accordion__content,
   .c-accordion[data-accordion-state='is-closed']
@@ -2219,191 +2009,30 @@ Assumed 'js' and'no-js' class on body for fail / intialized states
     display: none; }
 
 
-.c-accordion__content-icon {
-  position: relative;
-  width: 3.75rem;
-  height: 3.75rem;
-  float: left;
-  margin: 0.375rem 1.125rem 1.125rem 0;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  stroke-width: 3px;
-  fill: none; }
-  
-  .c-accordion__content-icon .svg {
-    position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
-    width: 2.25rem;
-    height: 2.25rem; }
+.c-pager {
+  padding: 1.5rem 0;
+  text-align: center; }
   @media (min-width: 37.5em) {
     
-    .c-accordion__content-icon {
-      position: relative;
-      width: 3.75rem;
-      height: 3.75rem;
-      position: absolute;
-      top: 2.25rem;
-      left: 1.125rem; }
-      
-      .c-accordion__content-icon .svg {
-        position: absolute;
-        top: 0.75rem;
-        left: 0.75rem;
-        width: 2.25rem;
-        height: 2.25rem; } }
-
-/*doc
----
-title: Accordion
-name: c105-accordion
-category: Components - Accordion
----
-
-State Variations
-
-```html_example
-<div class="js"> <!-- Style Guide Only - Added by JS dectection to body -->
-  <div class="c-accordion" data-accordion="enabled" data-accordion-state='is-closed'>
-
-    <a class="c-accordion__label" href="#" data-accordion-component="label">
-      <div class="c-accordion__label-text">
-        Is Closed: Risus Nullam Bibendum
-      </div>
-      <div class="c-accordion__label-icon">
-        <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
-        <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
-      </div>
-    </a>
-
-    <div class="c-accordion__content" data-accordion-component="content">
-      <div class="c-accordion__content-icon">
-        <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
-      </div>
-      <div class="c-accordion__content-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="c-accordion" data-accordion="enabled" data-accordion-state='is-open'>
-
-    <a class="c-accordion__label" href="#" data-accordion-component="label">
-      <div class="c-accordion__label-text">
-        Is Open: Ullamcorper Bibendum Dolor Vulputate Ridiculus
-      </div>
-      <div class="c-accordion__label-icon">
-        <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
-        <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
-      </div>
-    </a>
-
-    <div class="c-accordion__content" data-accordion-component="content">
-      <div class="c-accordion__content-icon">
-        <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
-      </div>
-      <div class="c-accordion__content-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="c-accordion" data-accordion="enabled">
-
-    <a class="c-accordion__label" href="#" data-accordion-component="label">
-      <div class="c-accordion__label-text">
-        JS Success, But Not Yet Initialized: Vulputate Tellus Cras
-      </div>
-      <div class="c-accordion__label-icon">
-        <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
-        <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
-      </div>
-    </a>
+    .c-pager {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem; } }
+  @media (min-width: 56.25em) {
+    
+    .c-pager {
+      padding-right: 0.75rem;
+      padding-left: 0.75rem; } }
+  @media (min-width: 75em) {
+    
+    .c-pager {
+      padding-right: 0;
+      padding-left: 0; } }
 
 
-    <div class="c-accordion__content" data-accordion-component="content">
-      <div class="c-accordion__content-icon">
-        <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
-      </div>
-      <div class="c-accordion__content-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
-      </div>
-    </div>
+.c-pager__item-current, .c-pager__item-prev, .c-pager__item-next {
+  display: inline-block;
+  padding: 0 1.5rem; }
 
-  </div>
-
-</div> <!-- End JS success class -->
-
-<div class="no-js"> <!-- Style Guide Only - Added by JS Failed dectection to body -->
-  <div class="c-accordion" data-accordion="enabled">
-
-    <a class="c-accordion__label" href="#" data-accordion-component="label">
-      <div class="c-accordion__label-text">
-        JS failed: Vulputate Tellus Cras
-      </div>
-      <div class="c-accordion__label-icon">
-        <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
-        <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
-      </div>
-    </a>
-
-
-    <div class="c-accordion__content" data-accordion-component="content">
-      <div class="c-accordion__content-icon">
-        <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
-      </div>
-      <div class="c-accordion__content-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris. Nullam viverra fringilla neque, sit amet tristique turpis fringilla eget. Sed non quam diam. Nunc id purus at arcu sollicitudin semper. Cras eu ante odio. Maecenas dapibus luctus maximus. Cras quis sagittis lectus, quis ullamcorper ante. Nullam dictum nibh non erat commodo, eget consectetur magna ultricies. Nulla facilisi. Cras non aliquet sem, eget condimentum tortor. Curabitur vel fringilla mauris.</p>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-```
-*/
-/*doc
----
-title: Accordion
-name: c106-accordion
-category: Components - Accordion
----
-
-```html_example
-<div class="c-accordion" data-accordion="enabled">
-  <a class="c-accordion__label" href="#" data-accordion-component="label">
-    <div class="c-accordion__label-text">
-      Accordion Content 2 Column (33-66%)
-    </div>
-    <div class="c-accordion__label-icon">
-      <svg class="svg c-accordion__svg--expand"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-down"></use></svg>
-      <svg class="svg c-accordion__svg--collapse"><use xlink:href="/svg/sprite-ui.svg#circle-arrow-up"></use></svg>
-    </div>
-  </a>
-
-
-  <div class="c-accordion__content" data-accordion-component="content">
-    <div class="c-accordion__content-icon">
-      <svg class="svg"><use xlink:href="/svg/sprite-ui.svg#megaphone"></use></svg>
-    </div>
-    <div class="c-accordion__content-body l-eq" data-eq-pts="2col: 400, 2col-33/66: 600">
-      <div class="l-item content-text__info-wrapper">
-        <p>Left Column Content</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris.</p>
-      </div>
-
-      <div class="l-item content-text__info-wrapper">
-        <p>Right Column Content</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget lacus eget arcu molestie imperdiet volutpat a mauris.</p>
-      </div>
-    </div>
-  </div>
-
-</div>
-```
-*/
 
 .l-eq[data-eq-state='2col'] .l-item,
 .l-eq[data-eq-state='2col-60/40'] .l-item,
@@ -2900,7 +2529,7 @@ category: Layout - Columns
       padding: 1.5rem 3.375rem; } }
 
 
-.c-accordion__content-body > :first-child,
+.c-accordion__content > :first-child,
 .l-page__content-main > :first-child,
 .l-form--filter > :first-child,
 .l-form > :first-child,
@@ -2909,7 +2538,7 @@ category: Layout - Columns
   margin-top: 0; }
 
 
-.c-accordion__content-body > :last-child,
+.c-accordion__content > :last-child,
 .l-page__content-main > :last-child,
 .l-form--filter > :last-child,
 .l-form > :last-child,
