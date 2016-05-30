@@ -1654,12 +1654,14 @@ category: Components - Buttons
   background-color: #939598;
   color: #ffffff; }
   
-  .c-btn--grey:hover,
   .c-btn--grey:focus,
   .c-btn--grey:active {
     border-color: #939598;
     background-color: #ffffff;
     color: #939598; }
+  
+  .c-btn--grey:hover {
+    outline: 1px solid red; }
 
 /*doc
 ---
@@ -1677,74 +1679,6 @@ category: Components - Buttons
 
 .c-btn--thin {
   padding: 0.1875rem 1.5rem; }
-
-/*doc
----
-title: Buttons - Inline Icons
-name: c-btn-400
-category: Components - Buttons
----
-
-```html_example
-<a href="#" class="c-btn--left"><svg class="svg"><use xlink:href="../svg/sprite-ui.svg#arrow-left"></use></svg>Back Button</a>
-<a href="#" class="c-btn--right">Continue Button<svg class="svg"><use xlink:href="../svg/sprite-ui.svg#arrow-right"></use></svg></a>
-```
-*/
-
-.c-btn--left,
-.c-btn--right {
-  position: relative;
-  border-color: #afafaf; }
-  
-  .c-btn--left:hover,
-  .c-btn--right:hover,
-  .c-btn--left:focus,
-  .c-btn--right:focus,
-  .c-btn--left:active,
-  .c-btn--right:active {
-    background-color: #f1f2f2;
-    color: #939598; }
-
-
-.c-btn--left {
-  position: relative;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 3rem;
-  padding-right: 1.5rem; }
-  
-  .c-btn--left .svg {
-    display: block;
-    position: absolute;
-    margin-top: -0.5625rem;
-    margin-left: -0.5625rem;
-    width: 1.125rem;
-    height: 1.125rem;
-    left: 1.5rem;
-    top: 1.5rem; }
-
-
-.c-btn--right {
-  position: relative;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-right: 3rem;
-  padding-left: 1.5rem; }
-  
-  .c-btn--right .svg {
-    display: block;
-    position: absolute;
-    margin-top: -0.5625rem;
-    margin-left: -0.5625rem;
-    width: 1.125rem;
-    height: 1.125rem;
-    right: 1.125rem;
-    top: 1.5rem; }
-  
-  .c-btn--right svg {
-    position: absolute;
-    top: 1rem;
-    right: 0.5rem; }
 
 /*doc
 ---
@@ -1847,6 +1781,62 @@ category: Components - Buttons
   .btn--menu:focus {
     text-decoration: none;
     color: #ffffff; }
+
+
+.c-btn--left,
+.c-btn--right {
+  position: relative;
+  border-color: #afafaf; }
+  
+  .c-btn--left:hover,
+  .c-btn--right:hover,
+  .c-btn--left:focus,
+  .c-btn--right:focus,
+  .c-btn--left:active,
+  .c-btn--right:active {
+    background-color: #f1f2f2;
+    color: #939598; }
+
+
+.c-btn--left {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 3rem;
+  padding-right: 1.5rem; }
+  
+  .c-btn--left .svg {
+    display: block;
+    position: absolute;
+    margin-top: -0.5625rem;
+    margin-left: -0.5625rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    left: 1.5rem;
+    top: 1.5rem; }
+
+
+.c-btn--right {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 3rem;
+  padding-left: 1.5rem; }
+  
+  .c-btn--right .svg {
+    display: block;
+    position: absolute;
+    margin-top: -0.5625rem;
+    margin-left: -0.5625rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    right: 1.125rem;
+    top: 1.5rem; }
+  
+  .c-btn--right svg {
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem; }
 
 /*doc
 ---

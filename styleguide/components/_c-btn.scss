@@ -7,11 +7,14 @@
 
 // Buttons 2
 //
+// __This is the description of the block__
+//
 // .c-btn       - Default
 // .c-btn--grey - Grey Button
 //
 // markup:
-// <a href="#" class=" {modifiers} ">Links</a>
+// <a href="#" class="{$modifiers}">c-btn</a>
+//
 //
 // Styleguide 2.2
 
@@ -22,6 +25,7 @@
   padding: ru(0.5) ru(1);
   text-transform: uppercase;
   text-decoration: none;
+  foo: $base-font-size;
 }
 
 %c-btn,
