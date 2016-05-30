@@ -80,8 +80,8 @@ category: Base - Colors
 
 .g-form-checkboxes:before,
 .g-form-radios:before,
-.c-pager:before,
 .c-accordion__label:before,
+.c-pager:before,
 .l-eq:before,
 .l-page__content:before,
 .l-form--filter[data-eq-state='2cols']:before,
@@ -90,8 +90,8 @@ category: Base - Colors
 .g-form-actions:before,
 .g-form-checkboxes:after,
 .g-form-radios:after,
-.c-pager:after,
 .c-accordion__label:after,
+.c-pager:after,
 .l-eq:after,
 .l-page__content:after,
 .l-form--filter[data-eq-state='2cols']:after,
@@ -106,8 +106,8 @@ category: Base - Colors
 
 .g-form-checkboxes:after,
 .g-form-radios:after,
-.c-pager:after,
 .c-accordion__label:after,
+.c-pager:after,
 .l-eq:after,
 .l-page__content:after,
 .l-form--filter[data-eq-state='2cols']:after,
@@ -1929,31 +1929,6 @@ category: Components - Quote
   font-style: normal; }
 
 
-.c-pager {
-  padding: 1.5rem 0;
-  text-align: center; }
-  @media (min-width: 37.5em) {
-    
-    .c-pager {
-      padding-right: 1.5rem;
-      padding-left: 1.5rem; } }
-  @media (min-width: 56.25em) {
-    
-    .c-pager {
-      padding-right: 0.75rem;
-      padding-left: 0.75rem; } }
-  @media (min-width: 75em) {
-    
-    .c-pager {
-      padding-right: 0;
-      padding-left: 0; } }
-
-
-.c-pager__item-current, .c-pager__item-prev, .c-pager__item-next {
-  display: inline-block;
-  padding: 0 1.5rem; }
-
-
 .c-accordion {
   clear: both;
   margin-bottom: 1.125rem; }
@@ -2032,6 +2007,31 @@ category: Components - Quote
   .c-accordion[data-accordion-state='is-closed']
   .c-accordion__content {
     display: none; }
+
+
+.c-pager {
+  padding: 1.5rem 0;
+  text-align: center; }
+  @media (min-width: 37.5em) {
+    
+    .c-pager {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem; } }
+  @media (min-width: 56.25em) {
+    
+    .c-pager {
+      padding-right: 0.75rem;
+      padding-left: 0.75rem; } }
+  @media (min-width: 75em) {
+    
+    .c-pager {
+      padding-right: 0;
+      padding-left: 0; } }
+
+
+.c-pager__item-current, .c-pager__item-prev, .c-pager__item-next {
+  display: inline-block;
+  padding: 0 1.5rem; }
 
 
 .l-eq[data-eq-state='2col'] .l-item,
