@@ -137,39 +137,6 @@ input[type='button'].pseudo-class-active,
   color: #ffffff;
 }
 
-button.pseudo-class-hover,
-input[type='reset'].pseudo-class-hover,
-input[type='submit'].pseudo-class-hover,
-input[type='button'].pseudo-class-hover,
-.c-btn--left.pseudo-class-hover,
-.c-btn--right.pseudo-class-hover,
-button.pseudo-class-focus,
-input[type='reset'].pseudo-class-focus,
-input[type='submit'].pseudo-class-focus,
-input[type='button'].pseudo-class-focus,
-.c-btn--left.pseudo-class-focus,
-.c-btn--right.pseudo-class-focus,
-button.pseudo-class-active,
-input[type='reset'].pseudo-class-active,
-input[type='submit'].pseudo-class-active,
-input[type='button'].pseudo-class-active,
-.c-btn--left.pseudo-class-active,
-.c-btn--right.pseudo-class-active,
-.c-btn.pseudo-class-hover,
-.c-btn.pseudo-class-focus,
-.c-btn.pseudo-class-active {
-  border-color: #939598;
-  background-color: #f1f2f2;
-}
-
-.c-btn--grey.pseudo-class-hover,
-.c-btn--grey.pseudo-class-focus,
-.c-btn--grey.pseudo-class-active {
-  border-color: #939598;
-  background-color: #ffffff;
-  color: #939598;
-}
-
 .c-btn--left.pseudo-class-hover,
 .c-btn--right.pseudo-class-hover,
 .c-btn--left.pseudo-class-focus,
@@ -178,25 +145,6 @@ input[type='button'].pseudo-class-active,
 .c-btn--right.pseudo-class-active {
   background-color: #f1f2f2;
   color: #939598;
-}
-
-.c-btn--svg--lrg.pseudo-class-hover,
-.c-btn--svg--sml.pseudo-class-hover,
-.c-btn--svg--lrg.pseudo-class-focus,
-.c-btn--svg--sml.pseudo-class-focus,
-.c-btn--svg--lrg.pseudo-class-active,
-.c-btn--svg--sml.pseudo-class-active,
-.c-btn--svg.pseudo-class-hover,
-.c-btn--svg.pseudo-class-focus,
-.c-btn--svg.pseudo-class-active {
-  background-color: #e6e7e8;
-}
-
-.btn--menu.pseudo-class-hover,
-.btn--menu.pseudo-class-active,
-.btn--menu.pseudo-class-focus {
-  text-decoration: none;
-  color: #ffffff;
 }
 
 .c-nav--vertical__link.pseudo-class-hover,
@@ -233,7 +181,7 @@ input[type='button'].pseudo-class-active,
   background-color: #e6e7e8;
 }
 
-.c-accordion__content-body > .pseudo-class-first-child,
+.c-accordion__content > .pseudo-class-first-child,
 .l-page__content-main > .pseudo-class-first-child,
 .l-form--filter > .pseudo-class-first-child,
 .l-form > .pseudo-class-first-child,
@@ -242,7 +190,7 @@ input[type='button'].pseudo-class-active,
   margin-top: 0;
 }
 
-.c-accordion__content-body > .pseudo-class-last-child,
+.c-accordion__content > .pseudo-class-last-child,
 .l-page__content-main > .pseudo-class-last-child,
 .l-form--filter > .pseudo-class-last-child,
 .l-form > .pseudo-class-last-child,

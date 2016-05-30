@@ -1,0 +1,107 @@
+// Accordian
+//
+// Accordian Exmaples.
+//
+// Styleguide 2.7
+
+%c-accordion,
+.c-accordion {
+  clear: both;
+  margin-bottom: ru(0.75);
+}
+
+%c-accordion__label,
+.c-accordion__label {
+  @extend %u-clearfix;
+  display: block;
+  position: relative;
+  outline: none;
+  border: 1px solid palette(grey, xlight);
+  background-color: palette(grey, xlight);
+  cursor: pointer;
+  padding: ru(0.75) ru(3) ru(0.75) ru(0.75);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: palette(grey, dark);
+  font-family: $title-font-family;
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: palette(grey);
+    background-color: palette(grey, light);
+  }
+}
+
+%c-accordion__label-icon,
+.c-accordion__label-icon {
+  @include svg-centered (ru(1.5), ru(1.5), ru(2), ru(2));
+  // Vertical center w/ Transform y
+  position: absolute;
+  top: 50%;
+  right: ru(0.25);
+  transform: translateY(-50%);
+  stroke: palette(grey, dark);
+  fill: none;
+}
+
+%c-accordion__svg--expand,
+.c-accordion__svg--expand {
+  display: none;
+
+  //STOP FOUC - js is running and it is not open - Show Icon
+  .js .c-accordion:not([data-accordion-state='is-open']) &,
+  .c-accordion[data-accordion-state='is-closed'] &,
+  .no-js & {
+    display: block;
+  }
+}
+
+%c-accordion__svg--collapse,
+.c-accordion__svg--collapse {
+  display: none;
+
+  .c-accordion[data-accordion-state='is-open'] & {
+    display: block;
+  }
+}
+
+%c-accordion__label-text,
+.c-accordion__label-text {
+  // pad top of text box to compensate for optical padding
+  // Caused by using all caps DIN
+  padding-top: ru(0.125);
+}
+
+%c-accordion__content,
+.c-accordion__content {
+  @extend %u-remove-child--margin-top-bottom;
+  position: relative;
+  background-color: palette(grey, mediumlight);
+  padding: ru(0.75);
+  color: $white;
+
+  // STOP FOUC - js is running and it is not open (doesn't need close state)
+  .js .c-accordion:not([data-accordion-state='is-open']) &,
+  .c-accordion[data-accordion-state='is-closed'] & {
+    display: none;
+  }
+}
+
+// Accordian: Open State
+//
+// Markup: _c-accordion--is-open.html
+//
+// Styleguide 2.7.1
+
+// Accordian: Closed State
+//
+// Markup: _c-accordion--is-closed.html
+//
+// Styleguide 2.7.2
+
+// Accordian: Multiple Accordians
+//
+// Markup: _c-accordion--is-closed.html
+//
+// Styleguide 2.7.3
