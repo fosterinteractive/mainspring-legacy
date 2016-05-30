@@ -86,8 +86,16 @@ $palettes: (
     mediumlight: #afafaf,
     light: #e6e7e8,
     xlight: #f1f2f2
-  )
+  ),
+  blue: (
+    base: #3f47b1,
+    dark: #2b3078,
+    light: #7c7fb1
+    )
+
 );
+
+
 
 // Shadow Color
 $shadow: rgba($black, 0.5);

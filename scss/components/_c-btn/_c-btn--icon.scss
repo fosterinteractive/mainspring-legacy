@@ -1,4 +1,4 @@
-//
+// Icon Buttons
 //
 // markup:
 // <a href="#" class="{$modifiers}">{$modifiers}</a>
@@ -15,10 +15,6 @@
   &:active {
     background-color: palette(grey, xlight);
     color: palette(grey);
-  }
-
-  svg {
-    // color: palette(green);
   }
 }
 

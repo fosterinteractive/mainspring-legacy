@@ -1,27 +1,35 @@
-// Buttons
+// Default Buttons
+//
+// .c-btn - Default
+// .c-btn:hover - Default Hover
+// .c-btn--blue - Blue
+// .c-btn--blue:hover - Blue Hover
+// .c-btn--thin - Thin
+// .c-btn--thin:hover - Thin Hover
+// .c-btn--thin-blue - Thin & Blue
+// .c-btn--thin-blue:hover - Thin & Blue Hover
 //
 // markup:
 // <a href="#" class="{$modifiers}">{$modifiers}</a>
 //
 // Styleguide 2.1.1
 
+////
+// Size Varations
+////
 
-
-
-%c-btn--core {
-  display: inline-block;
-  border: 1px solid $white;
-  border-radius: rem(4px);
+%c-btn--default-padding {
   padding: ru(0.5) ru(1);
-  text-transform: uppercase;
-  text-decoration: none;
-
-
 }
 
-%c-btn,
-.c-btn {
-  @extend %c-btn--core;
+%c-btn--narrow-padding {
+  padding: ru(0.25) ru(0.75);
+}
+
+////
+// Color Variations
+////
+%c-btn--palette-grey {
   border-color: palette(grey, mediumlight);
   background-color: $white;
   color: palette(grey);
@@ -32,137 +40,49 @@
     border-color: palette(grey);
     background-color: palette(grey, xlight);
   }
-
-
 }
 
-/*doc
----
-title: Button Color Variations
-name: c-btn-200
-category: Components - Buttons
----
-
-```html_example
-<div class="sg__wrapper--light-grey"> <!--styleguide only -->
-  <a href="#" class="c-btn--grey">Grey Button</a>
-</div>
-```
-*/
-
-%c-btn--grey,
-.c-btn--grey {
-  @extend %c-btn--core;
-  background-color: palette(grey);
+%c-btn--palette-blue {
+  border-color: palette(blue, dark);
+  background-color: palette(blue);
   color: $white;
 
+  &:hover,
   &:focus,
   &:active {
-    border-color: palette(grey);
-    background-color: $white;
-    color: palette(grey);
-  }
-
-  &:hover {
-    outline: 1px solid red;
+    border-color: palette(blue, dark);
+    background-color: palette(blue, dark);
   }
 }
 
-/*doc
----
-title: Button Size Variations
-name: c-btn-300
-category: Components - Buttons
----
 
-```html_example
-<div class="sg__wrapper--light-grey"> <!--styleguide only -->
-  <a href="#" class="c-btn--grey c-btn--thin">Thin Grey Button</a>
-</div>
-```
-*/
+// Button Variations
+%c-btn,
+.c-btn {
+  @extend %c-btn--core;
+  @extend %c-btn--default-padding;
+  @extend %c-btn--palette-grey;
+}
+
+%c-btn--blue,
+.c-btn--blue {
+  @extend %c-btn--core;
+  @extend %c-btn--default-padding;
+  @extend %c-btn--palette-blue;
+}
 
 %c-btn--thin,
 .c-btn--thin {
   @extend %c-btn--core;
-  padding: ru(0.125) ru(1);
+  @extend %c-btn--narrow-padding;
+  @extend %c-btn--palette-grey;
 }
 
-
-
-/*doc
----
-title: Buttons - Icons Only
-name: c-btn-500
-category: Components - Buttons
----
-
-```html_example
-<div class="sg__wrapper--light-grey"> <!--styleguide only -->
-  <a href="#" class="c-btn--svg">
-  <svg class="svg"><use xlink:href="../svg/sprite-ui.svg#close"></use></svg>
-  <div class="u-text-hide">Close</div>
-  </a>
-
-  <a href="#" class="c-btn--svg">
-  <svg class="svg"><use xlink:href="../svg/sprite-ui.svg#menu"></use></svg>
-  <div class="u-text-hide">Menu</div>
-  </a>
-</div>
-
-```
-*/
-
-%c-btn--svg,
-.c-btn--svg {
-  // See config/mixins/svg-position.scss
-  @include svg-centered(ru(1), ru(1), ru(1.5), ru(1.5), 'svg');
-  display: block;
-  color: palette(grey, dark);
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: palette(grey, light);
-  }
-}
-
-%c-btn--svg--lrg,
-.c-btn--svg--lrg {
-  @extend %c-btn--svg;
-  @include svg-centered(ru(1.25), ru(1.25), ru(1.25), ru(1.25), 'svg');
-}
-
-%c-btn--svg--sml,
-.c-btn--svg--sml {
-  @extend %c-btn--svg;
-  @include svg-centered(ru(1), ru(1), ru(1), ru(1), 'svg');
-}
-
-%btn--menu,
-.btn--menu {
-  position: absolute;
-  right: ru(1);
-  bottom: ru(0.5);
-  margin-bottom: 0;
-  cursor: pointer;
-  padding: ru(0.75) ru(0.25);
-  max-height: 100%;
-
-  @include respond-to('type-large') {
-    bottom: 0;
-  }
-
-  @include respond-to('full-nav') {
-    display: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    color: $white;
-  }
+%c-btn--thin-blue,
+.c-btn--thin-blue {
+  @extend %c-btn--core;
+  @extend %c-btn--narrow-padding;
+  @extend %c-btn--palette-blue;
 }
 
 
