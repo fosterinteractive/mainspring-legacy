@@ -1954,7 +1954,7 @@ category: Components - Quote
 
 .c-pager__item-current, .c-pager__item-prev, .c-pager__item-next {
   display: inline-block;
-  padding: 3px 1.5rem; }
+  padding: 0 1.5rem; }
 
 /*doc
 ---
