@@ -1,0 +1,71 @@
+// Pager
+//
+// markup: _c-pager.html
+//
+// Styleguide 2.5
+
+%c-pager,
+.c-pager {
+  @extend %u-clearfix;
+  background-color: $white;
+  padding: ru(1) 0;
+  text-align: center;
+
+  @include respond-to('type-large') {
+    padding-right: ru(1);
+    padding-left: ru(1);
+  }
+
+  @include respond-to('full-nav') {
+    padding-right: ru(0.5);
+    padding-left: ru(0.5);
+  }
+
+  @include respond-to('max-size') {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+%c-pager__item-btn {
+  display: inline-block;
+  padding: 3px ru(1);
+
+  @include respond-to('type-large') {
+    display: block;
+    width: 10%;
+  }
+}
+
+%c-pager__item-current,
+.c-pager__item-current {
+  display: inline-block;
+  padding: 3px ru(0.5);
+  text-align: center;
+
+  @include respond-to('type-large') {
+    display: block;
+    float: left;
+    padding: 0;
+    width: 80%;
+  }
+}
+
+.c-pager__item-prev {
+  @extend %c-pager__item-btn;
+  float: left;
+
+  a {
+    margin-left: ru(-1);
+  }
+}
+
+.c-pager__item-next {
+  @extend %c-pager__item-btn;
+  float: right;
+  text-align: right;
+
+  a {
+    margin-right: ru(-1);
+  }
+}

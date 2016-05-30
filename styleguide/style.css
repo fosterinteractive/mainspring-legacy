@@ -1922,34 +1922,11 @@ category: Components - Logo
   list-style: none; }
 
 
-.c-nav--vertical__item {
+.c-nav--vertical__item,
+.c-nav--horizontal__item {
   display: block;
   margin: 0; }
 
-/*doc
----
-title: Vertical Navigation
-name: c-nav-100
-category: Components - Navigation
----
-
-```html_example
-<ul class="c-nav--vertical">
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link is-active" href="#">Link 1 Is Active</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 2</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 3</a>
-  </li>
-  <li class="c-nav--vertical__item">
-    <a class="c-nav--vertical__link" href="#">Link 4</a>
-  </li>
-</ul>
-```
-*/
 
 .c-nav--vertical__link {
   display: block;
@@ -1967,23 +1944,6 @@ category: Components - Navigation
     color: #231f20;
     font-weight: 700; }
 
-/*doc
----
-title: Horizontal Navigation
-name: c-nav-200
-category: Components - Navigation
----
-
-
-```html_example
-<ul class="c-nav--horizontal">
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 1</a></li>
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 2</a></li>
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link is-active" href="#">Link 3</a></li>
-  <li class="c-nav--horizontal__item"><a class="c-nav--horizontal__link" href="#">Link 4</a></li>
-</ul>
-```
-*/
 
 .c-nav--horizontal__item {
   display: inline-block; }
@@ -2009,29 +1969,6 @@ category: Components - Navigation
   .c-nav--horizontal__link.is-active {
     color: #231f20; }
 
-/*doc
----
-title: Inline Nav (Breadcrumbs)
-name: c-nav-300
-category: Components - Navigation
----
-
-```html_example
-<h2>Ordered List</h2>
-<ol class="c-nav--inline">
-  <li><a href="#" class="is-active">Link 1</a></li>
-  <li><a href="#">Link 2</a></li>
-  <li><a href="#">Link 3</a></li>
-</ol>
-
-<h2>Unordered List</h2>
-<ul class="c-nav--inline">
-  <li><a href="#">Link 1</a></li>
-  <li><a href="#" class="is-active">Link 2</a></li>
-  <li><a href="#">Link 3</a></li>
-</ul>
-```
-*/
 
 .c-nav--inline {
   margin: 0;
@@ -2058,26 +1995,6 @@ category: Components - Navigation
       text-decoration: underline;
       color: #231f20; }
 
-/*doc
----
-title: Tabs
-name: c-tabs-100
-category: Components - Tabs
----
-
-```html_example
-<h2 class="element-invisible">Primary tabs</h2>
-<div class="c-tabs">
-  <ul class="c-tabs__list">
-    <li><a href="#" class="is-active">View</a></li>
-    <li><a href="#">Edit</a></li>
-    <li><a href="#">Manage display</a></li>
-    <li><a href="#">Devel</a></li>
-  </ul>
-</div>
-
-```
-*/
 
 .c-tabs {
   margin-top: 1.5rem; }
@@ -2133,37 +2050,8 @@ category: Components - Quote
 .c-quote__cite {
   font-style: normal; }
 
-/*doc
----
-title: Pager
-name: c-100pager
-category: Components - Pager
----
-
-```html_example
-<div class="c-pager">
-  <div class="c-pager__item-prev">
-      <a class="c-btn" href="#" title="Prev" rel="prev">
-        <span class="u-visually--hidden">Previous page</span>
-        <span aria-hidden="true">Prev</span>
-      </a>
-  </div>
-  <div class="c-pager__item-current">
-    Page 2
-  </div>
-
-  <div class="c-pager__item-next">
-    <a class="c-btn" href="#" title="Next" rel="next">
-      <span class="u-visually--hidden">Next page</span>
-      <span aria-hidden="true">Next</span>
-    </a>
-  </div>
-</div>
-```
-*/
 
 .c-pager {
-  background-color: #ffffff;
   padding: 1.5rem 0;
   text-align: center; }
   @media (min-width: 37.5em) {
@@ -2182,37 +2070,10 @@ category: Components - Pager
       padding-right: 0;
       padding-left: 0; } }
 
-.c-pager__item-prev, .c-pager__item-next {
+
+.c-pager__item-current, .c-pager__item-prev, .c-pager__item-next {
   display: inline-block;
   padding: 3px 1.5rem; }
-  @media (min-width: 37.5em) {
-    .c-pager__item-prev, .c-pager__item-next {
-      display: block;
-      width: 10%; } }
-
-
-.c-pager__item-current {
-  display: inline-block;
-  padding: 3px 0.75rem;
-  text-align: center; }
-  @media (min-width: 37.5em) {
-    
-    .c-pager__item-current {
-      display: block;
-      float: left;
-      padding: 0;
-      width: 80%; } }
-
-.c-pager__item-prev {
-  float: left; }
-  .c-pager__item-prev a {
-    margin-left: -1.5rem; }
-
-.c-pager__item-next {
-  float: right;
-  text-align: right; }
-  .c-pager__item-next a {
-    margin-right: -1.5rem; }
 
 /*doc
 ---
