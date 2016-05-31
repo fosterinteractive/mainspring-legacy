@@ -1,5 +1,13 @@
 'use strict';
 
+var extraHead = [
+  '<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>',
+  '<script src="/js/vendor/svg4everybody.min.js"></script>',
+  '<script src="/js/vendor/velocity.min.js"></script>',
+  '<script src="/js/vendor/mainspring.accordion.js"></script>',
+  '<script src="/js/styleguide.js"></script>'
+];
+
 // var config        = require('../config');
 // if(!config.tasks.jsLint){return;}
 
@@ -21,7 +29,9 @@ gulp.task('sc5:generate', function() {
         appRoot: styleguideAppRoot,
         overviewPath: overviewPath,
         disableHtml5Mode: true,
-        sideNav: true
+        sideNav: true,
+        extraHead: extraHead,
+        disableEncapsulation: true
       }))
     .pipe(gulp.dest(styleguideBuildPath));
 });

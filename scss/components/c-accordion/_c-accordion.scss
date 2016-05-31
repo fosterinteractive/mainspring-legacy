@@ -16,7 +16,6 @@
   display: block;
   position: relative;
   outline: none;
-  border: 1px solid palette(grey, xlight);
   background-color: palette(grey, xlight);
   cursor: pointer;
   padding: ru(0.75) ru(3) ru(0.75) ru(0.75);
@@ -49,7 +48,7 @@
 .c-accordion__svg--expand {
   display: none;
 
-  //STOP FOUC - js is running and it is not open - Show Icon
+  // STOP FOUC - js is running and it is not open - Show Icon
   .js .c-accordion:not([data-accordion-state='is-open']) &,
   .c-accordion[data-accordion-state='is-closed'] &,
   .no-js & {
@@ -88,19 +87,25 @@
   }
 }
 
-// Accordian: Open State
+// Accordian - Open State
+//
+// .c-accordion__label - Default.
+// :hover - Hover state.
 //
 // Markup: _c-accordion--is-open.html
 //
 // Styleguide 2.7.1
 
-// Accordian: Closed State
+// Accordian - Closed State
+//
+// .c-accordion__label - Default.
+// :hover - Hover state.
 //
 // Markup: _c-accordion--is-closed.html
 //
 // Styleguide 2.7.2
 
-// Accordian: Multiple Accordians
+// Accordian - Multiple Accordians
 //
 // Markup:
 // <sg-insert>2.7.2</sg-insert>
@@ -108,3 +113,14 @@
 // <sg-insert>2.7.2</sg-insert>
 //
 // Styleguide 2.7.3
+
+// Accordian - Javascript Enabled
+//
+// Markup:
+// <div data-style-guide="accordions">
+// <sg-insert>2.7.2</sg-insert>
+// <sg-insert>2.7.1</sg-insert>
+// <sg-insert>2.7.2</sg-insert>
+// </div>
+//
+// Styleguide 2.7.4
