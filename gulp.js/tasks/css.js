@@ -12,6 +12,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS     = require('gulp-clean-css');
 var sizeReport   = require('gulp-sizereport');
 
+var browserSync  = require('browser-sync');
+var reload       = browserSync.reload;
 
 // Config
 var src = config.tasks.css.pattern;
@@ -32,6 +34,7 @@ gulp.task('css:dev', function () {
     .pipe(autoprefixer(prefixSettings))
     .pipe(sourcemaps.write(sourceMaps))
     .pipe(gulp.dest(dest))
+    .pipe(reload({stream: true}))
     ;
 });
 
@@ -51,7 +54,4 @@ gulp.task('css:prod', function () {
     ;
 });
 
-// Watch Tasks (For Debug only - see watch.js for recommended task)
-gulp.task('css:watch', ['css:dev'], function() {
-  gulp.watch(src, ['css:dev']);
-});
+

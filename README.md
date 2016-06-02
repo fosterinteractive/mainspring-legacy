@@ -48,11 +48,18 @@ CS5 Also add a number of useful features that are in the [SC5 Documentation Syna
 
 
 ##CSS Architure & Class Naming conventions##
-Mainsping uses a [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) based naming pattern for css classes and [SMACSS](https://smacss.com/)inspired folder structure that has been adopted by the Drupal Community as recommended [CSS Architecture for Drupal 8](https://www.drupal.org/coding-standards/css/architecture).
+Mainsping uses a [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) based naming pattern for css classes and [SMACSS](https://smacss.com/) inspired folder structure that has been adopted by the Drupal Community as recommended [CSS Architecture for Drupal 8](https://www.drupal.org/coding-standards/css/architecture).
 
 These naming patterns are further extended ideas expressed by Harry Roberts [@CSSWizardry](https://twitter.com/csswizardry) in his post, [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/) where class names are extended with profixes and suffix to express more meaning about how they effect the website display.
 
- _Obsessive_ naming conventions (which are enforced by a sass linter) it allows you to understand the relationship bettern UI components and make sure your team all codes to the same specs.
+ _Obsessive_ naming conventions (which are enforced by a sass linter) allows you to understand the relationship bettern UI components and make sure your team all codes to the same specs.
+
+##Inspired / Stolen / Adapted From##
+
+*[Viget Labs Gulp Starter](https://github.com/vigetlabs/gulp-starter)
+*[Google Web Starter Kit](https://github.com/google/web-starter-kit)
+
+See [Inspiration](/docs/oh-my-god-its-full-of-stars.md) for more.
 
 
 ##Credits For Assets Used In Demos##
@@ -66,9 +73,4 @@ Mainspring Image by Hustvedt (Own work) [CC BY-SA 3.0 (http://creativecommons.or
 
 Spiral Spring Diagram by Inslack (Ben5 on wikipedia FR) (made by: User:Inslack / Ben5 (wikipedia FR)) [CC BY-SA 2.5 (http://creativecommons.org/licenses/by-sa/2.5), GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons
 
-###Gulp Inspired / Stolen / Adapted From###
 
-https://github.com/vigetlabs/gulp-starter/tree/master/gulpfile.js
-https://github.com/google/web-starter-kit
-
-See [Inspiration](/docs/oh-my-god-its-full-of-stars.md) for more.

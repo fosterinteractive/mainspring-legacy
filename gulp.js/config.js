@@ -1,18 +1,18 @@
 'use strict';
 
 var localUrl = 'mainspring.dev'; // EG 'localhost', 'mysite.dev'
-var browserSyncWatch = [ // Refresh browser when these files update
-  './css/*.css',
-  './styleguide/*.html'];  // Watch index.html only - Styleguide regenerates every file on update.
-var scssPattern = ['./scss/**/*.scss']; // Watch scss files for complile
-var jsLintPattern = [
-  './js/**/*.js',
-  '!./js/**/vendor/*.min.js', // Ignore minified files
-  '!./js/**/vendor/*.js']; // Ignore /vendor sub-folders
-var sassLintPattern = [ //Scss Lint these files
-  'scss/**/*.scss',
-  '!scss/**/vendor/**/*.scss']; // Ignore /vendor sub-folders
 
+var scssPattern = ['./scss/**/*.scss']; // Watch scss files for complile
+
+var jsLintPattern = [
+  'js/**/*.js',
+  '!js/**/*.min.js', // Ignore minified files
+  '!js/**/vendor/*.js']; // Ignore /vendor sub-folders
+
+// Exclude these SCSS files from linting
+var sassLintExclusions = ['!scss/**/vendor/**/*.scss'];
+// Lint all SCSS files, except these (vendor) files
+var sassLintPattern = scssPattern.concat(sassLintExclusions);
 
 module.exports = {
 
@@ -22,8 +22,6 @@ module.exports = {
       // See http://www.browsersync.io/docs/options/ for options
       proxy: localUrl,
       port: 3333,
-      files: [browserSyncWatch,
-      ],
       ui:{
         port: 3334
       },
@@ -69,13 +67,6 @@ module.exports = {
             'maxGzippedSize': 50000 // Max Size in Bytes after gzip
           }
         }
-      }
-    },
-    hologram: {
-      configFile: './hologram_config.yml',
-      settings : {
-        bundler: true,
-        logging: false
       }
     },
 

@@ -1,6 +1,9 @@
 
 /*# sourceMappingURL=maps/style-guide.css.map */
 @charset "UTF-8";
+body {
+  background-color: blue; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 

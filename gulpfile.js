@@ -14,4 +14,6 @@
 var requireDir = require('require-dir');
 
 // Require all tasks in gulpfile.js/tasks, including subfolders
+// Watch Task must come first as it defined a brosersync
+// require('./gulp.js/tasks/watch.js');
 requireDir('./gulp.js', { recurse: true });

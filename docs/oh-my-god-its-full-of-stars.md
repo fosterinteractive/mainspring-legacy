@@ -19,6 +19,8 @@ https://github.com/gulpjs/gulp/tree/master/docs/recipes
 SVG Components - Single file per folder
 https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-task-steps-per-folder.md
 
+#Browser Sync#
+[Browsersync recipes](https://github.com/BrowserSync/recipes)
 
 #Under Consideration#
 

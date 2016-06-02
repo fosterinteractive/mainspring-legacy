@@ -1,9 +1,0 @@
-{
-  "sites": {
-    "styles": {
-      "glob": "scss/**/*.{scss,html,md}",
-      "dest": "styleguide",
-      "parent": "styles"
-    }
-  }
-}
