@@ -1,1 +1,0 @@
-# Living Style Guide #
