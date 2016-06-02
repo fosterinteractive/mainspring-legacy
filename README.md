@@ -14,14 +14,12 @@ Intended for use in Drupal or similar CMS.
 [Commands](/docs/commands.md)
 
 ##Overview##
-Gulp-Sass is the workhorse of this package which runs off of lib-sass
-See http://sass-compatibility.github.io/ for sass compatibility lists
-compared to ruby-sass
+Gulp-Sass is the workhorse of this package which runs off of lib-sass which is much faster and has feature parity with ruby-sass.
 
 ##Gulp##
-(Gulp.js)[] is a task runner. We use it to automate boring repetitive tasks like refreshing your screen after you save. It's also used for optimizing things that are easy to forget to do like compressing images. Finally it takes care of tedious tasks like making SVG sprites.
+[Gulp.js](http://gulpjs.com/) is a task runner. We use it to automate boring repetitive tasks like refreshing your screen after you save. It's also used for optimizing things that are easy to forget to do like compressing images. Finally it takes care of tedious tasks like making SVG sprites.
 
-http://callmenick.com/post/an-introduction-to-gulp
+[Here's a introductory post to Gulp](http://callmenick.com/post/an-introduction-to-gulp)
 
 ###Why not Grunt?###
 Grunt is awesome, but Gulp is more awesome. Gulp allows you to do everything in memory, and you can choose to run tasks in sequence or asynchronously. End result - It's faster, and we automate MANY tasks in Mainsping so speed counts.
@@ -29,14 +27,14 @@ Grunt is awesome, but Gulp is more awesome. Gulp allows you to do everything in 
 ##SVG##
 If you can use SVG graphics you should. Icons, logos, diagrams and illustrations are typically better in SVG. They are superior to icon fonts for many reasons.
 
-If you're interested in learning more about SVG - Sara Soueidan [@SaraSoueidan](https://twitter.com/SaraSoueidan) is the definitive authority on practical applications of SVGs in websites. Seriously (check out her blog)[https://sarasoueidan.com/articles/]
+If you're interested in learning more about SVG - Sara Soueidan [@SaraSoueidan](https://twitter.com/SaraSoueidan) is the definitive authority on practical applications of SVGs in websites. Seriously [check out her blog](https://sarasoueidan.com/articles/)
 
-CSS Tricks also has an (amazing resource section)[https://css-tricks.com/mega-list-svg-information/].
+CSS Tricks also has an [amazing resource section](https://css-tricks.com/mega-list-svg-information/).
 
-To wrap your head around the actual SVG format itself checkout the (SVG Pocket Guide)[http://svgpocketguide.com/] by Joni Trythall (@JoniTrythall)[https://twitter.com/JoniTrythall]
+To wrap your head around the actual SVG format itself checkout the [SVG Pocket Guide](http://svgpocketguide.com/) by Joni Trythall [@JoniTrythall](https://twitter.com/JoniTrythall)
 
 ##CS5 Styleguide ##
-Living Style guides allow documentation of your UI to be created from comments in your sass partials. It's both a tool to help UI development and a documentation of that UI so you don't accidentally re-invent the wheel in your projects and end up with (20 similar-but-different button styles)[http://bradfrost.com/blog/post/interface-inventory/].
+Living Style guides allow documentation of your UI to be created from comments in your sass partials. It's both a tool to help UI development and a documentation of that UI so you don't accidentally re-invent the wheel in your projects and end up with [20 similar-but-different button styles](http://bradfrost.com/blog/post/interface-inventory/).
 
 Mainspring uses [SC5 Styleguide](https://github.com/SC5/sc5-styleguide#build-options) which is a project that extends [Node-KSS](https://github.com/kss-node/kss-node). Node-KSS is a node.js implementation
 of KSS "Knyle Style Sheets" which is syntax for creating comments in your
@@ -50,11 +48,11 @@ CS5 Also add a number of useful features that are in the [SC5 Documentation Syna
 
 
 ##CSS Architure & Class Naming conventions##
-Mainsping uses a (BEM)[http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/] based naming pattern for css classes and (SMACSS)[https://smacss.com/] inspired folder structure that has been adopted by the Drupal Community as recommended (CSS Architecture for Drupal 8)[https://www.drupal.org/coding-standards/css/architecture].
+Mainsping uses a [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) based naming pattern for css classes and [SMACSS](https://smacss.com/)inspired folder structure that has been adopted by the Drupal Community as recommended [CSS Architecture for Drupal 8](https://www.drupal.org/coding-standards/css/architecture).
 
-These naming patterns are further extended ideas expressed by Harry Roberts @CSSWizardry[https://twitter.com/csswizardry] in his post, (More Transparent UI Code with Namespaces)[http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/] where class names are extended with profixes and suffix to express more meaning about how they effect the website display.
+These naming patterns are further extended ideas expressed by Harry Roberts [@CSSWizardry](https://twitter.com/csswizardry) in his post, [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/) where class names are extended with profixes and suffix to express more meaning about how they effect the website display.
 
- _obsessive_ naming conventions (which are enforced by a sass linter) it allows you to understand the relationship bettern UI components and make sure your team all codes to the same specs.
+ _Obsessive_ naming conventions (which are enforced by a sass linter) it allows you to understand the relationship bettern UI components and make sure your team all codes to the same specs.
 
 
 ##Credits For Assets Used In Demos##
