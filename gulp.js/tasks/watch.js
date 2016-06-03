@@ -7,7 +7,7 @@ var config      = require('../config');
 var gulp        = require('gulp');
 var path        = require('path');
 var config      = require('../config');
-var browserSync = require('browser-sync').create();
+var browserSync = require('browser-sync').create('bs');
 var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
 
@@ -29,47 +29,18 @@ var styleGuideSrc     = ['scss/**/*.scss','scss/**/*.html'];
 
 var sassConfig = config.tasks.css.sassConfig;
 
-// gulp.task('watch', ['serve'], function() {
+// Watch Tasks
 
-//   // SASS & Styleguide
-//   gulp.watch(scssSrc, ['css:dev', 'sassLint', 'styleguide']);
+gulp.task('serve', ['css:dev','sassLintCached', 'jsLint', 'styleguide'], function() {
 
-//   // JS Tasks
-//   gulp.watch(jsSrc, ['jsLint']);
-// });
+  browserSync.init(browserSyncConfig); // Initialize BrowserSync Server
 
-// gulp.task('watch', ['css:dev', 'sassLint', 'jsLint', 'styleguide'], function() {
+  gulp.watch(scssSrc, ['css:devBrowserSync']); // Compile SCSS to CSS
+  gulp.watch(sassLintPattern, ['sassLintCached']); // Lint SCSS
+  gulp.watch(styleGuideSrc, ['styleguide']); // Compile scss/html files to Style Guide
 
-//   // SASS & Styleguide
-//   gulp.watch(scssSrc, ['css:dev', 'sassLint', 'styleguide']);
-
-//   // JS Tasks
-//   gulp.watch(jsSrc, ['jsLint']);
-// });
-
-// gulp.task('browserSync', ['sass'], function() {
-//   return browserSync.init(browserSyncConfig);
-// });
-
-
-
-// gulp.task('watch', ['serve'], function() {
-//     gulp.watch(scssSrc, ['css:dev','sassLint','styleguide']);
-
-//     // Trigger Actions on save of SCSS files
-
-//     // gulp.watch(scssSrc).on('change', browserSync.reload);
-//     // gulp.watch(src.html).on('change', browserSync.reload);
-// });
-
-// Static Server + watching scss/html files
-
-//gulp.task('serve', ['css:dev','sassLintCached','styleguide'], function() {
-gulp.task('serve', ['css:dev', 'sassLintCached', 'styleguide'], function() {
-  browserSync.init(browserSyncConfig);
-  gulp.watch(scssSrc, ['css:dev']);
-  gulp.watch(sassLintPattern, ['sassLintCached']);
-  gulp.watch(styleGuideSrc, ['styleguide']);
+  // JS Tasks
+  gulp.watch(jsSrc, ['jsLint']);
 });
 
 gulp.task('default', ['serve']);
@@ -92,43 +63,12 @@ var path         = require('path');
 
 
 // Config
-var src = config.tasks.css.pattern;
-var dest = config.tasks.css.dest;
+var scssSrc = config.tasks.css.pattern;
+var cssDest = config.tasks.css.dest;
 var sassConfig = config.tasks.css.sassConfig;
 var prefixSettings = config.tasks.css.autoprefixer;
 var sourceMaps = config.tasks.css.sourceMaps;
 var reportEnabled = config.tasks.css.sizeReport.enabled;
 var reportSettings = config.tasks.css.sizeReport.settings;
-
-
-// Development CSS - Non minfied with Sourcemaps
-// gulp.task('css:dev', function () {
-//   gulp.src(src)
-//     .pipe(sourcemaps.init())
-//     .pipe(sass(sassConfig))
-//     .on('error', handleErrors)
-//     .pipe(autoprefixer(prefixSettings))
-//     .pipe(sourcemaps.write(sourceMaps))
-//     .pipe(gulp.dest(dest))
-//     .pipe(browserSync.stream({match: '**/*.css'}))
-//     ;
-// });
-
-// // Production CSS - Minified w/size report, no sourcemaps.
-// gulp.task('css:prod', function () {
-//   gulp.src(src)
-//     .pipe(sass(sassConfig))
-//     .on('error', handleErrors)
-//     .pipe(autoprefixer(prefixSettings))
-//     .pipe(cleanCSS())
-//     .pipe(gulp.dest(dest))
-
-//     // Size Report
-//     .pipe(gulpIf(reportEnabled,
-//       sizeReport(reportSettings)
-//     ))
-//     ;
-// });
-
 
 

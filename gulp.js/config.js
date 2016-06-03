@@ -1,18 +1,32 @@
 'use strict';
 
+// *** Required Config Settings ***/
 var localUrl = 'mainspring.dev'; // EG 'localhost', 'mysite.dev'
 
-var scssPattern = ['./scss/**/*.scss']; // Watch scss files for complile
 
+// *** Optional Config Settings ***/
+// Only need to change if your use a non-default
+// mainspring folder structure.
+
+// Watch scss files to compile to css
+var scssPattern = ['scss/**/*.scss'];
+
+// Exclude these SCSS files from linting
+var sassLintExclusions = ['!scss/**/vendor/**/*.scss'];
+
+// Lint all SCSS files, the sassLintExclusions files
+var sassLintPattern = scssPattern.concat(sassLintExclusions);
+
+// JS Linting these files. (Default is no minified or /vendor files)
 var jsLintPattern = [
   'js/**/*.js',
   '!js/**/*.min.js', // Ignore minified files
   '!js/**/vendor/*.js']; // Ignore /vendor sub-folders
 
-// Exclude these SCSS files from linting
-var sassLintExclusions = ['!scss/**/vendor/**/*.scss'];
-// Lint all SCSS files, except these (vendor) files
-var sassLintPattern = scssPattern.concat(sassLintExclusions);
+// Watch these files for changes to trigger a regenerate
+// Styleguide event.
+var styleGuideSrc = ['scss/**/*.scss','scss/**/*.html'];
+
 
 module.exports = {
 
