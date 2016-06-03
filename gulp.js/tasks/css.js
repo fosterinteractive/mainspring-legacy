@@ -11,9 +11,19 @@ var handleErrors = require('../lib/handleErrors');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS     = require('gulp-clean-css');
 var sizeReport   = require('gulp-sizereport');
-
 var browserSync  = require('browser-sync');
-var reload       = browserSync.reload;
+
+
+
+// // Config
+// var src = config.tasks.css.pattern;
+// var dest = config.tasks.css.dest;
+// var sassConfig = config.tasks.css.sassConfig;
+// var prefixSettings = config.tasks.css.autoprefixer;
+// var sourceMaps = config.tasks.css.sourceMaps;
+// var reportEnabled = config.tasks.css.sizeReport.enabled;
+// var reportSettings = config.tasks.css.sizeReport.settings;
+
 
 // Config
 var src = config.tasks.css.pattern;
@@ -27,20 +37,22 @@ var reportSettings = config.tasks.css.sizeReport.settings;
 
 // Development CSS - Non minfied with Sourcemaps
 gulp.task('css:dev', function () {
-  return gulp.src(src)
+  gulp.src(src)
     .pipe(sourcemaps.init())
     .pipe(sass(sassConfig))
     .on('error', handleErrors)
     .pipe(autoprefixer(prefixSettings))
     .pipe(sourcemaps.write(sourceMaps))
     .pipe(gulp.dest(dest))
-    .pipe(reload({stream: true}))
+    .pipe(browserSync.stream({match: '**/*.css'}))
     ;
+
+    console.log('BrowserSync '+ browserSync.active);
 });
 
 // Production CSS - Minified w/size report, no sourcemaps.
 gulp.task('css:prod', function () {
-  return gulp.src(src)
+  gulp.src(src)
     .pipe(sass(sassConfig))
     .on('error', handleErrors)
     .pipe(autoprefixer(prefixSettings))

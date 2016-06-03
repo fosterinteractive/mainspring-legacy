@@ -15,7 +15,7 @@ var src = config.tasks.sassLint.pattern;
 // Eg if 2 files have lint errors you see 2 errors
 
 gulp.task('sassLint', function () {
-  return gulp.src(src)
+  gulp.src(src)
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
@@ -26,7 +26,7 @@ gulp.task('sassLint', function () {
 // only see 1 error on the file you just saved.
 
 gulp.task('sassLintCached', function () {
-  return gulp.src(src)
+  gulp.src(src)
     .pipe(cache('sassLintCache')) // Only Lint Updated Files
     .pipe(sassLint())
     .pipe(sassLint.format())

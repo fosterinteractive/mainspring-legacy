@@ -16,20 +16,20 @@ var browserSyncConfig = config.tasks.browserSync;
 
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['css:dev'], function() {
+// gulp.task('serve', ['css:dev'], function() {
 
-    browserSync.init(browserSyncConfig);
+//     browserSync.init(browserSyncConfig);
 
-    gulp.watch(src, ['sass']);
-    // gulp.watch(src.html).on('change', browserSync.reload);
-});
+//     gulp.watch(src, ['sass']);
+//     // gulp.watch(src.html).on('change', browserSync.reload);
+// });
 
-// Compile sass into CSS
-gulp.task('sass', function() {
-    return gulp.src(src)
-        .pipe(sass(sassConfig))
-        .pipe(gulp.dest(dest))
-        .pipe(reload({stream: true}));
-});
+// // Compile sass into CSS
+// gulp.task('sass', function() {
+//     return gulp.src(src)
+//         .pipe(sass(sassConfig))
+//         .pipe(gulp.dest(dest))
+//         .pipe(reload({stream: true}));
+// });
 
-gulp.task('default', ['serve']);
+// gulp.task('default', ['serve']);
