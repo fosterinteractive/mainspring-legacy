@@ -1,7 +1,4 @@
 @charset "UTF-8";
-body {
-  background: green; }
-
 *, *:before, *:after {
   box-sizing: border-box; }
 

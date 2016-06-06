@@ -13,17 +13,7 @@ var cleanCSS     = require('gulp-clean-css');
 var sizeReport   = require('gulp-sizereport');
 
 
-// Config
-// var src = config.tasks.css.pattern;
-// var dest = config.tasks.css.dest;
-// var sassConfig = config.tasks.css.sassConfig;
-// var prefixSettings = config.tasks.css.autoprefixer;
-// var sourceMaps = config.tasks.css.sourceMaps;
-// var reportEnabled = config.tasks.css.sizeReport.enabled;
-// var reportSettings = config.tasks.css.sizeReport.settings;
-
-
-// Config
+// Local Config
 var scssSrc = config.tasks.css.pattern;
 var cssDest = config.tasks.css.dest;
 var sassConfig = config.tasks.css.sassConfig;
@@ -62,19 +52,19 @@ gulp.task('css:dev', function () {
 
 
 // // Production CSS - Minified w/size report, no sourcemaps.
-// gulp.task('css:prod', function () {
-//   gulp.src(scssSrc)
-//     .pipe(sass(sassConfig))
-//     .on('error', handleErrors)
-//     .pipe(autoprefixer(prefixSettings))
-//     .pipe(cleanCSS())
-//     .pipe(gulp.dest(cssDest))
+gulp.task('css:prod', function () {
+  gulp.src(scssSrc)
+    .pipe(sass(sassConfig))
+    .on('error', handleErrors)
+    .pipe(autoprefixer(prefixSettings))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(cssDest))
 
-//     // Size Report
-//     .pipe(gulpIf(reportEnabled,
-//       sizeReport(reportSettings)
-//     ))
-//     ;
-// });
+    // Size Report
+    .pipe(gulpIf(reportEnabled,
+      sizeReport(reportSettings)
+    ))
+    ;
+});
 
 

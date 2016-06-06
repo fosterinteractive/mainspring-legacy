@@ -31,13 +31,13 @@ var sassConfig = config.tasks.css.sassConfig;
 
 // Watch Tasks
 
-gulp.task('serve', ['css:dev','sassLintCached', 'jsLint', 'styleguide'], function() {
+gulp.task('serve', ['css:dev','sassLintCached', 'jsLint', 'styleGuide'], function() {
 
   browserSync.init(browserSyncConfig); // Initialize BrowserSync Server
 
   gulp.watch(scssSrc, ['css:devBrowserSync']); // Compile SCSS to CSS
   gulp.watch(sassLintPattern, ['sassLintCached']); // Lint SCSS
-  gulp.watch(styleGuideSrc, ['styleguide']); // Compile scss/html files to Style Guide
+  gulp.watch(styleGuideSrc, ['styleGuide:BrowserSync']); // Compile scss/html files to Style Guide
 
   // JS Tasks
   gulp.watch(jsSrc, ['jsLint']);
