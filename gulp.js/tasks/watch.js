@@ -19,13 +19,11 @@ if(!config.tasks.browserSync){return;}
 if(!config.tasks.sassLint.pattern){return;}
 
 
-// var config  = config.tasks.browserSync;
 var scssSrc           = config.tasks.css.pattern;
 var jsSrc             = config.tasks.jsLint.pattern;
 var browserSyncConfig = config.tasks.browserSync;
 var sassLintPattern   = config.tasks.sassLint.pattern;
-var styleGuideSrc     = ['scss/**/*.scss','scss/**/*.html'];
-// var styleGuideSrc  = config.tasks.styleGuide.pattern;
+var styleGuideSrc     = config.tasks.styleGuide.styleGuideSrc;
 
 var sassConfig = config.tasks.css.sassConfig;
 

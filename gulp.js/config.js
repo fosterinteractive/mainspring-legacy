@@ -1,6 +1,7 @@
 'use strict';
-
-// *** Required Config Settings ***/
+// ******************************** //
+// *** Required Config Settings *** //
+// ******************************** //
 
 // BrowserSync Proxy URL
 var localUrl = 'mainspring.dev'; // EG 'localhost', 'mysite.dev'
@@ -18,24 +19,23 @@ var styleGuideExtraHead = [
 // Page Title of Style Guide
 var styleGuideTitle = 'Style Guide';
 
-// Watch these files to trigger a regenerate Style Guide event
-var styleGuideSrc = ['scss/**/*.scss','scss/**/*.html'];
-
 // Generate Style Guide in this folder
 var styleGuideBuildPath = 'styleguide';
 
-
+// ******************************** //
 // *** Optional Config Settings *** //
+// ******************************** //
 // Only need to change if your use a non-default
 // mainspring folder structure.
 
+/////////////
 // Sass & CSS Settings
 // Watch scss files to compile to css
 var scssPattern = ['scss/**/*.scss'];
 var maxCssSize = 70000 // Warn if compiled css < 70kb (uncompressed)
 var maxCssGzippedSize = 40000 // Warn if compiled css < 40kb (compressed)
 
-
+/////////////
 // Linters
 
 // Exclude these SCSS files from linting
@@ -50,7 +50,27 @@ var jsLintPattern = [
   '!js/**/*.min.js', // Ignore minified files
   '!js/**/vendor/*.js']; // Ignore /vendor sub-folders
 
+////////////////
+// SVG Settings
 
+// Source Folder for non optimized SVG's.
+var svgPattern = ['svg-src/**/*.svg'];
+
+// Keep Stroke / Fill Attributes for these folders.
+var svgKeepAttributes = ['svg-src/svg-art/*.svg'];
+
+//
+var svgSource = svgPattern.concat(svgKeepAttributes.map(function (i){
+    return '!' + i;
+}));
+
+console.log(svgSource);
+
+// Export SVG sprites here
+var svgDestination = ['svg'];
+
+
+var svgGzip = ['svgz']; // svgz or svg.gz
 
 // Config Array used by gulp.js tasks
 module.exports = {
@@ -154,13 +174,19 @@ module.exports = {
 
     // SVG spriting
     svgSprite: {
-      src: 'svg-src',
+      svgSource: 'svgSource',
       dest: 'svg',
       extensions: ['svg'],
-      imageminSettings: {
+      // Setting Remove Strokes and Fills for CSS color controll on SVG's
+      settingsRemoveAttrs: {
         multipass: true,
-        // @TODO - Add in more options from https://github.com/svg/svgo
-        // svgoPlugins: [{removeViewBox: false}],
+          svgoPlugins: [
+            { removeAttrs : { attrs :['stroke', 'fill'] }}
+          ],
+      },
+      // Setting leaves Colors intact
+      settings: {
+        multipass: true,
       },
       sizeReport: {
         enabled: true,
@@ -171,7 +197,8 @@ module.exports = {
         }
       }
     }
-  }
+  },
+
 };
 
 
