@@ -2,8 +2,6 @@
 
   'use strict';
 
-      console.log('mainSpring');
-
   // Need to bind on styleguide rendered event instead of document ready.
   // Styleguide is rendered after document ready event.
   $(window).bind('styleguide:onRendered', function(e) {

@@ -1,15 +1,42 @@
 'use strict';
 
 // *** Required Config Settings ***/
+
+// BrowserSync Proxy URL
 var localUrl = 'mainspring.dev'; // EG 'localhost', 'mysite.dev'
 
+// Style Guide Settings
+//
+// Add in these files to the <head> of the styleguide
+var styleGuideExtraHead = [
+  '<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>',
+  '<script src="/js/vendor/svg4everybody.min.js"></script>',
+  '<script src="/js/vendor/velocity.min.js"></script>',
+  '<script src="/js/vendor/mainspring.accordion.js"></script>',
+];
 
-// *** Optional Config Settings ***/
+// Page Title of Style Guide
+var styleGuideTitle = 'Style Guide';
+
+// Watch these files to trigger a regenerate Style Guide event
+var styleGuideSrc = ['scss/**/*.scss','scss/**/*.html'];
+
+// Generate Style Guide in this folder
+var styleGuideBuildPath = 'styleguide';
+
+
+// *** Optional Config Settings *** //
 // Only need to change if your use a non-default
 // mainspring folder structure.
 
+// Sass & CSS Settings
 // Watch scss files to compile to css
 var scssPattern = ['scss/**/*.scss'];
+var maxCssSize = 70000 // Warn if compiled css < 70kb (uncompressed)
+var maxCssGzippedSize = 40000 // Warn if compiled css < 40kb (compressed)
+
+
+// Linters
 
 // Exclude these SCSS files from linting
 var sassLintExclusions = ['!scss/**/vendor/**/*.scss'];
@@ -23,11 +50,9 @@ var jsLintPattern = [
   '!js/**/*.min.js', // Ignore minified files
   '!js/**/vendor/*.js']; // Ignore /vendor sub-folders
 
-// Watch these files for changes to trigger a regenerate
-// Styleguide event.
-var styleGuideSrc = ['scss/**/*.scss','scss/**/*.html'];
 
 
+// Config Array used by gulp.js tasks
 module.exports = {
 
   tasks: {
@@ -77,11 +102,34 @@ module.exports = {
         settings: {
           gzip: true, // Gzip for size reporting
           '*': {
-            'maxSize': 70000,
-            'maxGzippedSize': 50000 // Max Size in Bytes after gzip
+            'maxSize': maxCssSize,
+            'maxGzippedSize': maxCssGzippedSize // Max Size in Bytes after gzip
           }
         }
       }
+    },
+
+    styleGuide: {
+      styleGuideSettings: {
+        title: styleGuideTitle,
+        styleGuideExtraHead: styleGuideExtraHead,
+        server: false,
+        appRoot: './',
+        overviewPath: 'scss/homepage.md',
+        disableHtml5Mode: true,
+        sideNav: true,
+        disableEncapsulation: true
+      },
+      styleGuideSrc: styleGuideSrc,
+      styleGuideBuildPath: styleGuideBuildPath
+    },
+
+    jsLint: {
+      pattern: jsLintPattern
+    },
+
+    sassLint: {
+      pattern: sassLintPattern
     },
 
     // Compress Static Bitmaps
@@ -104,15 +152,6 @@ module.exports = {
       }
     },
 
-
-    jsLint: {
-      pattern: jsLintPattern
-    },
-
-    sassLint: {
-      pattern: sassLintPattern
-    },
-
     // SVG spriting
     svgSprite: {
       src: 'svg-src',
@@ -132,7 +171,7 @@ module.exports = {
         }
       }
     }
-  },
+  }
 };
 
 

@@ -26,7 +26,7 @@
 .c-tabs a {
   @include font-size($p--small-font-sizes);
   display: block;
-  border: 1px solid palette(grey, light);
+  border: 1px solid palette(grey);
   background-color: palette(grey, mediumlight);
   padding: ru(0.25) ru(0.5);
   color: palette(grey, dark);
