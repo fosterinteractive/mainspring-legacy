@@ -128,9 +128,13 @@ By default this command does the following:
 
 1. Deletes the contents of the /svg folder
 2. Minifies & copies SVG Artwork from:
-* /svg-src/*.svg >> /svg/*.svg
-* /svg-src/svg-art/*.svg >> /svg/svg-art/*.svg
+```
+/svg-src/*.svg -> /svg/*.svg
+/svg-src/svg-art/*.svg -> /svg/svg-art/*.svg
+```
 3. Deletes Fill and Stroke Attibutes, Minifies & copies SVG Icon Sprites from:
-* /svg-src/any-folders-you-create >> /svg/any-folders-you-create
+```
+/svg-src/any-folders-you-create -> /svg/any-folders-you-create
+```
 4. for each folder in /svg/folders-here create a sprite in /svg/sprite-here.svg
 5. Compresses all SVGs in /svg/*.svg with gzip.
