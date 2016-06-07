@@ -5,7 +5,7 @@ Very biased boilerplate templates for generating production CSS &amp; Living
 Style Guides w/ SASS, Gulp &amp; other libraries. Essentially this is an
 assembly of the work of very clever folks into a single starter package.
 
-Intended for use in Drupal or similar CMS.
+Intended for use in Drupal but would be easily used in WordPress or similar CMS.
 
 ##See /docs for more details##
 
