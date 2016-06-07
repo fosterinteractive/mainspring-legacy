@@ -1,10 +1,12 @@
 #SVG Documentation#
 
-Main Spring is setup to make creating SVG sprites easy... Well as easy as it can be ;). This workflow is setup to handle 2 different kinds of SVG images:
+Main Spring is setup to make creating SVG sprites easy... Well as easy as it can be ;)
 
-* _SVG Artwork_ have more than 2 colors or colors that we don't every want to control with CSS. Typically these are Logos, or Diagrams.
+This workflow is setup to handle 2 different kinds of SVG images:
 
-* _SVG Icons_ where you want to control the color of the SVG with CSS. These are typically part of the site's UI that have 1 or 2 colors. For performance we create an externally loaded sprite (or multiple sprites) so icons loads in fewer requests. Also the browser will cache the sprite once it's loaded.
+* **SVG Artwork** have more than 2 colors or colors that we don't every want to control with CSS. Typically these are Logos, or Diagrams.
+
+* **SVG Icons** where you want to control the color of the SVG with CSS. These are typically part of the site's UI that have 1 or 2 colors. For performance we create an externally loaded sprite (or multiple sprites) so icons loads in fewer requests. Also the browser will cache the sprite once it's loaded.
 
 ##How It Works##
 
@@ -20,13 +22,13 @@ Large files that appear in a single place (or few places) in your website should
 
 Place these files in /svg-src/ EG:
 ```
-/svg-src/my-fancy-logo.svg
+/svg-src/complex-chart.svg
 /svg-src/complex-illustration.svg
 ```
 This exports minified and compressed versions to /svg/ EG:
 ```
-/svg/my-fancy-logo.svg
-/svg/my-fancy-logo.svgz
+/svg/complex-chart.svg
+/svg/complex-chart.svgz
 /svg/complex-illustration.svg
 /svg/complex-illustration.svgz
 ```
@@ -34,6 +36,7 @@ This exports minified and compressed versions to /svg/ EG:
 ###Optimizing SVG Artwork (Sprited)###
 If you have full color icons, or Colourful Badges artwork where each specific file is small, but you don't want to control the SVG's color in CSS then place them in /svg-src/svg-art. EG:
 ```
+/svg-src/svg-art/logo.svg
 /svg-src/svg-art/top-10.svg
 /svg-src/svg-art/winner.svg
 ```
@@ -44,6 +47,9 @@ Gulp svgSprite task creates a sprite in /svg named after the folder "svg-art"
 ```
 Now you can use it in your HTML as an external SVG sprite
 ```html
+<svg>
+  <use xlink:href="/svg/svg-art.svg#logo"></use>
+</svg>
 <svg>
   <use xlink:href="/svg/svg-art.svg#top-10"></use>
 </svg>
@@ -137,6 +143,6 @@ By default this command does the following:
 ```
 /svg-src/any-folders-you-create -> /svg/any-folders-you-create
 ```
-4) for each folder in /svg/folders-here create a sprite in /svg/sprite-here.svg
+4) For each folder in /svg/folders-here create a sprite in /svg/sprite-here.svg
 
 5) Compresses all SVGs in /svg/*.svg with gzip.
