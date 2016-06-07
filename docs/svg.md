@@ -114,7 +114,7 @@ Note: The gulp tasks scans for new folders in the svg-src so you can name folder
 ###SVG <use> technique###
 https://css-tricks.com/svg-use-with-external-reference-take-2/
 
-###fill: currentColor; technique ###
+###fill: currentColor technique ###
 https://css-tricks.com/cascading-svg-fill-color/
 
 
@@ -123,7 +123,7 @@ https://css-tricks.com/cascading-svg-fill-color/
 ###To edit the default settings###
 /gulp.js/config.js
 
-###/gulp.js/tasks/svgSprite.js###
+###Gulp Task: /gulp.js/tasks/svgSprite.js###
 By default this command does the following:
 
 1. Deletes the contents of the /svg folder
