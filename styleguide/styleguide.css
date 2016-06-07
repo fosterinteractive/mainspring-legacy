@@ -1672,6 +1672,15 @@ input[type='button'],
     border-color: #2b3078;
     background-color: #2b3078; }
 
+button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'],
+.c-btn--left,
+.c-btn--right,
+.c-btn {
+  sdfsdf: dsfsdf; }
+
 
 .c-btn--left,
 .c-btn--right {

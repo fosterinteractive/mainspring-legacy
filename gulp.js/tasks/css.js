@@ -7,10 +7,11 @@ var gulp         = require('gulp');
 var gulpIf       = require('gulp-if');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
-var handleErrors = require('../lib/handleErrors');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS     = require('gulp-clean-css');
 var sizeReport   = require('gulp-sizereport');
+var plumber      = require('gulp-plumber');
+var notify       = require('gulp-notify');
 
 
 // Local Config
@@ -28,22 +29,26 @@ gulp.task('css:devBrowserSync', function () {
   var browserSync  = require('browser-sync').get('bs');
 
   gulp.src(scssSrc)
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
     .pipe(sourcemaps.init())
     .pipe(sass(sassConfig))
-    .on('error', handleErrors)
     .pipe(autoprefixer(prefixSettings))
     .pipe(sourcemaps.write(sourceMaps))
     .pipe(gulp.dest(cssDest))
-    .pipe(browserSync.stream({match: '**/*.css'}))
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 
 // Development CSS - Non minfied with Sourcemaps
 gulp.task('css:dev', function () {
   gulp.src(scssSrc)
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
     .pipe(sourcemaps.init())
     .pipe(sass(sassConfig))
-    .on('error', handleErrors)
     .pipe(autoprefixer(prefixSettings))
     .pipe(sourcemaps.write(sourceMaps))
     .pipe(gulp.dest(cssDest))
@@ -54,8 +59,10 @@ gulp.task('css:dev', function () {
 // // Production CSS - Minified w/size report, no sourcemaps.
 gulp.task('css:prod', function () {
   gulp.src(scssSrc)
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
     .pipe(sass(sassConfig))
-    .on('error', handleErrors)
     .pipe(autoprefixer(prefixSettings))
     .pipe(cleanCSS())
     .pipe(gulp.dest(cssDest))

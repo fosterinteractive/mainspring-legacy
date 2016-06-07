@@ -9,28 +9,28 @@ var sassLint  = require('gulp-sass-lint');
 var cache     = require('gulp-cached');
 
 // Array of Lint Src's
-var src = config.tasks.sassLint.pattern;
+var sassLintPattern = config.tasks.sassLint.pattern;
 
 // Lints Every File in the Lint Src
 // Eg if 2 files have lint errors you see 2 errors
 
 gulp.task('sassLint', function () {
-  gulp.src(src)
+  gulp.src(sassLintPattern)
     .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError());
+    .pipe(sassLint.format());
+    // .pipe(sassLint.failOnError());
 });
 
 // Passes the Src to gulp-cached
 // EG if 2 files have lint errors you
 // only see 1 error on the file you just saved.
 
-gulp.task('sassLintCached', function () {
-  gulp.src(src)
+gulp.task('sassLint:Cached', function () {
+  gulp.src(sassLintPattern)
     .pipe(cache('sassLintCache')) // Only Lint Updated Files
     .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError());
+    .pipe(sassLint.format());
+    // .pipe(sassLint.failOnError());
 });
 
 

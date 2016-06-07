@@ -105,7 +105,7 @@ category: Global - Forms
 */
 
 // Text & Similar Inputs
-// scss-lint:disable QualifyingElement
+
 textarea,
 select,
 input[type='date'],
@@ -132,18 +132,16 @@ input[type='week'] {
     @extend %g-input--large--centered;
   }
 }
-//scss-lint:enable QualifyingElement
 
 
 // Removes select drop-down arrow
-//scss-lint:disable ImportantRule
+
 select {
   @extend %g-input--core;
   background: url('../svg/sprite-ui/arrow-down.svg') no-repeat right ru(0.5)center;
   padding: ru(0.375) ru(1.5) ru(0.375) ru(0.5);
-  -moz-appearance: none !important;
+  -moz-appearance: none !important; //scss-lint:disable no-important
 }
-//scss-lint:enable ImportantRule
 
 // Placeholder Note we're repeating it on purpose!
 // a group of selectors containing an invalid selector is invalid.

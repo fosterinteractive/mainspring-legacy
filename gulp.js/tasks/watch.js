@@ -29,12 +29,12 @@ var sassConfig = config.tasks.css.sassConfig;
 
 // Watch Tasks
 
-gulp.task('serve', ['css:dev','sassLintCached', 'jsLint', 'styleGuide'], function() {
+gulp.task('serve', ['css:dev','sassLint:Cached', 'jsLint', 'styleGuide'], function() {
 
   browserSync.init(browserSyncConfig); // Initialize BrowserSync Server
 
   gulp.watch(scssSrc, ['css:devBrowserSync']); // Compile SCSS to CSS
-  gulp.watch(sassLintPattern, ['sassLintCached']); // Lint SCSS
+  gulp.watch(sassLintPattern, ['sassLint:Cached']); // Lint SCSS
   gulp.watch(styleGuideSrc, ['styleGuide:BrowserSync']); // Compile scss/html files to Style Guide
 
   // JS Tasks
@@ -44,29 +44,29 @@ gulp.task('serve', ['css:dev','sassLintCached', 'jsLint', 'styleGuide'], functio
 gulp.task('default', ['serve']);
 
 
-var config      = require('../config');
-if(!config.tasks.css){return;}
+// var config      = require('../config');
+// if(!config.tasks.css){return;}
 
-var gulp         = require('gulp');
-var gulpIf       = require('gulp-if');
-var sass         = require('gulp-sass');
-var sourcemaps   = require('gulp-sourcemaps');
-var handleErrors = require('../lib/handleErrors');
-var autoprefixer = require('gulp-autoprefixer');
-var cleanCSS     = require('gulp-clean-css');
-var sizeReport   = require('gulp-sizereport');
+// var gulp         = require('gulp');
+// var gulpIf       = require('gulp-if');
+// var sass         = require('gulp-sass');
+// var sourcemaps   = require('gulp-sourcemaps');
+// var handleErrors = require('../lib/handleErrors');
+// var autoprefixer = require('gulp-autoprefixer');
+// var cleanCSS     = require('gulp-clean-css');
+// var sizeReport   = require('gulp-sizereport');
 
-var reload       = browserSync.reload;
-var path         = require('path');
+// var reload       = browserSync.reload;
+// var path         = require('path');
 
 
-// Config
-var scssSrc = config.tasks.css.pattern;
-var cssDest = config.tasks.css.dest;
-var sassConfig = config.tasks.css.sassConfig;
-var prefixSettings = config.tasks.css.autoprefixer;
-var sourceMaps = config.tasks.css.sourceMaps;
-var reportEnabled = config.tasks.css.sizeReport.enabled;
-var reportSettings = config.tasks.css.sizeReport.settings;
+// // Config
+// var scssSrc = config.tasks.css.pattern;
+// var cssDest = config.tasks.css.dest;
+// var sassConfig = config.tasks.css.sassConfig;
+// var prefixSettings = config.tasks.css.autoprefixer;
+// var sourceMaps = config.tasks.css.sourceMaps;
+// var reportEnabled = config.tasks.css.sizeReport.enabled;
+// var reportSettings = config.tasks.css.sizeReport.settings;
 
 
