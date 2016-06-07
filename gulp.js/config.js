@@ -32,13 +32,14 @@ var styleGuideBuildPath = 'styleguide';
 // Sass & CSS Settings
 // Watch scss files to compile to css
 var scssPattern = ['scss/**/*.scss'];
-var maxCssSize = 70000 // Warn if compiled css < 70kb (uncompressed)
-var maxCssGzippedSize = 40000 // Warn if compiled css < 40kb (compressed)
+var maxCssSize = 70000; // Warn if compiled css < 70kb (uncompressed)
+var maxCssGzippedSize = 40000; // Warn if compiled css < 40kb (compressed)
 
 /////////////
 // Linters
 
 // Exclude these SCSS files from linting
+// Ignore any files in vendor folders
 var sassLintExclusions = ['!scss/**/vendor/**/*.scss'];
 
 // Lint all SCSS files, the sassLintExclusions files
@@ -57,20 +58,22 @@ var jsLintPattern = [
 var svgPattern = ['svg-src/**/*.svg'];
 
 // Keep Stroke / Fill Attributes for these folders.
-var svgKeepAttributes = ['svg-src/svg-art/*.svg'];
+var svgKeepAttributesPattern = ['svg-src/*.svg','svg-src/**/svg-art/**/*.svg'];
 
-//
-var svgSource = svgPattern.concat(svgKeepAttributes.map(function (i){
+// Excluse folder to Keep Fills & Strokes Attributes
+var svgSource = svgPattern.concat(svgKeepAttributesPattern.map(function (i){
     return '!' + i;
 }));
 
-console.log(svgSource);
 
-// Export SVG sprites here
-var svgDestination = ['svg'];
+// Export SVG sprites to this folder
+var svgDestination = 'svg';
 
+// Compressed SVG file extension (svgz or svg.gz)
+var svgGzipFormat = 'svgz';
 
-var svgGzip = ['svgz']; // svgz or svg.gz
+// Max size per SVG sprite
+var maxSvgSize = 50000; // Warn if Sprited SVG < 50kb (compressed)
 
 // Config Array used by gulp.js tasks
 module.exports = {
@@ -140,7 +143,7 @@ module.exports = {
         sideNav: true,
         disableEncapsulation: true
       },
-      styleGuideSrc: styleGuideSrc,
+      styleGuideSrc: scssPattern,
       styleGuideBuildPath: styleGuideBuildPath
     },
 
@@ -174,25 +177,27 @@ module.exports = {
 
     // SVG spriting
     svgSprite: {
-      svgSource: 'svgSource',
-      dest: 'svg',
-      extensions: ['svg'],
-      // Setting Remove Strokes and Fills for CSS color controll on SVG's
+      svgSource: svgSource,
+      svgKeepAttributesSource: svgKeepAttributesPattern,
+      dest: svgDestination,
+      svgGzipFormat: svgGzipFormat,
+      // Setting leaves Colors intact
+      settingsKeepAttrs: {
+        multipass: true,
+      },
+      // Setting Remove Attributes: Strokes and Fills (for CSS color controll on SVGs)
       settingsRemoveAttrs: {
         multipass: true,
           svgoPlugins: [
             { removeAttrs : { attrs :['stroke', 'fill'] }}
           ],
       },
-      // Setting leaves Colors intact
-      settings: {
-        multipass: true,
-      },
+      //
       sizeReport: {
         enabled: true,
         settings: {
           '*': {
-            'maxSize': 50000 // Alert if > Max Size in Bytes after gzip
+            'maxSize': maxSvgSize // Alert if > Max Size in Bytes after gzip
           }
         }
       }
