@@ -13,6 +13,8 @@ Intended for use in Drupal but is easily used in WordPress or similar CMS.
 
 [Commands](/docs/commands.md)
 
+[SVG: Sprites & Optimizations Docs](docs/svg.md)
+
 ##Overview##
 Gulp-Sass is the workhorse of this package which runs off of lib-sass which is much faster and has feature parity with ruby-sass.
 
@@ -29,7 +31,7 @@ If you can use SVG graphics you should. Icons, logos, diagrams and illustrations
 
 Main Spring created SVGs sprites automatically from the files in /svg-src folder. *Do not put your files in /svg as they are deleted as part of the build process!*
 
-[SVG Docs](docs/svg.md) - Read SVG documentation
+[SVG: Sprites & Optimizations Docs](docs/svg.md) - Read SVG documentation
 
 ###Further Reading on SVGs###
 If you're interested in learning more about SVG - Sara Soueidan [@SaraSoueidan](https://twitter.com/SaraSoueidan) is the definitive authority on practical applications of SVGs in websites. Seriously [check out her blog](https://sarasoueidan.com/articles/)
