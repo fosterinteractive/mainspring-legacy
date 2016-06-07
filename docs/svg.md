@@ -117,13 +117,20 @@ https://css-tricks.com/svg-use-with-external-reference-take-2/
 ###fill: currentColor; technique ###
 https://css-tricks.com/cascading-svg-fill-color/
 
+
+## How the Gulp Task Works ##
+
+###To edit the default settings###
+/gulp.js/config.js
+
+###/gulp.js/tasks/svgSprite.js###
 By default this command does the following:
 
-* Deletes the contents of the /svg folder
-* Minifies & copies SVGs from:
-** /svg-src/*.svg >> /svg/*.svg
-** /svg-src/svg-art/*.svg >> /svg/svg-art/*.svg
-* Deletes Fill and Stroke Attibutes, Minifies & copies SVGs from:
-** /svg-src/any-folders-you-create >> /svg/any-folders-you-create
-* for each folder in /svg/folders-here create a sprite in /svg/sprite-here.svg
-* compresses all SVGs in /svg/*.svg
+1. Deletes the contents of the /svg folder
+2. Minifies & copies SVG Artwork from:
+* /svg-src/*.svg >> /svg/*.svg
+* /svg-src/svg-art/*.svg >> /svg/svg-art/*.svg
+3. Deletes Fill and Stroke Attibutes, Minifies & copies SVG Icon Sprites from:
+* /svg-src/any-folders-you-create >> /svg/any-folders-you-create
+4. for each folder in /svg/folders-here create a sprite in /svg/sprite-here.svg
+5. Compresses all SVGs in /svg/*.svg with gzip.
