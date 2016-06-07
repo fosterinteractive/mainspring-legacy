@@ -54,8 +54,6 @@ gulp.task('svgMinify:KeepAttributes', ['svgMinify'], function() {
 // Each sub-folder's content becomes a single SVG sprite
 // in the root dest folder
 
-// TODO - Look into this as a solution https://github.com/hakubo/gulp-folders
-
 gulp.task('createSprites', ['svgMinify:KeepAttributes'], function(){
 
   // Get the folders in the dest

@@ -27,11 +27,18 @@ Grunt is awesome, but Gulp is more awesome. Gulp allows you to do everything in 
 ##SVG##
 If you can use SVG graphics you should. Icons, logos, diagrams and illustrations are typically better in SVG. They are superior to icon fonts for many reasons.
 
+Main Spring created SVGs sprites automatically from the files in /svg-src folder. *Do not put your files in /svg as they are deleted as part of the build process!*
+
+[SVG Docs](docs/svg.md) - Read SVG documentation
+
+###Further Reading on SVGs###
 If you're interested in learning more about SVG - Sara Soueidan [@SaraSoueidan](https://twitter.com/SaraSoueidan) is the definitive authority on practical applications of SVGs in websites. Seriously [check out her blog](https://sarasoueidan.com/articles/)
 
 CSS Tricks also has an [amazing resource section](https://css-tricks.com/mega-list-svg-information/).
 
 To wrap your head around the actual SVG format itself checkout the [SVG Pocket Guide](http://svgpocketguide.com/) by Joni Trythall [@JoniTrythall](https://twitter.com/JoniTrythall)
+
+
 
 ##CS5 Styleguide ##
 Living Style guides allow documentation of your UI to be created from comments in your sass partials. It's both a tool to help UI development and a documentation of that UI so you don't accidentally re-invent the wheel in your projects and end up with [20 similar-but-different button styles](http://bradfrost.com/blog/post/interface-inventory/).

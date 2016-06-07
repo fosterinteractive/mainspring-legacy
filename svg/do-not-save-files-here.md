@@ -6,4 +6,5 @@ $ gulp svgSprite
 ````
 
 Put SVG icons and artwork in the /svg-src folder.
-See ../docs/svg.md for more info on how to use SVGs in Main Spring
+
+See [SVG Docs](../docs/svg.md) for more info on how to use SVGs
