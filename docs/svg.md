@@ -60,8 +60,10 @@ Now you can use it in your HTML as an external SVG sprite
 Note: The gulp has a specifically defined list of folders for where stroke and fill colors are left intact. You can change this in (/gulp.js/config.js).
 
 ```js
-var svgKeepAttributesPattern = ['svg-src/*.svg','svg-src/**/svg-art/**/*.svg'];// Default
-var svgKeepAttributesPattern = ['svg-src/*.svg','svg-src/**/badges/**/*.svg'];// Removed 'svg-art' added 'badges'
+// Default
+var svgKeepAttributesPattern = ['svg-src/*.svg','svg-src/**/svg-art/**/*.svg'];
+// Removed 'svg-art' folder/sprite added 'badges'
+var svgKeepAttributesPattern = ['svg-src/*.svg','svg-src/**/badges/**/*.svg'];
 
 ```
 
