@@ -65,8 +65,8 @@ These naming patterns are further extended ideas expressed by Harry Roberts [@CS
 
 ##Inspired / Stolen / Adapted From##
 
-*[Viget Labs Gulp Starter](https://github.com/vigetlabs/gulp-starter)
-*[Google Web Starter Kit](https://github.com/google/web-starter-kit)
+* [Viget Labs Gulp Starter](https://github.com/vigetlabs/gulp-starter)
+* [Google Web Starter Kit](https://github.com/google/web-starter-kit)
 
 See [Inspiration](/docs/oh-my-god-its-full-of-stars.md) for more.
 
