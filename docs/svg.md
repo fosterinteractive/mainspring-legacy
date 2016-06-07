@@ -51,10 +51,12 @@ Now you can use it in your HTML as an external SVG sprite
   <use xlink:href="/svg/svg-art.svg#winner"></use>
 </svg>
 ```
-Note: The gulp has a specifically defined list of folders for "SVG Art" (where stroke and fill colors are left intact). You can change this in (/gulp.js/config.js).
+Note: The gulp has a specifically defined list of folders for where stroke and fill colors are left intact. You can change this in (/gulp.js/config.js).
 
 ```js
-var svgKeepAttributesPattern = ['svg-src/*.svg','svg-src/**/svg-art/**/*.svg'];
+var svgKeepAttributesPattern = ['svg-src/*.svg','svg-src/**/svg-art/**/*.svg'];// Default
+var svgKeepAttributesPattern = ['svg-src/*.svg','svg-src/**/badges/**/*.svg'];// Removed 'svg-art' added 'badges'
+
 ```
 
 ###Creating SVG Icon Sprites###
@@ -107,10 +109,13 @@ Now you can use it in your HTML as an external SVG sprite. All Stroke and Fill C
 
 Note: The gulp tasks scans for new folders in the svg-src so you can name folders anything you like.
 
-##Using External SVG Sprites in HTML##
+##Further Reading on SVG Sprites in HTML##
 
+###SVG <use> technique###
 https://css-tricks.com/svg-use-with-external-reference-take-2/
 
+###fill: currentColor; technique ###
+https://css-tricks.com/cascading-svg-fill-color/
 
 By default this command does the following:
 
@@ -120,5 +125,5 @@ By default this command does the following:
 ** /svg-src/svg-art/*.svg >> /svg/svg-art/*.svg
 * Deletes Fill and Stroke Attibutes, Minifies & copies SVGs from:
 ** /svg-src/any-folders-you-create >> /svg/any-folders-you-create
-* for each folder in /svg/<folders-here> create a sprite in /svg/<sprite-here>.svg
+* for each folder in /svg/folders-here create a sprite in /svg/sprite-here.svg
 * compresses all SVGs in /svg/*.svg
