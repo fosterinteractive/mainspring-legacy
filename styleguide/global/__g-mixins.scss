@@ -1,5 +1,0 @@
-%g-type__core {
-  // Fade in fonts using Web Font Loader default classes https://github.com/at-import/toolkit#font-helpers
-  @include content-fade-in(0.25s, '.wf-loading', false);
-  // font-family: $base-font-family;
-}

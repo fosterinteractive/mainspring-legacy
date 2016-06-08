@@ -21,7 +21,7 @@ var reportSettings = config.tasks.images.sizeReport.settings;
 gulp.task('images', function() {
   return gulp.src(imageSrc)
   .pipe(plumber({
-    errorHandler: notify.onError("Error: <%= error.message %>")
+    errorHandler: notify.onError('Error: <%= error.message %>')
   }))
 
   .pipe(imagemin()) // Optimize

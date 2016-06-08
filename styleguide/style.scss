@@ -16,7 +16,7 @@
 // or WYSIWYG editors. It also includes common patterns that are reused
 // thoughout the site like Typography, Images, SVGs, Forms, Lists, and print styles.
 //
-// *Uses Hacked Version of Normalize (See section 1.99)*
+// *Uses Hacked Version of Normalize 5.0.3 (See section 1.99)*
 //
 // <b>Naming Patterns</b>
 // <pre>
@@ -29,17 +29,18 @@
 //
 // Styleguide 1.0
 
-@import 'global/g-functions';
-@import 'global/variables';
-@import 'global/mixins';
-@import 'global/vendor/normalize';
-@import 'global/g-type';
-@import 'global/g-link';
-@import 'global/g-list';
-@import 'global/g-svg';
-@import 'global/g-form';
-@import 'global/g-image';
-@import 'global/g-table';
+@import 'global/g--functions/g--functions';
+@import 'global/g--mixins/g--mixins';
+// @import 'global/variables';
+// @import 'global/mixins';
+// @import 'global/vendor/normalize';
+// @import 'global/g-type';
+// @import 'global/g-link';
+// @import 'global/g-list';
+// @import 'global/g-svg';
+// @import 'global/g-form';
+// @import 'global/g-image';
+// @import 'global/g-table';
 // @import 'global/print';
 
 // Utility
@@ -62,7 +63,14 @@
 // Styleguide 4.0
 
 // Utiltiy Functions
-@import 'utility/utility';
+@import 'utility/u-animation';
+@import 'utility/u-clearfix';
+@import 'utility/u-inline-links';
+@import 'utility/u-list';
+@import 'utility/u-remove-child';
+// @import 'utility/u-text-hide';
+// @import 'utility/u-visually--hidden';
+
 
 // Components
 //
@@ -85,13 +93,13 @@
 // Styleguide 2.0
 
 // Components (with EJ.js based layouts)
-@import 'components/c-btn/c-btn';
-@import 'components/c-logo';
-@import 'components/c-nav/c-nav';
-@import 'components/c-tab/c-tab';
-@import 'components/c-quote';
-@import 'components/c-accordion/c-accordion';
-@import 'components/c-pager/c-pager';
+// @import 'components/c-btn/c-btn';
+// @import 'components/c-logo';
+// @import 'components/c-nav/c-nav';
+// @import 'components/c-tab/c-tab';
+// @import 'components/c-quote';
+// @import 'components/c-accordion/c-accordion';
+// @import 'components/c-pager/c-pager';
 
 // Component Partial Naming Examples
 // @import 'components/btn--icon';
@@ -178,9 +186,9 @@
 //
 // Styleguide 3.0
 
-@import 'layouts/l-eq';
-@import 'layouts/l-page';
-@import 'layouts/l-form';
+// @import 'layouts/l-eq';
+// @import 'layouts/l-page';
+// @import 'layouts/l-form';
 
 // Other Layout Naming Examples
 // @import 'layouts/l-header';
