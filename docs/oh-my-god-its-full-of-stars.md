@@ -13,26 +13,21 @@ https://github.com/google/web-starter-kit
 General Best Practices w/ Gulp
 https://github.com/gulpjs/gulp/tree/master/docs/recipes
 
-#Hologram Gulp Plugin#
-
 
 #SVG#
 
 SVG Components - Single file per folder
 https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-task-steps-per-folder.md
 
+#Browser Sync#
+[Browsersync recipes](https://github.com/BrowserSync/recipes)
 
 #Under Consideration#
 
 Lazy Loading Gulp Plugins
 http://andy-carter.com/blog/automatically-load-gulp-plugins-with-gulp-load-plugins
 
-Combining streams to handle errors
-https://github.com/gulpjs/gulp/blob/master/docs/recipes/combining-streams-to-handle-errors.md
-
 Google Page Speed on Local
 http://una.im/gulp-local-psi/
 http://zachwills.net/how-to-share-your-local-dev-environment-using-ngrok/
 
-- Create NGrok Account
-- Save Token to Local (Global)

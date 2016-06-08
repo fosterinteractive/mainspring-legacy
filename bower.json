@@ -21,7 +21,8 @@
     "media-match": "~2.0.2",
     "enquire": "~2.1.2",
     "Slidebars": "~0.10.3",
-    "velocity": "~1.2.3"
+    "velocity": "~1.2.3",
+    "mainspring-accordion": "0.0.2"
   },
   "devDependencies": {
     "Cortana": "~1.2.9",

@@ -33,7 +33,7 @@ gulp.task('bower', ['bower:install', 'bower:clean'], function() {
   .pipe(flatten())
   .pipe(gulp.dest('./js/vendor')) // Write the non-minified JS
   .pipe(uglify()) // Minify JS
-  .pipe(rename({extname: ".min.js"})) // Change file to *.min.js
+  .pipe(rename({extname: '.min.js'})) // Change file to *.min.js
   .pipe(gulp.dest('./js/vendor')) // Write minified files
   ;
 

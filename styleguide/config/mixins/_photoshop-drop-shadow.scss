@@ -1,0 +1,38 @@
+// From http://heygrady.com/blog/2011/08/06/recreating-photoshop-drop-shadows-in-css3-and-compass/
+
+$black: #000000 !default;
+
+//--------------------------------
+// Photoshop Drop Shadow
+//--------------------------------
+@mixin photoshop-drop-shadow ($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: $black, $inner: false) {
+  $angle: (180 - $angle) * pi() / 180; // convert to radians
+  $h-shadow: round(cos($angle) * $distance);
+  $v-shadow: round(sin($angle) * $distance);
+  $css-spread: $size * $spread / 100;
+  $blur: ($size - $css-spread);
+  $inset: if($inner != false, 'inset', '');
+  @include box-shadow($h-shadow $v-shadow $blur $css-spread $color unquote($inset));
+}
+
+
+//--------------------------------
+// Photoshop Inner Shadow
+//--------------------------------
+@mixin photoshop-inner-shadow ($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: $black) {
+  @include photoshop-drop-shadow ($angle, $distance, $spread, $size, $color, true);
+}
+
+//--------------------------------
+// Photoshop Text Shadow
+//--------------------------------
+@mixin photoshop-text-shadow ($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: $black) {
+  // NOTE: $spread has no effect for text shadows
+  $angle: (180 - $angle) * pi() / 180;
+  $h-shadow: round(cos($angle) * $distance);
+  $v-shadow: round(sin($angle) * $distance);
+  $css-spread: $size * $spread / 100;
+  $blur: ($size - $css-spread);
+
+  @include text-shadow($h-shadow $v-shadow $blur $color);
+}

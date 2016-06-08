@@ -8,15 +8,27 @@
 # Linter SpaceBeforeBrace, option "allow_single_line_padding"
 
 files:
-  include: '**/*.s+(a|c)ss'
+  include: 'sass/**/*.s+(a|c)ss'
+  ignore:
+    - 'sass/**/vendor/**/*.*'
 options:
   formatter: stylish
   merge-default-rules: false
 rules:
+  bem-depth:
+    - 1
+    - max-depth: 2
+  brace-style:
+    - 1
+    - style: 1tbs
+    - allow-single-line: true
   border-zero: 1
   class-name-format:
     - 1
     - convention: hyphenatedbem
+  clean-import-paths:
+    - leading-underscore: false
+    - filename-extension: true
   empty-line-between-blocks:
     - 1
     - ignore-single-line-rulesets: true
@@ -42,21 +54,36 @@ rules:
     - convention: hyphenatedbem
   indentation:
     - 1
-    - size: 2
+    -
+      size: 2
   leading-zero:
     - 1
     - include: true
   mixin-name-format:
     - 0
     - allow-leading-underscore: false
-  mixins-before-declarations: 0
+  mixins-before-declarations:
+    - 1
+    -
+      exclude:
+        - breakpoint
+        - mq
+        - respond-to
+
+  # Avoid nesting selectors too deeply.
+  nesting-depth:
+    - 1
+    -
+      max-depth: 4
   no-color-keyword: 0
   no-color-literals: 0
   no-css-comments: 0
+  no-warn: 1
   no-debug: 1
   no-duplicate-properties: 0
   no-empty-rulesets: 1
   no-invalid-hex: 1
+  no-important: 1
   no-mergeable-selectors: 1
   no-misspelled-properties:
     - 1
@@ -69,7 +96,8 @@ rules:
     - convention: hyphenatedbem
   property-sort-order:
     - 1
-    - ignore-custom-properties: true
+    -
+      ignore-custom-properties: false
       order:
         - display
         - position
