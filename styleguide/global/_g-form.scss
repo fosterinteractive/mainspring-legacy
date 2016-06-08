@@ -1,6 +1,6 @@
 // Forms
 //
-// Styleguide 1.4
+// Styleguide 1.15
 
 // Content styles from scss port of formalize
 // https://gist.github.com/jcanfield/3267623
@@ -140,7 +140,7 @@ select {
   @extend %g-input--core;
   background: url('../svg/sprite-ui/arrow-down.svg') no-repeat right ru(0.5)center;
   padding: ru(0.375) ru(1.5) ru(0.375) ru(0.5);
-  -moz-appearance: none !important; //scss-lint:disable no-important
+  -moz-appearance: none !important;
 }
 
 // Placeholder Note we're repeating it on purpose!

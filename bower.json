@@ -1,5 +1,5 @@
 {
-  "name": "theme",
+  "name": "main-spring",
   "version": "0.0.2",
   "authors": [
     "Aidan Foster <afoster@fosterinteractive.com>"
@@ -25,11 +25,8 @@
     "mainspring-accordion": "0.0.2"
   },
   "devDependencies": {
-    "Cortana": "~1.2.9",
     "breakpoint-sass": "~2.5.0",
-    "jacket": "~1.1.1",
     "sass-toolkit": "~2.7.0",
-    "sassy-maps": "~0.4.0",
     "singularity": "~1.6.2"
   },
   "overrides": {

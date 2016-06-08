@@ -10,22 +10,13 @@
 // Kickstart
 @import '../bower_components/sass-toolkit/stylesheets/toolkit/kickstart';
 
-
-// Global Config (Doesn not render any CSS)
-@import 'config/functions';
-@import 'config/variables';
-@import 'config/mixins';
-
-// Utiltiy Functions
-@import 'utility/utility';
-
 // Global
 //
 // Glocal elements style default HTML Elements and user generated content
 // or WYSIWYG editors. It also includes common patterns that are reused
 // thoughout the site like Typography, Images, SVGs, Forms, Lists, and print styles.
 //
-// Uses Hacked Version of Normalize 1.99
+// *Uses Hacked Version of Normalize (See section 1.99)*
 //
 // <b>Naming Patterns</b>
 // <pre>
@@ -38,7 +29,9 @@
 //
 // Styleguide 1.0
 
-
+@import 'global/g-functions';
+@import 'global/variables';
+@import 'global/mixins';
 @import 'global/vendor/normalize';
 @import 'global/g-type';
 @import 'global/g-link';
@@ -49,6 +42,27 @@
 @import 'global/g-table';
 // @import 'global/print';
 
+// Utility
+//
+// Generic modifier components. Oftern extended from other components. Each
+// Utility should be very specific and do only 1 job. This seciton also documents
+// Generic Mixins and Extendables
+//
+// <b>Utility Naming Patterns</b>
+// <pre>
+// .u-utility__element
+// .u-utility--modifier
+// .u-utility--modifier__element
+// .u-utility__element--modifier
+// </pre>
+//
+// <b>Mixin Naming Patterns</b>
+// @TODO
+//
+// Styleguide 4.0
+
+// Utiltiy Functions
+@import 'utility/utility';
 
 // Components
 //
@@ -177,26 +191,8 @@
 // @import 'layouts/l-footer';
 // @import 'layouts/l-form';
 
-// Utility
-//
-// Generic modifier components. Oftern extended from other components. Each
-// Utility should be very specific and do only 1 job. This seciton also documents
-// Generic Mixins and Extendables
-//
-// <b>Utility Naming Patterns</b>
-// <pre>
-// .u-utility__element
-// .u-utility--modifier
-// .u-utility--modifier__element
-// .u-utility__element--modifier
-// </pre>
-//
-// <b>Mixin Naming Patterns</b>
-// @TODO
-//
-// Styleguide 4.0
 
-@import 'utility/u-remove-child';
+
 
 
 // Vendor
