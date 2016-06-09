@@ -1,0 +1,28 @@
+// Typography
+//
+// Example "Kitchen Sink" Content
+//
+// markup:
+// <h1>H1 - Heading Level 1</h1>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar finibus diam, eget sagittis est hendrerit et. </p>
+// <h2 class="u-color--fg-orange"> Heading level 2 -  Pellentesque sed sollicitudin lacus, </h2>
+// <p>Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+// <h3 class="u-color--fg-green">Heading level 3 - Maecenas interdum, elit ut accumsan luctus </h3>
+// <p class="g-type__p--large">This is a Large Paragraph.Cras in suscipit erat. Integer sollicitudin ex ac urna interdum, pretium hendrerit lorem vehicula. Vestibulum sed dolor eu leo suscipit fringilla et pellentesque lectus. Donec cursus elementum neque, quis interdum quam sollicitudin non. Integer a tincidunt turpis. Suspendisse potenti. Aenean vel sem tellus.</p>
+// <p>This is a normal Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin lacus, at molestie odio.</p>
+// <p>New Paragrpah dolor eleifend dolor, eget suscipit ante erat ac lectus.  <a href="#">This is a text link</a> Ut sodales, lorem quis ultrices sollicitudin
+// <strong>Strong is used to indicate strong importance</strong> at cursus erat urna vitae justo. Maecenas interdum
+// <em>This text has added emphasis.</em>
+// <p>Superscript<sup>®</sup></p>
+// <p>Subscript for things like H<sub>2</sub>O</p>
+// <p><small>This small text is small for for fine print, etc.</small></p>
+//
+// Styleguide 1.5
+
+
+@import 'g-type--functions';
+@import 'g-type--variables';
+@import 'g-type--fonts';
+
+@import 'g-type__paragraph';
+@import 'g-type__headline';

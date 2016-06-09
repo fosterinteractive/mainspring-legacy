@@ -1,0 +1,483 @@
+// Forms
+//
+// Styleguide 1.15
+
+// Content styles from scss port of formalize
+// https://gist.github.com/jcanfield/3267623
+
+label:not(.option) {
+  @extend %g-type--xlarge;
+  display: block;
+
+  &.has-error {
+    // Change to sites red variant
+    border-color: $debug-red;
+    background-color: rgba($debug-red, 0.1);
+    color: $debug-red;
+  }
+}
+
+%g-input--core {
+  display: block;
+  margin-top: ru(0.5);
+  margin-bottom: ru(1);
+  outline: 0;
+  border: 1px solid palette(grey, mediumlight);
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  padding: ru(0.5);
+  width: 100%;
+  vertical-align: top;
+  font-family: $base-font-family;
+  // Many Resets for various browsers
+  text-shadow: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    border-color: palette(grey, dark);
+    background-color: $white;
+  }
+
+  // Error state
+  &.has-error {
+    // Change to sites red variant
+    border-color: $debug-red;
+    background-color: rgba($debug-red, 0.1);
+    color: $debug-red;
+  }
+
+  &[disabled] {
+    border-color: palette(grey, light);
+    background-color: palette(grey, xlight);
+  }
+}
+
+// Overside Form Elements
+%g-input--large {
+  @extend %g-type--xlarge;
+  margin-top: ru(1);
+  border-radius: 12px;
+  height: ru(3);
+}
+
+%g-input--large--centered {
+  @extend %g-input--large;
+  text-align: center;
+}
+
+/*doc
+---
+title: Input Boxes
+name: 100-g-form
+category: Global - Forms
+---
+
+```html_example
+<div class='sg__wrapper'> <!--styleguide only -->
+  <div class='l-form__item'>
+    <label for='edit-submitted-name'>Input Box <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='Jane Smith' type='text' id='edit-submitted-name' name='submitted[name]' value='' size='60' maxlength='128' >
+  </div>
+  <div class='l-form__item--narrow'>
+    <label for='edit-submitted-postal-code'>Narrow Input Box <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='M3A 1B7' type='text' id='edit-submitted-postal-code' name='submitted[postal_code]' value='' size='10' maxlength='7' class='form-text required'>
+  </div>
+  <div class='l-form__item'>
+    <label for='edit-submitted-province'>Select Box <span class='form-required' title='This field is required.'>*</span></label>
+    <select required='required' id='edit-submitted-province' name='submitted[province]' class='form-select required'><option value='AB'>Alberta</option><option value='BC'>British Columbia</option><option value='MB'>Manitoba</option><option value='NB'>New Brunswick</option><option value='NL'>Newfoundland and Labrador</option><option value='NS'>Nova Scotia</option><option value='NT'>Northwest Territories</option><option value='NU'>Nunavut</option><option value='ON' selected='selected'>Ontario</option><option value='PE'>Prince Edward Island</option><option value='QC'>Quebec</option><option value='SK'>Saskatchewan</option><option value='YT'>Yukon</option></select>
+  </div>
+  <div class='l-form__item--wide'>
+    <label for='edit-submitted-type-your-message'>Text Area <span class='form-required' title='This field is required.'>*</span></label>
+    <div class='form-textarea-wrapper resizable textarea-processed resizable-textarea'><textarea required='required' placeholder='Message' id='edit-submitted-type-your-message' name='submitted[type_your_message]' cols='60' rows='5' class='form-textarea required'></textarea><div class='grippie'></div></div>
+  </div>
+  <div class='l-form__item'>
+    <label for='edit-submitted-name'>Large Input Box<span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='info@info.com' type='text' id='edit-submitted-name' name='submitted[name]' value='' size='60' maxlength='128' class='g-input--large'>
+  </div>
+  <div class='l-form__item'>
+    <label for='edit-submitted-name'>Large Input Box w/ Centered Text<span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='info@info.com' type='text' id='edit-submitted-name' name='submitted[name]' value='' size='60' maxlength='128' class='g-input--large--centered'>
+  </div>
+</div>
+```
+
+*/
+
+// Text & Similar Inputs
+
+textarea,
+select,
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'] {
+  @extend %g-input--core;
+  background-color: $white;
+
+  &.g-input--large {
+    @extend %g-input--large;
+  }
+
+  &.g-input--large--centered {
+    @extend %g-input--large--centered;
+  }
+}
+
+
+// Removes select drop-down arrow
+
+select {
+  @extend %g-input--core;
+  background: url('../svg/sprite-ui/arrow-down.svg') no-repeat right ru(0.5)center;
+  padding: ru(0.375) ru(1.5) ru(0.375) ru(0.5);
+  -moz-appearance: none !important;
+}
+
+// Placeholder Note we're repeating it on purpose!
+// a group of selectors containing an invalid selector is invalid.
+// http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css
+@mixin placeholder--core {
+  color: palette(grey);
+}
+
+//scss-lint:disable VendorPrefix
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {  // Separate rule for Firefox. Separate rule for IE, too. Cannot stack with WebKit's.
+  @include placeholder--core;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  @include placeholder--core;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  @include placeholder--core;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  @include placeholder--core;
+}
+//scss-lint:enable VendorPrefix
+
+textarea {
+  height: ru(6);
+  overflow: auto;
+  resize: vertical;
+}
+
+optgroup {
+
+  &::-moz-focus-inner {  // Kill phantom spacing and dotted border that appears in Firefox.
+    border: 0;
+    padding: 0;
+  }
+}
+
+.form-required {
+  font-weight: normal;
+}
+
+// input.placeholder_text,
+// textarea.placeholder_text {
+// }
+
+%g-button--reset {
+  border: 0;
+  background-color: transparent;
+  width: auto;
+  border-spacing: 0;
+  text-align: left;
+  text-indent: 0;
+  text-decoration: none;
+
+  &::-moz-focus-inner,
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+//scss-lint:disable QualifyingElement
+button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'] {
+  @extend %g-button--reset;
+  @extend %g-input--core;
+  @extend %c-btn;
+}
+//scss-lint:enable QualifyingElement
+
+// Search Input
+///////////////
+// Remove decoration from input
+//scss-lint:disable QualifyingElement
+input[type='search']::-webkit-search-decoration {  // UI Consistency
+  display: none;
+}
+//scss-lint:enable QualifyingElement
+
+// Radios & checkmarks
+//////////////////////
+// Remove shadows
+//scss-lint:disable QualifyingElement
+input[type='file'],
+input[type='radio'],
+input[type='checkbox'] {
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+//scss-lint:enable QualifyingElement
+
+// Checkbox and radios (Drupal Styles)
+%g-form__checkbox-radio-group--core {
+  @extend %u-clearfix;
+  margin-bottom: ru(2);
+}
+
+// Wrapper for each item
+%g-form__checkbox-radio__item {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+// Element & label common styles
+%g-form-check-radio--core {
+  display: block;
+  margin-top: ru(0.5);
+  margin-bottom: (1);
+  vertical-align: baseline;
+  font-family: $base-font-family;
+}
+
+// Checkbox or radio UI component
+%g-form-check-radio-element {
+  @extend %g-form-check-radio--core;
+  position: absolute;
+  width: ru(1);
+  height: ru(1);
+}
+
+// Label for each UI component
+%g-form-check-radio-label {
+  @extend %g-form-check-radio--core;
+  float: left;
+  padding-left: ru(1.5);
+}
+
+/*doc
+---
+title: Check Boxes
+name: 110-g-form
+category: Global - Forms
+---
+
+```html_example
+<div class='styleguide__wrapper'> <!--styleguide only -->
+  <div class='form-item webform-component webform-component-checkboxes webform-component--check-boxes'>
+  <label for='edit-submitted-check-boxes'>Check Boxes </label>
+
+  <div id='edit-submitted-check-boxes' class='g-form-checkboxes'><div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AL'>
+   <input type='checkbox' id='edit-submitted-check-boxes-1' name='submitted[check_boxes][AL]' value='AL' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-1'>Alabama </label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AK'>
+   <input type='checkbox' id='edit-submitted-check-boxes-2' name='submitted[check_boxes][AK]' value='AK' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-2'>Alaska with a really long label to show what text wrapping looks like when something has a really really long label</label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AS'>
+   <input type='checkbox' id='edit-submitted-check-boxes-3' name='submitted[check_boxes][AS]' value='AS' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-3'>American Samoa</label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AZ'>
+   <input type='checkbox' id='edit-submitted-check-boxes-4' name='submitted[check_boxes][AZ]' value='AZ' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-4'>Arizona </label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-AR'>
+   <input type='checkbox' id='edit-submitted-check-boxes-5' name='submitted[check_boxes][AR]' value='AR' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-5'>Arkansas </label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-CA'>
+   <input type='checkbox' id='edit-submitted-check-boxes-6' name='submitted[check_boxes][CA]' value='CA' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-6'>California </label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-CO'>
+   <input type='checkbox' id='edit-submitted-check-boxes-7' name='submitted[check_boxes][CO]' value='CO' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-7'>Colorado </label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-CT'>
+   <input type='checkbox' id='edit-submitted-check-boxes-8' name='submitted[check_boxes][CT]' value='CT' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-8'>Connecticut </label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-DE'>
+   <input type='checkbox' id='edit-submitted-check-boxes-9' name='submitted[check_boxes][DE]' value='DE' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-9'>Delaware </label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-DC'>
+   <input type='checkbox' id='edit-submitted-check-boxes-10' name='submitted[check_boxes][DC]' value='DC' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-10'>District of Columbia </label>
+  </div>
+
+  <div class='form-item g-form-type-checkbox form-item-submitted-check-boxes-FL'>
+   <input type='checkbox' id='edit-submitted-check-boxes-11' name='submitted[check_boxes][FL]' value='FL' class='g-form-checkbox'>  <label class='option' for='edit-submitted-check-boxes-11'>Florida </label>
+  </div>
+
+  </div>
+  </div>
+</div>
+```
+
+*/
+
+%g-form__checkbox-group,
+.g-form-checkboxes {
+  @extend %g-form__checkbox-radio-group--core;
+}
+
+%g-form__checkbox__item,
+.g-form-type-checkbox {
+  @extend %g-form__checkbox-radio__item;
+}
+
+%g-form__checkbox,
+.g-form-checkbox {
+  @extend %g-form-check-radio-element;
+}
+
+%g-form__checkbox-label,
+.g-form-type-checkbox .option {
+  @extend %g-form-check-radio-label;
+}
+
+/*doc
+---
+title: Radio
+name: 120-form
+category: Global - Forms
+---
+
+```html_example
+<div class='styleguide__wrapper--small styleguide__radios'> <!--styleguide only -->
+<div class='form-item webform-component webform-component-radios webform-component--radio'>
+  <label for='edit-submitted-radio'>Radio  </label>
+ <div id='edit-submitted-radio' class='g-form-radios'><div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-1' name='submitted[radio]' value='sunday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-1'>Sunday </label>
+
+</div>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-2' name='submitted[radio]' value='monday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-2'>Monday with a really long label to show what text wrapping looks like when something has a really really long label</label>
+
+</div>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-3' name='submitted[radio]' value='tuesday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-3'>Tuesday </label>
+
+</div>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-4' name='submitted[radio]' value='wednesday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-4'>Wednesday </label>
+
+</div>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-5' name='submitted[radio]' value='thursday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-5'>Thursday </label>
+
+</div>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-6' name='submitted[radio]' value='friday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-6'>Friday </label>
+
+</div>
+<div class='form-item g-form-type-radio form-item-submitted-radio'>
+ <input type='radio' id='edit-submitted-radio-7' name='submitted[radio]' value='saturday' class='g-form-radio'>  <label class='option' for='edit-submitted-radio-7'>Saturday </label>
+
+</div>
+</div>
+</div>
+</div>
+```
+*/
+
+%g-form__radio-group,
+.g-form-radios {
+  @extend %g-form__checkbox-radio-group--core;
+}
+
+%g-form__radio__item,
+.g-form-type-radio {
+  @extend %g-form__checkbox-radio__item;
+}
+
+%g-form__radio,
+.g-form-radio {
+  @extend %g-form-check-radio-element;
+}
+
+%g-form__radio-label,
+.g-form-type-radio .option {
+  @extend %g-form-check-radio-label;
+}
+
+// Reset all Drupal Submit Forms to 'Action' Buttons
+//scss-lint:disable QualifyingElement
+// %g-form-submit--drupal,
+// .g-form-actions input[type='submit'] {
+//   @extend %btn--action;
+//   width: auto;
+// }
+//scss-lint:enable QualifyingElement
+
+/*doc
+---
+title: Form Layout Styles
+name: 130-layout
+category: Global - Forms
+---
+
+```html_example
+<h2>Form field width variations</h2>
+<div class='styleguide__form-layout'>
+<div class='l-form' data-eq-pts='2cols:500' data-eq-state='2cols'>
+  <div class='l-form__item--med l-form__item--no-top-margin'>
+    <label for='edit-submitted-name'>Name <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='Jane Smith' type='text' id='edit-submitted-name' name='submitted[name]' value='' size='60' maxlength='128' class='form-text required'>
+  </div>
+  <div class='l-form__item--med l-form__item--no-top-margin'>
+    <label for='address'>Address <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='Address' type='text' id='address' name='saddress' value='' size='60' maxlength='128' class='form-text required' disabled>
+  </div>
+  <div class='l-form__item--med l-form__item--no-top-margin'>
+    <label for='edit-submitted-email'>Email <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' class='email form-text form-email required' placeholder='email@example.com' type='email' id='edit-submitted-email' name='submitted[email]' size='60'>
+  </div>
+  <div class='l-form__item--wide'>
+    <label for='edit-submitted-province'>Province <span class='form-required' title='This field is required.'>*</span></label>
+    <select required='required' id='edit-submitted-province' name='submitted[province]' class='form-select required'><option value='AB'>Alberta</option><option value='BC'>British Columbia</option><option value='MB'>Manitoba</option><option value='NB'>New Brunswick</option><option value='NL'>Newfoundland and Labrador</option><option value='NS'>Nova Scotia</option><option value='NT'>Northwest Territories</option><option value='NU'>Nunavut</option><option value='ON' selected='selected'>Ontario</option><option value='PE'>Prince Edward Island</option><option value='QC'>Quebec</option><option value='SK'>Saskatchewan</option><option value='YT'>Yukon</option></select>
+  </div>
+  <div class='l-form__item--narrow'>
+    <label for='edit-submitted-postal-code'>Postal Code <span class='form-required' title='This field is required.'>*</span></label>
+    <input required='required' placeholder='M3A 1B7' type='text' id='edit-submitted-postal-code' name='submitted[postal_code]' value='' size='10' maxlength='7' class='form-text required has-error'>
+  </div>
+  <div class='l-form__item webform-component webform-component-textfield webform-component--postal-code'>
+    <label for='edit-submitted-your-message'>Postal Code <span class='form-required' title='This field is required.'>*</span></label>
+    <textarea class='l-form__item' name='submitted[your_message]' placeholder='Your Message' rows='5' cols='60' class='form-text required'></textarea>
+  </div>
+  <div class='g-form-actions'>
+    <input class='g-input--orange webform-submit button-primary form-submit ajax-processed' type='submit' id='edit-webform-ajax-submit-371' name='op' value='Submit'>
+  </div>
+</div>
+</div>
+```
+*/

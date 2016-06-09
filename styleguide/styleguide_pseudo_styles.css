@@ -1,0 +1,14 @@
+a.pseudo-class-active,
+a.pseudo-class-hover {
+  outline-width: 0;
+}
+
+.u-remove-child--margin-top-bottom > .pseudo-class-first-child,
+.u-remove-child--margin-top > .pseudo-class-first-child {
+  margin-top: 0;
+}
+
+.u-remove-child--margin-top-bottom > .pseudo-class-last-child,
+.u-remove-child--margin-bottom > .pseudo-class-last-child {
+  margin-bottom: 0;
+}

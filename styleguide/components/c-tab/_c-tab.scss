@@ -1,0 +1,41 @@
+// Tabs
+//
+// markup: _c-tab.html
+//
+// Styleguide 2.4
+
+%c-tabs,
+.c-tabs {
+  margin-top: ru(1);
+}
+
+%c-tabs__list,
+.c-tabs__list {
+  @extend %u-list--reset;
+  margin: 0;
+  padding: 0;
+}
+
+%c-tabs__list-item,
+.c-tabs__list li {
+  display: inline-block;
+  margin: 0;
+}
+
+%c-tabs__btn,
+.c-tabs a {
+  @include font-size($p--small-font-sizes);
+  display: block;
+  border: 1px solid palette(grey);
+  background-color: palette(grey, mediumlight);
+  padding: ru(0.25) ru(0.5);
+  color: palette(grey, dark);
+  font-weight: 600;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.is-active {
+    background-color: $white;
+  }
+}

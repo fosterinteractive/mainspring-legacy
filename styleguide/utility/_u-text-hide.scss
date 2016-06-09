@@ -1,0 +1,14 @@
+// Hide Text
+//
+// Styleguide 4.7
+
+@mixin text-hide {
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap;
+}
+
+%u-text-hide,
+.u-text-hide {
+  @include text-hide;
+}

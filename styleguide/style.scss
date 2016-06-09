@@ -29,12 +29,11 @@
 //
 // Styleguide 1.0
 
+@import 'global/vendor/normalize';
 @import 'global/g--functions/g--functions';
 @import 'global/g--mixins/g--mixins';
-// @import 'global/variables';
-// @import 'global/mixins';
-// @import 'global/vendor/normalize';
-// @import 'global/g-type';
+@import 'global/g-color/g-color';
+@import 'global/g-type/g-type';
 // @import 'global/g-link';
 // @import 'global/g-list';
 // @import 'global/g-svg';

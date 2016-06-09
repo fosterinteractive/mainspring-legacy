@@ -1,13 +1,17 @@
 // @function palette ($palette, $tone)
 //
-// Stores colors in easy to remember array names
+// Stores colors in easy to remember array names. Based on http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
 //
-// Based on http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+//
+// *Requires: $palette (map) - see _g-color--variables.scss*
 //
 // <pre>@function palette ($palette, $tone:'base')</pre>
 //
-// <pre>
-// a {
+// <pre>$palette - Base Color
+// $tone - Shade variation of Base Color
+// </pre>
+//
+// <pre>a {
 //   color: palette(purple);
 //   &:hover {
 //     color: palette(purple, light);
@@ -15,24 +19,8 @@
 // }
 // </pre>
 //
-// Example Palette Map
 //
-// <pre>
-// $palettes: (
-//   purple: (
-//     base: rgb(42, 40, 80),
-//     light: rgb(51, 46, 140),
-//     dark: rgb(40, 38, 65)
-//   ),
-//   grey: (
-//     base:  $_color-base-grey,
-//     light: lighten($_color-base-grey, 10%),
-//     dark: darken($_color-base-grey, 10%)
-//   )
-// )
-// </pre>
-//
-// Styleguide 1.1.1
+// Styleguide 1.3.1
 
 $_color-base-grey: rgb(229, 231, 234) !default;
 // scss-lint:disable ColorVariable

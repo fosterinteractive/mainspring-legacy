@@ -1,0 +1,51 @@
+// Colors
+//
+// $black - black
+// $white - white
+//
+// markup:
+// <div style="background:{$modifiers};"><br><br><br></div>
+//   <pre>{$modifiers}</pre>
+//
+// sg-wrapper:
+// <div class="sg__wrapper--swatch">
+//   <sg-wrapper-content/>
+// </div>
+//
+//
+// Styleguide 1.3
+
+@import 'g-color--functions';
+
+// Static Colors
+$black: #030303;
+$white: #fefefe;
+
+
+
+$palettes: (
+  grey: (
+    base: #939598,
+    dark: #231f20,
+    mediumlight: #afafaf,
+    light: #e6e7e8,
+    xlight: #f1f2f2
+  ),
+  blue: (
+    base: #3f47b1,
+    dark: #2b3078,
+    light: #7c7fb1
+  )
+);
+
+
+
+// Shadow Color
+$shadow: rgba($black, 0.5);
+
+// Array of colors for /global/mixin/_debug-layout.scss
+$debug-blue: rgb(0, 0, 160);
+$debug-red: rgb(160, 0, 0);
+$debug-green: rgb(0, 160, 0);
+
+$debug-colors: $debug-red, $debug-green, $debug-blue !global;
