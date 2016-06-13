@@ -1,7 +1,10 @@
+// $font-sizes (Maps)
+//
 // Arrays of Font Sizing which change at breakpoints
-// See _grid/breakpoints.scss
+// See /layouts/l--breakpoints.scss
+//
+// Styleguide 1.5.2
 
-// Font Settings
 
 $base-font-family: 'Arial', sans-serif;
 $title-font-weight: 400;
@@ -34,14 +37,6 @@ $p--xxlarge-font-sizes: (
   null: (24px, $base-line-height * 1.25)
 );
 
-$p--huge-font-sizes: (
-  null: (40px, $base-line-height * 2)
-);
-
-$p--xhuge-font-sizes: (
-  null: (65px, $base-line-height * 3)
-);
-
 $h1-font-sizes: (
   null: (32px, $base-line-height * 1.5),
   type-large: (42px, $base-line-height * 2)
@@ -51,7 +46,6 @@ $h2-font-sizes: (
   null: (28px, $base-line-height * 1.25),
   type-large: (36px, $base-line-height * 1.75)
 );
-
 
 $h3-font-sizes: (
   null: (24px, $base-line-height * 1.25),

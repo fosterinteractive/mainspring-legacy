@@ -1,0 +1,28 @@
+// Right Aligned Images
+//
+// Right Aligned Inline Image Styles
+//
+// Markup: _g-image--right.html
+//
+// Styleguide 1.8.2
+
+.image-content-half-width-right,
+.align-right {
+  @extend %image-content;
+
+  @include respond-to('type-large') {
+    float: right;
+    margin-left: ru(0.5);
+    padding-left: ru(0.5);
+    width: 50%;
+  }
+
+  //Add if width changes @ breakpoints
+  // @include respond-to('2-up') {
+  //   width: 45%;
+  // }
+
+  // @include respond-to('max-size') {
+  //   width: 35%;
+  // }
+}

@@ -1,91 +1,19 @@
-
-// Paragraphs
+// Headlines
 //
-// Styleguide 1.11
+// Headings resize from small to large at breakpoint.
+// H4-6 are not expected to be used.
+//
+// markup:
+// <h1>My Title Level 1</h1>
+// <h2>My Title Level 2</h2>
+// <h3>My Title Level 3</h3>
+// <h4>My Title Level 4</h4>
+// <h5>My Title Level 5</h5>
+// <h6>My Title Level 6</h6>
+//
+// Styleguide 1.5.4
 
-/*doc
----
-title: Basic Elements
-name: g-type-200
-category: Global - Typography
----
 
-<h2>Paragraph Sizes w/ Bold &amp; Italic</h2>
-
-```html_example
-<p>
-  Default Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
-</p>
-<p class="g-type--xsmall">
-  xsmall Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
-</p>
-<p class="g-type--small">
-  small Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
-</p>
-<p class="g-type--large">
-  large Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
-</p>
-<p class="g-type--xlarge">
-  xlarge Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
-</p>
-<p class="g-type--huge">
-  huge Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
-</p>
-```
-*/
-
-%g-type__core {
-  @include font-size($p-font-sizes);
-  margin: 0 0 1rem 0;
-}
-
-p {
-  @extend %g-type__core;
-}
-
-%g-type--xsmall,
-.g-type--xsmall {
-  @include font-size($p--xsmall-font-sizes);
-}
-
-%g-type--small,
-.g-type--small {
-  @include font-size($p--small-font-sizes);
-}
-
-%g-type--large,
-.g-type--large {
-  @include font-size($p--large-font-sizes);
-}
-
-%g-type--xlarge,
-.g-type--xlarge {
-  @include font-size($p--xlarge-font-sizes);
-}
-
-%g-type--huge,
-.g-type--huge {
-  @include font-size($p--xhuge-font-sizes);
-}
-
-/*doc
----
-title: Headings
-name: g-type-300
-category: Global - Typography
----
-<p>Headings resize from small to large at breakpoint. </p>
-<p>H4-6 inherit H3's styles and are not expected to be used</p>
-
-```html_example
-<h1>My Title Level 1</h1>
-<h2>My Title Level 2</h2>
-<h3>My Title Level 3</h3>
-<h4>My Title Level 4</h4>
-<h5>My Title Level 5</h5>
-<h6>My Title Level 6</h6>
-```
-*/
 
 %heading-font {
   @extend %g-type__core;

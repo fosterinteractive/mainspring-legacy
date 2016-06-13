@@ -3,12 +3,100 @@ a.pseudo-class-hover {
   outline-width: 0;
 }
 
+a.pseudo-class-hover,
+a.pseudo-class-focus,
+a.pseudo-class-active {
+  text-decoration: none;
+}
+
+.c-accordion__content > .pseudo-class-first-child,
 .u-remove-child--margin-top-bottom > .pseudo-class-first-child,
 .u-remove-child--margin-top > .pseudo-class-first-child {
   margin-top: 0;
 }
 
+.c-accordion__content > .pseudo-class-last-child,
 .u-remove-child--margin-top-bottom > .pseudo-class-last-child,
 .u-remove-child--margin-bottom > .pseudo-class-last-child {
   margin-bottom: 0;
+}
+
+.u-visually--hidden .focusable.pseudo-class-active,
+.u-visually--hidden .focusable.pseudo-class-focus {
+  position: static;
+  margin: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+}
+
+.c-btn--left.pseudo-class-hover,
+.c-btn--right.pseudo-class-hover,
+.c-btn.pseudo-class-hover,
+.c-btn--thin.pseudo-class-hover,
+.c-btn--left.pseudo-class-focus,
+.c-btn--right.pseudo-class-focus,
+.c-btn.pseudo-class-focus,
+.c-btn--thin.pseudo-class-focus,
+.c-btn--left.pseudo-class-active,
+.c-btn--right.pseudo-class-active,
+.c-btn.pseudo-class-active,
+.c-btn--thin.pseudo-class-active {
+  border-color: #939598;
+  background-color: #f1f2f2;
+}
+
+.c-btn--blue.pseudo-class-hover,
+.c-btn--thin-blue.pseudo-class-hover,
+.c-btn--blue.pseudo-class-focus,
+.c-btn--thin-blue.pseudo-class-focus,
+.c-btn--blue.pseudo-class-active,
+.c-btn--thin-blue.pseudo-class-active {
+  border-color: #2b3078;
+  background-color: #2b3078;
+}
+
+.c-btn--left.pseudo-class-hover,
+.c-btn--right.pseudo-class-hover,
+.c-btn--left.pseudo-class-focus,
+.c-btn--right.pseudo-class-focus,
+.c-btn--left.pseudo-class-active,
+.c-btn--right.pseudo-class-active {
+  background-color: #f1f2f2;
+  color: #939598;
+}
+
+.c-nav--vertical__link.pseudo-class-hover,
+.c-nav--vertical__link.pseudo-class-focus,
+.c-nav--vertical__link.pseudo-class-active {
+  background-color: #f1f2f2;
+  color: #231f20;
+}
+
+.c-nav--horizontal__link.pseudo-class-hover,
+.c-nav--horizontal__link.pseudo-class-focus,
+.c-nav--horizontal__link.pseudo-class-active {
+  text-decoration: underline;
+  color: #231f20;
+}
+
+.c-nav--inline a.pseudo-class-hover,
+.c-nav--inline a.pseudo-class-focus,
+.c-nav--inline a.pseudo-class-active {
+  text-decoration: underline;
+  color: #231f20;
+}
+
+.c-tabs a.pseudo-class-hover,
+.c-tabs a.pseudo-class-focus,
+.c-tabs a.pseudo-class-active {
+  background-color: #fefefe;
+}
+
+.c-accordion__label.pseudo-class-focus,
+.c-accordion__label.pseudo-class-hover,
+.c-accordion__label.pseudo-class-active {
+  border-color: #939598;
+  background-color: #e6e7e8;
 }

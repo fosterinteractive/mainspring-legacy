@@ -1,7 +1,16 @@
 // Breakpoints and Grid Variables
+//
+// Default grids and breakpoints.
+//
+// <pre>expanded-wrapper => 400px</pre>
+// <pre>type-large => 600px</pre>
+// <pre>full-nav => 900px</pre>
+// <pre>max-size => 1200px</pre>
+//
+// Styleguide 3.2
+
 
 // Breakpoint Variables
-
 $breakpoint-no-query-fallbacks: true;
 $breakpoint-to-ems: true;
 

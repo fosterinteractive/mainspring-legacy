@@ -1,6 +1,6 @@
 // Lists Reset
 //
-// Styleguide 4.4
+// Styleguide 4.3
 
 // Reset to Default List Style
 %u-list--reset {
@@ -22,6 +22,7 @@
   margin: 0;
 }
 
+//TODO: Remove if posible
 %u-list--blank {
   @extend %u-list__list--blank;
 

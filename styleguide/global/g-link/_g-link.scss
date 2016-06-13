@@ -1,0 +1,26 @@
+// Inline Links
+//
+//
+// markup:
+//  <a href="#">Default Link</a>
+//
+// sg-wrapper:
+// <div class="sg__wrapper--swatch">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.6
+
+
+%link,
+a {
+  @extend %u-animate-color;
+  @extend %u-animate-background-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}

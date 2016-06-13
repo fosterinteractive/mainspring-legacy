@@ -1,0 +1,29 @@
+// Left Aligned Images
+//
+// Left Aligned Inline Image Styles
+//
+// Markup: _g-image--left.html
+//
+// Styleguide 1.8.1
+
+
+.image-content-half-width-left,
+.align-left {
+  @extend %image-content;
+
+  @include respond-to('type-large') {
+    float: left;
+    margin-right: ru(0.5);
+    padding-right: ru(0.5);
+    width: 50%;
+  }
+
+  //Add if width changes @ breakpoints
+  // @include respond-to('2-up') {
+  //   width: 45%;
+  // }
+
+  // @include respond-to('max-size') {
+  //   width: 35%;
+  // }
+}

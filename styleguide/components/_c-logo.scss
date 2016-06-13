@@ -53,16 +53,6 @@ category: Components - Logo
   }
 }
 
-// %c-logo__link,
-// .c-logo__link {
-
-//   &:hover,
-//   &:focus,
-//   &:active {
-
-//   }
-// }
-
 %c-logo__svg,
 .c-logo__svg {
   @extend %svg__core;
