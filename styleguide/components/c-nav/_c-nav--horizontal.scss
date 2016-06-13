@@ -4,12 +4,10 @@
 //
 // Styleguide 2.6.2
 
-%c-nav--horizontal,
 .c-nav--horizontal {
   @extend %c-nav--core;
 }
 
-%c-nav--horizontal__item,
 .c-nav--horizontal__item {
   @extend %c-nav__item--core;
   display: inline-block;
@@ -23,7 +21,6 @@
   }
 }
 
-%c-nav--horizontal__link,
 .c-nav--horizontal__link {
   display: block;
   padding-top: 0;

@@ -23,7 +23,6 @@
   }
 }
 
-%c-btn--left,
 .c-btn--left {
   @extend %c-btn--icon;
   // See config/mixins/svg-position.scss
@@ -40,7 +39,6 @@
     $v-alignment: 'top'); // Align Icon 'middle' or 'top'
 }
 
-%c-btn--right,
 .c-btn--right {
   @extend %c-btn--icon;
   @include svg-inline(

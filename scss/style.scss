@@ -32,6 +32,7 @@
 @import 'global/vendor/normalize';
 @import 'global/g--functions/g--functions';
 @import 'global/g--mixins/g--mixins';
+@import 'global/g-grid-breakpoint/g-grid-breakpoints';
 @import 'global/g-color/g-color';
 @import 'global/g-type/g-type';
 @import 'global/g-link/g-link';
@@ -93,7 +94,7 @@
 
 // Components (with EJ.js based layouts)
 @import 'components/c-btn/c-btn';
-// @import 'components/c-logo';
+@import 'components/c-logo/c-logo';
 @import 'components/c-nav/c-nav';
 @import 'components/c-tab/c-tab';
 // @import 'components/c-quote';
@@ -185,7 +186,6 @@
 //
 // Styleguide 3.0
 
-@import 'layouts/l-grid-breakpoints';
 
 // @import 'layouts/l-eq';
 // @import 'layouts/l-page';

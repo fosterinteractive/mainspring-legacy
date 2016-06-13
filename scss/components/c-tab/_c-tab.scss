@@ -4,12 +4,10 @@
 //
 // Styleguide 2.4
 
-%c-tabs,
 .c-tabs {
   margin-top: ru(1);
 }
 
-%c-tabs__list,
 .c-tabs__list {
   @extend %u-list--reset;
   margin: 0;

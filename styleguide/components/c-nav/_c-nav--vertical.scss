@@ -4,17 +4,14 @@
 //
 // Styleguide 2.6.1
 
-%c-nav--vertical,
 .c-nav--vertical {
   @extend %c-nav--core;
 }
 
-%c-nav--vertical__item,
 .c-nav--vertical__item {
   @extend %c-nav__item--core;
 }
 
-%c-nav--vertical__link,
 .c-nav--vertical__link {
   display: block;
   padding: ru(0.25) 0;

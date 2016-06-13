@@ -1,0 +1,37 @@
+// Logo
+//
+// Basic Default Logo
+//
+// Markup: _c-logo.html
+//
+// Styleguide 2.2
+
+// Core Extendables
+%c-logo,
+.c-logo {
+  float: left;
+  width: ru(1);
+
+  @include respond-to('full-nav') {
+    float: none;
+    margin-bottom: ru(1.75);
+    padding-left: ru(1.5);
+    width: auto;
+  }
+}
+
+.c-logo__svg {
+  @extend %svg__core;
+  width: rem(24px);
+  height: rem(56px);
+
+  @include respond-to('full-nav') {
+    width: rem(42px);
+    height: rem(101px);
+  }
+}
+
+.c-logo__hidden-text {
+  @extend %u-text-hide;
+  height: 0;
+}
