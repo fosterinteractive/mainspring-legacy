@@ -1,0 +1,79 @@
+// Form Checkboxes
+//
+// Form Checkboxes
+//
+// Markup: _g-form--check.html
+//
+// Styleguide 1.15.2
+
+
+// Radios & checkmarks
+//////////////////////
+// Remove shadows
+//scss-lint:disable QualifyingElement
+input[type='file'],
+input[type='radio'],
+input[type='checkbox'] {
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+//scss-lint:enable QualifyingElement
+
+// Checkbox and radios (Drupal Styles)
+%g-form__checkbox-radio-group--core {
+  @extend %u-clearfix;
+  margin-bottom: ru(2);
+}
+
+// Wrapper for each item
+%g-form__checkbox-radio__item {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+// Element & label common styles
+%g-form-check-radio--core {
+  display: block;
+  margin-top: ru(0.5);
+  margin-bottom: (1);
+  vertical-align: baseline;
+  font-family: $base-font-family;
+}
+
+// Checkbox or radio UI component
+%g-form-check-radio-element {
+  @extend %g-form-check-radio--core;
+  position: absolute;
+  width: ru(1);
+  height: ru(1);
+}
+
+// Label for each UI component
+%g-form-check-radio-label {
+  @extend %g-form-check-radio--core;
+  float: left;
+  padding-left: ru(1.5);
+}
+
+%g-form__checkbox-group,
+.g-form-checkboxes {
+  @extend %g-form__checkbox-radio-group--core;
+}
+
+%g-form__checkbox__item,
+.g-form-type-checkbox {
+  @extend %g-form__checkbox-radio__item;
+}
+
+%g-form__checkbox,
+.g-form-checkbox {
+  @extend %g-form-check-radio-element;
+}
+
+%g-form__checkbox-label,
+.g-form-type-checkbox .option {
+  @extend %g-form-check-radio-label;
+}

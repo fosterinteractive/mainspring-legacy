@@ -9,18 +9,62 @@ a.pseudo-class-active {
   text-decoration: none;
 }
 
+textarea.pseudo-class-focus,
+select.pseudo-class-focus,
+input[type='date'].pseudo-class-focus,
+input[type='datetime'].pseudo-class-focus,
+input[type='datetime-local'].pseudo-class-focus,
+input[type='email'].pseudo-class-focus,
+input[type='month'].pseudo-class-focus,
+input[type='number'].pseudo-class-focus,
+input[type='password'].pseudo-class-focus,
+input[type='search'].pseudo-class-focus,
+input[type='tel'].pseudo-class-focus,
+input[type='text'].pseudo-class-focus,
+input[type='time'].pseudo-class-focus,
+input[type='url'].pseudo-class-focus,
+input[type='week'].pseudo-class-focus,
+button.pseudo-class-focus,
+input[type='reset'].pseudo-class-focus,
+input[type='submit'].pseudo-class-focus,
+input[type='button'].pseudo-class-focus {
+  border-color: #231f20;
+  background-color: #fefefe;
+}
+
+input[type='file'].pseudo-class-focus,
+input[type='file'].pseudo-class-active,
+input[type='radio'].pseudo-class-focus,
+input[type='radio'].pseudo-class-active,
+input[type='checkbox'].pseudo-class-focus,
+input[type='checkbox'].pseudo-class-active {
+  box-shadow: none;
+}
+
+button.pseudo-class-hover,
+input[type='reset'].pseudo-class-hover,
+input[type='submit'].pseudo-class-hover,
+input[type='button'].pseudo-class-hover,
 .c-btn--icon-menu.pseudo-class-hover,
 .c-btn--icon.pseudo-class-hover,
 .c-btn--icon-left.pseudo-class-hover,
 .c-btn--icon-right.pseudo-class-hover,
 .c-btn.pseudo-class-hover,
 .c-btn--thin.pseudo-class-hover,
+button.pseudo-class-focus,
+input[type='reset'].pseudo-class-focus,
+input[type='submit'].pseudo-class-focus,
+input[type='button'].pseudo-class-focus,
 .c-btn--icon-menu.pseudo-class-focus,
 .c-btn--icon.pseudo-class-focus,
 .c-btn--icon-left.pseudo-class-focus,
 .c-btn--icon-right.pseudo-class-focus,
 .c-btn.pseudo-class-focus,
 .c-btn--thin.pseudo-class-focus,
+button.pseudo-class-active,
+input[type='reset'].pseudo-class-active,
+input[type='submit'].pseudo-class-active,
+input[type='button'].pseudo-class-active,
 .c-btn--icon-menu.pseudo-class-active,
 .c-btn--icon.pseudo-class-active,
 .c-btn--icon-left.pseudo-class-active,
