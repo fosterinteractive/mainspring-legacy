@@ -31,16 +31,22 @@ a.pseudo-class-active {
   clip: auto;
 }
 
-.c-btn--left.pseudo-class-hover,
-.c-btn--right.pseudo-class-hover,
+.c-btn--icon-menu.pseudo-class-hover,
+.c-btn--icon.pseudo-class-hover,
+.c-btn--icon-left.pseudo-class-hover,
+.c-btn--icon-right.pseudo-class-hover,
 .c-btn.pseudo-class-hover,
 .c-btn--thin.pseudo-class-hover,
-.c-btn--left.pseudo-class-focus,
-.c-btn--right.pseudo-class-focus,
+.c-btn--icon-menu.pseudo-class-focus,
+.c-btn--icon.pseudo-class-focus,
+.c-btn--icon-left.pseudo-class-focus,
+.c-btn--icon-right.pseudo-class-focus,
 .c-btn.pseudo-class-focus,
 .c-btn--thin.pseudo-class-focus,
-.c-btn--left.pseudo-class-active,
-.c-btn--right.pseudo-class-active,
+.c-btn--icon-menu.pseudo-class-active,
+.c-btn--icon.pseudo-class-active,
+.c-btn--icon-left.pseudo-class-active,
+.c-btn--icon-right.pseudo-class-active,
 .c-btn.pseudo-class-active,
 .c-btn--thin.pseudo-class-active {
   border-color: #939598;
@@ -57,14 +63,32 @@ a.pseudo-class-active {
   background-color: #2b3078;
 }
 
-.c-btn--left.pseudo-class-hover,
-.c-btn--right.pseudo-class-hover,
-.c-btn--left.pseudo-class-focus,
-.c-btn--right.pseudo-class-focus,
-.c-btn--left.pseudo-class-active,
-.c-btn--right.pseudo-class-active {
+.c-btn--icon-menu.pseudo-class-hover,
+.c-btn--icon.pseudo-class-hover,
+.c-btn--icon-left.pseudo-class-hover,
+.c-btn--icon-right.pseudo-class-hover,
+.c-btn--icon-menu.pseudo-class-focus,
+.c-btn--icon.pseudo-class-focus,
+.c-btn--icon-left.pseudo-class-focus,
+.c-btn--icon-right.pseudo-class-focus,
+.c-btn--icon-menu.pseudo-class-active,
+.c-btn--icon.pseudo-class-active,
+.c-btn--icon-left.pseudo-class-active,
+.c-btn--icon-right.pseudo-class-active {
   background-color: #f1f2f2;
   color: #939598;
+}
+
+.c-btn--icon-menu.pseudo-class-hover,
+.c-btn--icon-menu.pseudo-class-focus,
+.c-btn--icon-menu.pseudo-class-active {
+  background-color: transparent;
+}
+
+.c-btn--icon-menu.pseudo-class-hover svg,
+.c-btn--icon-menu.pseudo-class-focus svg,
+.c-btn--icon-menu.pseudo-class-active svg {
+  fill: #afafaf;
 }
 
 .c-nav--vertical__link.pseudo-class-hover,

@@ -667,7 +667,8 @@ ol, ul, .c-nav--inline, .c-tabs__list {
   clip: auto;
   clip: rect(auto auto auto auto); }
 
-.c-btn--left, .c-btn--right,
+.c-btn--icon-menu,
+.c-btn--icon, .c-btn--icon-left, .c-btn--icon-right,
 .c-btn, .c-btn--blue, .c-btn--thin, .c-btn--thin-blue {
   display: inline-block;
   border-width: 1px;
@@ -677,21 +678,26 @@ ol, ul, .c-nav--inline, .c-tabs__list {
   text-transform: uppercase;
   text-decoration: none; }
 
-.c-btn--left, .c-btn--right,
+.c-btn--icon-menu,
+.c-btn--icon, .c-btn--icon-left, .c-btn--icon-right,
 .c-btn, .c-btn--blue {
   padding: 0.75rem 1.5rem; }
 
 .c-btn--thin, .c-btn--thin-blue {
   padding: 0.375rem 1.125rem; }
 
-.c-btn--left, .c-btn--right,
+.c-btn--icon-menu,
+.c-btn--icon, .c-btn--icon-left, .c-btn--icon-right,
 .c-btn, .c-btn--thin {
   border-color: #afafaf;
   background-color: #fefefe;
   color: #939598; }
-  .c-btn--left:hover, .c-btn--right:hover,
-  .c-btn:hover, .c-btn--thin:hover, .c-btn--left:focus, .c-btn--right:focus,
-  .c-btn:focus, .c-btn--thin:focus, .c-btn--left:active, .c-btn--right:active,
+  .c-btn--icon-menu:hover,
+  .c-btn--icon:hover, .c-btn--icon-left:hover, .c-btn--icon-right:hover,
+  .c-btn:hover, .c-btn--thin:hover, .c-btn--icon-menu:focus,
+  .c-btn--icon:focus, .c-btn--icon-left:focus, .c-btn--icon-right:focus,
+  .c-btn:focus, .c-btn--thin:focus, .c-btn--icon-menu:active,
+  .c-btn--icon:active, .c-btn--icon-left:active, .c-btn--icon-right:active,
   .c-btn:active, .c-btn--thin:active {
     border-color: #939598;
     background-color: #f1f2f2; }
@@ -704,20 +710,44 @@ ol, ul, .c-nav--inline, .c-tabs__list {
     border-color: #2b3078;
     background-color: #2b3078; }
 
-.c-btn--left, .c-btn--right {
+.c-btn--icon-menu,
+.c-btn--icon, .c-btn--icon-left, .c-btn--icon-right {
   position: relative;
   border-color: #afafaf; }
-  .c-btn--left:hover, .c-btn--right:hover, .c-btn--left:focus, .c-btn--right:focus, .c-btn--left:active, .c-btn--right:active {
+  .c-btn--icon-menu:hover,
+  .c-btn--icon:hover, .c-btn--icon-left:hover, .c-btn--icon-right:hover, .c-btn--icon-menu:focus,
+  .c-btn--icon:focus, .c-btn--icon-left:focus, .c-btn--icon-right:focus, .c-btn--icon-menu:active,
+  .c-btn--icon:active, .c-btn--icon-left:active, .c-btn--icon-right:active {
     background-color: #f1f2f2;
     color: #939598; }
 
-.c-btn--left {
+.c-btn--icon-menu,
+.c-btn--icon {
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem; }
+  .c-btn--icon-menu .svg,
+  .c-btn--icon .svg {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+
+.c-btn--icon-menu {
+  border: 0; }
+  .c-btn--icon-menu:hover, .c-btn--icon-menu:focus, .c-btn--icon-menu:active {
+    background-color: transparent; }
+    .c-btn--icon-menu:hover svg, .c-btn--icon-menu:focus svg, .c-btn--icon-menu:active svg {
+      fill: #afafaf; }
+
+.c-btn--icon-left {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 3rem;
   padding-right: 1.5rem; }
-  .c-btn--left .svg {
+  .c-btn--icon-left .svg {
     display: block;
     position: absolute;
     margin-top: -0.5625rem;
@@ -725,15 +755,15 @@ ol, ul, .c-nav--inline, .c-tabs__list {
     width: 1.125rem;
     height: 1.125rem;
     left: 1.5rem;
-    top: 1.5rem; }
+    top: 50%; }
 
-.c-btn--right {
+.c-btn--icon-right {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-right: 3rem;
   padding-left: 1.5rem; }
-  .c-btn--right .svg {
+  .c-btn--icon-right .svg {
     display: block;
     position: absolute;
     margin-top: -0.5625rem;
@@ -741,8 +771,8 @@ ol, ul, .c-nav--inline, .c-tabs__list {
     width: 1.125rem;
     height: 1.125rem;
     right: 1.125rem;
-    top: 1.5rem; }
-  .c-btn--right svg {
+    top: 50%; }
+  .c-btn--icon-right svg {
     position: absolute;
     top: 1rem;
     right: 0.5rem; }
