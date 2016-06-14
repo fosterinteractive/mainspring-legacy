@@ -1,8 +1,9 @@
 #Commands#
 
-##Local Dev Tasks##
+##Local Dev Tasks (Default gulp command)##
 
 ```
+$ gulp
 $ gulp watch
 ```
 

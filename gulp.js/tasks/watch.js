@@ -28,7 +28,7 @@ var sassConfig = config.tasks.css.sassConfig;
 
 // Watch Tasks
 
-gulp.task('serve', ['css:dev','sassLint:Cached', 'jsLint'], function() {
+gulp.task('watch', ['css:dev','sassLint', 'jsLint'], function() {
 
   browserSync.init(browserSyncConfig); // Initialize BrowserSync Server
 
@@ -40,7 +40,7 @@ gulp.task('serve', ['css:dev','sassLint:Cached', 'jsLint'], function() {
   gulp.watch(jsSrc, ['jsLint']);
 });
 
-gulp.task('default', ['serve']);
+
 
 
 
