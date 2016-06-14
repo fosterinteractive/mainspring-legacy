@@ -10,25 +10,16 @@
 %c-logo,
 .c-logo {
   float: left;
-  width: ru(1);
+  width: ru(11.5);
+}
 
-  @include respond-to('full-nav') {
-    float: none;
-    margin-bottom: ru(1.75);
-    padding-left: ru(1.5);
-    width: auto;
-  }
+%c-logo__svg-wrapper,
+.c-logo__svg-wrapper {
+  @include svg-wrapper(130 / 32); // Logo is 130x32px
 }
 
 .c-logo__svg {
   @extend %svg__core;
-  width: rem(24px);
-  height: rem(56px);
-
-  @include respond-to('full-nav') {
-    width: rem(42px);
-    height: rem(101px);
-  }
 }
 
 .c-logo__hidden-text {

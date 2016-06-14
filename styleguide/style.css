@@ -581,6 +581,12 @@ svg circle {
 .svg--stroke {
   stroke: currentColor; }
 
+
+.c-logo__svg-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0; }
+
 .c-logo__svg,
 .svg__core {
   position: absolute;
@@ -778,22 +784,23 @@ ol, ul, .c-nav--inline, .c-tabs__list {
 
 .c-logo {
   float: left;
-  width: 1.5rem; }
-  @media (min-width: 56.25em) {
-    
-    .c-logo {
-      float: none;
-      margin-bottom: 2.625rem;
-      padding-left: 2.25rem;
-      width: auto; } }
+  width: 17.25rem; }
 
-.c-logo__svg {
-  width: 1.5rem;
-  height: 3.5rem; }
-  @media (min-width: 56.25em) {
-    .c-logo__svg {
-      width: 2.625rem;
-      height: 6.3125rem; } }
+
+.c-logo__svg-wrapper {
+  position: relative;
+  height: 0;
+  padding-top: 24.6153846154%;
+  width: 100%; }
+  
+  .c-logo__svg-wrapper > * {
+    display: block;
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0;
+    margin: 0;
+    padding: 0; }
 
 .c-logo__hidden-text {
   height: 0; }
