@@ -9,28 +9,6 @@ a.pseudo-class-active {
   text-decoration: none;
 }
 
-.c-accordion__content > .pseudo-class-first-child,
-.u-remove-child--margin-top-bottom > .pseudo-class-first-child,
-.u-remove-child--margin-top > .pseudo-class-first-child {
-  margin-top: 0;
-}
-
-.c-accordion__content > .pseudo-class-last-child,
-.u-remove-child--margin-top-bottom > .pseudo-class-last-child,
-.u-remove-child--margin-bottom > .pseudo-class-last-child {
-  margin-bottom: 0;
-}
-
-.u-visually--hidden .focusable.pseudo-class-active,
-.u-visually--hidden .focusable.pseudo-class-focus {
-  position: static;
-  margin: 0;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  clip: auto;
-}
-
 .c-btn--icon-menu.pseudo-class-hover,
 .c-btn--icon.pseudo-class-hover,
 .c-btn--icon-left.pseudo-class-hover,
@@ -123,4 +101,26 @@ a.pseudo-class-active {
 .c-accordion__label.pseudo-class-active {
   border-color: #939598;
   background-color: #e6e7e8;
+}
+
+.c-accordion__content > .pseudo-class-first-child,
+.u-remove-child--margin-top-bottom > .pseudo-class-first-child,
+.u-remove-child--margin-top > .pseudo-class-first-child {
+  margin-top: 0;
+}
+
+.c-accordion__content > .pseudo-class-last-child,
+.u-remove-child--margin-top-bottom > .pseudo-class-last-child,
+.u-remove-child--margin-bottom > .pseudo-class-last-child {
+  margin-bottom: 0;
+}
+
+.u-visually--hidden .focusable.pseudo-class-active,
+.u-visually--hidden .focusable.pseudo-class-focus {
+  position: static;
+  margin: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
 }

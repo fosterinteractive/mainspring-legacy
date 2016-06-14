@@ -34,6 +34,7 @@
 @import 'global/g--mixins/g--mixins';
 @import 'global/g-grid-breakpoint/g-grid-breakpoints';
 @import 'global/g-color/g-color';
+@import 'global/g-html/g-html';
 @import 'global/g-type/g-type';
 @import 'global/g-link/g-link';
 @import 'global/g-image/g-image';
@@ -42,35 +43,6 @@
 // @import 'global/g-form/g-form';
 // @import 'global/g-table/g-table';
 // @import 'global/print';
-
-// Utility
-//
-// Generic modifier components. Oftern extended from other components. Each
-// Utility should be very specific and do only 1 job. This seciton also documents
-// Generic Mixins and Extendables
-//
-// <b>Utility Naming Patterns</b>
-// <pre>
-// .u-utility__element
-// .u-utility--modifier
-// .u-utility--modifier__element
-// .u-utility__element--modifier
-// </pre>
-//
-// <b>Mixin Naming Patterns</b>
-// @TODO
-//
-// Styleguide 4.0
-
-// Utiltiy Functions
-@import 'utility/u-animation';
-@import 'utility/u-clearfix';
-@import 'utility/u-inline-links';
-@import 'utility/u-list';
-@import 'utility/u-remove-child';
-@import 'utility/u-text-hide';
-@import 'utility/u-visually--hidden';
-
 
 // Components
 //
@@ -200,8 +172,33 @@
 // @import 'layouts/l-footer';
 // @import 'layouts/l-form';
 
+// Utility
+//
+// Generic modifier components. Oftern extended from other components. Each
+// Utility should be very specific and do only 1 job. This seciton also documents
+// Generic Mixins and Extendables
+//
+// <b>Utility Naming Patterns</b>
+// <pre>
+// .u-utility__element
+// .u-utility--modifier
+// .u-utility--modifier__element
+// .u-utility__element--modifier
+// </pre>
+//
+// <b>Mixin Naming Patterns</b>
+// @TODO
+//
+// Styleguide 4.0
 
-
+// Utiltiy Functions
+@import 'utility/u-animation';
+@import 'utility/u-clearfix';
+@import 'utility/u-inline-links';
+@import 'utility/u-list';
+@import 'utility/u-remove-child';
+@import 'utility/u-text-hide';
+@import 'utility/u-visually--hidden';
 
 
 // Vendor

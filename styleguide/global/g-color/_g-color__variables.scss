@@ -20,7 +20,7 @@
 // Styleguide 1.4.2
 
 
-$_color-base-grey: rgb(229, 231, 234) !default;
+$color-base-grey: rgb(229, 231, 234) !default;
 // scss-lint:disable ColorVariable
 $palettes: (
   purple: (
@@ -29,9 +29,9 @@ $palettes: (
     dark: rgb(40, 38, 65)
   ),
   grey: (
-    base:  $_color-base-grey,
-    light: lighten($_color-base-grey, 10%),
-    dark: darken($_color-base-grey, 10%)
+    base:  $color-base-grey,
+    light: lighten($color-base-grey, 10%),
+    dark: darken($color-base-grey, 10%)
   )
 ) !default;
 // scss-lint:enable ColorVariable
