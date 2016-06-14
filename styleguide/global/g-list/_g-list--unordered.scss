@@ -1,0 +1,18 @@
+// Unordered Lists
+//
+// Unordered List
+//
+// Markup: _g-list--unordered.html
+//
+// Styleguide 1.8.2
+
+ul {
+  @extend %u-list--reset;
+  margin-bottom: ru(0.5);
+  margin-left: ru(0.5);
+  list-style-type: disc;
+
+  ul {
+    margin-bottom: 0;
+  }
+}

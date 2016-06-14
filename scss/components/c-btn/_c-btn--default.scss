@@ -62,25 +62,20 @@
   @extend %c-btn--core;
   @extend %c-btn--default-padding;
   @extend %c-btn--palette-grey;
-
-  sdfsdf:dsfsdf;
 }
 
-%c-btn--blue,
 .c-btn--blue {
   @extend %c-btn--core;
   @extend %c-btn--default-padding;
   @extend %c-btn--palette-blue;
 }
 
-%c-btn--thin,
 .c-btn--thin {
   @extend %c-btn--core;
   @extend %c-btn--narrow-padding;
   @extend %c-btn--palette-grey;
 }
 
-%c-btn--thin-blue,
 .c-btn--thin-blue {
   @extend %c-btn--core;
   @extend %c-btn--narrow-padding;

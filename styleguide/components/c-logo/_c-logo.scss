@@ -1,0 +1,28 @@
+// Logo
+//
+// Basic Default Logo
+//
+// Markup: _c-logo.html
+//
+// Styleguide 2.2
+
+// Core Extendables
+%c-logo,
+.c-logo {
+  float: left;
+  width: ru(11.5);
+}
+
+%c-logo__svg-wrapper,
+.c-logo__svg-wrapper {
+  @include svg-wrapper(130 / 32); // Logo is 130x32px
+}
+
+.c-logo__svg {
+  @extend %svg__core;
+}
+
+.c-logo__hidden-text {
+  @extend %u-text-hide;
+  height: 0;
+}

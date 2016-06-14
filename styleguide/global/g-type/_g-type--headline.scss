@@ -1,0 +1,62 @@
+// Headlines
+//
+// Headings resize from small to large at breakpoint.
+// H4-6 are not expected to be used.
+//
+// markup:
+// <h1>My Title Level 1</h1>
+// <h2>My Title Level 2</h2>
+// <h3>My Title Level 3</h3>
+// <h4>My Title Level 4</h4>
+// <h5>My Title Level 5</h5>
+// <h6>My Title Level 6</h6>
+//
+// Styleguide 1.6.5
+
+
+
+%heading-font {
+  @extend %g-type__core;
+  margin: 1rem 0 0.5rem;
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+}
+
+h1,
+.g-type__h1,
+%g-type__h1 {
+  @extend %heading-font;
+  @include font-size($h1-font-sizes);
+}
+
+h2,
+.g-type__h2,
+%g-type__h2 {
+  @extend %heading-font;
+  @include font-size($h2-font-sizes);
+}
+
+h3,
+.g-type__h3,
+%g-type__h3 {
+  @extend %heading-font;
+  @include font-size($h3-font-sizes);
+}
+
+h4,
+.g-type__h4,
+%g-type__h4 {
+  @extend %g-type__h3;
+}
+
+h5,
+.g-type__h5,
+%g-type__h5 {
+  @extend %g-type__h3;
+}
+
+h6,
+.g-type__h6,
+%g-type__h6 {
+  @extend %g-type__h3;
+}

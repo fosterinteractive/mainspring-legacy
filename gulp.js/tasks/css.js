@@ -30,7 +30,7 @@ gulp.task('css:devBrowserSync', function () {
 
   gulp.src(scssSrc)
     .pipe(plumber({
-      errorHandler: notify.onError("Error: <%= error.message %>")
+      errorHandler: notify.onError('Error: <%= error.message %>')
     }))
     .pipe(sourcemaps.init())
     .pipe(sass(sassConfig))
@@ -45,13 +45,13 @@ gulp.task('css:devBrowserSync', function () {
 gulp.task('css:dev', function () {
   gulp.src(scssSrc)
     .pipe(plumber({
-      errorHandler: notify.onError("Error: <%= error.message %>")
+      errorHandler: notify.onError('Error: <%= error.message %>')
     }))
     .pipe(sourcemaps.init())
     .pipe(sass(sassConfig))
     .pipe(autoprefixer(prefixSettings))
     .pipe(sourcemaps.write(sourceMaps))
-    .pipe(gulp.dest(cssDest))
+    .pipe(gulp.dest(cssDest));
 });
 
 
@@ -60,7 +60,7 @@ gulp.task('css:dev', function () {
 gulp.task('css:prod', function () {
   gulp.src(scssSrc)
     .pipe(plumber({
-      errorHandler: notify.onError("Error: <%= error.message %>")
+      errorHandler: notify.onError('Error: <%= error.message %>')
     }))
     .pipe(sass(sassConfig))
     .pipe(autoprefixer(prefixSettings))

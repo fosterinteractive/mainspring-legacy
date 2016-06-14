@@ -1,16 +1,14 @@
-// Accordian
+// Accordion
 //
-// Accordian Exmaples.
+// Accordion Exmaples.
 //
 // Styleguide 2.7
 
-%c-accordion,
 .c-accordion {
   clear: both;
   margin-bottom: ru(0.75);
 }
 
-%c-accordion__label,
 .c-accordion__label {
   @extend %u-clearfix;
   display: block;
@@ -32,7 +30,6 @@
   }
 }
 
-%c-accordion__label-icon,
 .c-accordion__label-icon {
   @include svg-centered (ru(1.5), ru(1.5), ru(2), ru(2));
   // Vertical center w/ Transform y
@@ -44,7 +41,6 @@
   fill: none;
 }
 
-%c-accordion__svg--expand,
 .c-accordion__svg--expand {
   display: none;
 
@@ -56,7 +52,6 @@
   }
 }
 
-%c-accordion__svg--collapse,
 .c-accordion__svg--collapse {
   display: none;
 
@@ -65,14 +60,12 @@
   }
 }
 
-%c-accordion__label-text,
 .c-accordion__label-text {
   // pad top of text box to compensate for optical padding
   // Caused by using all caps DIN
   padding-top: ru(0.125);
 }
 
-%c-accordion__content,
 .c-accordion__content {
   @extend %u-remove-child--margin-top-bottom;
   position: relative;
@@ -87,7 +80,7 @@
   }
 }
 
-// Accordian - Open State
+// Accordion - Open State
 //
 // .c-accordion__label - Default.
 // :hover - Hover state.
@@ -96,7 +89,7 @@
 //
 // Styleguide 2.7.1
 
-// Accordian - Closed State
+// Accordion - Closed State
 //
 // .c-accordion__label - Default.
 // :hover - Hover state.
@@ -105,7 +98,7 @@
 //
 // Styleguide 2.7.2
 
-// Accordian - Multiple Accordians
+// Accordion - Multiple Accordions
 //
 // Markup:
 // <sg-insert>2.7.2</sg-insert>
@@ -114,7 +107,7 @@
 //
 // Styleguide 2.7.3
 
-// Accordian - Javascript Enabled
+// Accordion - Javascript Enabled
 //
 // Markup:
 // <div data-style-guide="accordions">

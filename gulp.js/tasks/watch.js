@@ -8,7 +8,6 @@ var gulp        = require('gulp');
 var path        = require('path');
 var config      = require('../config');
 var browserSync = require('browser-sync').create('bs');
-var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
 
 
@@ -29,7 +28,7 @@ var sassConfig = config.tasks.css.sassConfig;
 
 // Watch Tasks
 
-gulp.task('serve', ['css:dev','sassLint:Cached', 'jsLint', 'styleGuide'], function() {
+gulp.task('watch', ['css:dev','sassLint', 'jsLint'], function() {
 
   browserSync.init(browserSyncConfig); // Initialize BrowserSync Server
 
@@ -41,32 +40,9 @@ gulp.task('serve', ['css:dev','sassLint:Cached', 'jsLint', 'styleGuide'], functi
   gulp.watch(jsSrc, ['jsLint']);
 });
 
-gulp.task('default', ['serve']);
 
 
-// var config      = require('../config');
-// if(!config.tasks.css){return;}
-
-// var gulp         = require('gulp');
-// var gulpIf       = require('gulp-if');
-// var sass         = require('gulp-sass');
-// var sourcemaps   = require('gulp-sourcemaps');
-// var handleErrors = require('../lib/handleErrors');
-// var autoprefixer = require('gulp-autoprefixer');
-// var cleanCSS     = require('gulp-clean-css');
-// var sizeReport   = require('gulp-sizereport');
-
-// var reload       = browserSync.reload;
-// var path         = require('path');
 
 
-// // Config
-// var scssSrc = config.tasks.css.pattern;
-// var cssDest = config.tasks.css.dest;
-// var sassConfig = config.tasks.css.sassConfig;
-// var prefixSettings = config.tasks.css.autoprefixer;
-// var sourceMaps = config.tasks.css.sourceMaps;
-// var reportEnabled = config.tasks.css.sizeReport.enabled;
-// var reportSettings = config.tasks.css.sizeReport.settings;
 
 

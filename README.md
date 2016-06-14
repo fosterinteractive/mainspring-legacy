@@ -1,4 +1,4 @@
-# Mainspring
+# Main Spring
 v0.02
 
 Very biased boilerplate templates for generating production CSS &amp; Living
@@ -24,7 +24,7 @@ Gulp-Sass is the workhorse of this package which runs off of lib-sass which is m
 [Here's a introductory post to Gulp](http://callmenick.com/post/an-introduction-to-gulp)
 
 ###Why not Grunt?###
-Grunt is awesome, but Gulp is more awesome. Gulp allows you to do everything in memory, and you can choose to run tasks in sequence or asynchronously. End result - It's faster, and we automate MANY tasks in Mainsping so speed counts.
+Grunt is awesome, but Gulp is more awesome. Gulp allows you to do everything in memory, and you can choose to run tasks in sequence or asynchronously. End result - It's faster, and we automate MANY tasks in Main Spring so speed counts.
 
 ##SVG##
 If you can use SVG graphics you should. Icons, logos, diagrams and illustrations are typically better in SVG. They are superior to icon fonts for many reasons.
@@ -45,7 +45,7 @@ To wrap your head around the actual SVG format itself checkout the [SVG Pocket G
 ##CS5 Styleguide ##
 Living Style guides allow documentation of your UI to be created from comments in your sass partials. It's both a tool to help UI development and a documentation of that UI so you don't accidentally re-invent the wheel in your projects and end up with [20 similar-but-different button styles](http://bradfrost.com/blog/post/interface-inventory/).
 
-Mainspring uses [SC5 Styleguide](https://github.com/SC5/sc5-styleguide#build-options) which is a project that extends [Node-KSS](https://github.com/kss-node/kss-node). Node-KSS is a node.js implementation
+Main Spring uses [SC5 Styleguide](https://github.com/SC5/sc5-styleguide#build-options) which is a project that extends [Node-KSS](https://github.com/kss-node/kss-node). Node-KSS is a node.js implementation
 of KSS "Knyle Style Sheets" which is syntax for creating comments in your
 scss (or css) and generating Living Style Guide Websites
 
@@ -78,8 +78,10 @@ Icons are from Font Awesome Created by Dave Gandy.
 
 ###Image Credits###
 
-Mainspring Image by Hustvedt (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons
+Main Spring Image by Hustvedt (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons
 
 Spiral Spring Diagram by Inslack (Ben5 on wikipedia FR) (made by: User:Inslack / Ben5 (wikipedia FR)) [CC BY-SA 2.5 (http://creativecommons.org/licenses/by-sa/2.5), GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons
 
+##Open Source License##
+Main Spring is licensed under [GNU General Public License v3.0](LICENSE.txt) .
 

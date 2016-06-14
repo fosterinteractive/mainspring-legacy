@@ -27,21 +27,22 @@ rules:
     - 1
     - convention: hyphenatedbem
   clean-import-paths:
+    - 1
     - leading-underscore: false
-    - filename-extension: true
+    - filename-extension: false
   empty-line-between-blocks:
     - 1
     - ignore-single-line-rulesets: true
   extends-before-declarations: 1
   extends-before-mixins: 1
   final-newline:
-    - 0
+    - 1
     - include: true
   force-attribute-nesting: 0
   force-element-nesting: 0
   force-pseudo-nesting: 0
   function-name-format:
-    - 0
+    - 1
     - allow-leading-underscore: false
   hex-length:
     - 1
@@ -60,7 +61,7 @@ rules:
     - 1
     - include: true
   mixin-name-format:
-    - 0
+    - 1
     - allow-leading-underscore: false
   mixins-before-declarations:
     - 1
@@ -74,7 +75,7 @@ rules:
   nesting-depth:
     - 1
     -
-      max-depth: 4
+      max-depth: 3
   no-color-keyword: 0
   no-color-literals: 0
   no-css-comments: 0
@@ -83,7 +84,7 @@ rules:
   no-duplicate-properties: 0
   no-empty-rulesets: 1
   no-invalid-hex: 1
-  no-important: 1
+  no-important: 0
   no-mergeable-selectors: 1
   no-misspelled-properties:
     - 1
@@ -198,6 +199,6 @@ rules:
     - include: false
   url-quotes: 1
   variable-name-format:
-    - 0
+    - 1
     - allow-leading-underscore: false
   zero-unit: 1

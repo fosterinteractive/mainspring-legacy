@@ -1,0 +1,19 @@
+// Ordered Lists
+//
+// Ordered List
+//
+// Markup: _g-list--ordered.html
+//
+// Styleguide 1.8.1
+
+ol {
+  @extend %u-list--reset;
+  margin-bottom: ru(0.5);
+  margin-left: ru(0.5);
+  list-style-type: decimal;
+
+  ol {
+    margin-bottom: 0;
+    list-style-type: lower-alpha;
+  }
+}

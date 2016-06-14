@@ -1,0 +1,23 @@
+// HTML / Body
+//
+// Default @viewport for responsive.
+//
+// Default HTML / Body resets.
+//
+// Styleguide 1.5
+
+@viewport {
+  width: device-width;
+}
+
+html {
+  line-height: ($base-line-height / $base-font-size) * 1em;
+  font-size: ($base-font-size / 16px) * 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+// Remove UA default margin.
+body {
+  margin: 0;
+}

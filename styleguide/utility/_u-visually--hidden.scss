@@ -1,16 +1,53 @@
 // Visuall Hidden / Shown
 //
-// Styleguide 4.8
+// <pre>@mixin visually-hidden</pre>
+// <pre>@mixin visually-shown</pre>
+//
+// Styleguide 4.6
 
-%visually--hidden,
-.visuallyhidden,
-.u-visually--hidden {
-  @include visuallyhidden;
+// Mixins
+@mixin visually-hidden {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  .focusable {
+    &:active,
+    &:focus {
+      position: static;
+      margin: 0;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip: auto;
+    }
+  }
 }
 
-%visually--shown,
-.visuallyshown,
+@mixin visually-shown {
+  position: static;
+  margin: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+
+  clip: auto;
+  clip: rect(auto auto auto auto); // scss-lint:disable DuplicateProperty
+}
+
+
+%u-visually--hidden,
+.u-visually--hidden {
+  @include visually-hidden;
+}
+
+%u-visually--shown,
 .u-visually--shown {
-  @include visuallyshown;
+  @include visually-shown;
 }
 

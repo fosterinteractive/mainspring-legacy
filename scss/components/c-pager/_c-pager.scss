@@ -4,7 +4,6 @@
 //
 // Styleguide 2.5
 
-%c-pager,
 .c-pager {
   @extend %u-clearfix;
   padding: ru(1) 0;
@@ -31,7 +30,6 @@
   padding: 0 ru(1);
 }
 
-%c-pager__item-current,
 .c-pager__item-current {
   @extend %c-pager__item-btn;
 }

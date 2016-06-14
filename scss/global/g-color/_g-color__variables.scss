@@ -1,0 +1,37 @@
+// $palettes (Example Palette Map)
+//
+// Example Palette Map
+//
+// <pre>
+// $palettes: (
+//   purple: (
+//     base: rgb(42, 40, 80),
+//     light: rgb(51, 46, 140),
+//     dark: rgb(40, 38, 65)
+//   ),
+//   grey: (
+//     base:  $_color-base-grey,
+//     light: lighten($_color-base-grey, 10%),
+//     dark: darken($_color-base-grey, 10%)
+//   )
+// )
+// </pre>
+//
+// Styleguide 1.4.2
+
+
+$color-base-grey: rgb(229, 231, 234) !default;
+// scss-lint:disable ColorVariable
+$palettes: (
+  purple: (
+    base: rgb(42, 40, 80),
+    light: rgb(51, 46, 140),
+    dark: rgb(40, 38, 65)
+  ),
+  grey: (
+    base:  $color-base-grey,
+    light: lighten($color-base-grey, 10%),
+    dark: darken($color-base-grey, 10%)
+  )
+) !default;
+// scss-lint:enable ColorVariable

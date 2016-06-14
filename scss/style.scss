@@ -4,20 +4,11 @@
 @import '../bower_components/sassy-maps/sass/sassy-maps';
 @import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
 @import '../bower_components/singularity/stylesheets/singularitygs';
-@import '../bower_components/jacket/stylesheets/jacket';
+// @import '../bower_components/jacket/stylesheets/jacket';
 
 
 // Kickstart
 @import '../bower_components/sass-toolkit/stylesheets/toolkit/kickstart';
-
-
-// Global Config (Doesn not render any CSS)
-@import 'config/functions';
-@import 'config/variables';
-@import 'config/mixins';
-
-// Utiltiy Functions
-@import 'utility/utility';
 
 // Global
 //
@@ -25,7 +16,7 @@
 // or WYSIWYG editors. It also includes common patterns that are reused
 // thoughout the site like Typography, Images, SVGs, Forms, Lists, and print styles.
 //
-// Uses Hacked Version of Normalize 1.99
+// *Uses Hacked Version of Normalize 5.0.3 (See section 1.99)*
 //
 // <b>Naming Patterns</b>
 // <pre>
@@ -38,17 +29,20 @@
 //
 // Styleguide 1.0
 
-
 @import 'global/vendor/normalize';
-@import 'global/g-type';
-@import 'global/g-link';
-@import 'global/g-list';
-@import 'global/g-svg';
-@import 'global/g-form';
-@import 'global/g-image';
-@import 'global/g-table';
+@import 'global/g--functions/g--functions';
+@import 'global/g--mixins/g--mixins';
+@import 'global/g-grid-breakpoint/g-grid-breakpoints';
+@import 'global/g-color/g-color';
+@import 'global/g-html/g-html';
+@import 'global/g-type/g-type';
+@import 'global/g-link/g-link';
+@import 'global/g-image/g-image';
+@import 'global/g-list/g-list';
+@import 'global/g-svg/g-svg';
+// @import 'global/g-form/g-form';
+// @import 'global/g-table/g-table';
 // @import 'global/print';
-
 
 // Components
 //
@@ -72,10 +66,10 @@
 
 // Components (with EJ.js based layouts)
 @import 'components/c-btn/c-btn';
-@import 'components/c-logo';
+@import 'components/c-logo/c-logo';
 @import 'components/c-nav/c-nav';
 @import 'components/c-tab/c-tab';
-@import 'components/c-quote';
+// @import 'components/c-quote';
 @import 'components/c-accordion/c-accordion';
 @import 'components/c-pager/c-pager';
 
@@ -164,9 +158,10 @@
 //
 // Styleguide 3.0
 
-@import 'layouts/l-eq';
-@import 'layouts/l-page';
-@import 'layouts/l-form';
+
+// @import 'layouts/l-eq';
+// @import 'layouts/l-page';
+// @import 'layouts/l-form';
 
 // Other Layout Naming Examples
 // @import 'layouts/l-header';
@@ -196,7 +191,14 @@
 //
 // Styleguide 4.0
 
+// Utiltiy Functions
+@import 'utility/u-animation';
+@import 'utility/u-clearfix';
+@import 'utility/u-inline-links';
+@import 'utility/u-list';
 @import 'utility/u-remove-child';
+@import 'utility/u-text-hide';
+@import 'utility/u-visually--hidden';
 
 
 // Vendor
