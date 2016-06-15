@@ -1,3 +1,15 @@
+// Form Layout
+//
+// <pre>2 Column Form Layout       =>  %l-form--2col</pre>
+// <pre> - Default Item > 100% width  =>  %l-form__item</pre>
+// <pre> - Wide Item > 75% width      =>  %l-form__item--wide</pre>
+// <pre> - Med Item > 50% width       =>  %l-form__item--med</pre>
+// <pre> - Narrow Item > 25% width    =>  %l-form__item--narrow</pre>
+//
+// Markup: _l-form.html
+//
+// Styleguide 3.3
+
 %l-form__item--core {
   float: left;
   width: 100%;
@@ -27,7 +39,7 @@
   }
 
   label {
-    @extend %visually--hidden;
+    @extend %u-visually--hidden;
   }
 }
 

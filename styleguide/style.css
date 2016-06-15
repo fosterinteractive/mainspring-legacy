@@ -1347,6 +1347,284 @@ input[type='button'], .c-btn--icon-menu,
   padding: 0 1.5rem; }
 
 
+.l-eq[data-eq-state='2col'] .l-item,
+.l-eq[data-eq-state='2col-60/40'] .l-item,
+.l-eq[data-eq-state='2col-66/33'] .l-item,
+.l-eq[data-eq-state='2col-33/66'] .l-item,
+.l-eq[data-eq-state='2col-40/60'] .l-item,
+.l-eq[data-eq-state='2col-75/25'] .l-item,
+.l-eq[data-eq-state='3col'] .l-item {
+  padding: 0 0.75rem; }
+
+
+.l-eq[data-eq-state='2col'] .l-item:nth-child(2n+1) {
+  width: 50%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: both; }
+
+
+.l-eq[data-eq-state='2col'] .l-item:nth-child(2n+2) {
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none; }
+
+
+.l-eq[data-eq-state='2col-60/40'] .l-item:nth-child(2n+1) {
+  width: 60%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: both; }
+
+
+.l-eq[data-eq-state='2col-60/40'] .l-item:nth-child(2n+2) {
+  width: 40%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none; }
+
+
+.l-eq[data-eq-state='2col-66/33'] .l-item:nth-child(2n+1) {
+  width: 66.6666666667%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: both; }
+
+
+.l-eq[data-eq-state='2col-66/33'] .l-item:nth-child(2n+2) {
+  width: 33.3333333333%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none; }
+
+
+.l-eq[data-eq-state='2col-33/66'] .l-item:nth-child(2n+1) {
+  width: 33.3333333333%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: both; }
+
+
+.l-eq[data-eq-state='2col-33/66'] .l-item:nth-child(2n+2) {
+  width: 66.6666666667%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none; }
+
+
+.l-eq[data-eq-state='2col-40/60'] .l-item:nth-child(2n+1) {
+  width: 40%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: both; }
+
+
+.l-eq[data-eq-state='2col-40/60'] .l-item:nth-child(2n+2) {
+  width: 60%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none; }
+
+
+.l-eq[data-eq-state='2col-75/25'] .l-item:nth-child(2n+1) {
+  width: 75%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: both; }
+
+
+.l-eq[data-eq-state='2col-75/25'] .l-item:nth-child(2n+2) {
+  width: 25%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none; }
+
+
+.l-eq[data-eq-state='3col'] .l-item:nth-child(3n+1) {
+  width: 33.3333333333%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  clear: both; }
+
+
+.l-eq[data-eq-state='3col'] .l-item:nth-child(3n+2) {
+  width: 33.3333333333%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 33.3333333333%;
+  clear: none; }
+
+
+.l-eq[data-eq-state='3col'] .l-item:nth-child(3n+3) {
+  width: 33.3333333333%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0%;
+  clear: none; }
+
+
+.l-form__item--wide,
+.l-form__item--med,
+.l-form__item--narrow,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--wide,
+.l-form[data-eq-state='2cols'] .l-form__item--wide,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--med,
+.l-form[data-eq-state='2cols'] .l-form__item--med,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--narrow,
+.l-form[data-eq-state='2cols'] .l-form__item--narrow,
+.l-form__item {
+  float: left;
+  width: 100%; }
+
+
+.l-form--filter[data-eq-state='2cols'],
+.l-form[data-eq-state='2cols'],
+.l-form--filter,
+.l-form {
+  margin: 0 -0.375rem; }
+  
+  .l-form[data-eq-state='2cols'] .g-form-actions,
+  .l-form--filter .g-form-actions,
+  .l-form .g-form-actions {
+    margin: 0 0.375rem; }
+
+
+.l-form__item--wide,
+.l-form__item--med,
+.l-form__item--narrow,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--wide,
+.l-form[data-eq-state='2cols'] .l-form__item--wide,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--med,
+.l-form[data-eq-state='2cols'] .l-form__item--med,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--narrow,
+.l-form[data-eq-state='2cols'] .l-form__item--narrow,
+.l-form__item {
+  padding: 0 0.375rem; }
+  
+  .l-form__item--wide input,
+  .l-form__item--med input,
+  .l-form__item--narrow input,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--wide input,
+  .l-form[data-eq-state='2cols'] .l-form__item--wide input,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--med input,
+  .l-form[data-eq-state='2cols'] .l-form__item--med input,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--narrow input,
+  .l-form[data-eq-state='2cols'] .l-form__item--narrow input,
+  .l-form__item--wide select,
+  .l-form__item--med select,
+  .l-form__item--narrow select,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--wide select,
+  .l-form[data-eq-state='2cols'] .l-form__item--wide select,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--med select,
+  .l-form[data-eq-state='2cols'] .l-form__item--med select,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--narrow select,
+  .l-form[data-eq-state='2cols'] .l-form__item--narrow select,
+  .l-form__item--wide textarea,
+  .l-form__item--med textarea,
+  .l-form__item--narrow textarea,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--wide textarea,
+  .l-form[data-eq-state='2cols'] .l-form__item--wide textarea,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--med textarea,
+  .l-form[data-eq-state='2cols'] .l-form__item--med textarea,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--narrow textarea,
+  .l-form[data-eq-state='2cols'] .l-form__item--narrow textarea,
+  .l-form__item--wide button,
+  .l-form__item--med button,
+  .l-form__item--narrow button,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--wide button,
+  .l-form[data-eq-state='2cols'] .l-form__item--wide button,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--med button,
+  .l-form[data-eq-state='2cols'] .l-form__item--med button,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--narrow button,
+  .l-form[data-eq-state='2cols'] .l-form__item--narrow button,
+  .l-form__item--wide optgroup,
+  .l-form__item--med optgroup,
+  .l-form__item--narrow optgroup,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--wide optgroup,
+  .l-form[data-eq-state='2cols'] .l-form__item--wide optgroup,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--med optgroup,
+  .l-form[data-eq-state='2cols'] .l-form__item--med optgroup,
+  .l-form--filter[data-eq-state='2cols'] .l-form__item--narrow optgroup,
+  .l-form[data-eq-state='2cols'] .l-form__item--narrow optgroup,
+  .l-form__item input,
+  .l-form__item select,
+  .l-form__item textarea,
+  .l-form__item button,
+  .l-form__item optgroup {
+    width: 100%; }
+
+
+.l-form__item--no-top-margin input,
+.l-form__item--no-top-margin select,
+.l-form__item--no-top-margin textarea,
+.l-form__item--no-top-margin button,
+.l-form__item--no-top-margin optgroup {
+  margin-top: 0; }
+
+
+.l-form--filter[data-eq-state='2cols'] .l-form__item--wide,
+.l-form[data-eq-state='2cols'] .l-form__item--wide {
+  width: 75%; }
+
+
+.l-form--filter[data-eq-state='2cols'] .l-form__item--med,
+.l-form[data-eq-state='2cols'] .l-form__item--med {
+  width: 50%; }
+
+
+.l-form--filter[data-eq-state='2cols'] .l-form__item--narrow,
+.l-form[data-eq-state='2cols'] .l-form__item--narrow {
+  width: 25%; }
+
+
+.l-form__foo-bar {
+  display: none; }
+
+
+.l-form--filter[data-eq-state='2cols'],
+.l-form--filter,
+.l-form .l-form-actions,
+.g-form-actions {
+  clear: both; }
+
+
+.l-form--filter[data-eq-state='2cols'],
+.l-form--filter {
+  margin: 0;
+  padding: 1.5rem 1.125rem; }
+  @media (min-width: 25em) {
+    
+    .l-form--filter[data-eq-state='2cols'],
+    .l-form--filter {
+      padding: 1.5rem 1.875rem; } }
+  @media (min-width: 56.25em) {
+    
+    .l-form--filter[data-eq-state='2cols'],
+    .l-form--filter {
+      padding: 1.5rem 3.375rem; } }
+
+
 a {
   -webkit-transition-property: background-color;
   transition-property: background-color;
@@ -1363,8 +1641,18 @@ a {
 
 .g-form-checkboxes:before,
 .g-form-radios:before, .c-accordion__label:before, .c-pager:before,
+.l-eq:before,
+.l-form--filter[data-eq-state='2cols']:before,
+.l-form--filter:before,
+.l-form .l-form-actions:before,
+.g-form-actions:before,
 .g-form-checkboxes:after,
 .g-form-radios:after, .c-accordion__label:after, .c-pager:after,
+.l-eq:after,
+.l-form--filter[data-eq-state='2cols']:after,
+.l-form--filter:after,
+.l-form .l-form-actions:after,
+.g-form-actions:after,
 .u-clearfix:before,
 .u-clearfix:after {
   display: table;
@@ -1373,6 +1661,11 @@ a {
 
 .g-form-checkboxes:after,
 .g-form-radios:after, .c-accordion__label:after, .c-pager:after,
+.l-eq:after,
+.l-form--filter[data-eq-state='2cols']:after,
+.l-form--filter:after,
+.l-form .l-form-actions:after,
+.g-form-actions:after,
 .u-clearfix:after {
   clear: both; }
 
@@ -1383,11 +1676,15 @@ ol, ul, .c-nav--inline, .c-tabs__list {
   list-style-position: outside; }
 
 .c-accordion__content > :first-child,
+.l-form--filter > :first-child,
+.l-form > :first-child,
 .u-remove-child--margin-top-bottom > :first-child,
 .u-remove-child--margin-top > :first-child {
   margin-top: 0; }
 
 .c-accordion__content > :last-child,
+.l-form--filter > :last-child,
+.l-form > :last-child,
 .u-remove-child--margin-top-bottom > :last-child,
 .u-remove-child--margin-bottom > :last-child {
   margin-bottom: 0; }
@@ -1399,6 +1696,16 @@ ol, ul, .c-nav--inline, .c-tabs__list {
   white-space: nowrap; }
 
 
+.l-form__item--wide label,
+.l-form__item--med label,
+.l-form__item--narrow label,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--wide label,
+.l-form[data-eq-state='2cols'] .l-form__item--wide label,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--med label,
+.l-form[data-eq-state='2cols'] .l-form__item--med label,
+.l-form--filter[data-eq-state='2cols'] .l-form__item--narrow label,
+.l-form[data-eq-state='2cols'] .l-form__item--narrow label,
+.l-form__item label,
 .u-visually--hidden {
   position: absolute;
   margin: -1px;
@@ -1409,6 +1716,14 @@ ol, ul, .c-nav--inline, .c-tabs__list {
   overflow: hidden;
   clip: rect(0 0 0 0); }
   
+  .l-form__item--wide label .focusable:active,
+  .l-form__item--med label .focusable:active,
+  .l-form__item--narrow label .focusable:active,
+  .l-form__item label .focusable:active,
+  .l-form__item--wide label .focusable:focus,
+  .l-form__item--med label .focusable:focus,
+  .l-form__item--narrow label .focusable:focus,
+  .l-form__item label .focusable:focus,
   .u-visually--hidden .focusable:active,
   .u-visually--hidden .focusable:focus {
     position: static;

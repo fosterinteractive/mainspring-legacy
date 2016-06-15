@@ -13,7 +13,9 @@ var styleGuideExtraHead = [
   '<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>',
   '<script src="/js/vendor/svg4everybody.min.js"></script>',
   '<script src="/js/vendor/velocity.min.js"></script>',
+  '<script src="/js/vendor/eq.min.js"></script>',
   '<script src="/js/vendor/mainspring.accordion.js"></script>',
+  '<script src="/js/styleguide.js"></script>',
 ];
 
 // Page Title of Style Guide
@@ -135,7 +137,7 @@ module.exports = {
     styleGuide: {
       styleGuideSettings: {
         title: styleGuideTitle,
-        styleGuideExtraHead: styleGuideExtraHead,
+        extraHead: styleGuideExtraHead,
         server: false,
         appRoot: './',
         overviewPath: 'scss/homepage.md',
