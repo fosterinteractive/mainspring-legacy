@@ -41,6 +41,17 @@ input[type='checkbox'].pseudo-class-active {
   box-shadow: none;
 }
 
+tr.pseudo-class-hover,
+tr.pseudo-class-focus {
+  background-color: #e6e7e8;
+}
+
+tr.pseudo-class-hover td,
+tr.pseudo-class-focus td {
+  border-right-color: #939598;
+  border-left-color: #afafaf;
+}
+
 button.pseudo-class-hover,
 input[type='reset'].pseudo-class-hover,
 input[type='submit'].pseudo-class-hover,

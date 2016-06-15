@@ -7,8 +7,32 @@
 // Styleguide 1.15.1
 
 // Mixins
+
+// Mixin for setting html5 placeholder color
+$grey-light: #999999 !default;
+
+@mixin placeholder($color: $grey-light) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  /* Firefox 18- */
+  &:-moz-placeholder {  // scss-lint:disable VendorPrefix
+    color: $color;
+  }
+
+  /* Firefox 19+ */
+  &::-moz-placeholder {   // scss-lint:disable VendorPrefix
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
 @mixin placeholder--core {
-  color: palette(grey);
+  @include placeholder();
 }
 
 // Extendables ***

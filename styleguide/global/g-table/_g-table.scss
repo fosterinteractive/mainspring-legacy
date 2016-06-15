@@ -1,55 +1,8 @@
 // Tables
 //
+// Markup: _g-table.html
+//
 // Styleguide 1.16
-
-/*doc
----
-title: Tables
-name: c100-tables
-category: Components - Tables
----
-
-<p>All content fields displayed.</p>
-
-```html_example
-<div class="styleguide__tables"><!--only used in style guide-->
-<table class="g-table">
-  <tbody>
-    <tr>
-      <th scope="col">Fusce Euismod Tellus Mollis</th>
-      <th class="g-table__col--narrow" scope="col">Sem Lorem</th>
-      <th class="g-table__col--narrow" scope="col">Venenatis</th>
-    </tr>
-    <tr>
-      <td>Porta</td>
-      <td class="g-table__col--narrow">Yes</td>
-      <td class="g-table__col--narrow">Yes</td>
-    </tr>
-    <tr>
-      <td>Inceptos</td>
-      <td class="g-table__col--narrow">Yes</td>
-      <td class="g-table__col--narrow">No</td>
-    </tr>
-    <tr>
-      <td>Cras Elit Nullam</td>
-      <td class="g-table__col--narrow">Yes</td>
-      <td class="g-table__col--narrow">No</td>
-    </tr>
-    <tr>
-      <td>Nullam Foo Donis</td>
-      <td class="g-table__col--narrow">Yes</td>
-      <td class="g-table__col--narrow">No</td>
-    </tr>
-    <tr>
-      <td>Elit</td>
-      <td class="g-table__col--narrow">Yes</td>
-      <td class="g-table__col--narrow">No</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-```
-*/
 
 // Note: This breaks the naming conventions a bit. This should probably be
 // a scoped class, but the assumptions is that no tables in the layout will

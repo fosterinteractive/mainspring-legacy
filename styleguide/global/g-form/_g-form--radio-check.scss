@@ -1,3 +1,12 @@
+// Form Checkboxes and Radio Buttons
+//
+// Form Checkboxes and Radio Buttons
+//
+// Markup: _g-form--radio-check.html
+//
+// Styleguide 1.15.2
+
+
 // Radios & checkmarks
 //////////////////////
 // Remove shadows
@@ -5,7 +14,6 @@
 input[type='file'],
 input[type='radio'],
 input[type='checkbox'] {
-
   &:focus,
   &:active {
     box-shadow: none;
@@ -48,4 +56,48 @@ input[type='checkbox'] {
   @extend %g-form-check-radio--core;
   float: left;
   padding-left: ru(1.5);
+}
+
+
+//Checkboxes
+%g-form__checkbox-group,
+.g-form-checkboxes {
+  @extend %g-form__checkbox-radio-group--core;
+}
+
+%g-form__checkbox__item,
+.g-form-type-checkbox {
+  @extend %g-form__checkbox-radio__item;
+}
+
+%g-form__checkbox,
+.g-form-checkbox {
+  @extend %g-form-check-radio-element;
+}
+
+%g-form__checkbox-label,
+.g-form-type-checkbox .option {
+  @extend %g-form-check-radio-label;
+}
+
+
+//Radio Buttons
+%g-form__radio-group,
+.g-form-radios {
+  @extend %g-form__checkbox-radio-group--core;
+}
+
+%g-form__radio__item,
+.g-form-type-radio {
+  @extend %g-form__checkbox-radio__item;
+}
+
+%g-form__radio,
+.g-form-radio {
+  @extend %g-form-check-radio-element;
+}
+
+%g-form__radio-label,
+.g-form-type-radio .option {
+  @extend %g-form-check-radio-label;
 }
