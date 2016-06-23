@@ -612,7 +612,8 @@ ul {
   margin-left: 0.75rem;
   list-style-type: disc; }
   ul ul {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    list-style-type: circle; }
 
 svg path,
 svg line,
@@ -1674,7 +1675,6 @@ a {
 ol, ul, .c-nav--inline, .c-tabs__list {
   margin: 0;
   padding: 0 0 0 1.5rem;
-  list-style-type: none;
   list-style-position: outside; }
 
 .c-accordion__content > :first-child,
