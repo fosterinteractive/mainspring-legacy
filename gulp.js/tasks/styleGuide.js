@@ -24,7 +24,7 @@ gulp.task('sc5:generate', function() {
 // Apply Styles: Parses CSS outpiut to Generate :hover
 // & other pseudo elements as classes for display in the styleguide
 gulp.task('styleGuide', ['sc5:generate'], function() {
-  return gulp.src(cssDest)
+  return gulp.src(cssDest + '/*.css')
     .pipe(styleguide.applyStyles())
     .pipe(gulp.dest(styleBuildPath));
 });
@@ -46,7 +46,7 @@ gulp.task('sc5:generateBrowserSync', function() {
 gulp.task('styleGuide:BrowserSync', ['sc5:generateBrowserSync'], function() {
   var browserSync  = require('browser-sync').get('bs');
 
-  return gulp.src('css/**.css')
+  return gulp.src(cssDest + '/*.css')
     .pipe(styleguide.applyStyles())
     .pipe(gulp.dest(styleBuildPath))
     .pipe(browserSync.stream({match: '**/*.css'}));
