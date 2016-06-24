@@ -1,0 +1,155 @@
+// l-eq (eq.js based layouts)
+//
+// l-eq column variations
+//
+// <pre>2 Column Layout @ 50% EACH           => %l-eq-2col__item</pre>
+// <pre>2 Column Layout @ 60% & 40%          => %l-eq-2col__item--1-2\(60\,40\)</pre>
+// <pre>2 Column Layout @ 66.666% & 33.333%  => %l-eq-2col__item--1-2\(66\,33\)</pre>
+// <pre>2 Column Layout @ 33.333% & 66.666%  => %l-eq-2col__item--1-2\(33\,66\)</pre>
+// <pre>2 Column Layout @ 40% & 60%          => %l-eq-2col__item--1-2\(40\,60\)</pre>
+// <pre>2 Column Layout @ 75% & 25%          => %l-eq-2col__item--1-2\(75\,25\)</pre>
+// <pre>3 Column Layout @ 33% EACH           => %l-eq-3col__item</pre>
+//
+// Markup: _l-eq.html
+//
+// Styleguide 3.2
+
+
+//eq wrapper - core
+%l-eq-core,
+.l-eq {
+  @extend %u-clearfix;
+}
+
+// eq item - core, default gutter
+%l-item {
+  padding: 0 ru(0.5);
+}
+
+// eq item - thin gutter
+%l-item--thin-margin {
+  padding: 0 1px;
+}
+
+// 2COLUMN LAYOUT @ 50% EACH
+%l-eq-2col__item,
+.l-eq[data-eq-state='2col'] .l-item {
+  @extend %l-item;
+
+  @include layout(2, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: both;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+// 2COLUMN LAYOUT @ 60% & 40%
+%l-eq-2col__item--1-2\(60\,40\),
+.l-eq[data-eq-state='2col-60/40'] .l-item {
+  @extend %l-item;
+
+  @include layout(60 40, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: both;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+//2COLUMN LAYOUT @ 66.666% & 33.333%
+%l-eq-2col__item--1-2\(66\,33\),
+.l-eq[data-eq-state='2col-66/33'] .l-item {
+  @extend %l-item;
+
+  @include layout(66 33, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: both;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+// 2COLUMN LAYOUT @ 33.333% & 66.666%
+%l-eq-2col__item--1-2\(33\,66\),
+.l-eq[data-eq-state='2col-33/66'] .l-item {
+  @extend %l-item;
+
+  @include layout(33 66, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: both;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+//2COLUMN LAYOUT @ 40% & 60%
+%l-eq-2col__item--1-2\(40\,60\),
+.l-eq[data-eq-state='2col-40/60'] .l-item {
+  @extend %l-item;
+
+  @include layout(40 60, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: both;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+// 2COLUMN LAYOUT @ 75% & 25%
+%l-eq-2col__item--1-2\(75\,25\),
+.l-eq[data-eq-state='2col-75/25'] .l-item {
+  @extend %l-item;
+
+  @include layout(75 25, $gutter: 0) {
+    &:nth-child(2n+1) {
+      @include grid-span(1, 1);
+      clear: both;
+    }
+
+    &:nth-child(2n+2) {
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+// 3COLUMN LAYOUT @ 33% EACH
+%l-eq-3col__item,
+.l-eq[data-eq-state='3col'] .l-item {
+  @extend %l-item;
+
+  @include layout(33 33 33, $gutter: 0) {
+    &:nth-child(3n+1) {
+      @include grid-span(1, 1);
+      clear: both;
+    }
+
+    &:nth-child(3n+2) {
+      @include grid-span(1, 2);
+    }
+
+    &:nth-child(3n+3) {
+      @include grid-span(1, 3);
+    }
+  }
+}

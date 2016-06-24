@@ -1347,6 +1347,31 @@ input[type='button'], .c-btn--icon-menu,
   display: inline-block;
   padding: 0 1.5rem; }
 
+.l-page__content {
+  background-color: #999999;
+  padding: 1.5rem; }
+
+@media (min-width: 37.5em) {
+  .l-page__content-main--has-aside {
+    width: 66.6666666667%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+    padding-right: 0.75rem; } }
+
+.l-page__content-aside {
+  margin-top: 0.75rem; }
+  @media (min-width: 37.5em) {
+    .l-page__content-aside {
+      width: 33.3333333333%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0%;
+      clear: none;
+      margin-top: 0;
+      padding-left: 0.75rem; } }
+
 
 .l-eq[data-eq-state='2col'] .l-item,
 .l-eq[data-eq-state='2col-60/40'] .l-item,
@@ -1641,14 +1666,14 @@ a {
 
 
 .g-form-checkboxes:before,
-.g-form-radios:before, .c-accordion__label:before, .c-pager:before,
+.g-form-radios:before, .c-accordion__label:before, .c-pager:before, .l-page__content:before,
 .l-eq:before,
 .l-form--filter[data-eq-state='2cols']:before,
 .l-form--filter:before,
 .l-form .l-form-actions:before,
 .g-form-actions:before,
 .g-form-checkboxes:after,
-.g-form-radios:after, .c-accordion__label:after, .c-pager:after,
+.g-form-radios:after, .c-accordion__label:after, .c-pager:after, .l-page__content:after,
 .l-eq:after,
 .l-form--filter[data-eq-state='2cols']:after,
 .l-form--filter:after,
@@ -1661,7 +1686,7 @@ a {
 
 
 .g-form-checkboxes:after,
-.g-form-radios:after, .c-accordion__label:after, .c-pager:after,
+.g-form-radios:after, .c-accordion__label:after, .c-pager:after, .l-page__content:after,
 .l-eq:after,
 .l-form--filter[data-eq-state='2cols']:after,
 .l-form--filter:after,
@@ -1675,14 +1700,14 @@ ol, ul, .c-nav--inline, .c-tabs__list {
   padding: 0 0 0 1.5rem;
   list-style-position: outside; }
 
-.c-accordion__content > :first-child,
+.c-accordion__content > :first-child, .l-page__content-main > :first-child,
 .l-form--filter > :first-child,
 .l-form > :first-child,
 .u-remove-child--margin-top-bottom > :first-child,
 .u-remove-child--margin-top > :first-child {
   margin-top: 0; }
 
-.c-accordion__content > :last-child,
+.c-accordion__content > :last-child, .l-page__content-main > :last-child,
 .l-form--filter > :last-child,
 .l-form > :last-child,
 .u-remove-child--margin-top-bottom > :last-child,

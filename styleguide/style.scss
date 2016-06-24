@@ -158,10 +158,15 @@
 //
 // Styleguide 3.0
 
+// Layout Extends
+@import 'layouts/l--extends/l-extends';
+// Site Specific Layouts
+@import 'layouts/l-page/l-page';
 
-@import 'layouts/l-eq';
-// @import 'layouts/l-page';
-@import 'layouts/l-form';
+// Resuable Layouts
+@import 'layouts/l-eq/l-eq';
+@import 'layouts/l-form/l-form';
+
 
 // Other Layout Naming Examples
 // @import 'layouts/l-header';
