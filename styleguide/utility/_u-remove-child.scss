@@ -1,8 +1,20 @@
 // Remove Child Margins
 //
+// Remove top and bottom margin from childen elements in a container.
+// This is useful for things like titles in WYSIWYG Fields.
+//
+// Use as class or @extend (preferred)
+//
+// <pre> @extend %u-remove-child--margin-top; </pre>
+// <pre> @extend %u-remove-child--margin-bottom; </pre>
+// <pre> @extend %u-remove-child--margin-top-bottom; </pre>
+// <pre> .u-remove-child--margin-top; </pre>
+// <pre> .u-remove-child--margin-bottom; </pre>
+// <pre> .u-remove-child--margin-top-bottom; </pre>
+//
 // Styleguide 4.4
 
-// Need to remove the top margin on the first child element.
+
 %u-remove-child--margin-top,
 .u-remove-child--margin-top {
 
@@ -11,7 +23,7 @@
   }
 }
 
-// Remove the the last child element bottom margin.
+
 %u-remove-child--margin-bottom,
 .u-remove-child--margin-bottom {
 

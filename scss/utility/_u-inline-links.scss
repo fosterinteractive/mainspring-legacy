@@ -1,10 +1,20 @@
 // Inline Links
 //
+// Basic styling used in lists
+// Intended for Drupals default menu (ul.menu) / tabs formats to remove default
+// Bullets & display as inline links.
+//
+//
+// <pre>
+// .my-ul-class {
+//   @extend %u-inline-links;
+// }
+// </pre>
+//
+//
 // Styleguide 4.2
 
-// Basic styling used in muliple lists
 
-// Intended for Drupals default menu (ul.menu) / tabs formats
 
 %u-inline-links__list {
   margin: 0;

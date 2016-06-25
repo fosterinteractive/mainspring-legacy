@@ -1,5 +1,14 @@
 // Animation Helpers
 //
+// Animation Extends for CSS transitions
+//
+// $transition-duration: 0.25s !default;
+//
+// <pre> @extend %u-animate-background-color </pre>
+// <pre> @extend %u-animate-color </pre>
+// <pre> @extend %u-animate-opacity </pre>
+// <pre> @extend %u-animate-all </pre>
+//
 // Styleguide 4.7
 
 $transition-duration: 0.25s !default;

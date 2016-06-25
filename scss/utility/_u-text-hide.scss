@@ -1,6 +1,12 @@
 // Hide Text
 //
-// <pre>@mixin text-hide</pre>
+// Hides text in block elements using text-indent. Useful for accessibility in
+// Icon links etc.
+//
+// Use as class or @extend (preferred)
+//
+// <pre> @extend %u-text-hide; </pre>
+// <pre> .u-text-hide </pre>
 //
 // Styleguide 4.5
 
