@@ -11,11 +11,11 @@ var localUrl = 'mainspring.dev'; // EG 'localhost', 'mysite.dev'
 // Add in these files to the <head> of the styleguide
 var styleGuideExtraHead = [
   '<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>',
-  '<script src="/js/vendor/svg4everybody.min.js"></script>',
-  '<script src="/js/vendor/velocity.min.js"></script>',
-  '<script src="/js/vendor/eq.min.js"></script>',
-  '<script src="/js/vendor/mainspring.accordion.js"></script>',
-  '<script src="/js/styleguide.js"></script>',
+  '<script src="../js/vendor/svg4everybody.min.js"></script>',
+  '<script src="../js/vendor/velocity.min.js"></script>',
+  '<script src="../js/vendor/eq.min.js"></script>',
+  '<script src="../js/vendor/mainspring.accordion.js"></script>',
+  '<script src="../js/styleguide.js"></script>',
 ];
 
 // Page Title of Style Guide
