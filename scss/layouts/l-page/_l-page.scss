@@ -2,37 +2,42 @@
 //
 // Wrappers for the entire website
 //
+// Markup: _l-page.html
+//
 // Styleguide 3.5
 
+%l-page-limit {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(1340px);
+}
 
-// Used specifically in products page to do two column layout with content and image when selecting default layout.
+.l-page {
+
+}
+
+.l-page__header-wrapper {
+
+  @include dbl;
+}
+
+.l-page__header {
+  @extend %l-page-limit;
+}
+
+.l-page__main {
+  @extend %l-page-limit;
+}
+
 .l-page__content {
-  @extend %u-clearfix;
-  background-color: $grey-light;
-  padding: ru(1);
+
 }
 
-// Main Content Wrapper (default is full width)
-.l-page__content-main {
-  @extend %u-remove-child--margin-top-bottom;
+.l-page__footer-wrapper {
+
+  @include dbl;
 }
 
-// Main Content Region w/ Aside
-.l-page__content-main--has-aside {
-
-  @include respond-to('type-large') {
-    @include grid-span(4, 1);
-    padding-right: ru(0.5);
-  }
-}
-
-// Aide Region
-.l-page__content-aside {
-  margin-top: ru(0.5);
-
-  @include respond-to('type-large') {
-    @include grid-span(2, 5);
-    margin-top: 0;
-    padding-left: ru(0.5);
-  }
+.l-page__footer {
+  @extend %l-page-limit;
 }

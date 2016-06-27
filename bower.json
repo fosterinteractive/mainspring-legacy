@@ -27,7 +27,8 @@
   "devDependencies": {
     "breakpoint-sass": "~2.5.0",
     "sass-toolkit": "~2.7.0",
-    "singularity": "~1.6.2"
+    "singularity": "~1.6.2",
+    "jacket": "~1.1.1"
   },
   "overrides": {
     "eq.js": {
