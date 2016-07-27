@@ -1,4 +1,7 @@
 # Treat Minfied Files as binary
 
-css/**/*css -diff
+css/**/*.css -diff
 svg/**/*.svg -diff
+
+# Treat all changes to stylguide as binary
+styleguide/**/** -diff
