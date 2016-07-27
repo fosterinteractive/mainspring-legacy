@@ -1,7 +1,17 @@
 // Visuall Hidden / Shown
 //
-// <pre>@mixin visually-hidden</pre>
-// <pre>@mixin visually-shown</pre>
+// Accessible way to hide elements on the page (and show them again)
+//
+// Use as a mixin (discouraged), class, or @extend (preferred)
+//
+// <pre> .u-visually--hidden </pre>
+// <pre> @extend %u-visually--hidden; </pre>
+// <pre> @inlude visually-hidden; </pre>
+//
+//
+// <pre> .u-visually--shown </pre>
+// <pre> @extend %u-visually--hidden; </pre>
+// <pre> @inlclude visually-shown; </pre>
 //
 // Styleguide 4.6
 

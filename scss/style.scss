@@ -1,10 +1,11 @@
 
+
 // Import Libraries
 @import '../bower_components/sass-toolkit/stylesheets/toolkit';
 @import '../bower_components/sassy-maps/sass/sassy-maps';
 @import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
 @import '../bower_components/singularity/stylesheets/singularitygs';
-// @import '../bower_components/jacket/stylesheets/jacket';
+@import '../bower_components/jacket/stylesheets/jacket';
 
 
 // Kickstart
@@ -16,7 +17,7 @@
 // or WYSIWYG editors. It also includes common patterns that are reused
 // thoughout the site like Typography, Images, SVGs, Forms, Lists, and print styles.
 //
-// *Uses Hacked Version of Normalize 5.0.3 (See section 1.99)*
+// Uses Hacked Version of Normalize 1.99
 //
 // <b>Naming Patterns</b>
 // <pre>
@@ -43,6 +44,7 @@
 @import 'global/g-form/g-form';
 @import 'global/g-table/g-table';
 // @import 'global/print';
+
 
 // Components
 //
@@ -167,7 +169,6 @@
 @import 'layouts/l-eq/l-eq';
 @import 'layouts/l-form/l-form';
 
-
 // Other Layout Naming Examples
 // @import 'layouts/l-header';
 // @import 'layouts/l-page';
@@ -196,7 +197,6 @@
 //
 // Styleguide 4.0
 
-// Utiltiy Functions
 @import 'utility/u-animation';
 @import 'utility/u-clearfix';
 @import 'utility/u-inline-links';
@@ -207,7 +207,13 @@
 
 
 // Vendor
+//
+// Put the css from 3rd parties libraries here. These files will not be linted.
+//
+// Styleguide 5.0
+
 // @import 'vendor/system.base';
 // @import 'vendor/remodal';
 // @import 'vendor/slidebar';
 // @import 'vendor/slick';
+

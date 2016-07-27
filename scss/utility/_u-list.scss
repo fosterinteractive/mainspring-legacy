@@ -1,5 +1,17 @@
 // Lists Reset
 //
+// Reset lists to have no bullets and default left padding
+//
+// <pre>.my-ul-class {
+//   @extend %u-list--reset;
+// }</pre>
+//
+// Reset lists to have no bullets, no padding or margins.
+//
+// <pre>.my-ul-class {
+//   @extend %u-list--blank;
+// }</pre>
+//
 // Styleguide 4.3
 
 // Reset to Default List Style
