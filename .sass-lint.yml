@@ -102,6 +102,18 @@ rules:
       order:
         - display
         - position
+        - flex-flow
+        - flex-direction
+        - flex-wrap
+        - justify-content
+        - align-items
+        - align-content
+        - order
+        - flex
+        - flex-grow
+        - flex-shrink
+        - flex-basis
+        - align-self
         - top
         - right
         - bottom
@@ -172,6 +184,7 @@ rules:
         - text-indent
         - text-transform
         - text-decoration
+        - text-decoration-color
         - line-height
         - word-spacing
         - letter-spacing
