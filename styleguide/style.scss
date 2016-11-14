@@ -205,12 +205,26 @@
 @import 'utility/u-text-hide';
 @import 'utility/u-visually--hidden';
 
+// Scope
+//
+// Scoped Classes are dependant on the DOM creates a new styling context or Scope.
+// Similar to a Theme, but not necessarily cosmetic, these should be used
+// sparingly—they can be open to abuse and lead to poor CSS if not used wisely.
+//
+// <b>Scope Naming Patterns</b>
+// <pre>
+// .s-context
+// </pre>
+//
+// Styleguide 5.0
+
+@import 'scope/s-wysiwyg';
 
 // Vendor
 //
 // Put the css from 3rd parties libraries here. These files will not be linted.
 //
-// Styleguide 5.0
+// Styleguide 6.0
 
 // @import 'vendor/system.base';
 // @import 'vendor/remodal';

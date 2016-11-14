@@ -8,7 +8,7 @@
 
 .image-content-half-width-right,
 .align-right {
-  @extend %image-content;
+  @extend %g-image--core;
 
   @include respond-to('type-large') {
     float: right;

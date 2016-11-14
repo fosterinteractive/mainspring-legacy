@@ -12,6 +12,7 @@
     "gulp-bower-normalize": "^1.0.6",
     "gulp-cached": "^1.1.0",
     "gulp-clean-css": "^2.0.8",
+    "gulp-concat": "^2.6.0",
     "gulp-filter": "^4.0.0",
     "gulp-flatten": "^0.2.0",
     "gulp-gzip": "^1.2.0",

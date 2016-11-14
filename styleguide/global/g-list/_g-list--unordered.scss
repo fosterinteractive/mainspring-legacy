@@ -1,19 +1,44 @@
 // Unordered Lists
 //
-// Unordered List
+// Apply Scoped Variable .s-wysiwyg to wrapper (see scope/_s-wysiwyg.scss) or
+// apply .g-list--unordered to each parent ul
 //
 // Markup: _g-list--unordered.html
 //
 // Styleguide 1.8.2
 
+
+// Reset Lists to have no styling
+
 ul {
-  @extend %u-list--reset;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+%g-list--unordered,
+.g-list--unordered {
+  margin-top: ru(0.25);
   margin-bottom: ru(0.5);
-  margin-left: ru(0.5);
-  list-style-type: disc;
+  padding-left: 0;
+  list-style-type: none;
+
+  li {
+    position: relative;
+    margin-bottom: ru(0.25);
+    margin-left: ru(1.25);
+    padding-left: 0;
+  }
+
+  li:before {
+    position: absolute;
+    top: 0;
+    left: ru(-1);
+    color: palette(blue, light);
+    content: '\2022 '; // Bullet symbol
+  }
 
   ul {
     margin-bottom: 0;
-    list-style-type: circle;
-  }
+   }
 }

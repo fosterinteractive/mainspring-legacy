@@ -1,19 +1,52 @@
 // Ordered Lists
 //
-// Ordered List
+// Apply Scoped Variable .s-wysiwyg to wrapper (see scope/_s-wysiwyg.scss) or
+// apply .g-list--ordered to each parent ol
+//
+//
+// See https://www.christianheilmann.com/2014/11/19/simple-things-styling-ordered-lists/
+// For usage of css counters
 //
 // Markup: _g-list--ordered.html
 //
 // Styleguide 1.8.1
 
-ol {
-  @extend %u-list--reset;
-  margin-bottom: ru(0.5);
-  margin-left: ru(0.5);
-  list-style-type: decimal;
 
-  ol {
-    margin-bottom: 0;
-    list-style-type: lower-alpha;
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+%g-list--ordered,
+.g-list--ordered {
+  margin-top: ru(0.25);
+  margin-bottom: ru(0.5);
+  padding-left: 0;
+  list-style-type: none;
+  counter-reset: list;
+
+
+  > li {
+    position: relative;
+    margin-bottom: ru(0.25);
+    margin-left: ru(1.25);
+    padding-left: 0;
+    list-style: none;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: ru(-1);
+      color: palette(blue);
+      content: counter(list) '.';
+      counter-increment: list;
+    }
+  }
+
+  // Add in space above next paragraph (titles add their own top margin)
+  + p {
+    margin-top: ru(1);
   }
 }
+

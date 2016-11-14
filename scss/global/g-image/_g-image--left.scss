@@ -9,7 +9,7 @@
 
 .image-content-half-width-left,
 .align-left {
-  @extend %image-content;
+  @extend %g-image--core;
 
   @include respond-to('type-large') {
     float: left;

@@ -3,10 +3,30 @@ a.pseudo-class-hover {
   outline-width: 0;
 }
 
-a.pseudo-class-hover,
-a.pseudo-class-focus,
-a.pseudo-class-active {
-  text-decoration: none;
+.s-wysiwyg a.pseudo-class-visited:not(.c-btn),
+.cke_editable a.pseudo-class-visited:not(.c-btn),
+.g-link.pseudo-class-visited {
+  color: #3f3fb1;
+}
+
+.s-wysiwyg a.pseudo-class-hover:not(.c-btn),
+.cke_editable a.pseudo-class-hover:not(.c-btn),
+.s-wysiwyg a.pseudo-class-active:not(.c-btn),
+.cke_editable a.pseudo-class-active:not(.c-btn),
+.g-link.pseudo-class-hover,
+.g-link.pseudo-class-active {
+  background-color: #f1f2f2;
+  color: #2b3078;
+  text-shadow: none;
+}
+
+.s-wysiwyg a.pseudo-class-focus:not(.c-btn),
+.cke_editable a.pseudo-class-focus:not(.c-btn),
+.g-link.pseudo-class-focus {
+  outline: 0;
+  background-color: #f1f2f2;
+  color: #2b3078;
+  text-shadow: none;
 }
 
 textarea.pseudo-class-focus,

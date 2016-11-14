@@ -1,10 +1,13 @@
 // Images
 //
-// Inline Image Styles
+// Inline Image Styles (User Generated content is WYSIWYG / Markdown editor)
 //
 // **Core Extendables:**
-//
 // <pre>%image-content<pre>
+//
+// Default Image (full width)
+//
+// Markup: _g-image.html
 //
 // Styleguide 1.9
 
@@ -15,7 +18,7 @@ figure {
 }
 
 // Core Extendables
-%image-content {
+%g-image--core {
   display: block;
   padding-top: ru(0.25);
   padding-bottom: ru(0.75);
@@ -23,9 +26,16 @@ figure {
   font-size: $base-font-size;
 }
 
-// Default Image Style
-.image-content-full-width {
-  @extend %image-content;
+// Default img / figure Style
+.g-image {
+  @extend %g-image--core;
+}
+
+
+.g-image figcaption {
+  background-color: palette(grey, xlight);
+  padding: ru(0.25) ru(0.5);
+  font-style: italic;
 }
 
 // Import Variations

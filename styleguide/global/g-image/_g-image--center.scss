@@ -8,7 +8,7 @@
 
 .image-content-half-width-center,
 .align-center {
-  @extend %image-content;
+  @extend %g-image--core;
 
   @include respond-to('type-large') {
     margin: 0 auto;

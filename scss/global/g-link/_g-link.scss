@@ -1,8 +1,11 @@
 // Inline Links
 //
+// High legibility Links where text-shadow is used on decendors
+// (requires white background)
+//
 //
 // markup:
-//  <a href="#">Default Link</a>
+//  <a class="g-link" href="#">Default - Type Decendors y j are "cut out"</a>
 //
 // sg-wrapper:
 // <div class="sg__wrapper--swatch">
@@ -11,16 +14,38 @@
 //
 // Styleguide 1.7
 
-
-%link,
 a {
-  @extend %u-animate-color;
-  @extend %u-animate-background-color;
   text-decoration: none;
+}
+
+%g-link,
+.g-link {
+  @extend %u-animate-background-color;
+  $underline: palette(blue, light);
+  display: inline-block;
+  background-image: linear-gradient(to right, $underline 0%, $underline 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.25em center;
+  background-size: 100% 1px;
+  color: palette(blue, dark);
+  text-shadow: 1px 0 0 $white, -1px 0 0 $white, 0 0.5px 0 $white, 0 -0.5px 0 $white;
+
+  &:visited {
+    color: palette(blue);
+  }
 
   &:hover,
-  &:focus,
   &:active {
-    text-decoration: none;
+    background-color: palette(grey, xlight);
+    color: palette(blue, dark);
+    text-shadow: none;
   }
+
+  &:focus {
+    outline: 0;
+    background-color: palette(grey, xlight);
+    color: palette(blue, dark);
+    text-shadow: none;
+  }
+
 }

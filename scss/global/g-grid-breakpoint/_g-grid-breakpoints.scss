@@ -35,7 +35,7 @@ $breakpoints: add-breakpoint('max-size', 1200px);
 
 
 //Defines default 2 column grid
-@include add-grid(6);
+@include add-grid(12);
 // @include add-grid(1 2 at $bp-med);
 // @include add-grid(2 4 1 at $bp-lrg);
 @include add-gutter-style('fixed');
