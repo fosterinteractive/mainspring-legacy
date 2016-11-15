@@ -9,9 +9,9 @@
 // Styleguide 5.1
 
 
-// Ckeditable styles are using in CKEDITOR
+// CKEDITOR's Default iframe class for the editor.
 .s-wysiwyg,
-.cke_editable { // CKEDITOR's Default iframe class for the editor
+.cke_editable { // sass-lint:disable-line class-name-format
 
   ul {
     @extend %g-list--unordered;
