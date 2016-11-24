@@ -1,0 +1,45 @@
+// Quote
+//
+//
+// markup: _c-quote.html
+//
+// Styleguide 2.3
+
+.c-quote__wrapper {
+  margin: ru(1) 0 ru(3) 0;
+}
+
+%c-quote,
+.c-quote {
+  @include font-size($h1-font-sizes);
+  text-align: center;
+  color: palette(red);
+  font-weight: 700;
+
+  p {
+    @include font-size($h1-font-sizes);
+  }
+}
+
+
+%c-quote--icon-core {
+  @include svg-centered(ru(3),  ru(3),  ru(3),  ru(3));
+  margin-right: auto;
+  margin-left: auto;
+  fill: palette(red);
+
+}
+
+.c-quote__open {
+  @extend %c-quote--icon-core;
+}
+
+.c-quote__close {
+  @extend %c-quote--icon-core;
+}
+
+
+// %c-quote__cite,
+// .c-quote__cite {
+//   font-style: normal;
+// }
