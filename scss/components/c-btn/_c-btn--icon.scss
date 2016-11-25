@@ -11,7 +11,6 @@
 %c-btn--icon-core {
   @extend %c-btn--core;
   @extend %u-animate-background-color; // Animate background
-  display: block;
   position: relative;
   border-color: palette(grey, light);
   color: palette(grey, dark);

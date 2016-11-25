@@ -3,17 +3,25 @@ a.pseudo-class-hover {
   outline-width: 0;
 }
 
+.s-wysiwyg a.pseudo-class-visited:not(.c-btn),
+.cke_editable a.pseudo-class-visited:not(.c-btn),
 .g-link.pseudo-class-visited {
-  color: #3f3fb1;
+  color: #2b3078;
 }
 
+.s-wysiwyg a.pseudo-class-hover:not(.c-btn),
+.cke_editable a.pseudo-class-hover:not(.c-btn),
+.s-wysiwyg a.pseudo-class-active:not(.c-btn),
+.cke_editable a.pseudo-class-active:not(.c-btn),
 .g-link.pseudo-class-hover,
 .g-link.pseudo-class-active {
   background-color: #c7c8ca;
   color: #2b3078;
-  text-shadow: none;
+  text-shadow: 1px 0 0 #c7c8ca, -1px 0 0 #c7c8ca, 0 0.5px 0 #c7c8ca, 0 -0.5px 0 #c7c8ca;
 }
 
+.s-wysiwyg a.pseudo-class-focus:not(.c-btn),
+.cke_editable a.pseudo-class-focus:not(.c-btn),
 .g-link.pseudo-class-focus {
   outline: 0;
   background-color: #c7c8ca;
@@ -21,13 +29,21 @@ a.pseudo-class-hover {
   text-shadow: none;
 }
 
-.g-link__grey-dark.pseudo-class-visited {
+.g-link--grey-dark.pseudo-class-visited {
   color: #606265;
 }
 
-.g-link__grey-dark.pseudo-class-hover,
-.g-link__grey-dark.pseudo-class-active {
-  color: #939598;
+.g-link--grey-dark.pseudo-class-hover,
+.g-link--grey-dark.pseudo-class-active {
+  background-color: #cce0ff;
+  color: #47494b;
+  text-shadow: 1px 0 0 #cce0ff, -1px 0 0 #cce0ff, 0 0.5px 0 #cce0ff, 0 -0.5px 0 #cce0ff;
+}
+
+.g-link--grey-dark.pseudo-class-focus {
+  outline: 0;
+  background-color: #c7c8ca;
+  color: #47494b;
   text-shadow: none;
 }
 

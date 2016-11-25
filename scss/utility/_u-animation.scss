@@ -18,6 +18,11 @@ $transition-duration: 0.25s !default;
   transition-duration: $transition-duration;
 }
 
+%u-animate-text-shadow {
+  transition-property: text-shadow;
+  transition-duration: $transition-duration;
+}
+
 %u-animate-color {
   transition-property: color;
   transition-duration: $transition-duration;
