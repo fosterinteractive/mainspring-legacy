@@ -81,10 +81,10 @@ rules:
   no-css-comments: 0
   no-warn: 1
   no-debug: 1
-  no-duplicate-properties: 0
+  no-duplicate-properties: 1
   no-empty-rulesets: 1
   no-invalid-hex: 1
-  no-important: 0
+  no-important: 1
   no-mergeable-selectors: 1
   no-misspelled-properties:
     - 1

@@ -47,7 +47,7 @@
   overflow: visible;
 
   clip: auto;
-  clip: rect(auto auto auto auto); // scss-lint:disable DuplicateProperty
+  clip: rect(auto auto auto auto); // sass-lint:disable-line no-duplicate-properties
 }
 
 %u-visually--hidden,

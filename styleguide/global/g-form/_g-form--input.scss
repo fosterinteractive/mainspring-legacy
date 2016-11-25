@@ -120,7 +120,7 @@ select {
   @extend %g-input--core;
   background: url('/svg/sprite-ui/arrow-down.svg') no-repeat right ru(0.5)center;
   padding: ru(0.375) ru(1.5) ru(0.375) ru(0.5);
-  -moz-appearance: none !important;
+  -moz-appearance: none !important; // sass-lint:disable-line no-important
 }
 
 
