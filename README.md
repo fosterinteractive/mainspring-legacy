@@ -1,5 +1,5 @@
 # Main Spring
-v0.02
+v0.03
 
 Very biased boilerplate templates for generating production CSS &amp; Living
 Style Guides w/ SASS, Gulp &amp; other libraries. Essentially this is an

@@ -69,7 +69,7 @@
 .c-accordion__content {
   @extend %u-remove-child--margin-top-bottom;
   position: relative;
-  background-color: palette(grey, mediumlight);
+  background-color: palette(grey, light);
   padding: ru(0.75);
   color: $white;
 

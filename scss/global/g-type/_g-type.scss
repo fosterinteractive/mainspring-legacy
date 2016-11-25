@@ -22,7 +22,16 @@
 
 @import 'g-type__functions';
 @import 'g-type__variables';
-@import 'g-type__fonts';
+// @import 'g-type__fonts';
+
+html {
+  line-height: ($base-line-height / $base-font-size) * 1em;
+  color: palette(grey, dark);
+  font-family: $base-font-family;
+  font-size: ($base-font-size / 16px) * 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 
 @import 'g-type--variants';
 @import 'g-type--headline';

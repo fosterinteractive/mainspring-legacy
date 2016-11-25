@@ -33,11 +33,16 @@
 // Default Base line for positioning SVGs next to text
 $baseline: 1.5rem !default;
 
-@mixin svg-centered($svg-width, $svg-height, $wrapper-width, $wrapper-height, $svg-class: svg) {
+@mixin svg-centered($svg-width, $svg-height, $wrapper-width, $wrapper-height, $border-px: 0px, $svg-class: 'g-svg', $x-offset: 0, $y-offset: 0, $layout-mode: 'transform') {
 
   @if ($wrapper-width < $svg-width or $wrapper-height < $svg-height) {
     @error ('Wrapper can not be larger the the svg');
   }
+
+  @if ($x-offset != 0 and unit($x-offset) != '%') {
+    @error ('$x-offset be a % unit');
+  }
+
 
   position: relative;
   width: $wrapper-width;
@@ -45,10 +50,21 @@ $baseline: 1.5rem !default;
 
   .#{$svg-class} {
     position: absolute;
-    top: ($wrapper-height - $svg-height) / 2;
-    left: ($wrapper-width - $svg-width) / 2;
+    top: 50% + $y-offset;
+    left: 50% + $x-offset;
     width: $svg-width;
     height: $svg-height;
+
+    @if ($layout-mode == 'transform') {
+      transform: translateX(-50%) translateY(-50%);
+
+    } @elseif ($layout-mode == 'margin') {
+      margin-top: -1 * ($svg-height / 2);
+      margin-left: -1 * ($svg-width / 2);
+
+    } @else {
+      @error ('layout-mode must be transform or margin');
+    }
   }
 }
 
@@ -88,11 +104,12 @@ $baseline: 1.5rem !default;
   $container-vertical-padding,
   $container-padding-right: 0,
   $container-padding-left: 0,
-  $svg-class: 'svg',
+  $svg-class: 'g-svg',
   $h-alignment: 'left',
   $v-alignment: 'middle') {
 
   position: relative;
+  transform-style: preserve-3d;
 
   // Top and Bottom Padding of Container
   @if ($container-vertical-padding != 0) {
@@ -122,16 +139,15 @@ $baseline: 1.5rem !default;
   .#{$svg-class} {
     display: block;
     position: absolute;
-
-    margin-top: (-$svg-height / 2);
-    margin-left: (-$svg-width / 2);
     width: $svg-width;
     height: $svg-height;
+    transform: translateX(-50%) translateY(-50%);
+    transform-style: preserve-3d;
 
     @if ($h-alignment == 'left') {
       left: 0 + $svg-pad-left + $container-padding-left;
     } @else {
-      right: 0 + $svg-pad-right + $container-padding-right;
+      right: 0 + $svg-pad-right;
     }
 
     // SVG vertical positioning

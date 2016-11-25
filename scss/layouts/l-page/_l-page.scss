@@ -4,13 +4,7 @@
 //
 // Markup: _l-page.html
 //
-// Styleguide 3.5
-
-%l-page-limit {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: rem(1340px);
-}
+// Styleguide 3.4
 
 .l-page {
 
@@ -22,11 +16,11 @@
 }
 
 .l-page__header {
-  @extend %l-page-limit;
+  @extend %l-extends__page-limit;
 }
 
 .l-page__main {
-  @extend %l-page-limit;
+  @extend %l-extends__page-limit;
 }
 
 .l-page__content {
@@ -39,5 +33,5 @@
 }
 
 .l-page__footer {
-  @extend %l-page-limit;
+  @extend %l-extends__page-limit;
 }
