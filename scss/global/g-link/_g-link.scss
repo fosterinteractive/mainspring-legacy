@@ -25,7 +25,8 @@ a {
   display: inline-block;
   background-image: linear-gradient(to right, $underline 0%, $underline 100%);
   background-repeat: repeat-x;
-  background-position: bottom 0.25em center;
+  background-position: bottom center; // Default for old safari
+  background-position: bottom 0.15em center; //sass-lint:disable-line no-duplicate-properties
   background-size: 100% 1px;
   color: palette(blue, dark);
   text-shadow: 1px 0 0 $white, -1px 0 0 $white, 0 0.5px 0 $white, 0 -0.5px 0 $white;
@@ -47,5 +48,20 @@ a {
     color: palette(blue, dark);
     text-shadow: none;
   }
+}
 
+.g-link__grey-dark {
+  @extend %u-animate-color;
+
+  color: palette(grey, dark);
+
+  &:visited {
+    color: palette(grey, dark);
+  }
+
+  &:hover,
+  &:active {
+    color: palette(grey);
+    text-shadow: none;
+  }
 }
