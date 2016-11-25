@@ -46,17 +46,20 @@ h3,
 h4,
 .g-type__h4,
 %g-type__h4 {
-  @extend %g-type__h3;
+  @extend %heading-font;
+  @include font-size($h4-font-sizes);
 }
 
 h5,
 .g-type__h5,
 %g-type__h5 {
-  @extend %g-type__h3;
+  @extend %heading-font;
+  @include font-size($h5-font-sizes);
 }
 
 h6,
 .g-type__h6,
 %g-type__h6 {
-  @extend %g-type__h3;
+  @extend %heading-font;
+  @include font-size($h6-font-sizes);
 }

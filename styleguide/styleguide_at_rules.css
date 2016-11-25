@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/roboto/RobotoSlab-Regular-webfont") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: italic;
+  font-style: normal;
+  src: url("/fonts/roboto/Roboto-Italic-webfont") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/fonts/roboto/Roboto-Bold-webfont") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/fonts/roboto_slab/RobotoSlab-Bold-webfont.woff") format("woff");
+}

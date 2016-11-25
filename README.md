@@ -72,9 +72,14 @@ See [Inspiration](/docs/oh-my-god-its-full-of-stars.md) for more.
 
 
 ##Credits For Assets Used In Demos##
-###Fonts###
+###Icons###
 Icons are from Font Awesome Created by Dave Gandy.
 - Opened and re-saved in Illustrator to add real-world bloat.
+
+###Web Fonts###
+[Roboto](https://www.fontsquirrel.com/fonts/roboto?q%5Bterm%5D=roboto&q%5Bsearch_check%5D=Y) & [Roboto Slab](https://www.fontsquirrel.com/fonts/roboto-slab) by Christian Robertson - Downloaded from [Font Squirrel](https://www.fontsquirrel.com/) Licensed under Apache 2.0
+
+
 
 ###Image Credits###
 

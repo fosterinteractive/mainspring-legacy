@@ -20,9 +20,72 @@
 // Styleguide 1.6
 
 
+// GLOBAL TYPE COMPONENTS
+
+// NOTE: Variables partial is imported in style.scss before all other global functions
+// $base-font-size and $base-line-height are needed for global functions like rem()
+// @import 'g-type__variables';
+
 @import 'g-type__functions';
-@import 'g-type__variables';
+
+// Optional Partial - if you need to import font-face
 @import 'g-type__fonts';
 
-@import 'g-type--variants';
+html {
+  line-height: ($base-line-height / $base-font-size) * 1em;
+  color: palette(grey, xdark);
+  font-family: $base-font-family;
+  font-size: ($base-font-size / 16px) * 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+// Type Variants
+//
+// Type Variants
+//
+// markup:
+// <p>
+//   Default Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+// </p>
+// <p class="g-type--small">
+//   small Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+// </p>
+// <p class="g-type--large">
+//   large Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+// </p>
+// <p class="g-type--xlarge">
+//   xlarge Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+// </p>
+// <p class="g-type--grey">
+//   xlarge Paragraph <strong>This is in Bold</strong>, consectetur adipiscing elit. <em>This is italic</em> Ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+// </p>
+//
+// Styleguide 1.6.4
+
+%g-type__core {
+  @include font-size($p-font-sizes);
+  margin: 0 0 1rem 0;
+}
+
+p {
+  @extend %g-type__core;
+}
+
+%g-type--small,
+.g-type--small {
+  @include font-size($p--small-font-sizes);
+}
+
+%g-type--large,
+.g-type--large {
+  @include font-size($p--large-font-sizes);
+}
+
+%g-type--xlarge,
+.g-type--xlarge {
+  @include font-size($p--xlarge-font-sizes);
+}
+
+
 @import 'g-type--headline';

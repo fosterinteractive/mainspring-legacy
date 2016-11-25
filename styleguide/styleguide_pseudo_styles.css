@@ -1,0 +1,195 @@
+a.pseudo-class-active,
+a.pseudo-class-hover {
+  outline-width: 0;
+}
+
+.g-link.pseudo-class-visited {
+  color: #3f3fb1;
+}
+
+.g-link.pseudo-class-hover,
+.g-link.pseudo-class-active {
+  background-color: #c7c8ca;
+  color: #2b3078;
+  text-shadow: none;
+}
+
+.g-link.pseudo-class-focus {
+  outline: 0;
+  background-color: #c7c8ca;
+  color: #2b3078;
+  text-shadow: none;
+}
+
+.g-link__grey-dark.pseudo-class-visited {
+  color: #606265;
+}
+
+.g-link__grey-dark.pseudo-class-hover,
+.g-link__grey-dark.pseudo-class-active {
+  color: #939598;
+  text-shadow: none;
+}
+
+textarea.pseudo-class-focus,
+select.pseudo-class-focus,
+input[type='date'].pseudo-class-focus,
+input[type='datetime'].pseudo-class-focus,
+input[type='datetime-local'].pseudo-class-focus,
+input[type='email'].pseudo-class-focus,
+input[type='month'].pseudo-class-focus,
+input[type='number'].pseudo-class-focus,
+input[type='password'].pseudo-class-focus,
+input[type='search'].pseudo-class-focus,
+input[type='tel'].pseudo-class-focus,
+input[type='text'].pseudo-class-focus,
+input[type='time'].pseudo-class-focus,
+input[type='url'].pseudo-class-focus,
+input[type='week'].pseudo-class-focus,
+button.pseudo-class-focus,
+input[type='reset'].pseudo-class-focus,
+input[type='submit'].pseudo-class-focus,
+input[type='button'].pseudo-class-focus {
+  border-color: #606265;
+  background-color: #fefefe;
+}
+
+input[type='file'].pseudo-class-focus,
+input[type='file'].pseudo-class-active,
+input[type='radio'].pseudo-class-focus,
+input[type='radio'].pseudo-class-active,
+input[type='checkbox'].pseudo-class-focus,
+input[type='checkbox'].pseudo-class-active {
+  box-shadow: none;
+}
+
+button.pseudo-class-hover,
+input[type='reset'].pseudo-class-hover,
+input[type='submit'].pseudo-class-hover,
+input[type='button'].pseudo-class-hover,
+.c-btn--icon-menu.pseudo-class-hover,
+.c-btn--icon.pseudo-class-hover,
+.c-btn--icon-left.pseudo-class-hover,
+.c-btn--icon-right.pseudo-class-hover,
+.c-btn.pseudo-class-hover,
+.c-btn--thin.pseudo-class-hover,
+button.pseudo-class-focus,
+input[type='reset'].pseudo-class-focus,
+input[type='submit'].pseudo-class-focus,
+input[type='button'].pseudo-class-focus,
+.c-btn--icon-menu.pseudo-class-focus,
+.c-btn--icon.pseudo-class-focus,
+.c-btn--icon-left.pseudo-class-focus,
+.c-btn--icon-right.pseudo-class-focus,
+.c-btn.pseudo-class-focus,
+.c-btn--thin.pseudo-class-focus,
+button.pseudo-class-active,
+input[type='reset'].pseudo-class-active,
+input[type='submit'].pseudo-class-active,
+input[type='button'].pseudo-class-active,
+.c-btn--icon-menu.pseudo-class-active,
+.c-btn--icon.pseudo-class-active,
+.c-btn--icon-left.pseudo-class-active,
+.c-btn--icon-right.pseudo-class-active,
+.c-btn.pseudo-class-active,
+.c-btn--thin.pseudo-class-active {
+  border-color: #939598;
+  background-color: #c7c8ca;
+}
+
+.c-btn--blue.pseudo-class-hover,
+.c-btn--thin-blue.pseudo-class-hover,
+.c-btn--blue.pseudo-class-focus,
+.c-btn--thin-blue.pseudo-class-focus,
+.c-btn--blue.pseudo-class-active,
+.c-btn--thin-blue.pseudo-class-active {
+  border-color: #2b3078;
+  background-color: #2b3078;
+}
+
+.c-btn--icon-menu.pseudo-class-hover,
+.c-btn--icon.pseudo-class-hover,
+.c-btn--icon-left.pseudo-class-hover,
+.c-btn--icon-right.pseudo-class-hover,
+.c-btn--icon-menu.pseudo-class-focus,
+.c-btn--icon.pseudo-class-focus,
+.c-btn--icon-left.pseudo-class-focus,
+.c-btn--icon-right.pseudo-class-focus,
+.c-btn--icon-menu.pseudo-class-active,
+.c-btn--icon.pseudo-class-active,
+.c-btn--icon-left.pseudo-class-active,
+.c-btn--icon-right.pseudo-class-active {
+  background-color: #c7c8ca;
+  color: #939598;
+}
+
+.c-btn--icon-menu.pseudo-class-hover,
+.c-btn--icon-menu.pseudo-class-focus,
+.c-btn--icon-menu.pseudo-class-active {
+  background-color: transparent;
+}
+
+.c-btn--icon-menu.pseudo-class-hover svg,
+.c-btn--icon-menu.pseudo-class-focus svg,
+.c-btn--icon-menu.pseudo-class-active svg {
+  fill: #adafb1;
+}
+
+.c-nav--vertical__link.pseudo-class-hover,
+.c-nav--vertical__link.pseudo-class-focus,
+.c-nav--vertical__link.pseudo-class-active {
+  background-color: #c7c8ca;
+  color: #606265;
+}
+
+.c-nav--horizontal__link.pseudo-class-hover,
+.c-nav--horizontal__link.pseudo-class-focus,
+.c-nav--horizontal__link.pseudo-class-active {
+  text-decoration: underline;
+  color: #606265;
+}
+
+.c-nav--inline a.pseudo-class-hover,
+.c-nav--inline a.pseudo-class-focus,
+.c-nav--inline a.pseudo-class-active {
+  text-decoration: underline;
+  color: #606265;
+}
+
+.c-tabs a.pseudo-class-hover,
+.c-tabs a.pseudo-class-focus,
+.c-tabs a.pseudo-class-active {
+  background-color: #fefefe;
+}
+
+.l-form--filter > .pseudo-class-first-child,
+.l-form > .pseudo-class-first-child,
+.u-remove-child--margin-top-bottom > .pseudo-class-first-child,
+.u-remove-child--margin-top > .pseudo-class-first-child {
+  margin-top: 0;
+}
+
+.l-form--filter > .pseudo-class-last-child,
+.l-form > .pseudo-class-last-child,
+.u-remove-child--margin-top-bottom > .pseudo-class-last-child,
+.u-remove-child--margin-bottom > .pseudo-class-last-child {
+  margin-bottom: 0;
+}
+
+.l-form__item--wide label .focusable.pseudo-class-active,
+.l-form__item--med label .focusable.pseudo-class-active,
+.l-form__item--narrow label .focusable.pseudo-class-active,
+.l-form__item label .focusable.pseudo-class-active,
+.l-form__item--wide label .focusable.pseudo-class-focus,
+.l-form__item--med label .focusable.pseudo-class-focus,
+.l-form__item--narrow label .focusable.pseudo-class-focus,
+.l-form__item label .focusable.pseudo-class-focus,
+.u-visually--hidden .focusable.pseudo-class-active,
+.u-visually--hidden .focusable.pseudo-class-focus {
+  position: static;
+  margin: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+}

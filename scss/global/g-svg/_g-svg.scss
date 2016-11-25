@@ -4,9 +4,11 @@
 //
 // Styleguide 1.10
 
-// Overrides presentation attributes in SVG file to
-// Allow these values to inherit from CSS file.
 svg {
+
+  // Overrides presentation attributes in SVG file to
+  // Allow these values to inherit from CSS file.
+
   // path,
   // line,
   // circle {
@@ -32,9 +34,10 @@ svg {
   stroke: currentColor;
 }
 
-// ///// Scale in proportion, fluid width SVGs
-// // Allowing fully fluid SVG's
-// // Based on http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
+// Scale in proportion, fluid width SVGs
+// Allowing fully fluid SVG's
+// Based on http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
+
 %svg__wrapper {
   position: relative;
   width: 100%;
