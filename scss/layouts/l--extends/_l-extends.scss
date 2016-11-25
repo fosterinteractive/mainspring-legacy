@@ -2,3 +2,9 @@
 //
 // Styleguide 3.1
 //
+
+%l-extends__page-limit {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(1340px);
+}
