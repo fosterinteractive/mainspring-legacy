@@ -16,11 +16,11 @@
 }
 
 .l-page__header {
-  @extend %l-page-limit;
+  @extend %l-extends__page-limit;
 }
 
 .l-page__main {
-  @extend %l-page-limit;
+  @extend %l-extends__page-limit;
 }
 
 .l-page__content {
