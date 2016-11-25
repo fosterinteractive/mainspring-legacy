@@ -11,7 +11,7 @@
 %c-btn--icon-core {
   @extend %c-btn;
   position: relative;
-  border-color: palette(grey, mediumlight);
+  border-color: palette(grey, light);
 
   &:hover,
   &:focus,
@@ -39,7 +39,7 @@
     background-color: transparent;
 
     svg {
-      fill: palette(grey, mediumlight);
+      fill: palette(grey, light);
     }
   }
 }
