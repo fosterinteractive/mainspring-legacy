@@ -67,30 +67,18 @@ button.pseudo-class-hover,
 input[type='reset'].pseudo-class-hover,
 input[type='submit'].pseudo-class-hover,
 input[type='button'].pseudo-class-hover,
-.c-btn--icon-menu.pseudo-class-hover,
-.c-btn--icon.pseudo-class-hover,
-.c-btn--icon-left.pseudo-class-hover,
-.c-btn--icon-right.pseudo-class-hover,
 .c-btn.pseudo-class-hover,
 .c-btn--thin.pseudo-class-hover,
 button.pseudo-class-focus,
 input[type='reset'].pseudo-class-focus,
 input[type='submit'].pseudo-class-focus,
 input[type='button'].pseudo-class-focus,
-.c-btn--icon-menu.pseudo-class-focus,
-.c-btn--icon.pseudo-class-focus,
-.c-btn--icon-left.pseudo-class-focus,
-.c-btn--icon-right.pseudo-class-focus,
 .c-btn.pseudo-class-focus,
 .c-btn--thin.pseudo-class-focus,
 button.pseudo-class-active,
 input[type='reset'].pseudo-class-active,
 input[type='submit'].pseudo-class-active,
 input[type='button'].pseudo-class-active,
-.c-btn--icon-menu.pseudo-class-active,
-.c-btn--icon.pseudo-class-active,
-.c-btn--icon-left.pseudo-class-active,
-.c-btn--icon-right.pseudo-class-active,
 .c-btn.pseudo-class-active,
 .c-btn--thin.pseudo-class-active {
   border-color: #939598;
@@ -107,32 +95,21 @@ input[type='button'].pseudo-class-active,
   background-color: #2b3078;
 }
 
-.c-btn--icon-menu.pseudo-class-hover,
 .c-btn--icon.pseudo-class-hover,
+.c-btn--icon-large.pseudo-class-hover,
 .c-btn--icon-left.pseudo-class-hover,
 .c-btn--icon-right.pseudo-class-hover,
-.c-btn--icon-menu.pseudo-class-focus,
 .c-btn--icon.pseudo-class-focus,
+.c-btn--icon-large.pseudo-class-focus,
 .c-btn--icon-left.pseudo-class-focus,
 .c-btn--icon-right.pseudo-class-focus,
-.c-btn--icon-menu.pseudo-class-active,
 .c-btn--icon.pseudo-class-active,
+.c-btn--icon-large.pseudo-class-active,
 .c-btn--icon-left.pseudo-class-active,
 .c-btn--icon-right.pseudo-class-active {
   background-color: #c7c8ca;
-  color: #939598;
-}
-
-.c-btn--icon-menu.pseudo-class-hover,
-.c-btn--icon-menu.pseudo-class-focus,
-.c-btn--icon-menu.pseudo-class-active {
-  background-color: transparent;
-}
-
-.c-btn--icon-menu.pseudo-class-hover svg,
-.c-btn--icon-menu.pseudo-class-focus svg,
-.c-btn--icon-menu.pseudo-class-active svg {
-  fill: #adafb1;
+  color: #2b3078;
+  fill: #3f3fb1;
 }
 
 .c-nav--vertical__link.pseudo-class-hover,

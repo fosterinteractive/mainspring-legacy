@@ -20,11 +20,16 @@
 // </pre>
 // <pre> </pre>
 // <pre>
-// $svg-width       - Width of the SVG Icon
-// $svg-height      - Height of the SVG Icon
-// $wrapper-width   - Width of the container
-// $wrapper-height  - Height of the container
-// $svg-class       - '.svg' by default
+// $svg-width           - Width of the SVG Icon
+// $svg-height          - Height of the SVG Icon
+// $wrapper-width       - Width of the container
+// $wrapper-height      - Height of the container
+// $svg-class:'.g-svg'  - SVG class '.g-svg' by default
+// $x-offset:0          - % horizontal offset from center
+// $y-offset:0          - % vertical offset from center
+// $layout-mode:'margin'- 'margin' or 'transform' Center SVG with fixed margins or css transform
+//                        IE 11 / Safari 9 has a bug which trasform uses up space
+//
 // </pre>
 //
 // Styleguide 1.10.2
@@ -33,7 +38,15 @@
 // Default Base line for positioning SVGs next to text
 $baseline: 1.5rem !default;
 
-@mixin svg-centered($svg-width, $svg-height, $wrapper-width, $wrapper-height, $border-px: 0px, $svg-class: 'g-svg', $x-offset: 0, $y-offset: 0, $layout-mode: 'transform') {
+@mixin svg-centered(
+  $svg-width,
+  $svg-height,
+  $wrapper-width,
+  $wrapper-height,
+  $svg-class: 'g-svg',
+  $x-offset: 0,
+  $y-offset: 0,
+  $layout-mode: 'margin') {
 
   @if ($wrapper-width < $svg-width or $wrapper-height < $svg-height) {
     @error ('Wrapper can not be larger the the svg');
@@ -43,11 +56,12 @@ $baseline: 1.5rem !default;
     @error ('$x-offset be a % unit');
   }
 
-
+  // Define SVG Wrapper
   position: relative;
   width: $wrapper-width;
   height: $wrapper-height;
 
+  // Define SVG
   .#{$svg-class} {
     position: absolute;
     top: 50% + $y-offset;
@@ -85,7 +99,7 @@ $baseline: 1.5rem !default;
 // $container-vertical-padding      - Top & bottom padding for container
 // $container-padding-right: 0      - Right padding for container
 // $container-padding-left: 0       - Left and right padding for container
-// $svg-class: 'svg'                - Class for the SVG inside the parent
+// $svg-class: 'g-svg'                - Class for the SVG inside the parent
 // $h-alignment: 'left'             - Align Icon on 'left' or 'right'
 // $v-alignment: 'middle'           - Align Icon 'middle' or 'top'
 // </pre>

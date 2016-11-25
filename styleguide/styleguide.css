@@ -1108,9 +1108,10 @@ input[type='checkbox']:active {
 button,
 input[type='reset'],
 input[type='submit'],
-input[type='button'], .c-btn--icon-menu,
-.c-btn--icon, .c-btn--icon-left, .c-btn--icon-right,
-.c-btn, .c-btn--blue, .c-btn--thin, .c-btn--thin-blue {
+input[type='button'],
+.c-btn, .c-btn--blue, .c-btn--thin, .c-btn--thin-blue,
+.c-btn--icon,
+.c-btn--icon-large, .c-btn--icon-left, .c-btn--icon-right {
   display: inline-block;
   border-width: 1px;
   border-style: solid;
@@ -1122,8 +1123,7 @@ input[type='button'], .c-btn--icon-menu,
 button,
 input[type='reset'],
 input[type='submit'],
-input[type='button'], .c-btn--icon-menu,
-.c-btn--icon, .c-btn--icon-left, .c-btn--icon-right,
+input[type='button'],
 .c-btn, .c-btn--blue {
   padding: 0.8125rem 1.625rem; }
 
@@ -1133,8 +1133,7 @@ input[type='button'], .c-btn--icon-menu,
 button,
 input[type='reset'],
 input[type='submit'],
-input[type='button'], .c-btn--icon-menu,
-.c-btn--icon, .c-btn--icon-left, .c-btn--icon-right,
+input[type='button'],
 .c-btn, .c-btn--thin {
   border-color: #adafb1;
   background-color: #fefefe;
@@ -1142,18 +1141,15 @@ input[type='button'], .c-btn--icon-menu,
   button:hover,
   input[type='reset']:hover,
   input[type='submit']:hover,
-  input[type='button']:hover, .c-btn--icon-menu:hover,
-  .c-btn--icon:hover, .c-btn--icon-left:hover, .c-btn--icon-right:hover,
+  input[type='button']:hover,
   .c-btn:hover, .c-btn--thin:hover, button:focus,
   input[type='reset']:focus,
   input[type='submit']:focus,
-  input[type='button']:focus, .c-btn--icon-menu:focus,
-  .c-btn--icon:focus, .c-btn--icon-left:focus, .c-btn--icon-right:focus,
+  input[type='button']:focus,
   .c-btn:focus, .c-btn--thin:focus, button:active,
   input[type='reset']:active,
   input[type='submit']:active,
-  input[type='button']:active, .c-btn--icon-menu:active,
-  .c-btn--icon:active, .c-btn--icon-left:active, .c-btn--icon-right:active,
+  input[type='button']:active,
   .c-btn:active, .c-btn--thin:active {
     border-color: #939598;
     background-color: #c7c8ca; }
@@ -1166,39 +1162,54 @@ input[type='button'], .c-btn--icon-menu,
     border-color: #2b3078;
     background-color: #2b3078; }
 
-.c-btn--icon-menu,
-.c-btn--icon, .c-btn--icon-left, .c-btn--icon-right {
-  position: relative;
-  border-color: #adafb1; }
-  .c-btn--icon-menu:hover,
-  .c-btn--icon:hover, .c-btn--icon-left:hover, .c-btn--icon-right:hover, .c-btn--icon-menu:focus,
-  .c-btn--icon:focus, .c-btn--icon-left:focus, .c-btn--icon-right:focus, .c-btn--icon-menu:active,
-  .c-btn--icon:active, .c-btn--icon-left:active, .c-btn--icon-right:active {
-    background-color: #c7c8ca;
-    color: #939598; }
 
-.c-btn--icon-menu,
+.c-btn--icon,
+.c-btn--icon-large, .c-btn--icon-left, .c-btn--icon-right {
+  display: block;
+  position: relative;
+  border-color: #adafb1;
+  color: #606265;
+  fill: #606265; }
+  
+  .c-btn--icon:hover,
+  .c-btn--icon-large:hover, .c-btn--icon-left:hover, .c-btn--icon-right:hover,
+  .c-btn--icon:focus,
+  .c-btn--icon-large:focus, .c-btn--icon-left:focus, .c-btn--icon-right:focus,
+  .c-btn--icon:active,
+  .c-btn--icon-large:active, .c-btn--icon-left:active, .c-btn--icon-right:active {
+    background-color: #c7c8ca;
+    color: #2b3078;
+    fill: #3f3fb1; }
+
+
 .c-btn--icon {
   position: relative;
-  width: 2.03125rem;
-  height: 2.03125rem; }
-  .c-btn--icon-menu .g-svg,
+  width: 2.4375rem;
+  height: 2.4375rem; }
+  
   .c-btn--icon .g-svg {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 1.625rem;
-    height: 1.625rem;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%); }
+    width: 2.03125rem;
+    height: 2.03125rem;
+    margin-top: -1.015625rem;
+    margin-left: -1.015625rem; }
 
-.c-btn--icon-menu {
-  border: 0; }
-  .c-btn--icon-menu:hover, .c-btn--icon-menu:focus, .c-btn--icon-menu:active {
-    background-color: transparent; }
-    .c-btn--icon-menu:hover svg, .c-btn--icon-menu:focus svg, .c-btn--icon-menu:active svg {
-      fill: #adafb1; }
+
+.c-btn--icon-large {
+  position: relative;
+  width: 3.25rem;
+  height: 3.25rem; }
+  
+  .c-btn--icon-large .g-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.84375rem;
+    height: 2.84375rem;
+    margin-top: -1.421875rem;
+    margin-left: -1.421875rem; }
 
 .c-btn--icon-left {
   position: relative;
@@ -1229,7 +1240,7 @@ input[type='button'], .c-btn--icon-menu,
   padding-bottom: 0.8125rem;
   padding-right: 3.25rem;
   padding-left: 1.625rem; }
-  .c-btn--icon-right .svg {
+  .c-btn--icon-right .g-svg {
     display: block;
     position: absolute;
     width: 1.21875rem;
@@ -1240,11 +1251,7 @@ input[type='button'], .c-btn--icon-menu,
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
     right: 0;
-    top: 50%; }
-  .c-btn--icon-right svg {
-    position: absolute;
-    top: 1.0833333333rem;
-    right: 0.5416666667rem; }
+    top: 1.625rem; }
 
 
 .c-logo {
@@ -1392,9 +1399,8 @@ input[type='button'], .c-btn--icon-menu,
     left: 50%;
     width: 4.875rem;
     height: 4.875rem;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%); }
+    margin-top: -2.4375rem;
+    margin-left: -2.4375rem; }
 
 .c-pager {
   padding: 1.625rem 0;
@@ -1708,7 +1714,9 @@ input[type='button'], .c-btn--icon-menu,
       padding: 1.625rem 3.65625rem; } }
 
 
-.g-link {
+.g-link,
+.c-btn--icon,
+.c-btn--icon-large, .c-btn--icon-left, .c-btn--icon-right {
   -webkit-transition-property: background-color;
   transition-property: background-color;
   -webkit-transition-duration: 0.25s;
