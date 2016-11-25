@@ -30,31 +30,6 @@
 // Styleguide 1.10.2
 
 
-// // Apply this mixin to the svg's wrapper
-@mixin svg-wrapper($intristic-ratio) {
-  @extend %svg__wrapper;
-  @include ir($intristic-ratio);
-}
-
-// @mixin svg-centered
-//
-// Puts an fixed SVG inside a container of a specific size
-//
-// <pre>
-// svg-centered($svg-width, $svg-height, $wrapper-width, $wrapper-height, $svg-class: svg)
-// </pre>
-// <pre> </pre>
-// <pre>
-// $svg-width       - Width of the SVG Icon
-// $svg-height      - Height of the SVG Icon
-// $wrapper-width   - Width of the container
-// $wrapper-height  - Height of the container
-// $svg-class       - '.svg' by default
-// </pre>
-//
-// Styleguide 1.10.2
-
-
 // Default Base line for positioning SVGs next to text
 $baseline: 1.5rem !default;
 
