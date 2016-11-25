@@ -1391,33 +1391,31 @@ input[type='button'],
 
 
 .c-quote {
-  font-size: 2rem;
-  line-height: 1.21875;
+  font-size: 1.5rem;
+  line-height: 1.3541666667;
   text-align: center;
-  color: #939598;
+  color: #2b3078;
   font-weight: 700; }
   @media (min-width: 37.5em) {
     
     .c-quote {
-      font-size: 2.625rem;
-      line-height: 1.2380952381; } }
+      font-size: 2rem;
+      line-height: 1.21875; } }
   
   .c-quote p {
-    font-size: 2rem;
-    line-height: 1.21875; }
+    font-size: 1.5rem;
+    line-height: 1.3541666667; }
     @media (min-width: 37.5em) {
       
       .c-quote p {
-        font-size: 2.625rem;
-        line-height: 1.2380952381; } }
+        font-size: 2rem;
+        line-height: 1.21875; } }
 
 .c-quote__open, .c-quote__close {
   position: relative;
   width: 4.875rem;
   height: 4.875rem;
-  margin-right: auto;
-  margin-left: auto;
-  fill: #939598; }
+  fill: #cce0ff; }
   .c-quote__open .g-svg, .c-quote__close .g-svg {
     position: absolute;
     top: 50%;
@@ -1426,6 +1424,9 @@ input[type='button'],
     height: 4.875rem;
     margin-top: -2.4375rem;
     margin-left: -2.4375rem; }
+
+.c-quote__close {
+  margin-left: auto; }
 
 .c-pager {
   padding: 1.625rem 0;

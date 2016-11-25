@@ -11,22 +11,20 @@
 
 %c-quote,
 .c-quote {
-  @include font-size($h1-font-sizes);
+  @include font-size($h3-font-sizes);
   text-align: center;
-  color: palette(grey);
+  color: palette(blue, dark);
   font-weight: 700;
 
   p {
-    @include font-size($h1-font-sizes);
+    @include font-size($h3-font-sizes);
   }
 }
 
 
 %c-quote--icon-core {
   @include svg-centered(ru(3),  ru(3),  ru(3),  ru(3));
-  margin-right: auto;
-  margin-left: auto;
-  fill: palette(grey);
+  fill: palette(blue, xlight);
 
 }
 
@@ -36,6 +34,7 @@
 
 .c-quote__close {
   @extend %c-quote--icon-core;
+  margin-left: auto;
 }
 
 
