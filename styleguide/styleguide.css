@@ -1,6 +1,13 @@
 
 /*# sourceMappingURL=maps/style-guide.css.map */
 @charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+img, video {
+  max-width: 100%;
+  height: auto; }
+
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
