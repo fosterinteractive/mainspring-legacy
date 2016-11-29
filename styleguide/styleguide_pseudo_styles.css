@@ -3,26 +3,26 @@ a.pseudo-class-hover {
   outline-width: 0;
 }
 
-.s-wysiwyg a.pseudo-class-visited:not(.c-btn),
 .cke_editable a.pseudo-class-visited:not(.c-btn),
-.g-link.pseudo-class-visited {
+.g-link.pseudo-class-visited,
+.s-wysiwyg a.pseudo-class-visited:not(.c-btn) {
   color: #2b3078;
 }
 
-.s-wysiwyg a.pseudo-class-hover:not(.c-btn),
-.cke_editable a.pseudo-class-hover:not(.c-btn),
-.s-wysiwyg a.pseudo-class-active:not(.c-btn),
 .cke_editable a.pseudo-class-active:not(.c-btn),
+.cke_editable a.pseudo-class-hover:not(.c-btn),
+.g-link.pseudo-class-active,
 .g-link.pseudo-class-hover,
-.g-link.pseudo-class-active {
+.s-wysiwyg a.pseudo-class-active:not(.c-btn),
+.s-wysiwyg a.pseudo-class-hover:not(.c-btn) {
   background-color: #c7c8ca;
   color: #2b3078;
-  text-shadow: 1px 0 0 #c7c8ca, -1px 0 0 #c7c8ca, 0 0.5px 0 #c7c8ca, 0 -0.5px 0 #c7c8ca;
+  text-shadow: 1px 0 0 #c7c8ca,-1px 0 0 #c7c8ca,0 .5px 0 #c7c8ca,0 -.5px 0 #c7c8ca;
 }
 
-.s-wysiwyg a.pseudo-class-focus:not(.c-btn),
 .cke_editable a.pseudo-class-focus:not(.c-btn),
-.g-link.pseudo-class-focus {
+.g-link.pseudo-class-focus,
+.s-wysiwyg a.pseudo-class-focus:not(.c-btn) {
   outline: 0;
   background-color: #c7c8ca;
   color: #2b3078;
@@ -33,11 +33,11 @@ a.pseudo-class-hover {
   color: #606265;
 }
 
-.g-link--grey-dark.pseudo-class-hover,
-.g-link--grey-dark.pseudo-class-active {
+.g-link--grey-dark.pseudo-class-active,
+.g-link--grey-dark.pseudo-class-hover {
   background-color: #cce0ff;
   color: #47494b;
-  text-shadow: 1px 0 0 #cce0ff, -1px 0 0 #cce0ff, 0 0.5px 0 #cce0ff, 0 -0.5px 0 #cce0ff;
+  text-shadow: 1px 0 0 #cce0ff,-1px 0 0 #cce0ff,0 .5px 0 #cce0ff,0 -.5px 0 #cce0ff;
 }
 
 .g-link--grey-dark.pseudo-class-focus {
@@ -47,145 +47,145 @@ a.pseudo-class-hover {
   text-shadow: none;
 }
 
-textarea.pseudo-class-focus,
-select.pseudo-class-focus,
-input[type='date'].pseudo-class-focus,
-input[type='datetime'].pseudo-class-focus,
-input[type='datetime-local'].pseudo-class-focus,
-input[type='email'].pseudo-class-focus,
-input[type='month'].pseudo-class-focus,
-input[type='number'].pseudo-class-focus,
-input[type='password'].pseudo-class-focus,
-input[type='search'].pseudo-class-focus,
-input[type='tel'].pseudo-class-focus,
-input[type='text'].pseudo-class-focus,
-input[type='time'].pseudo-class-focus,
-input[type='url'].pseudo-class-focus,
-input[type='week'].pseudo-class-focus,
 button.pseudo-class-focus,
-input[type='reset'].pseudo-class-focus,
-input[type='submit'].pseudo-class-focus,
-input[type='button'].pseudo-class-focus {
+input[type=date].pseudo-class-focus,
+input[type=datetime].pseudo-class-focus,
+input[type=datetime-local].pseudo-class-focus,
+input[type=email].pseudo-class-focus,
+input[type=month].pseudo-class-focus,
+input[type=number].pseudo-class-focus,
+input[type=password].pseudo-class-focus,
+input[type=search].pseudo-class-focus,
+input[type=tel].pseudo-class-focus,
+input[type=text].pseudo-class-focus,
+input[type=time].pseudo-class-focus,
+input[type=url].pseudo-class-focus,
+input[type=week].pseudo-class-focus,
+input[type=reset].pseudo-class-focus,
+input[type=submit].pseudo-class-focus,
+input[type=button].pseudo-class-focus,
+select.pseudo-class-focus,
+textarea.pseudo-class-focus {
   border-color: #606265;
   background-color: #fefefe;
 }
 
-input[type='file'].pseudo-class-focus,
-input[type='file'].pseudo-class-active,
-input[type='radio'].pseudo-class-focus,
-input[type='radio'].pseudo-class-active,
-input[type='checkbox'].pseudo-class-focus,
-input[type='checkbox'].pseudo-class-active {
+input[type=file].pseudo-class-active,
+input[type=file].pseudo-class-focus,
+input[type=radio].pseudo-class-active,
+input[type=radio].pseudo-class-focus,
+input[type=checkbox].pseudo-class-active,
+input[type=checkbox].pseudo-class-focus {
   box-shadow: none;
 }
 
-button.pseudo-class-hover,
-input[type='reset'].pseudo-class-hover,
-input[type='submit'].pseudo-class-hover,
-input[type='button'].pseudo-class-hover,
-.c-btn.pseudo-class-hover,
-.c-btn--thin.pseudo-class-hover,
-button.pseudo-class-focus,
-input[type='reset'].pseudo-class-focus,
-input[type='submit'].pseudo-class-focus,
-input[type='button'].pseudo-class-focus,
-.c-btn.pseudo-class-focus,
+.c-btn--thin.pseudo-class-active,
 .c-btn--thin.pseudo-class-focus,
-button.pseudo-class-active,
-input[type='reset'].pseudo-class-active,
-input[type='submit'].pseudo-class-active,
-input[type='button'].pseudo-class-active,
+.c-btn--thin.pseudo-class-hover,
 .c-btn.pseudo-class-active,
-.c-btn--thin.pseudo-class-active {
+.c-btn.pseudo-class-focus,
+.c-btn.pseudo-class-hover,
+button.pseudo-class-active,
+button.pseudo-class-focus,
+button.pseudo-class-hover,
+input[type=reset].pseudo-class-active,
+input[type=reset].pseudo-class-focus,
+input[type=reset].pseudo-class-hover,
+input[type=submit].pseudo-class-active,
+input[type=submit].pseudo-class-focus,
+input[type=submit].pseudo-class-hover,
+input[type=button].pseudo-class-active,
+input[type=button].pseudo-class-focus,
+input[type=button].pseudo-class-hover {
   border-color: #939598;
   background-color: #c7c8ca;
 }
 
-.c-btn--blue.pseudo-class-hover,
-.c-btn--thin-blue.pseudo-class-hover,
-.c-btn--blue.pseudo-class-focus,
-.c-btn--thin-blue.pseudo-class-focus,
 .c-btn--blue.pseudo-class-active,
-.c-btn--thin-blue.pseudo-class-active {
+.c-btn--blue.pseudo-class-focus,
+.c-btn--blue.pseudo-class-hover,
+.c-btn--thin-blue.pseudo-class-active,
+.c-btn--thin-blue.pseudo-class-focus,
+.c-btn--thin-blue.pseudo-class-hover {
   border-color: #2b3078;
   background-color: #2b3078;
 }
 
-.c-btn--icon.pseudo-class-hover,
-.c-btn--icon-large.pseudo-class-hover,
-.c-btn--icon-left.pseudo-class-hover,
-.c-btn--icon-right.pseudo-class-hover,
-.c-btn--icon.pseudo-class-focus,
-.c-btn--icon-large.pseudo-class-focus,
-.c-btn--icon-left.pseudo-class-focus,
-.c-btn--icon-right.pseudo-class-focus,
-.c-btn--icon.pseudo-class-active,
 .c-btn--icon-large.pseudo-class-active,
+.c-btn--icon-large.pseudo-class-focus,
+.c-btn--icon-large.pseudo-class-hover,
 .c-btn--icon-left.pseudo-class-active,
-.c-btn--icon-right.pseudo-class-active {
+.c-btn--icon-left.pseudo-class-focus,
+.c-btn--icon-left.pseudo-class-hover,
+.c-btn--icon-right.pseudo-class-active,
+.c-btn--icon-right.pseudo-class-focus,
+.c-btn--icon-right.pseudo-class-hover,
+.c-btn--icon.pseudo-class-active,
+.c-btn--icon.pseudo-class-focus,
+.c-btn--icon.pseudo-class-hover {
   background-color: #c7c8ca;
   color: #2b3078;
   fill: #3f3fb1;
 }
 
-.c-nav--vertical__link.pseudo-class-hover,
+.c-nav--vertical__link.pseudo-class-active,
 .c-nav--vertical__link.pseudo-class-focus,
-.c-nav--vertical__link.pseudo-class-active {
+.c-nav--vertical__link.pseudo-class-hover {
   background-color: #c7c8ca;
   color: #606265;
 }
 
-.c-nav--horizontal__link.pseudo-class-hover,
+.c-nav--horizontal__link.pseudo-class-active,
 .c-nav--horizontal__link.pseudo-class-focus,
-.c-nav--horizontal__link.pseudo-class-active {
+.c-nav--horizontal__link.pseudo-class-hover {
   text-decoration: underline;
   color: #606265;
 }
 
-.c-nav--inline a.pseudo-class-hover,
+.c-nav--inline a.pseudo-class-active,
 .c-nav--inline a.pseudo-class-focus,
-.c-nav--inline a.pseudo-class-active {
+.c-nav--inline a.pseudo-class-hover {
   text-decoration: underline;
   color: #606265;
 }
 
-.c-tabs a.pseudo-class-hover,
+.c-tabs a.pseudo-class-active,
 .c-tabs a.pseudo-class-focus,
-.c-tabs a.pseudo-class-active {
+.c-tabs a.pseudo-class-hover {
   background-color: #fefefe;
 }
 
+.c-accordion__label.pseudo-class-active,
 .c-accordion__label.pseudo-class-focus,
-.c-accordion__label.pseudo-class-hover,
-.c-accordion__label.pseudo-class-active {
+.c-accordion__label.pseudo-class-hover {
   border-color: #939598;
   background-color: #adafb1;
 }
 
-.c-accordion__content > .pseudo-class-first-child,
-.l-form--filter > .pseudo-class-first-child,
-.l-form > .pseudo-class-first-child,
-.u-remove-child--margin-top-bottom > .pseudo-class-first-child,
-.u-remove-child--margin-top > .pseudo-class-first-child {
+.c-accordion__content>.pseudo-class-first-child,
+.l-form--filter>.pseudo-class-first-child,
+.l-form>.pseudo-class-first-child,
+.u-remove-child--margin-top-bottom>.pseudo-class-first-child,
+.u-remove-child--margin-top>.pseudo-class-first-child {
   margin-top: 0;
 }
 
-.c-accordion__content > .pseudo-class-last-child,
-.l-form--filter > .pseudo-class-last-child,
-.l-form > .pseudo-class-last-child,
-.u-remove-child--margin-top-bottom > .pseudo-class-last-child,
-.u-remove-child--margin-bottom > .pseudo-class-last-child {
+.c-accordion__content>.pseudo-class-last-child,
+.l-form--filter>.pseudo-class-last-child,
+.l-form>.pseudo-class-last-child,
+.u-remove-child--margin-bottom>.pseudo-class-last-child,
+.u-remove-child--margin-top-bottom>.pseudo-class-last-child {
   margin-bottom: 0;
 }
 
-.l-form__item--wide label .focusable.pseudo-class-active,
-.l-form__item--med label .focusable.pseudo-class-active,
-.l-form__item--narrow label .focusable.pseudo-class-active,
 .l-form__item label .focusable.pseudo-class-active,
-.l-form__item--wide label .focusable.pseudo-class-focus,
-.l-form__item--med label .focusable.pseudo-class-focus,
-.l-form__item--narrow label .focusable.pseudo-class-focus,
 .l-form__item label .focusable.pseudo-class-focus,
+.l-form__item--med label .focusable.pseudo-class-active,
+.l-form__item--med label .focusable.pseudo-class-focus,
+.l-form__item--narrow label .focusable.pseudo-class-active,
+.l-form__item--narrow label .focusable.pseudo-class-focus,
+.l-form__item--wide label .focusable.pseudo-class-active,
+.l-form__item--wide label .focusable.pseudo-class-focus,
 .u-visually--hidden .focusable.pseudo-class-active,
 .u-visually--hidden .focusable.pseudo-class-focus {
   position: static;
